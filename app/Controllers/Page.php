@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class Page extends BaseController
 {
-    public function index()
-{
+  public function index()
+  {
     return view('beranda');
-    }
+  }
 }
