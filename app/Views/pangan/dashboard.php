@@ -53,7 +53,7 @@
             <div class="card bg-secondary">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="/dist/img/user4-128x128.jpg">
+                  <img class="img-fluid" src="/img/kambing.png">
                 </div>
                 <h3 class="profile-username text-center">Kambing</h3>
               </div>
@@ -66,7 +66,7 @@
             <div class="card bg-warning">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="/dist/img/user4-128x128.jpg">
+                  <img class="img-fluid" src="/img/domba.png">
                 </div>
                 <h3 class="profile-username text-center">Domba</h3>
               </div>
@@ -88,7 +88,7 @@
             <div class="card bg-success">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="/dist/img/user4-128x128.jpg">
+                  <img class="img-fluid" src="/img/buah.png">
                 </div>
                 <h3 class="profile-username text-center">Buah-buahan</h3>
               </div>
@@ -101,7 +101,7 @@
             <div class="card bg-indigo">
               <div class="card-body">
                 <div class="text-center">
-                  <img class="img-fluid" src="/dist/img/user4-128x128.jpg">
+                  <img class="img-fluid" src="/img/ayam.png">
                 </div>
                 <h3 class="profile-username text-center">Ayam</h3>
               </div>
