@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0"> Aplikasi Ketersediaan Pangan</small></h1>
+          <h1 class="m-0">Profile</small></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -23,7 +23,7 @@
   <!-- /.content-header -->
 
   <section class="content">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-3">
 
@@ -380,4 +380,4 @@
     </div><!-- /.container-fluid -->
   </section>
 
-  <?= $thid->endSection(); ?>
+  <?= $this->endSection(); ?>

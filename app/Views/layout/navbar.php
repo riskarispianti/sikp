@@ -14,7 +14,7 @@
     <!-- Right navbar links -->
     <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
       <li class="nav-item">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
         <a href="#" class="nav-link">Data Pangan</a>
@@ -37,7 +37,7 @@
           <!-- Menu Footer-->
           <li class="user-footer">
             <a href="/profile" class="btn btn-default btn-flat">Profile</a>
-            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
+            <a href="/" class="btn btn-default btn-flat float-right">Sign out</a>
           </li>
         </ul>
       </li>
