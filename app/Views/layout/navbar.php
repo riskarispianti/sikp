@@ -17,7 +17,7 @@
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link">Data Pangan</a>
+        <a href="/laporan" class="nav-link">Data Pangan</a>
       </li>
       <!-- profile Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
