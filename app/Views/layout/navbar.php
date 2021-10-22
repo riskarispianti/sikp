@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+<nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
   <div class="container">
     <a href="/" class="navbar-brand">
       <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -14,10 +14,10 @@
     <!-- Right navbar links -->
     <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
       <li class="nav-item">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">Data Pangan</a>
+        <a href="" class="nav-link">Data Pangan</a>
       </li>
       <!-- profile Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
@@ -36,8 +36,8 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-            <a href="#" class="btn btn-default btn-flat">Profile</a>
-            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
+            <a href="/profile" class="btn btn-default btn-flat">Profile</a>
+            <a href="/" class="btn btn-default btn-flat float-right">Sign out</a>
           </li>
         </ul>
       </li>
