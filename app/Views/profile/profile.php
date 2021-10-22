@@ -40,15 +40,25 @@
           </div>
           <!-- /.card -->
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Aksi</h3>
-            </div>
+
             <div class="card-body row">
-              <div class="col-md-6">
-                <button type="button" class="btn btn-info btn-block"><i class="fa fa-plus"></i> Registrasi</button>
+              <div class="col-md-4">
+                <a href="profile/registrasi" type="button" class="btn btn-outline-info">
+                  <i class="fas fa-plus"></i>
+                  Regist..</a>
+
               </div>
-              <div class="col-md-6">
-                <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-edit"></i> Edit</button>
+              <div class="col-md-4">
+                <a href="profile/edit" type="button" class="btn btn-outline-primary">
+                  <i class="fas fa-edit"></i>
+                  Edit...</a>
+
+              </div>
+              <div class="col-md-4">
+                <a href="/dashboard" type="button" class="btn btn-outline-warning">
+                  <i class="fas fa-ban"></i>
+                  Keluar..</a>
+
               </div>
             </div>
           </div>
