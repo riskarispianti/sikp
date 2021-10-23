@@ -11,4 +11,11 @@ class Laporan extends BaseController
     ];
     return view('laporan_pangan/data_pangan', $data);
   }
+  public function detail()
+  {
+    $data = [
+      'title' => 'Detail Laporan | Ketersediaan Pangan'
+    ];
+    return view('laporan_pangan/detail', $data);
+  }
 }
