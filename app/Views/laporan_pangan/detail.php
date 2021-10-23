@@ -9,12 +9,13 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Laporan Ketersediaan Pangan</small></h1>
+          <h1 class="m-0">Detail Ketersediaan Pangan</small></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Laporan</li>
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+            <li class="breadcrumb-item"><a href="/laporan">Laporan</a></li>
+            <li class="breadcrumb-item active">Detail</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -23,5 +24,5 @@
   <!-- /.content-header -->
 
 
-
-  <?= $this->endSection(); ?>
+</div>
+<?= $this->endSection(); ?>
