@@ -10,10 +10,10 @@ class ProfileSeeder extends Seeder
     {
         $data = [
             'logo' => '/img/logo_portal.png',
-            'nama_dinas'    => 'Fakultas Ilmu Komputer',
-            'deskripsi'    => 'ini fasilkom',
-            'username'    => 'fasilkom',
-            'password'    => 'fasilkom'
+            'nama_dinas'    => 'Dinas Pertanian Subang',
+            'deskripsi'    => 'Ini penjelasan tentang dinas pertanian di daerah subang',
+            'username'    => 'user',
+            'password'    => 'user'
         ];
         $this->db->table('profile')->insert($data);
     }
