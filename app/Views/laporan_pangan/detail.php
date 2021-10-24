@@ -79,7 +79,7 @@
                         </h4>
                       </div>
                     </a>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
                       <div class="card-body">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                       </div>
@@ -93,7 +93,7 @@
                         </h4>
                       </div>
                     </a>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion" style="">
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
                       <div class="card-body">
                         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                       </div>
@@ -107,7 +107,7 @@
                         </h4>
                       </div>
                     </a>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion" style="">
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
                       <div class="card-body">
                         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
                       </div>
@@ -121,7 +121,7 @@
                         </h4>
                       </div>
                     </a>
-                    <div id="collapseFour" class="collapse" data-parent="#accordion" style="">
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
                       <div class="card-body">
                         Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
                       </div>
@@ -135,7 +135,7 @@
                         </h4>
                       </div>
                     </a>
-                    <div id="collapseFive" class="collapse" data-parent="#accordion" style="">
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
                       <div class="card-body">
                         In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
                       </div>
