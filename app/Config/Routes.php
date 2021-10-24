@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Login::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
+$routes->get('/laporan', 'Laporan::index');
+
 
 /*
  * --------------------------------------------------------------------
