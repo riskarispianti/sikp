@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Detail Ketersediaan Pangan</small></h1>
+          <h1 class="m-0">Detail</small></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -27,173 +27,131 @@
     <div class="container">
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Detail Tanaman Pangan</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
               <div class="row">
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Estimated budget</span>
-                      <span class="info-box-number text-center text-muted mb-0">2300</span>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="card-body">
+                      <div class="card card-info card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Kelompok/Jenis Pangan</h5>
+
+                        </div>
+                        <div class="card-body">
+                          <strong>Sayur Musiman</strong>
+                        </div>
+                      </div>
+
+                      <div class="card card-primary card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Ancaman Produksi</h5>
+
+                        </div>
+                        <div class="card-body">
+                          <strong>Wereng</strong>
+
+                          <p class="text-muted">
+                            dengan menyemprotkan pestisida kepada tanaman tomat tersebut
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card card-primary card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Infrastruktur Produksi</h5>
+
+                        </div>
+                        <div class="card-body">
+                          <strong>Sarana dan Prasarana Pengairan</strong>
+
+                          <p class="text-muted">
+                            Irigasi
+                          </p>
+                          <strong>Pengelolaan Jaringan Irigasi, Embung dan Rawa</strong>
+
+                          <p class="text-muted">
+                            Jaringan irigasi memakai ....
+                          </p>
+                          <strong>Insfrastruktur Pengelolaan Air Bagi Pertanian</strong>
+
+                          <p class="text-muted">
+                            Sungai
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card card-primary card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Produsen</h5>
+
+                        </div>
+                        <div class="card-body">
+                          <strong>Jumlah Produsen/Petani Pengahasil Komoditas</strong>
+                          <p class="text-muted">
+                            2000 Petani
+                          </p>
+                          <strong>Pembinaan Kepada Produsen/Petani</strong>
+                          <p class="text-muted">
+                            Pada perkebunan tomat melakukan pembinaan Kepada petani pengelola perkebunan
+                          </p>
+                          <strong>Kelembagaan Produsen/Petani</strong>
+                          <p class="text-muted">
+                            Lembaga Pertaniaan
+                          </p>
+                          <strong>Kesejahteraan Petani</strong>
+                          <p class="text-muted">
+                            Kesejahteraan Petani
+                          </p>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Total amount spent</span>
-                      <span class="info-box-number text-center text-muted mb-0">2000</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="info-box bg-light">
-                    <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Estimated project duration</span>
-                      <span class="info-box-number text-center text-muted mb-0">20</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" id="accordion">
-                  <h2>Details</h2>
-                  <div class="card card-primary card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseOne" aria-expanded="true">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          1. Lorem ipsum dolor sit amet
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-primary card-outline">
-                    <a class="d-block w-100 collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          2. Aenean massa
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-primary card-outline">
-                    <a class="d-block w-100 collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          3. Donec quam felis
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-warning card-outline">
-                    <a class="d-block w-100 collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          4. Donec pede justo
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseFour" class="collapse" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-warning card-outline">
-                    <a class="d-block w-100 collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          5. In enim justo
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseFive" class="collapse" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-warning card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseSix">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          6. Integer tincidunt
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseSix" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseSeven">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          7. Aenean leo ligula
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseSeven" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseEight">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          8. Aliquam lorem ante
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseEight" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-danger card-outline">
-                    <a class="d-block w-100" data-toggle="collapse" href="#collapseNine">
-                      <div class="card-header">
-                        <h4 class="card-title w-100">
-                          9. Quisque rutrum
-                        </h4>
-                      </div>
-                    </a>
-                    <div id="collapseNine" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                        Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                <div class="col-6">
+                  <div class="row">
+                    <div class="card-body">
+                      <div class="card card-info card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Produksi Pangan</h5>
+
+                        </div>
+                        <div class="card-body">
+                          <dl>
+                            <dt>Luas Tanam/Areal</dt>
+                            <dd>200 Ha</dd>
+                            <dt>Luas Panen</dt>
+                            <dd>200 Ha</dd>
+                            <dt>Produktivitas</dt>
+                            <dd>100 Ton/Ha</dd>
+                            <dt>Lama Proses Produksi</dt>
+                            <dd>4 Bulan</dd>
+                            <dt>Perkiraan Iklim</dt>
+                            <dd>Pada Musim Panas</dd>
+                            <dt>Perkiraan Musim Tanam dan Panen</dt>
+                            <dd>Pada Musim Panas</dd>
+                            <dt>Biaya Produksi</dt>
+                            <dd>10 Juta</dd>
+                            <dt>Harga Jual Hasil Produksi</dt>
+                            <dd>10 Juta</dd>
+                            <dt>Lahan Produksi</dt>
+                            <dd>Perkebunan</dd>
+                            <dt>Sumber Pengairan</dt>
+                            <dd>Irigasi, Air Hujan, dan Sungai</dd>
+                            <dt>Bibit</dt>
+                            <dd>Produksi Sendiri</dd>
+                            <dt>Pupuk</dt>
+                            <dd>Produksi Sendiri, Beli</dd>
+                            <dt>Alat atau teknologi yang digunakan</dt>
+                            <dd>Traktor, Cangkul, dll</dd>
+                            <dt>Pemanfaatan Hasil Produksi</dt>
+                            <dd>Dikonsumsi sendiri dan Dijual langsung</dd>
+                            <dt>Limbah Hasil Produksi dan Pengelolaannya</dt>
+                            <dd>Dimanfaatkan Sendiri dan diolah</dd>
+                          </dl>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -201,39 +159,41 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> AdminLTE v3</h3>
-              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
-              <br>
+              <h1 class="text-primary"><i class="fas fa-paint-brush"></i> TOMAT</h1>
               <div class="text-muted">
-                <p class="text-sm">Client Company
-                  <b class="d-block">Deveint Inc</b>
-                </p>
-                <p class="text-sm">Project Leader
+                <p class="text-sm">Kepemilikan
                   <b class="d-block">Tony Chicken</b>
+                </p>
+                <p class="text-sm">Status Lahan
+                  <b class="d-block">Dipake</b>
+                </p>
+                <p class="text-sm">Letak dan Luas Kawasan Produksi
+                  <b class="d-block">Deveint Inc</b>
                 </p>
               </div>
 
-              <h5 class="mt-5 text-muted">Project files</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
-                </li>
-              </ul>
+              <h5 class="mt-5 text-muted">Senstra Produksi</h5>
+              <div class="text-muted">
+                <strong>Nama/Identitas Senstra Produksi</strong>
+                <p class="text-muted">
+                  BBBlgfg
+                </p>
+
+                <strong>Kecamatan</strong>
+                <p class="text-muted">
+                  Link
+                </p>
+
+                <strong>Kelurahan</strong>
+                <p class="text-muted">
+                  B.S.
+                </p>
+
+              </div>
               <div class="text-center mt-5 mb-3">
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+                <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/laporan" class="btn btn-sm btn-warning">Kembali</a>
+                <a href="#" class="btn btn-sm btn-danger">Hapus</a>
               </div>
             </div>
           </div>
