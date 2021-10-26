@@ -62,6 +62,206 @@
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>Tomat</td>
+                    <td>Tony Chicken</td>
+                    <td>DiKebun</td>
+                    <td>
+                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <i class="fa fa-folder-open"></i> Detail</a>
+                    </td>
+                  </tr>
 
                 </tbody>
               </table>
