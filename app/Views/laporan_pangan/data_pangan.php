@@ -58,7 +58,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -68,7 +68,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -78,7 +78,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -88,7 +88,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -98,7 +98,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -108,7 +108,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -118,7 +118,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -128,7 +128,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -138,7 +138,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -148,7 +148,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -158,7 +158,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -168,7 +168,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -178,7 +178,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -188,7 +188,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -198,7 +198,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -208,7 +208,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -218,7 +218,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -228,7 +228,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -238,7 +238,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -248,7 +248,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>
@@ -258,7 +258,7 @@
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
-                      <a href="/laporan/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
                   </tr>

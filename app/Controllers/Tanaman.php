@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Laporan extends BaseController
+class Tanaman extends BaseController
 {
   public function index()
   {
