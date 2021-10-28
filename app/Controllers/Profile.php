@@ -11,4 +11,11 @@ class Profile extends BaseController
     ];
     return view('profile/profile', $data);
   }
+  public function registrasi()
+  {
+    $data = [
+      'title' => 'Registrasi'
+    ];
+    return view('profile/registrasi', $data);
+  }
 }
