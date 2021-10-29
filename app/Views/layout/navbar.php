@@ -1,8 +1,8 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-light">
   <div class="container">
     <a href="/" class="navbar-brand">
-      <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
       <span class="brand-text font-weight-light">SInKePang</span>
     </a>
 
@@ -27,13 +27,13 @@
       <!-- profile Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-          <img src="/img/logo_portal.png" class="user-image img-circle elevation-2" alt="User Image">
+          <img src="/img/logo_portal.png" class="user-image" alt="User Image">
           <span class="d-none d-md-inline">FASILKOM</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
           <li class="user-header bg-info">
-            <img src="/img/logo_portal.png" class="img-circle elevation-2" alt="User Image">
+            <img src="/img/logo_portal.png" class="elevation-2" alt="User Image">
             <p>
               Fakultas Ilmu komputer
               <small>Member since Oct. 2021</small>
