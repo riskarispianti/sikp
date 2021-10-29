@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Profile</small></h1>
+          <h1 class="m-0">Registrasi</small></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -25,20 +25,11 @@
 
   <section class="content">
     <div class="container">
-      <!-- SELECT2 EXAMPLE -->
-
-
-      <!-- SELECT2 EXAMPLE -->
-
-
-
-
-
       <div class="row">
         <div class="col-md-12">
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">bs-stepper</h3>
+              <h3 class="card-title">Account</h3>
             </div>
             <div class="card-body p-0">
               <div class="bs-stepper">
@@ -47,44 +38,95 @@
                   <div class="step" data-target="#logins-part">
                     <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
                       <span class="bs-stepper-circle">1</span>
-                      <span class="bs-stepper-label">Logins</span>
+                      <span class="bs-stepper-label">Profile</span>
                     </button>
                   </div>
                   <div class="line"></div>
                   <div class="step" data-target="#information-part">
                     <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
                       <span class="bs-stepper-circle">2</span>
-                      <span class="bs-stepper-label">Various information</span>
+                      <span class="bs-stepper-label">Logins</span>
                     </button>
                   </div>
                 </div>
                 <div class="bs-stepper-content">
                   <!-- your steps content here -->
                   <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
+                    <form class="form-horizontal">
+                      <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Nama Dinas</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputName" placeholder="Nama dinas">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="visimisi" class="col-sm-2 col-form-label">Visi & Misi</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Visi & Misi">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputSejarah" class="col-sm-2 col-form-label">Sejarah</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" id="inputSejarah" placeholder="Sejarah"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputLogo" class="col-sm-2 col-form-label">Logo Dinas</label>
+                        <div class="col-sm-5">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <div>
+                            <img class="attachment-img" src="/dist/img/AdminLTELogo.png" alt="Logo" width="150">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
                     <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                   </div>
                   <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                    <div class="form-group">
-                      <label for="exampleInputFile">File input</label>
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="exampleInputFile">
-                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text">Upload</span>
+                    <form class="form-horizontal">
+                      <div class="form-group row">
+                        <label for="username" class="col-sm-2 col-form-label">Username</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="username" placeholder="Username">
                         </div>
                       </div>
-                    </div>
-                    <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
+                      <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Password">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="password2" class="col-sm-2 col-form-label">Password 2</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="password2" placeholder="Password 2">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <button class="btn btn-warning" onclick="stepper.previous()">Previous</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
@@ -92,7 +134,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-              Visit <a href="https://github.com/Johann-S/bs-stepper/#how-to-use-it">bs-stepper documentation</a> for more examples and information about the plugin.
+
             </div>
           </div>
           <!-- /.card -->

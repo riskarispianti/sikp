@@ -20,6 +20,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="/plugins/bs-stepper/css/bs-stepper.min.css">
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -62,6 +64,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="/dist/js/demo.js"></script>
+  <!-- BS-Stepper -->
+  <script src="/plugins/bs-stepper/js/bs-stepper.min.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
@@ -78,8 +82,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         "info": true,
         "autoWidth": false,
         "responsive": true,
-      });
-    });
+      })
+    })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function() {
+      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
   </script>
 </body>
 
