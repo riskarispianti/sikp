@@ -76,23 +76,19 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="card shadow">
-                <a href="">
-                  <div class="card-body">
-                    <div class="text-center">
-                      <img src="/img/ayam.png" class="img-fluid">
-                    </div>
-                    <div class="ribbon-wrapper ribbon-lg">
-                      <div class="ribbon bg-danger text-lg">
-                        Ayam
-                      </div>
-                    </div>
+          <div class="card shadow">
+            <a href="">
+              <div class="card-body">
+                <div class="text-center">
+                  <img src="/img/ayam.png" class="img-fluid">
+                </div>
+                <div class="ribbon-wrapper ribbon-xl">
+                  <div class="ribbon bg-danger text-xl">
+                    Ayam
                   </div>
-                </a>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
