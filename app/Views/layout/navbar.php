@@ -1,8 +1,8 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-light">
   <div class="container">
     <a href="/" class="navbar-brand">
-      <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
       <span class="brand-text font-weight-light">SInKePang</span>
     </a>
 
@@ -16,19 +16,24 @@
       <li class="nav-item">
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
-      <li class="nav-item">
-        <a href="/laporan" class="nav-link">Data Pangan</a>
+      <li class="nav-item dropdown">
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data Pangan</a>
+        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+          <li><a href="/tanaman" class="dropdown-item">Tanaman Pangan </a></li>
+          <li><a href="#" class="dropdown-item">Peternakan</a></li>
+          <li><a href="#" class="dropdown-item">Perikanan</a></li>
+        </ul>
       </li>
       <!-- profile Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-          <img src="/img/logo_portal.png" class="user-image img-circle elevation-2" alt="User Image">
+          <img src="/img/logo_portal.png" class="user-image" alt="User Image">
           <span class="d-none d-md-inline">FASILKOM</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
           <li class="user-header bg-info">
-            <img src="/img/logo_portal.png" class="img-circle elevation-2" alt="User Image">
+            <img src="/img/logo_portal.png" class="elevation-2" alt="User Image">
             <p>
               Fakultas Ilmu komputer
               <small>Member since Oct. 2021</small>

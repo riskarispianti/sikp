@@ -20,6 +20,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="/plugins/bs-stepper/css/bs-stepper.min.css">
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -59,18 +61,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/plugins/pdfmake/vfs_fonts.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-  <script src="/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-  <!-- AdminLTE App -->
   <script src="/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="/dist/js/demo.js"></script>
+  <!-- BS-Stepper -->
+  <script src="/plugins/bs-stepper/js/bs-stepper.min.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        "buttons": ["pdf", "print"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
@@ -80,8 +82,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         "info": true,
         "autoWidth": false,
         "responsive": true,
-      });
-    });
+      })
+    })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function() {
+      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
   </script>
 </body>
 
