@@ -29,8 +29,6 @@ class ProfileSeeder extends Seeder
             'password' => 'user'
         ];
         $this->db->table('profile')->insert($data);
-        
-        
     }
 }
 } 
