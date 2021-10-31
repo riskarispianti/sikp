@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $title; ?></title>
+  <title>Ketersediaan Pangan</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -27,39 +27,52 @@
         <p class="login-box-msg">
           <img src="/img/logo_portal.png" alt="logo" width="150">
         </p>
-        <form action="/dashboard" method="post">
-          <div class="input-group mb-3">
-            <input type="username" class="form-control" placeholder="Username">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-user"></span>
+
+
+
+        <main class="form-signin">
+          <?php if (!empty(session()->getFlashdata('error'))) : ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <?php echo session()->getFlashdata('error'); ?>
+            </div>
+          <?php endif; ?>
+
+          <form method="post" action="/dashboard">
+            <?= csrf_field(); ?>
+
+            <div class="input-group mb-3">
+              <input type="username" class="form-control" placeholder="Username" class="form-control">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Password" class="form-control">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                  Remember Me
-                </label>
+            <div class="row">
+              <div class="col-8">
+                <div class="icheck-primary">
+                  <input type="checkbox" id="remember">
+                  <label for="remember">
+                    Remember Me
+                  </label>
+                </div>
               </div>
+              <!-- /.col -->
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+              </div>
+              <!-- /.col -->
             </div>
-            <!-- /.col -->
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Login</button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
+          </form>
+        </main>
 
         <p class="mb-1">
           <a href="forgot-password.html">I forgot my password</a>

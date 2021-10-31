@@ -40,7 +40,7 @@ class Profile extends Migration
                 'constraint' => '100',
             ]
         ]);
-        $this->forge->addKey('id', true);
+        $this->forge->addPrimaryKey('id', true);
         $this->forge->createTable('profile');
     }
 
