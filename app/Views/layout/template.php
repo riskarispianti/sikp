@@ -69,10 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script>
     $(function() {
       $("#example1").DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
-        "buttons": ["pdf", "print"]
+        "responsive": true
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
