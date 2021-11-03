@@ -26,19 +26,35 @@
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-2">
+        <div class="col-md-3">
           <div class="card">
-            <div class="card-body">
-              <a href="/tanaman/tambah" type="button" class="btn btn-block bg-gradient-primary">
-                <i class=" fas fa-plus"></i> <strong>Tambah Data</strong>
-              </a>
-              <a href="/dashboard" type="button" class="btn btn-block bg-gradient-warning">
-                <i class=" fas fa-plus"></i> <strong>Keluar</strong>
-              </a>
+            <div class="card-header">
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
             </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a href="/tanaman/tambah" class="nav-link">
+                    <i class="fas fa-plus"></i> Tambah Data
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/dashboard" class="nav-link">
+                    <i class="fas fa-reply"></i> Kembali
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.card-body -->
           </div>
+          <!-- /.card -->
+
         </div>
-        <div class="col-10">
+        <div class="col-9">
           <div class="card">
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">

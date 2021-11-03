@@ -83,6 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         "autoWidth": false,
         "responsive": true,
       })
+
     })
     // BS-Stepper Init
     document.addEventListener('DOMContentLoaded', function() {
