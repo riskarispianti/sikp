@@ -255,7 +255,7 @@
             </div>
             <div class="col-6">
               <div class="card">
-                <a href="" class="btn btn-outline-success">
+                <a href="/dashboard/grafik" class="btn btn-outline-success">
                   <div class="card-body">
                     <div class="text-center">
                       <img src="/img/tomat2.png" class="img-fluid">

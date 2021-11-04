@@ -66,6 +66,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/dist/js/demo.js"></script>
   <!-- BS-Stepper -->
   <script src="/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="/plugins/chart.js/Chart.min.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="/dist/js/pages/dashboard3.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
