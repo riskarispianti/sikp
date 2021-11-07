@@ -43,6 +43,16 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a href="/print" class="nav-link">
+                    <i class="fas fa-print"></i> Print
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/download" class="nav-link">
+                    <i class="fas fa-download"></i> Download (PDF)
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="/dashboard" class="nav-link">
                     <i class="fas fa-reply"></i> Kembali
                   </a>
