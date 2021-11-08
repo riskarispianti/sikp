@@ -22,7 +22,7 @@ class Komoditas extends Migration
         ]);
         $this->forge->addKey('id_kom', true);
         $this->forge->createTable('komoditas', true);
-        $this->forge->addForeignKey('id_tanam', 'id_ternak', 'id_ikan');
+        $this->forge->addForeignKey('id_tanam', 'prod_tan_pangan');
     }
 
     public function down()
