@@ -43,10 +43,18 @@ class Profile extends Migration
             'password'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
-            ]
+            ],
+            'created-at'       => [
+                'type'       => 'DATETIME',
+                'null' => true,
+            ],
+            'updated-at'       => [
+                'type'       => 'DATETIME',
+                'null' => true,
+            ],
         ]);
         $this->forge->addKey('id_prof', true);
-        $this->forge->createTable('profile');
+        $this->forge->createTable('profile', true);
     }
 
     public function down()
