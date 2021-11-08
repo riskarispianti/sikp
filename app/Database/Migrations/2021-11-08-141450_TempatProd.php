@@ -4,35 +4,32 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Komoditas extends Migration
+class TempatProd extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_kom'          => [
+            'id_tp'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'komoditas'       => [
+            'letak_prod'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'id_tanam'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+            'luas_prod'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
             ],
-            'id_ternak'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+            'kepemilikan'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
             ],
-            'id_ikan'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+            'status_lahan'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
             ],
             'created-at'       => [
                 'type'       => 'DATETIME',
@@ -43,12 +40,12 @@ class Komoditas extends Migration
                 'null' => true,
             ],
         ]);
-        $this->forge->addKey('id_kom', true);
-        $this->forge->createTable('komoditas', true);
+        $this->forge->addKey('id_tp', true);
+        $this->forge->createTable('tempat_prod', true);
     }
 
     public function down()
     {
-        $this->forge->dropTable('komoditas');
+        $this->forge->dropTable('tempat_prod');
     }
 }
