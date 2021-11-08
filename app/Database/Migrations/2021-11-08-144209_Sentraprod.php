@@ -27,11 +27,11 @@ class Sentraprod extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'created-at'       => [
+            'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],
-            'updated-at'       => [
+            'updated_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],

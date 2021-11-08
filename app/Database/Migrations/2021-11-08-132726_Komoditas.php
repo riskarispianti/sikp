@@ -34,11 +34,11 @@ class Komoditas extends Migration
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
-            'created-at'       => [
+            'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],
-            'updated-at'       => [
+            'updated_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],

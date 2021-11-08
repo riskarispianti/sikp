@@ -31,11 +31,11 @@ class Produsen extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'created-at'       => [
+            'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],
-            'updated-at'       => [
+            'updated_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
             ],
