@@ -27,6 +27,14 @@ class Infrasprod extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'kandang'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'rph'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
