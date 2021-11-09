@@ -37,7 +37,7 @@ class Sentraprod extends Migration
             ],
         ]);
         $this->forge->addKey('id_sp', true);
-        $this->forge->createTable('sentra_prod', true);
+        $this->forge->createTable('sentra_prod');
     }
 
     public function down()

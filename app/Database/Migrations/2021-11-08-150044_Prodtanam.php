@@ -118,7 +118,7 @@ class Prodtanam extends Migration
             ],
         ]);
         $this->forge->addKey('id_tanam', true);
-        $this->forge->createTable('prod_tanam', true);
+        $this->forge->createTable('prod_tanam');
     }
 
     public function down()

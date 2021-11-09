@@ -45,7 +45,7 @@ class Infrasprod extends Migration
             ],
         ]);
         $this->forge->addKey('id_ip', true);
-        $this->forge->createTable('infras_prod', true);
+        $this->forge->createTable('infras_prod');
     }
 
     public function down()

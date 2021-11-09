@@ -54,7 +54,7 @@ class Profile extends Migration
             ],
         ]);
         $this->forge->addKey('id_prof', true);
-        $this->forge->createTable('profile', true);
+        $this->forge->createTable('profile');
     }
 
     public function down()

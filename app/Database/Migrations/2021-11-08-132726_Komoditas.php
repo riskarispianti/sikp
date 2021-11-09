@@ -44,7 +44,7 @@ class Komoditas extends Migration
             ],
         ]);
         $this->forge->addKey('id_kom', true);
-        $this->forge->createTable('komoditas', true);
+        $this->forge->createTable('komoditas');
     }
 
     public function down()

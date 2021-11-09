@@ -41,7 +41,7 @@ class TempatProd extends Migration
             ],
         ]);
         $this->forge->addKey('id_tp', true);
-        $this->forge->createTable('tempat_prod', true);
+        $this->forge->createTable('tempat_prod');
     }
 
     public function down()

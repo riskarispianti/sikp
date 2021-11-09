@@ -94,7 +94,7 @@ class Prodternak extends Migration
             ],
         ]);
         $this->forge->addKey('id_ternak', true);
-        $this->forge->createTable('prod_ternak', true);
+        $this->forge->createTable('prod_ternak');
     }
 
     public function down()

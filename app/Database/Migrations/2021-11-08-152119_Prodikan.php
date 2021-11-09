@@ -102,7 +102,7 @@ class Prodikan extends Migration
             ],
         ]);
         $this->forge->addKey('id_ikan', true);
-        $this->forge->createTable('prod_ikan', true);
+        $this->forge->createTable('prod_ikan');
     }
 
     public function down()

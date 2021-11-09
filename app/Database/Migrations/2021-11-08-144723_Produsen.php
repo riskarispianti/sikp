@@ -41,7 +41,7 @@ class Produsen extends Migration
             ],
         ]);
         $this->forge->addKey('id_produsen', true);
-        $this->forge->createTable('produsen', true);
+        $this->forge->createTable('produsen');
     }
 
     public function down()

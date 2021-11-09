@@ -33,7 +33,7 @@ class Ancaman extends Migration
             ],
         ]);
         $this->forge->addKey('id_anc', true);
-        $this->forge->createTable('ancaman', true);
+        $this->forge->createTable('ancaman');
     }
 
     public function down()
