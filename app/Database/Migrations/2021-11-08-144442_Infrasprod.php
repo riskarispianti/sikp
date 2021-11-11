@@ -4,30 +4,34 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Produsen extends Migration
+class Infrasprod extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_produsen'          => [
+            'id_ip'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'jml_penghasil_kom'       => [
+            'sarana_pengairan'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'pembinaan'       => [
+            'pengel_jar_irigasi'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'kelembagaan'       => [
+            'infras_pengel_air'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'kesejahteraan'       => [
+            'kandang'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'rph'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
@@ -55,12 +59,18 @@ class Produsen extends Migration
                 'null' => true,
             ],
         ]);
-        $this->forge->addKey('id_produsen', true);
-        $this->forge->createTable('produsen');
+        $this->forge->addKey('id_ip', true);
+        $this->forge->addForeignKey('id_tanam', 'prod_tanam', 'id_tanam');
+        $this->forge->addForeignKey('id_ternak', 'prod_ternak', 'id_ternak');
+        $this->forge->addForeignKey('id_ikan', 'prod_ikan', 'id_ikan');
+        $this->forge->createTable('infras_prod');
     }
 
     public function down()
     {
-        $this->forge->dropTable('produsen');
+        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_tanam_foreign');
+        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_ternak_foreign');
+        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_ikan_foreign');
+        $this->forge->dropTable('infras_prod');
     }
 }
