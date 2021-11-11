@@ -23,6 +23,21 @@ class Ancaman extends Migration
                 'type'           => 'TEXT',
                 'null'           => true,
             ],
+            'id_tanam'          => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true,
+            ],
+            'id_ternak'          => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true,
+            ],
+            'id_ikan'          => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true,
+            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
