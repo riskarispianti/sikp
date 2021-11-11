@@ -44,11 +44,17 @@ class Komoditas extends Migration
             ],
         ]);
         $this->forge->addKey('id_kom', true);
+        $this->forge->addForeignKey('id_tanam', 'prod_tanam', 'id_tanam');
+        $this->forge->addForeignKey('id_ternak', 'prod_ternak', 'id_ternak');
+        $this->forge->addForeignKey('id_ikan', 'prod_ikan', 'id_ikan');
         $this->forge->createTable('komoditas');
     }
 
     public function down()
     {
+        $this->forge->dropForeignKey('komoditas', 'komoditas_id_tanam_foreign');
+        $this->forge->dropForeignKey('komoditas', 'komoditas_id_ternak_foreign');
+        $this->forge->dropForeignKey('komoditas', 'komoditas_id_ikan_foreign');
         $this->forge->dropTable('komoditas');
     }
 }

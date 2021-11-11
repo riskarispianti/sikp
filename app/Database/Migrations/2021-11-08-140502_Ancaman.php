@@ -48,11 +48,17 @@ class Ancaman extends Migration
             ],
         ]);
         $this->forge->addKey('id_anc', true);
+        $this->forge->addForeignKey('id_tanam', 'prod_tanam', 'id_tanam');
+        $this->forge->addForeignKey('id_ternak', 'prod_ternak', 'id_ternak');
+        $this->forge->addForeignKey('id_ikan', 'prod_ikan', 'id_ikan');
         $this->forge->createTable('ancaman');
     }
 
     public function down()
     {
+        $this->forge->dropForeignKey('ancaman', 'ancaman_id_tanam_foreign');
+        $this->forge->dropForeignKey('ancaman', 'ancaman_id_ternak_foreign');
+        $this->forge->dropForeignKey('ancaman', 'ancaman_id_ikan_foreign');
         $this->forge->dropTable('ancaman');
     }
 }
