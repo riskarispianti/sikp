@@ -35,21 +35,6 @@ class Infrasprod extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'id_tanam'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_ternak'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_ikan'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
@@ -60,17 +45,11 @@ class Infrasprod extends Migration
             ],
         ]);
         $this->forge->addKey('id_ip', true);
-        $this->forge->addForeignKey('id_tanam', 'prod_tanam', 'id_tanam');
-        $this->forge->addForeignKey('id_ternak', 'prod_ternak', 'id_ternak');
-        $this->forge->addForeignKey('id_ikan', 'prod_ikan', 'id_ikan');
         $this->forge->createTable('infras_prod');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_tanam_foreign');
-        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_ternak_foreign');
-        $this->forge->dropForeignKey('infras_prod', 'infras_prod_id_ikan_foreign');
         $this->forge->dropTable('infras_prod');
     }
 }

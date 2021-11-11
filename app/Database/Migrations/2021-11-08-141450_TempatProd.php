@@ -31,21 +31,6 @@ class TempatProd extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'id_tanam'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_ternak'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_ikan'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
@@ -56,17 +41,11 @@ class TempatProd extends Migration
             ],
         ]);
         $this->forge->addKey('id_tp', true);
-        $this->forge->addForeignKey('id_tanam', 'prod_tanam', 'id_tanam');
-        $this->forge->addForeignKey('id_ternak', 'prod_ternak', 'id_ternak');
-        $this->forge->addForeignKey('id_ikan', 'prod_ikan', 'id_ikan');
         $this->forge->createTable('tempat_prod');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('tempat_prod', 'tempat_prod_id_tanam_foreign');
-        $this->forge->dropForeignKey('tempat_prod', 'tempat_prod_id_ternak_foreign');
-        $this->forge->dropForeignKey('tempat_prod', 'tempat_prod_id_ikan_foreign');
         $this->forge->dropTable('tempat_prod');
     }
 }
