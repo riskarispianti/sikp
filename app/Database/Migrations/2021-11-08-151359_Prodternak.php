@@ -59,31 +59,6 @@ class Prodternak extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'id_anc'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_tp'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_sp'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_ip'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
-            'id_produsen'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
