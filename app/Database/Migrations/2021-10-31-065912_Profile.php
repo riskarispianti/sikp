@@ -51,7 +51,7 @@ class Profile extends Migration
             'updated_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
-            ],
+            ]
         ]);
         $this->forge->addKey('id_prof', true);
         $this->forge->createTable('profile');
