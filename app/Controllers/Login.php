@@ -8,7 +8,10 @@ class Login extends BaseController
 {
   public function index()
   {
-    return view('log_in/login');
+    $data = [
+      'title' => 'Profile'
+    ];
+    return view('log_in/login', $data);
   }
 
   public function process()

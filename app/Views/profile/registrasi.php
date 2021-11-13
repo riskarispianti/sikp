@@ -49,99 +49,110 @@
                     </button>
                   </div>
                 </div>
-                <div class="bs-stepper-content">
-                  <!-- your steps content here -->
-                  <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Nama Dinas</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName" placeholder="Nama dinas">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="visimisi" class="col-sm-2 col-form-label">Visi & Misi</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" placeholder="Visi & Misi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputSejarah" class="col-sm-2 col-form-label">Sejarah</label>
-                        <div class="col-sm-10">
-                          <textarea class="form-control" id="inputSejarah" placeholder="Sejarah"></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputLogo" class="col-sm-2 col-form-label">Logo Dinas</label>
-                        <div class="col-sm-5">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+
+                <?php if (isset($validation)) : ?>
+                  <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+                <?php endif; ?>
+                <form action="/register/save" method="post">
+                  <div class="mb-3">
+
+                    <div class="bs-stepper-content">
+                      <!-- your steps content here -->
+                      <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                        <form class="form-horizontal">
+                          <div class="form-group row">
+                            <label for="InputNama" class="col-sm-2 col-form-label">Nama Dinas</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="nama_dinas" placeholder="Nama dinas">
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div>
-                            <img class="attachment-img" src="/dist/img/AdminLTELogo.png" alt="Logo" width="150">
+                          <div class="form-group row">
+                            <label for="InputVisiMisi" class="col-sm-2 col-form-label">Visi & Misi</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Visi & Misi">
+                            </div>
                           </div>
-                        </div>
+                          <div class="form-group row">
+                            <label for="InputAlamat" class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="alamat_dinas" placeholder="Alamat">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="InputSejarah" class="col-sm-2 col-form-label">Sejarah</label>
+                            <div class="col-sm-10">
+                              <textarea class="form-control" id="sejarah" placeholder="Sejarah"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="InputLogo" class="col-sm-2 col-form-label">Logo Dinas</label>
+                            <div class="col-sm-5">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="offset-sm-2 col-sm-10">
+                              <div>
+                                <img class="attachment-img" src="/dist/img/AdminLTELogo.png" alt="Logo" width="150">
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                       </div>
-                    </form>
-                    <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+
+
+
+                      <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                        <form class="form-horizontal">
+                          <div class="form-group row">
+                            <label for="username" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="username" placeholder="Username">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="password" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Password">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="password2" class="col-sm-2 col-form-label">Password 2</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="password2" placeholder="Password 2">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="offset-sm-2 col-sm-10">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <button class="btn btn-warning" onclick="stepper.previous()">Previous</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
                   </div>
-                  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="username" class="col-sm-2 col-form-label">Username</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="username" placeholder="Username">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" placeholder="Password">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="password2" class="col-sm-2 col-form-label">Password 2</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="password2" placeholder="Password 2">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <button class="btn btn-warning" onclick="stepper.previous()">Previous</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
+              </div>
+              </form>
+              <!-- /.card-body -->
+              <div class="card-footer">
+
               </div>
             </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-
-            </div>
+            <!-- /.card -->
           </div>
-          <!-- /.card -->
         </div>
       </div>
-    </div>
-    <!-- /.container-fluid -->
+      <!-- /.container-fluid -->
   </section>
   <!-- /.content -->
 

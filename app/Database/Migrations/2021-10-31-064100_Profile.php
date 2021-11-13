@@ -9,31 +9,30 @@ class Profile extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id_prof'          => [
+            'id'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'logo'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
             'nama_dinas'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'visimisi'       => [
+            'visimisi' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'alamat'       => [
+            'alamat_dinas'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'sejarah' => [
                 'type' => 'TEXT',
-                'null' => true,
-            ],
-            'logo_dinas' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
                 'null' => true,
             ],
             'username'       => [
@@ -43,21 +42,9 @@ class Profile extends Migration
             'password'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
-            ],
-            'created_at'       => [
-                'type'       => 'DATETIME',
-                'null' => true,
-            ],
-            'updated_at'       => [
-                'type'       => 'DATETIME',
-                'null' => true,
-            ],
+            ]
         ]);
-<<<<<<< HEAD
         $this->forge->addPrimaryKey('id', true);
-=======
-        $this->forge->addKey('id_prof', true);
->>>>>>> 42c3fbdb07bcb2d205690c703e3c359fdfd508a4
         $this->forge->createTable('profile');
     }
 

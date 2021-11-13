@@ -10,5 +10,5 @@ class ProfileModel extends Model
     protected $primaryKey = "username";
     protected $returnType = "object";
     //protected $useTimestamps = true;
-    protected $allowedFields = ['username', 'password', 'nama_dinas'];
+    protected $allowedFields = ['username', 'password', 'logo', 'nama_dinas', 'visimisi', 'sejarah', 'alamat_dinas'];
 }

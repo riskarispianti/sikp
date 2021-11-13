@@ -4,43 +4,30 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Profile extends Migration
+class TempatProd extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_prof'          => [
+            'id_tp'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_dinas'       => [
+            'letak_prod'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'visimisi'       => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'alamat'       => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'sejarah' => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'logo_dinas' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
-                'null' => true,
-            ],
-            'username'       => [
+            'luas_prod'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'password'       => [
+            'kepemilikan'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'status_lahan'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
@@ -53,16 +40,12 @@ class Profile extends Migration
                 'null' => true,
             ],
         ]);
-<<<<<<< HEAD
-        $this->forge->addPrimaryKey('id', true);
-=======
-        $this->forge->addKey('id_prof', true);
->>>>>>> 42c3fbdb07bcb2d205690c703e3c359fdfd508a4
-        $this->forge->createTable('profile');
+        $this->forge->addKey('id_tp', true);
+        $this->forge->createTable('tempat_prod');
     }
 
     public function down()
     {
-        $this->forge->dropTable('profile');
+        $this->forge->dropTable('tempat_prod');
     }
 }

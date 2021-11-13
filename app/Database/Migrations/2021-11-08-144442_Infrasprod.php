@@ -4,45 +4,36 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Profile extends Migration
+class Infrasprod extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_prof'          => [
+            'id_ip'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_dinas'       => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
-            ],
-            'visimisi'       => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'alamat'       => [
+            'sarana_pengairan'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'sejarah' => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'logo_dinas' => [
-                'type' => 'VARCHAR',
+            'pengel_jar_irigasi'       => [
+                'type'       => 'VARCHAR',
                 'constraint' => '255',
-                'null' => true,
             ],
-            'username'       => [
+            'infras_pengel_air'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ],
-            'password'       => [
+            'kandang'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
+            ],
+            'rph'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
             ],
             'created_at'       => [
                 'type'       => 'DATETIME',
@@ -53,16 +44,12 @@ class Profile extends Migration
                 'null' => true,
             ],
         ]);
-<<<<<<< HEAD
-        $this->forge->addPrimaryKey('id', true);
-=======
-        $this->forge->addKey('id_prof', true);
->>>>>>> 42c3fbdb07bcb2d205690c703e3c359fdfd508a4
-        $this->forge->createTable('profile');
+        $this->forge->addKey('id_ip', true);
+        $this->forge->createTable('infras_prod');
     }
 
     public function down()
     {
-        $this->forge->dropTable('profile');
+        $this->forge->dropTable('infras_prod');
     }
 }

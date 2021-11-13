@@ -4,43 +4,26 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Profile extends Migration
+class Sentraprod extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_prof'          => [
+            'id_sp'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_dinas'       => [
+            'nama_sp'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'visimisi'       => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'alamat'       => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'sejarah' => [
-                'type' => 'TEXT',
-                'null' => true,
-            ],
-            'logo_dinas' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
-                'null' => true,
-            ],
-            'username'       => [
+            'kecamatan'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'password'       => [
+            'kelurahan'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
@@ -53,16 +36,12 @@ class Profile extends Migration
                 'null' => true,
             ],
         ]);
-<<<<<<< HEAD
-        $this->forge->addPrimaryKey('id', true);
-=======
-        $this->forge->addKey('id_prof', true);
->>>>>>> 42c3fbdb07bcb2d205690c703e3c359fdfd508a4
-        $this->forge->createTable('profile');
+        $this->forge->addKey('id_sp', true);
+        $this->forge->createTable('sentra_prod');
     }
 
     public function down()
     {
-        $this->forge->dropTable('profile');
+        $this->forge->dropTable('sentra_prod');
     }
 }
