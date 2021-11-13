@@ -51,7 +51,7 @@ class Profile extends Migration
             'updated_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
-            ],
+            ]
         ]);
 <<<<<<< HEAD
         $this->forge->addPrimaryKey('id', true);
