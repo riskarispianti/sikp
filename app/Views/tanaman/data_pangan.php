@@ -45,7 +45,7 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Nama Tanaman Pangan</th>
+                    <th>Komoditas</th>
                     <th>Kepemilikan</th>
                     <th>Lokasi</th>
                     <th></th>
@@ -64,7 +64,7 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Tomat</td>
+                    <td>Padi</td>
                     <td>Tony Chicken</td>
                     <td>DiKebun</td>
                     <td>
@@ -74,9 +74,9 @@
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Tomat</td>
-                    <td>Tony Chicken</td>
-                    <td>DiKebun</td>
+                    <td>jagung</td>
+                    <td>PT.sereal</td>
+                    <td>Dikebun</td>
                     <td>
                       <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
@@ -84,8 +84,8 @@
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Tomat</td>
-                    <td>Tony Chicken</td>
+                    <td>Sagu</td>
+                    <td>Kantor advoat</td>
                     <td>DiKebun</td>
                     <td>
                       <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
@@ -94,9 +94,9 @@
                   </tr>
                   <tr>
                     <td>5</td>
-                    <td>Tomat</td>
-                    <td>Tony Chicken</td>
-                    <td>DiKebun</td>
+                    <td>Tebu</td>
+                    <td>PT.Rajawali</td>
+                    <td>Dikebun</td>
                     <td>
                       <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>

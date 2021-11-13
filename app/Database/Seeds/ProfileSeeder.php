@@ -28,7 +28,10 @@ class ProfileSeeder extends Seeder
             'username' => $faker->name,
             'password' => 'user'
         ];
+
+
         $this->db->table('profile')->insert($data);
     }
+    
 }
 } 

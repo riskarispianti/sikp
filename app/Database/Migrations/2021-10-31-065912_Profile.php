@@ -38,6 +38,18 @@ class Profile extends Migration
             'password'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
+            ],
+            'visi'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'misi'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'sejarah'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
             ]
         ]);
         $this->forge->addKey('id', true);
