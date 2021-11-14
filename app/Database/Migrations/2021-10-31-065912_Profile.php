@@ -53,11 +53,7 @@ class Profile extends Migration
                 'null' => true,
             ]
         ]);
-<<<<<<< HEAD
-        $this->forge->addPrimaryKey('id', true);
-=======
-        $this->forge->addKey('id_prof', true);
->>>>>>> 42c3fbdb07bcb2d205690c703e3c359fdfd508a4
+        $this->forge->addKey('id', true);
         $this->forge->createTable('profile');
     }
 

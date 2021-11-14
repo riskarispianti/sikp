@@ -38,7 +38,7 @@
             <div class="card-body p-0">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                  <a href="/tanaman/tambah" class="nav-link">
+                  <a href="<?= base_url('/tanaman/tambah'); ?>" class="nav-link">
                     <i class="fas fa-plus"></i> Tambah Data
                   </a>
                 </li>
@@ -76,22 +76,22 @@
                     <th>Lokasi</th>
                     <th></th>
                   </tr>
-                
+
                 </thead>
                 <tbody>
-                  <?php foreach($tanaman as $tan): ?>
-                  <tr>
-                    <td>1</td>
-                    <td><?= $tan['komoditas']; ?> </td>
-                    <td><?= $tan['kepemilikan']; ?></td>
-                    <td><?= $tan['kecamatan']; ?></td>
-                    <td>
-                    
-                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
-                        <i class="fa fa-folder-open"></i> Detail</a>
-                    </td>
-                  </tr>
-                    <?php endforeach; ?>
+                  <?php foreach ($tanaman as $tan) : ?>
+                    <tr>
+                      <td>1</td>
+                      <td><?= $tan['komoditas']; ?> </td>
+                      <td><?= $tan['kepemilikan']; ?></td>
+                      <td><?= $tan['kecamatan']; ?></td>
+                      <td>
+
+                        <a href="<?= base_url('/tanaman/detail'); ?>" class=" btn btn-block btn-info btn-sm" type="button">
+                          <i class="fa fa-folder-open"></i> Detail</a>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

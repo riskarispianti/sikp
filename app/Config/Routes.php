@@ -39,6 +39,7 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
 $routes->get('/tanaman', 'Tanaman::index');
+$routes->get('/tanaman/tambah', 'Tanaman::tambah');
 
 
 /*
