@@ -222,7 +222,7 @@ class Tanaman extends BaseController
       return redirect()->back()->withInput();
     }
 
-    $this->tanaman_pangan->insert([
+    $this->prod_tanam->insert([
       'nama_pangan' => $this->request->getVar('nama_pangan'),
       'jenis_pangan' => $this->request->getVar('jenis_pangan'),
       'luas_tanam' => $this->request->getVar('luas_tanam'),

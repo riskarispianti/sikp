@@ -6,16 +6,14 @@ use CodeIgniter\Model;
 
 class TanamanModel extends Model
 {
-    protected $table = "tanaman_pangan";
-    protected $primaryKey = "id";
+    protected $table = "prod_tanam";
+    protected $primaryKey = "id_tanam";
     protected $returnType = "object";
     protected $useTimestamps = true;
     protected $allowedFields = [
-        'id', 'nama_pangan', 'jenis_pangan', 'luas_tanam', 'luas_panen', 'produktivitas', 'jumlah_produksi', 'lama_proses',
-        'iklim', 'waktu_produksi', 'harga_jual', 'lahan_produksi', 'sumber_pengairan', 'bibit', 'pupuk', 'alat_teknologi',
-        'pemanfaatan_produksi', 'limbah_produksi', 'ancamana_produksi', 'letak_dan_luas_produksi', 'kepemilikan_dan_status_lahan',
-        'nama_sentra_produksi', 'lokasi_sentra_produksi', 'prasarana_pengairan', 'pengelolaan_jaringan', 'infrastruktur_pengelolaan',
-        'jumlah_petani', 'pembinaan_petani', 'kelembagaan_petani', 'kesejahteraan_petani'
+        'id_tanam', 'id_kom', 'jenis_tanam', 'ls_tanam', 'ls_panen', 'produktivitas', 'jml_prod', 'lama_proses_prod',
+        'perk_iklim', 'perk_tanam_panen', 'biaya_prod', 'harga_jual_prod', 'lahan_prod', 'sumber_pengairan', 'bibit', 'pupuk', 'alat_teknologi',
+        'peman_hasil_prod', 'limbah_hasil_prod', 'id_anc', 'id_tp', 'id_sp', 'id_ip', 'id_produsen'
     ];
 
     public function getTanam()

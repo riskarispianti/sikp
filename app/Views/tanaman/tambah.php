@@ -32,7 +32,7 @@
       </button>
     </div>
   <?php endif; ?>
-  <form method="post" action="<?= base_url('tanaman/save') ?>" class="form-horizontal">
+  <form action="/tanaman/tambah" class="form-horizontal" method="POST">
 
     <section class="content">
       <div class="container">
