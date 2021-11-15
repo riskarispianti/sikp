@@ -82,8 +82,8 @@
 
                 </thead>
                 <tbody>
-                  <?= $i = 1; ?>
-                  <?php foreach ($tanaman as $tan) : ?>
+                  <?php $i = 1;
+                  foreach ($tanaman as $tan) : ?>
                     <tr>
                       <td><?= $i++; ?></td>
                       <td><?= $tan['komoditas']; ?> </td>
