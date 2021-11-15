@@ -31,7 +31,7 @@ class Tanaman extends BaseController
   public function tambah()
   {
     $data = [
-      'title' => 'Detail Laporan | Ketersediaan Pangan'
+      'title' => 'Tambah Data Tanaman Pangan'
     ];
     return view('tanaman/tambah', $data);
   }
