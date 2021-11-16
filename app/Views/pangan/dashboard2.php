@@ -26,39 +26,46 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="/img/tumbuhan.png" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/img/perikanan.png" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/img/hewanternak.png" alt="Third slide">
-                </div>
+        <div class="col-md-3">
+          <!-- Profile Image -->
+          <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="img-fluid" src="/img/logo_portal.png" alt="User profile picture">
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-custom-icon" aria-hidden="true">
-                  <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-custom-icon" aria-hidden="true">
-                  <i class="fas fa-chevron-right"></i>
-                </span>
-                <span class="sr-only">Next</span>
-              </a>
+              <h3 class="profile-username text-center mt-4">Fakultas Ilmu Komputer</h3>
+              <p class="text-muted text-center">Universitas Subang</p>
             </div>
           </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">About Me</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <strong><i class="fas fa-book mr-1"></i> Visi & Misi</strong>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita sit,
+                voluptatum repellendus soluta obcaecati fugit sint,
+                nulla magni harum rem quae molestiae illum nostrum sequi temporibus numquam ipsum exercitationem quisquam.
+              </p>
+              <hr>
+              <strong><i class="fas fa-map-marker-alt mr-1"></i> Alamat</strong>
+              <p class="text-muted">Malibu, California</p>
+              <hr>
+              <strong><i class="far fa-file-alt mr-1"></i> Sejarah Singkat</strong>
+              <p class="text-muted">Di Universitas Subang berdiri fakultas ilmu Komputer jurusan sistem informasi pada tanggal
+                21 april 2005. Fakultas ilmu komputer mempunyai satu jurusan yaitu sistem informasi.</p>
+              <hr>
+              <strong><i class="far fa-file-alt mr-1"></i> Struktur Organisasi</strong>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
         </div>
       </div>
       <div class="row">
