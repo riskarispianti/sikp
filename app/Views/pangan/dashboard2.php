@@ -73,14 +73,14 @@
                   <h1 class="lead"><b>Tanaman Pangan, Holtikultura, dan perkebunan</b></h1>
                 </div>
                 <div class="col-5 text-center">
-                  <img src="../../dist/img/user1-128x128.jpg" class="img-fluid">
+                  <img src="/img/sabuah.png" class="img-fluid">
                 </div>
               </div>
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-primary">
-                  <i class="fas fa-arrow-circle-right"></i> More Info
+                <a href="#" class="btn btn-sm btn-outline-info">
+                  More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
             </div>
@@ -97,14 +97,14 @@
                   <h1 class="lead"><b>Peternakan</b></h1>
                 </div>
                 <div class="col-5 text-center">
-                  <img src="../../dist/img/user2-160x160.jpg" class="img-fluid">
+                  <img src="/img/kandang.png" class="img-fluid">
                 </div>
               </div>
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-primary">
-                  <i class="fas fa-arrow-circle-right"></i> More Info
+                <a href="#" class="btn btn-sm btn-outline-success">
+                  More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
             </div>
@@ -121,14 +121,14 @@
                   <h1 class="lead"><b>Perikanan</b></h1>
                 </div>
                 <div class="col-5 text-center">
-                  <img src="../../dist/img/user1-128x128.jpg" class="img-fluid">
+                  <img src="/img/emberikan2.png" class="img-fluid">
                 </div>
               </div>
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-primary">
-                  <i class="fas fa-arrow-circle-right"></i> More Info
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
             </div>
