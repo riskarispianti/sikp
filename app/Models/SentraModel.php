@@ -12,5 +12,5 @@ class SentraModel extends Model
     protected $allowedFields        = ['nama_sp', 'kecamatan', 'kelurahan'];
 
     // Dates
-    protected $useTimestamps        = false;
+    protected $useTimestamps        = true;
 }

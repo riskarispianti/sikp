@@ -55,11 +55,56 @@ class Tanaman extends BaseController
   }
   public function save()
   {
-    $this->tanamanModel->save([
-      // [
-      //   'komoditas' => $this->request->getVar('komoditas')
-      // ],
-      'id_kom' => $this->request->getVar('komoditas'),
+    $komoditas = [
+      'komoditas' => $this->request->getVar('komoditas')
+    ];
+    $this->komoditasModel->insert($komoditas);
+
+    $ancaman = [
+      'nama_anc' => $this->request->getVar('nama_anc'),
+      'penanggulangan' => $this->request->getVar('penanggulangan')
+    ];
+    $this->ancamanModel->insert($ancaman);
+
+    $infrastruktur = [
+      'sarana_pengairan' => $this->request->getVar('sarana_pengairan'),
+      'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
+      'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
+    ];
+    $this->infrastrukturModel->insert($infrastruktur);
+
+    $sentra = [
+      'nama_sp' => $this->request->getVar('nama_sp'),
+      'kecamatan' => $this->request->getVar('kecamatan'),
+      'kelurahan' => $this->request->getVar('kelurahan')
+    ];
+    $this->sentraModel->insert($sentra);
+
+    $tempat = [
+      'letak_prod' => $this->request->getVar('letak_prod'),
+      'luas_prod' => $this->request->getVar('luas_prod'),
+      'kepemilikan' => $this->request->getVar('kepemilikan'),
+      'status_lahan' => $this->request->getVar('status_lahan')
+    ];
+    $this->tempatModel->insert($tempat);
+
+    $produsen = [
+      'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
+      'pembinaan' => $this->request->getVar('pembinaan'),
+      'kelembagaan' => $this->request->getVar('kelembagaan'),
+      'kesejahteraan' => $this->request->getVar('kesejahteraan')
+    ];
+    $this->produsenModel->insert($produsen);
+
+    $id_kom = $this->komoditasModel->insertID();
+    $id_anc = $this->ancamanModel->insertID();
+    $id_tp = $this->tempatModel->insertID();
+    $id_sp = $this->sentraModel->insertID();
+    $id_ip = $this->infrastrukturModel->insertID();
+    $id_produsen = $this->produsenModel->insertID();
+
+    $data = [
+      'id_kom' => $id_kom,
       'jenis_tanam' => $this->request->getVar('jenis_tanam'),
       'ls_tanam' => $this->request->getVar('ls_tanam'),
       'ls_panen' => $this->request->getVar('ls_panen'),
@@ -77,34 +122,13 @@ class Tanaman extends BaseController
       'alat_teknologi' => $this->request->getVar('alat_teknologi'),
       'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
       'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
-
-      // [
-      //   'nama_anc' => $this->request->getVar('nama_anc'),
-      //   'penanggulangan' => $this->request->getVar('penanggulangan'),
-      // ],
-      // [
-      //   'letak_prod' => $this->request->getVar('letak_prod'),
-      //   'luas_prod' => $this->request->getVar('luas_prod'),
-      //   'kepemilikan' => $this->request->getVar('kepemilikan'),
-      //   'status_lahan' => $this->request->getVar('status_lahan')
-      // ],
-      // [
-      //   'nama_sp' => $this->request->getVar('nama_sp'),
-      //   'kecamatan' => $this->request->getVar('kecamatan'),
-      //   'kelurahan' => $this->request->getVar('kelurahan')
-      // ],
-      // [
-      //   'sarana_pengairan' => $this->request->getVar('sarana_pengairan'),
-      //   'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
-      //   'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
-      // ],
-      // [
-      //   'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
-      //   'pembinaan' => $this->request->getVar('pembinaan'),
-      //   'kelembagaan' => $this->request->getVar('kelembagaan'),
-      //   'kesejahteraan' => $this->request->getVar('kesejahteraan')
-      // ]
-    ]);
+      'id_anc' => $id_anc,
+      'id_tp' => $id_tp,
+      'id_sp' => $id_sp,
+      'id_ip' => $id_ip,
+      'id_produsen' => $id_produsen
+    ];
+    $this->tanamanModel->insert($data);
 
     return redirect()->to('/tanaman');
   }

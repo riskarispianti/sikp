@@ -124,7 +124,7 @@
                   <div class="form-group row">
                     <label for="sumber_pengairan" class="col-sm-5 col-form-label">Sumber Pengairan</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="sumber_pengairan" name="sumber_pengairan">
+                      <select class="form-control" name="sumber_pengairan">
                         <option>---</option>
                         <option>Irigasi</option>
                         <option>air Hujan</option>
@@ -136,7 +136,7 @@
                   <div class="form-group row">
                     <label for="bibit" class="col-sm-5 col-form-label">Bibit</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="bibit" name="bibit">
+                      <select class="form-control" name="bibit">
                         <option>---</option>
                         <option>Produksi Sendiri</option>
                         <option>Beli</option>
@@ -147,7 +147,7 @@
                   <div class="form-group row">
                     <label for="pupuk" class="col-sm-5 col-form-label">Pupuk</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="pupuk" name="pupuk">
+                      <select class="form-control" name="pupuk">
                         <option>---</option>
                         <option>Produksi Sendiri</option>
                         <option>Beli</option>
@@ -158,13 +158,13 @@
                   <div class="form-group row">
                     <label for="alat_teknologi" class="col-sm-5 col-form-label">Alat/teknologi yg Digunakan</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="alat_teknologi" name="alat_teknologi" placeholder="Alat/Teknologi">
+                      <input type="text" class="form-control" name="alat_teknologi" placeholder="Alat/Teknologi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="peman_hsl_prod" class="col-sm-5 col-form-label">Pemanfaatan Hasil Produksi</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="peman_hsl_prod" name="peman_hsl_prod">
+                      <select class="form-control" name="peman_hsl_prod">
                         <option>---</option>
                         <option>Dikonsumsi Sendiri</option>
                         <option>Dijual Langsung</option>
@@ -175,7 +175,7 @@
                   <div class="form-group row">
                     <label for="limbah_hsl_prod" class="col-sm-5 col-form-label">Limbah Produksi dan Pengelolaannya</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="limbah_hsl_prod" name="limbah_hsl_prod">
+                      <select class="form-control" name="limbah_hsl_prod">
                         <option>---</option>
                         <option>Dijual</option>
                         <option>Dimanfaatkan Sendiri</option>
@@ -191,13 +191,13 @@
                   <div class="form-group row my-4">
                     <label for="ancaman" class="col-sm-5 col-form-label">Ancaman</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="ancaman" name="ancaman" placeholder="Ancaman">
+                      <input type="text" class="form-control" name="nama_anc" placeholder="Ancaman">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="penanggulangan" class="col-sm-5 col-form-label">Cara Penanggulangan</label>
                     <div class="col-sm-7">
-                      <textarea class="form-control" id="penganggulangan" name="penganggulangan"></textarea>
+                      <textarea class="form-control" name="penganggulangan"></textarea>
                     </div>
                   </div>
                 </div>
@@ -209,25 +209,25 @@
                   <div class="form-group row my-4">
                     <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="letak_prod" placeholder="Letak produksi">
+                      <input type="text" class="form-control" name="letak_prod" placeholder="Letak produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="luas_prod" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="luas_prod" name="luas_prod" placeholder="Luas produksi">
+                      <input type="text" class="form-control" name="luas_prod" placeholder="Luas produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="kepemilikan" class="col-sm-5 col-form-label">Pemilik Kawasan Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="kepemilikan" name="kepemilikan" placeholder="Pemilik produksi">
+                      <input type="text" class="form-control" name="kepemilikan" placeholder="Pemilik produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="status_lahan" class="col-sm-5 col-form-label">Status Lahan</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="status_lahan" name="status_lahan" placeholder="Status Lahan">
+                      <input type="text" class="form-control" name="status_lahan" placeholder="Status Lahan">
                     </div>
                   </div>
                 </div>
@@ -237,19 +237,19 @@
                   <div class="form-group row my-4">
                     <label for="nama_sp" class="col-sm-5 col-form-label">Identitas Sentra Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="nama_sp" name="nama_sp" placeholder="Sentra Produksi">
+                      <input type="text" class="form-control" name="nama_sp" placeholder="Sentra Produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="kecamatan" class="col-sm-5 col-form-label">Kecamatan</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="Kecamatan">
+                      <input type="text" class="form-control" name="kecamatan" placeholder="Kecamatan">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="kelurahan" class="col-sm-5 col-form-label">Kelurahan</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="kelurahan" name="kelurahan" placeholder="Kelurahan">
+                      <input type="text" class="form-control" name="kelurahan" placeholder="Kelurahan">
                     </div>
                   </div>
                 </div>
@@ -259,19 +259,19 @@
                   <div class="form-group row my-4">
                     <label for="sarana_pengairan" class="col-sm-5 col-form-label">Sarana dan Prasarana Pengairan</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="sarana_pengairan" name="sarana_pengairan" placeholder="Prasarana">
+                      <input type="text" class="form-control" name="sarana_pengairan" placeholder="Prasarana">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="pengel_jar_irigasi" class="col-sm-5 col-form-label">Pengelolaan Jaringan Irigasi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="pengel_jar_irigasi" name="pengel_jar_irigasi" placeholder="pengelolaan">
+                      <input type="text" class="form-control" name="pengel_jar_irigasi" placeholder="pengelolaan">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="infras_pengel_air" class="col-sm-5 col-form-label">Infrastruktur Pengelolaan Air</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="infras_pengel_air" name="infras_pengel_air" placeholder="Prasarana">
+                      <input type="text" class="form-control" name="infras_pengel_air" placeholder="pengelolaan air">
                     </div>
                   </div>
                 </div>
@@ -281,25 +281,25 @@
                   <div class="form-group row my-4">
                     <label for="jml_penghasil_kom" class="col-sm-5 col-form-label">Jumlah Produsen/Petani</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="jml_penghasil_kom" name="jml_penghasil_kom">
+                      <input type="text" class="form-control" name="jml_penghasil_kom">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="pembinaan" class="col-sm-5 col-form-label">Pembinaan Kepada Produsen/Petani</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="pembinaan" name="pembinaan">
+                      <input type="text" class="form-control" name="pembinaan">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="kelembagaan" name="kelembagaan">
+                      <input type="text" class="form-control" name="kelembagaan">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="kesejahteraan" class="col-sm-5 col-form-label">Kesejahteraan Petani</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="kesejahteraan" name="kesejahteraan">
+                      <input type="text" class="form-control" name="kesejahteraan">
                     </div>
                   </div>
                 </div>
