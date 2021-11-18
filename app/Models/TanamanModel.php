@@ -10,6 +10,38 @@ class TanamanModel extends Model
     protected $primaryKey = 'id_tanam';
     protected $useAutoIncrement = true;
     protected $useTimestamps = true;
+    protected $allowedfields = [
+        'komoditas',
+        'jenis_tanam',
+        'ls_tanam',
+        'ls_panen',
+        'produktivitas',
+        'jml_prod',
+        'lama_proses_prod',
+        'perk_iklim',
+        'perk_tanam_panen',
+        'biaya_prod',
+        'harga_jual_prod',
+        'lahan_prod',
+        'sumber_pengairan',
+        'bibit',
+        'pupuk',
+        'alat_teknologi',
+        'peman_hsl_prod',
+        'limbah_hsl_prod',
+        'nama_anc',
+        'penanggulangan',
+        'letak_prod',
+        'luas_prod',
+        'kepemilikan',
+        'status_lahan',
+        'nama_sp',
+        'kecamatan',
+        'kelurahan',
+        'sarana_pengairan',
+        'pengel_jar_irigasi',
+        'infras_pengel_air'
+    ];
 
     public function getTanam($id_tanam = false)
     {

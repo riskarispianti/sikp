@@ -35,7 +35,7 @@ $routes->get('/', 'Login::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
 $routes->get('/tanaman', 'Tanaman::index');
-// $routes->get('/detail/(:segment)', 'Tanaman::detail/$1');
+// $routes->add('/tanaman/tambah', 'tanaman::save');
 
 /*
  * --------------------------------------------------------------------
