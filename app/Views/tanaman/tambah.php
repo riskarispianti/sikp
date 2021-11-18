@@ -36,13 +36,13 @@
                   <div class="form-group row my-4">
                     <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="komoditas" name="komoditas" placeholder="Komoditas" autofocus>
+                      <input type="text" class="form-control" name="komoditas" placeholder="Komoditas" autofocus>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="jenis_pangan" class="col-sm-5 col-form-label">Jenis Pangan</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="jenis_pangan" name="jenis_pangan">
+                      <select class="form-control" name="jenis_tanam">
                         <option>---</option>
                         <option>Serealia</option>
                         <option>Umbi-umbian</option>
@@ -57,61 +57,61 @@
                   <div class="form-group row">
                     <label for="ls_tanam" class="col-sm-5 col-form-label">Luas Tanam/Areal</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="ls_tanam" name="ls_tanam" placeholder="Ha">
+                      <input type="text" class="form-control" name="ls_tanam" placeholder="Ha">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="ls_panen" class="col-sm-5 col-form-label">Luas Panen</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="ls_panen" name="ls_panen" placeholder="Ha">
+                      <input type="text" class="form-control" name="ls_panen" placeholder="Ha">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="produktivitas" class="col-sm-5 col-form-label">Produktivitas</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="produktivitas" name="produktivitas" placeholder="Ton/Ha">
+                      <input type="text" class="form-control" name="produktivitas" placeholder="Ton/Ha">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="jml_prod" class="col-sm-5 col-form-label">Jumlah Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="jml_prod" name="jml_prod" placeholder="Ton">
+                      <input type="text" class="form-control" name="jml_prod" placeholder="Ton">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="lama_proses_prod" class="col-sm-5 col-form-label">Lama Proses Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="lama_proses_prod" name="lama_proses_prod" placeholder="Bulan/Tahun">
+                      <input type="text" class="form-control" name="lama_proses_prod" placeholder="Bulan/Tahun">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="perk_iklim" class="col-sm-5 col-form-label">Perkiraan Iklim</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="perk_iklim" name="perk_iklim" placeholder="Perkiraan iklim">
+                      <input type="text" class="form-control" name="perk_iklim" placeholder="Perkiraan iklim">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="perk_tanam_panen" class="col-sm-5 col-form-label">Perkiraan Musim Tanam dan Panen</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="perk_tanam_panen" name="perk_tanam_panen" placeholder="Waktu produksi">
+                      <input type="text" class="form-control" name="perk_tanam_panen" placeholder="Waktu produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="biaya_prod" class="col-sm-5 col-form-label">Biaya Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="biaya_prod" name="biaya_prod" placeholder="Biaya produksi">
+                      <input type="text" class="form-control" name="biaya_prod" placeholder="Biaya produksi">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="harga_jual_prod" class="col-sm-5 col-form-label">Harga Jual Hasil Produksi</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="harga_jual_prod" name="harga_jual_prod" placeholder="Harga jual">
+                      <input type="text" class="form-control" name="harga_jual_prod" placeholder="Harga jual">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="lahan_prod" class="col-sm-5 col-form-label">Lahan Produksi</label>
                     <div class="col-sm-7">
-                      <select class="form-control" id="lahan_prod" name="lahan_prod">
+                      <select class="form-control" name="lahan_prod">
                         <option>---</option>
                         <option>Sawah Irigasi</option>
                         <option>Sawah Tadah Hujan</option>

@@ -10,7 +10,7 @@ class TanamanModel extends Model
     protected $primaryKey = 'id_tanam';
     protected $useAutoIncrement = true;
     protected $useTimestamps = true;
-    protected $allowedfields = [
+    protected $allowedFields  = [
         'jenis_tanam',
         'ls_tanam',
         'ls_panen',
