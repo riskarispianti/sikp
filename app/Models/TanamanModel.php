@@ -11,7 +11,6 @@ class TanamanModel extends Model
     protected $useAutoIncrement = true;
     protected $useTimestamps = true;
     protected $allowedfields = [
-        'komoditas',
         'jenis_tanam',
         'ls_tanam',
         'ls_panen',
@@ -29,18 +28,6 @@ class TanamanModel extends Model
         'alat_teknologi',
         'peman_hsl_prod',
         'limbah_hsl_prod',
-        'nama_anc',
-        'penanggulangan',
-        'letak_prod',
-        'luas_prod',
-        'kepemilikan',
-        'status_lahan',
-        'nama_sp',
-        'kecamatan',
-        'kelurahan',
-        'sarana_pengairan',
-        'pengel_jar_irigasi',
-        'infras_pengel_air'
     ];
 
     public function getTanam($id_tanam = false)
