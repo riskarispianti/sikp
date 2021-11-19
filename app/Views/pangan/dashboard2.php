@@ -81,7 +81,7 @@
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-outline-info">
+                <a href="/tanaman" class="btn btn-sm btn-outline-info">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>

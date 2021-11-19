@@ -17,7 +17,7 @@
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="/dashboard/home2" class="nav-link">Home2</a>
+        <a href="/dashboard/grafik" class="nav-link">Persediaan</a>
       </li>
       <li class="nav-item dropdown">
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data Pangan</a>
