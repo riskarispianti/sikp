@@ -2,15 +2,27 @@
 
 namespace App\Controllers;
 
+use App\Models\TanamanModel;
+
 class Tanaman extends BaseController
 {
+  protected $tanamanModel;
+  public function __construct()
+  {
+    $this->tanamanModel = new TanamanModel();
+  }
+
   public function index()
   {
+    $tanaman = $this->tanamanModel->getTanam();
+
     $data = [
-      'title' => 'Data Laporan | Ketersediaan Pangan'
+      'title' => 'Data Laporan | Ketersediaan Pangan',
+      'tanaman' => $tanaman
     ];
-    return view('tanaman/data_pangan', $data);
+    echo view('tanaman/data_pangan', $data);
   }
+
   public function detail()
   {
     $data = [
@@ -24,5 +36,12 @@ class Tanaman extends BaseController
       'title' => 'Detail Laporan | Ketersediaan Pangan'
     ];
     return view('tanaman/tambah', $data);
+  }
+  public function edit()
+  {
+    $data = [
+      'title' => 'Edit Laporan | Ketersediaan Pangan'
+    ];
+    return view('tanaman/edit', $data);
   }
 }

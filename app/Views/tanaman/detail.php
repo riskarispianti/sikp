@@ -191,7 +191,7 @@
 
               </div>
               <div class="text-center mt-5 mb-3">
-                <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/tanaman/edit" class="btn btn-sm btn-primary">Edit</a>
                 <a href="/tanaman" class="btn btn-sm btn-warning">Kembali</a>
                 <a href="#" class="btn btn-sm btn-danger">Hapus</a>
               </div>
