@@ -86,11 +86,10 @@
                     <td><?= $tan['kepemilikan']; ?></td>
                     <td><?= $tan['kecamatan']; ?></td>
                     <td>
-                    
-                      <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
+                      <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-block btn-info btn-sm" type="button">
                         <i class="fa fa-folder-open"></i> Detail</a>
                     </td>
-                  </tr>
+                  </tr>la
                     <?php endforeach; ?>
                 </tbody>
               </table>

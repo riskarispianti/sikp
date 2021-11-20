@@ -11,18 +11,20 @@ class Tanaman extends BaseController
     }
     public function index()
     {
-      $tanaman =$this->tanamanModel->getTanam();
+     
       
       $data = [
       'title' => 'Data Laporan | Ketersediaan Pangan',
-      'tanaman' => $tanaman
+      'tanaman' => $this ->tanamanModel >getTanam()
     ];
     echo view('tanaman/data_pangan', $data);
   }
-  public function detail()
+  public function detail($id_tanam)
   {
     $data = [
-      'title' => 'Detail Laporan | Ketersediaan Pangan'
+      'title' => 'Detail Laporan | Ketersediaan Pangan',
+      'tanaman' => $this ->tanamanModel >getTanam($id_tanam)
+     
     ];
     return view('tanaman/detail', $data);
   }

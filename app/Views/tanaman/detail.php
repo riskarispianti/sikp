@@ -40,7 +40,7 @@
 
                         </div>
                         <div class="card-body">
-                          <strong>Sayur Musiman</strong>
+                          <strong>jenis_tanam</strong>
                         </div>
                       </div>
 
@@ -50,10 +50,10 @@
 
                         </div>
                         <div class="card-body">
-                          <strong>Wereng</strong>
+                          <strong>nama_amcaman</strong>
 
                           <p class="text-muted">
-                            dengan menyemprotkan pestisida kepada tanaman tomat tersebut
+                            dengan menyemprotkan pestisida kepada tanaman cabai tersebut
                           </p>
                         </div>
                       </div>
@@ -72,12 +72,16 @@
                           <strong>Pengelolaan Jaringan Irigasi, Embung dan Rawa</strong>
 
                           <p class="text-muted">
-                            Jaringan irigasi memakai ....
+                            Jaringan irigasi memakai air hujan
                           </p>
                           <strong>Insfrastruktur Pengelolaan Air Bagi Pertanian</strong>
 
+
+
+                          
                           <p class="text-muted">
-                            Sungai
+                            
+                          
                           </p>
                         </div>
                       </div>
@@ -90,19 +94,19 @@
                         <div class="card-body">
                           <strong>Jumlah Produsen/Petani Pengahasil Komoditas</strong>
                           <p class="text-muted">
-                            2000 Petani
+                            100 Petani
                           </p>
                           <strong>Pembinaan Kepada Produsen/Petani</strong>
                           <p class="text-muted">
-                            Pada perkebunan tomat melakukan pembinaan Kepada petani pengelola perkebunan
+                            Pada perkebunan cabai melakukan pembinaan Kepada petani pengelola perkebunan
                           </p>
                           <strong>Kelembagaan Produsen/Petani</strong>
-                          <p class="text-muted">
-                            Lembaga Pertaniaan
+                          p class="text-muted">
+                            <?= $tanaman['kelembagaan']; ?>
                           </p>
                           <strong>Kesejahteraan Petani</strong>
                           <p class="text-muted">
-                            Kesejahteraan Petani
+                            <?= $tanaman['Kesejahteraan Petani']; ?>
                           </p>
                         </div>
                       </div>
@@ -120,36 +124,41 @@
                         </div>
                         <div class="card-body">
                           <dl>
-                            <dt>Luas Tanam/Areal</dt>
-                            <dd>200 Ha</dd>
+                            <dt>Kelompok/Jenis Pangan</dt>
+                            <dd><?= $tanaman['jenis tanam']; ?></dd>
+                            <dt>Luas Tanaman/Areal</dt>
+                            <dd><?= $tanaman['ls_tanam']; ?></dd>
                             <dt>Luas Panen</dt>
-                            <dd>200 Ha</dd>
+                            <dd><?= $tanaman['ls_tanam']=; ?></dd>
                             <dt>Produktivitas</dt>
-                            <dd>100 Ton/Ha</dd>
+                            <dd><?= $tanaman['produktivitas']; ?></dd>
+                            <dt>Jumlah Produksi</dt>
+                            <dd><?= $tanaman['jml_prod']; ?></dd>
                             <dt>Lama Proses Produksi</dt>
-                            <dd>4 Bulan</dd>
+                            <dd><?= $tanaman['lama_proses_prod'] ?></dd>
                             <dt>Perkiraan Iklim</dt>
-                            <dd>Pada Musim Panas</dd>
-                            <dt>Perkiraan Musim Tanam dan Panen</dt>
-                            <dd>Pada Musim Panas</dd>
-                            <dt>Biaya Produksi</dt>
-                            <dd>10 Juta</dd>
-                            <dt>Harga Jual Hasil Produksi</dt>
-                            <dd>10 Juta</dd>
-                            <dt>Lahan Produksi</dt>
-                            <dd>Perkebunan</dd>
-                            <dt>Sumber Pengairan</dt>
-                            <dd>Irigasi, Air Hujan, dan Sungai</dd>
-                            <dt>Bibit</dt>
-                            <dd>Produksi Sendiri</dd>
+                            <dd><?= $tanaman [' perk_iklim']; ?></dd>
+                            <dt>Perkiraan Musim Tanaman Panen</dt>
+                            <dd><?= $tanaman ['perk_tanam_panen']; ?></dd>
+                            <dt>Biaya Produksi </dt>
+                            <dd><?= $tanaman ['biaya_prod']; ?></dd>
+                            <dt>Harga Jual Hasil Produksi </dt>
+                            <dd><?= $tanaman ['harga_jual_prod']; ?></dd>
+                            <dt>Lahan Produksi </dt>
+                            <dd><?= $tanaman ['lahan_prod']; ?></dd>
+                            <dt>Sumber Pengairan </dt>
+                            <dd><?= $tanaman ['sumber_pengairan']; ?></dd>
+                            <dt>Bibit </dt>
+                            <dd><?= $thistanaman ['bibit']; ?>l</dd>
                             <dt>Pupuk</dt>
-                            <dd>Produksi Sendiri, Beli</dd>
-                            <dt>Alat atau teknologi yang digunakan</dt>
-                            <dd>Traktor, Cangkul, dll</dd>
+                            <dd><?= $tanaman ['pupuk']; ?></dd>
+                            <dt>Alat atau teknologi yang digunakan</dd>
+                            <dd><?= $tanaman ['alat_teknologi']; ?></dd>
+                            
                             <dt>Pemanfaatan Hasil Produksi</dt>
-                            <dd>Dikonsumsi sendiri dan Dijual langsung</dd>
-                            <dt>Limbah Hasil Produksi dan Pengelolaannya</dt>
-                            <dd>Dimanfaatkan Sendiri dan diolah</dd>
+                            <dd><?= $tanaman ['peman_hsl_prod']; ?></dd>
+                            <dt>Limbah Hasil Produksi dan Pengelolaannya</dd> 
+                            <dd><?= $tanaman ['limbah_hsl_prod']; ?></dd>
                           </dl>
                         </div>
                       </div>
@@ -159,34 +168,41 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h1 class="text-primary"><i class="fas fa-paint-brush"></i> TOMAT</h1>
-              <div class="text-muted">
-                <p class="text-sm">Kepemilikan
-                  <b class="d-block">Tony Chicken</b>
-                </p>
-                <p class="text-sm">Status Lahan
-                  <b class="d-block">Dipake</b>
-                </p>
-                <p class="text-sm">Letak dan Luas Kawasan Produksi
-                  <b class="d-block">Deveint Inc</b>
-                </p>
-              </div>
-
-              <h5 class="mt-5 text-muted">Senstra Produksi</h5>
-              <div class="text-muted">
-                <strong>Nama/Identitas Senstra Produksi</strong>
+              <h1 class="text-primary"><?= $tanaman['Komoditas']; ?></h1>
+              <h5 class="mt-5 text-muted">Tempat Produksi</h5>
+              <div class="text-muted
+              <strong>Nama/Identitas Sentra Produksi</strong>
                 <p class="text-muted">
-                  BBBlgfg
+                  <?= $tanaman ['nama_sp']; ?>
                 </p>
 
                 <strong>Kecamatan</strong>
                 <p class="text-muted">
-                  Link
+                  <?= $tanaman['kecamatan']; ?>
                 </p>
 
                 <strong>Kelurahan</strong>
                 <p class="text-muted">
-                  B.S.
+                  <?= $tanaman['kelurahan']; ?>
+                </p>
+
+                
+
+              <h5 class="mt-5 text-muted">Senstra Produksi</h5>
+              <div class="text-muted">
+                <strong>Nama/Identitas Sentra Produksi</strong>
+                <p class="text-muted">
+                  <?= $tanaman ['nama_sp']; ?>
+                </p>
+
+                <strong>Kecamatan</strong>
+                <p class="text-muted">
+                  <?= $tanaman['kecamatan']; ?>
+                </p>
+
+                <strong>Kelurahan</strong>
+                <p class="text-muted">
+                  <?= $tanaman['kelurahan']; ?>
                 </p>
 
               </div>
