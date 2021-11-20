@@ -9,7 +9,7 @@ class Dashboard extends BaseController
     $data = [
       'title' => 'Home | Ketersediaan Pangan'
     ];
-    return view('pangan/dashboard', $data);
+    return view('pangan/dashboard2', $data);
   }
   public function grafik()
   {
@@ -17,5 +17,12 @@ class Dashboard extends BaseController
       'title' => 'Ketersediaan Pangan'
     ];
     return view('pangan/grafik', $data);
+  }
+  public function home2()
+  {
+    $data = [
+      'title' => 'Ketersediaan Pangan'
+    ];
+    return view('pangan/dashboard2', $data);
   }
 }

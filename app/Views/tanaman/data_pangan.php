@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Laporan Ketersediaan Pangan</small></h1>
+          <h1 class="m-0">Laporan Produksi Tanaman Pangan, Holtikultura, dan Perkebunan</small></h1>
 
         </div><!-- /.col -->
         <div class="col-sm-6">
@@ -26,7 +26,7 @@
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="card">
             <div class="card-header">
               <div class="card-tools">
@@ -64,7 +64,7 @@
           <!-- /.card -->
 
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <div class="card">
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -74,18 +74,26 @@
                     <th>Komoditas</th>
                     <th>Kepemilikan</th>
                     <th>Lokasi</th>
+                    <th>Jenis Tanam</th>
+                    <th>Luas Panen</th>
+                    <th>Produktivitas</th>
                     <th></th>
                   </tr>
+
                 </thead>
                 <tbody>
-                  <?php foreach ($tanaman as $tan) : ?>
+                  <?php $i = 1;
+                  foreach ($tanaman as $tan) : ?>
                     <tr>
-                      <td>1</td>
-                      <td><?= $tan['komoditas']; ?></td>
+                      <td><?= $i++; ?></td>
+                      <td><?= $tan['komoditas']; ?> </td>
                       <td><?= $tan['kepemilikan']; ?></td>
                       <td><?= $tan['kecamatan']; ?></td>
+                      <td><?= $tan['jenis_tanam']; ?></td>
+                      <td><?= $tan['ls_panen']; ?></td>
+                      <td><?= $tan['produktivitas']; ?></td>
                       <td>
-                        <a href="/tanaman/detail" class="btn btn-block btn-info btn-sm" type="button">
+                        <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-block btn-info btn-sm" type="button">
                           <i class="fa fa-folder-open"></i> Detail</a>
                       </td>
                     </tr>
