@@ -3,31 +3,48 @@
 namespace App\Controllers;
 
 use App\Models\TanamanModel;
+use App\Models\AncamanModel;
+use App\Models\InfrastrukturModel;
+use App\Models\KomoditasModel;
+use App\Models\ProdusenModel;
+use App\Models\SentraModel;
+use App\Models\TempatModel;
 
 class Tanaman extends BaseController
 {
   protected $tanamanModel;
+  protected $ancamanModel;
+  protected $infrastrukturModel;
+  protected $komoditasModel;
+  protected $produsenModel;
+  protected $sentraModel;
+  protected $tempatModel;
 
   public function __construct()
   {
     $this->tanamanModel = new TanamanModel();
+    $this->ancamanModel = new AncamanModel();
+    $this->infrastrukturModel = new InfrastrukturModel();
+    $this->komoditasModel = new KomoditasModel();
+    $this->produsenModel = new ProdusenModel();
+    $this->sentraModel = new SentraModel();
+    $this->tempatModel = new TempatModel();
   }
 
   public function index()
   {
-    $tanaman = $this->tanamanModel->getTanam();
-
     $data = [
       'title' => 'Data Laporan | Ketersediaan Pangan',
-      'tanaman' => $tanaman
+      'tanaman' => $this->tanamanModel->getTanam()
     ];
     echo view('tanaman/data_pangan', $data);
   }
 
-  public function detail()
+  public function detail($id_tanam)
   {
     $data = [
-      'title' => 'Detail Laporan | Ketersediaan Pangan'
+      'title' => 'Detail Laporan | Ketersediaan Pangan',
+      'tanaman' => $this->tanamanModel->getTanam($id_tanam)
     ];
     return view('tanaman/detail', $data);
   }
@@ -35,225 +52,95 @@ class Tanaman extends BaseController
   public function tambah()
   {
     $data = [
-      'title' => 'Detail Laporan | Ketersediaan Pangan'
+      'title' => 'Tambah Data Tanaman Pangan',
     ];
     return view('tanaman/tambah', $data);
   }
 
   public function save()
   {
-    if (!$this->validate([
-      'nama_pangan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'jenis_pangan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'luas_tanam' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'luas_panen' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'produktivitas' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'jumlah_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'lama_proses' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'iklim' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'waktu_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'harga_jual' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'lahan_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'harga_jual' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'bibit' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'pupuk' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'alat_teknologi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'pemanfaatan_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'limbah_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'ancaman_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'letak_dan_luas_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'kepemilikan_dan_status_lahan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'nama_sentra_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'lokasi_sentra_produksi' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'prasarana_pengairan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'pengelolaan_jaringan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'infrastruktur_pengelolaan' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'jumah_petenai' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'pembinaan_petani' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'kelembagaan_petani' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-      'kesejahteraan_petani' => [
-        'rules' => 'required',
-        'errors' => [
-          'required' => '{field} Harus diisi'
-        ]
-      ],
-    ])) {
-      session()->setFlashdata('error', $this->validator->listErrors());
-      return redirect()->back()->withInput();
-    }
+    $komoditas = [
+      'komoditas' => $this->request->getVar('komoditas')
+    ];
+    $this->komoditasModel->insert($komoditas);
+    $id_kom = $this->komoditasModel->insertID();
 
-    $this->prod_tanam->insert([
-      'nama_pangan' => $this->request->getVar('nama_pangan'),
-      'jenis_pangan' => $this->request->getVar('jenis_pangan'),
-      'luas_tanam' => $this->request->getVar('luas_tanam'),
-      'luas_panen' => $this->request->getVar('luas_panen'),
+    $ancaman = [
+      'nama_anc' => $this->request->getVar('nama_anc'),
+      'penanggulangan' => $this->request->getVar('penanggulangan')
+    ];
+    $this->ancamanModel->insert($ancaman);
+    $id_anc = $this->ancamanModel->insertID();
+
+    $tempat = [
+      'letak_prod' => $this->request->getVar('letak_prod'),
+      'luas_prod' => $this->request->getVar('luas_prod'),
+      'kepemilikan' => $this->request->getVar('kepemilikan'),
+      'status_lahan' => $this->request->getVar('status_lahan')
+    ];
+    $this->tempatModel->insert($tempat);
+    $id_tp = $this->tempatModel->insertID();
+
+    $sentra = [
+      'nama_sp' => $this->request->getVar('nama_sp'),
+      'kecamatan' => $this->request->getVar('kecamatan'),
+      'kelurahan' => $this->request->getVar('kelurahan')
+    ];
+    $this->sentraModel->insert($sentra);
+    $id_sp = $this->sentraModel->insertID();
+
+    $infrastruktur = [
+      'sarana_pengairan' => $this->request->getVar('sarana_pengairan'),
+      'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
+      'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
+    ];
+    $this->infrastrukturModel->insert($infrastruktur);
+    $id_ip = $this->infrastrukturModel->insertID();
+
+    $produsen = [
+      'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
+      'pembinaan' => $this->request->getVar('pembinaan'),
+      'kelembagaan' => $this->request->getVar('kelembagaan'),
+      'kesejahteraan' => $this->request->getVar('kesejahteraan')
+    ];
+    $this->produsenModel->insert($produsen);
+    $id_produsen = $this->produsenModel->insertID();
+
+    $tanam = [
+      'id_kom' => $id_kom,
+      'jenis_tanam' => $this->request->getVar('jenis_tanam'),
+      'ls_tanam' => $this->request->getVar('ls_tanam'),
+      'ls_panen' => $this->request->getVar('ls_panen'),
       'produktivitas' => $this->request->getVar('produktivitas'),
-      'jumlah_produksi' => $this->request->getVar('jumlah_produksi'),
-      'lama_proses' => $this->request->getVar('lama_proses'),
-      'iklim' => $this->request->getVar('iklim'),
-      'waktu_produksi' => $this->request->getVar('waktu_produksi'),
-      'harga_jual' => $this->request->getVar('harga_jual'),
-      'lahan_produksi' => $this->request->getVar('lahan_produksi'),
+      'jml_prod' => $this->request->getVar('jml_prod'),
+      'lama_proses_prod' => $this->request->getVar('lama_proses_prod'),
+      'perk_iklim' => $this->request->getVar('perk_iklim'),
+      'perk_tanam_panen' => $this->request->getVar('perk_tanam_panen'),
+      'biaya_prod' => $this->request->getVar('biaya_prod'),
+      'harga_jual_prod' => $this->request->getVar('harga_jual_prod'),
+      'lahan_prod' => $this->request->getVar('lahan_prod'),
       'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
-      'bibit' => $this->request->getVar('bibir'),
+      'bibit' => $this->request->getVar('bibit'),
       'pupuk' => $this->request->getVar('pupuk'),
       'alat_teknologi' => $this->request->getVar('alat_teknologi'),
-      'pemanfaatan_produksi' => $this->request->getVar('pemanfaatan_produksi'),
-      'limbah_produksi' => $this->request->getVar('limbah_produksi'),
-      'ancaman_produksi' => $this->request->getVar('ancaman_produksi'),
-      'letak_dan_luas_produksi' => $this->request->getVar('letak_dan_luas_produksi'),
-      'kepemilikan_dan_status_lahan' => $this->request->getVar('kepemilikan_dan_status_lahan'),
-      'nama_sentra_produksi' => $this->request->getVar('nama_sentra_produksi'),
-      'lokasi_sentra_produksi' => $this->request->getVar('lokasi_sentra_produksi'),
-      'prasarana_pengairan' => $this->request->getVar('prasarana_pengairan'),
-      'pengelolaan_jaringan' => $this->request->getVar('pengelolaan_jaringan'),
-      'infrastruktur_pengelolaan' => $this->request->getVar('infrastruktur_pengelolaan'),
-      'jumlah_petani' => $this->request->getVar('jumlah_petani'),
-      'pembinaan_petani' => $this->request->getVar('pembinaan_petani'),
-      'kelembagaan_petani' => $this->request->getVar('kelembagaan_petani'),
-      'kesejahteraan_petani' => $this->request->getVar('kesejahteraan_petani')
-    ]);
-    session()->setFlashdata('message', 'Tambah Data Tanaman Pangan Berhasil');
+      'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
+      'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
+      'id_anc' => $id_anc,
+      'id_tp' => $id_tp,
+      'id_sp' => $id_sp,
+      'id_ip' => $id_ip,
+      'id_produsen' => $id_produsen
+    ];
+    // dd($tanam);
+    $this->tanamanModel->insert($tanam);
+
     return redirect()->to('/tanaman');
+  }
+  public function edit()
+  {
+    $data = [
+      'title' => 'Edit Laporan | Ketersediaan Pangan'
+    ];
+    return view('tanaman/edit', $data);
   }
 }

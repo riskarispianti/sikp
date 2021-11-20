@@ -39,8 +39,12 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
 $routes->get('/tanaman', 'Tanaman::index');
+<<<<<<< HEAD
 $routes->get('/tanaman/tambah', 'Tanaman::tambah');
 
+=======
+$routes->post('/tanaman/save', 'Tanaman::save');
+>>>>>>> 166f4eed7dbd07af5d64be3c529381dd73abc05e
 
 /*
  * --------------------------------------------------------------------
