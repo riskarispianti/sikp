@@ -325,15 +325,10 @@
                 </div>
               </div>
             </form>
-            >>>>>>> 166f4eed7dbd07af5d64be3c529381dd73abc05e
           </div>
           <!-- /.card-body -->
         </div>
-        <<<<<<< HEAD </form>
-          =======
-          <!-- /.card -->
       </div>
-      >>>>>>> 166f4eed7dbd07af5d64be3c529381dd73abc05e
     </section>
 
 </div>
