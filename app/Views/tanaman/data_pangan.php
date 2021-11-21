@@ -29,6 +29,7 @@
         <div class="col-md">
           <div class="card-header border-bottom-0">
             <a href="/tanaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+            <a href="/tanaman/tambah2" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan 2</a>
             <a href="" class="btn btn-secondary"><i class="fas fa-print"></i> Print</a>
             <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
           </div>

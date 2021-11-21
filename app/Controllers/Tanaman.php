@@ -55,6 +55,13 @@ class Tanaman extends BaseController
     ];
     return view('tanaman/tambah', $data);
   }
+  public function tambah2()
+  {
+    $data = [
+      'title' => 'Tambah Data Tanaman Pangan',
+    ];
+    return view('tanaman/tambah2', $data);
+  }
 
   public function save()
   {
