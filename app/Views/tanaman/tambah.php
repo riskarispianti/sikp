@@ -29,6 +29,7 @@
       <div class="card card-solid">
         <div class="card-body">
           <form class="form-horizontal" action="/tanaman/save" method="post">
+            <?= csrf_field() ?>
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="card-body text-muted">
