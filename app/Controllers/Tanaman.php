@@ -133,6 +133,8 @@ class Tanaman extends BaseController
     // dd($tanam);
     $this->tanamanModel->insert($tanam);
 
+    session()->setFlashdata('pesan', 'ditambahkan.');
+
     return redirect()->to('/tanaman');
   }
   public function edit($id_tanam)
@@ -228,6 +230,9 @@ class Tanaman extends BaseController
   public function hapus($id_tanam)
   {
     $this->tanamanModel->delete($id_tanam);
+
+    session()->setFlashdata('pesan', 'dihapus.');
+
     return redirect()->to('/tanaman');
   }
 }

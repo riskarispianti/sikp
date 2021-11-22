@@ -26,12 +26,18 @@
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md">
-          <div class="card-header border-bottom-0">
-            <a href="/tanaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
-            <a href="" class="btn btn-secondary"><i class="fas fa-print"></i> Print</a>
-            <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
-          </div>
+        <div class="col-md-12 border-bottom-0">
+          <a href="/tanaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+          <a href="" class="btn btn-secondary"><i class="fas fa-print"></i> Print</a>
+          <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
+        </div>
+        <div class="col-md-12 mt-3">
+          <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="alert bg-gradient-success alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h5><i class="icon fas fa-check"></i> Data berhasil <?= session()->getFlashdata('pesan'); ?></h5>
+            </div>
+          <?php endif; ?>
           <div class="card">
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -65,6 +71,8 @@
                             <i class="fa fa-folder-open"></i></a>
                           <a href="/tanaman/edit/<?= $tan['id_tanam']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
+                          <!-- <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" data-toggle="modal" data-target="#modal-default">
+                            <i class="fa fa-trash"></i></a> -->
                           <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="fa fa-trash"></i></a>
                         </div>
