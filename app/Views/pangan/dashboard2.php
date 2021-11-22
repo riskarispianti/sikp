@@ -20,40 +20,128 @@
     <div class="container">
       <div class="row">
         <div class="col-md">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">About Me</h3>
-            </div>
-            <!-- /.card-header -->
+          <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-md-3">
-                  <div class="card-body box-profile">
-                    <div class="text-center">
-                      <img class="img-fluid" src="/img/logo_portal.png" alt="User profile picture">
-                    </div>
-                    <h3 class="profile-username text-center mt-4">Fakultas Ilmu Komputer</h3>
-                    <p class="text-muted text-center">Universitas Subang</p>
+                <div class="col-md-4">
+                  <div class="card-body p-0" style="height: 300px;">
+                    <h4 class="text-center">Data Tanaman Pangan</h4>
+                    <table class="table table-hover table-responsive-sm">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th>Komoditas</th>
+                          <th style="width: 40px">Jumlah</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1.</td>
+                          <td>Update software</td>
+
+                          <td><span class="badge bg-danger">55 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>2.</td>
+                          <td>Clean database</td>
+
+                          <td><span class="badge bg-warning">70 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>3.</td>
+                          <td>Cron job running</td>
+
+                          <td><span class="badge bg-primary">30 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>4.</td>
+                          <td>Fix and squish bugs</td>
+
+                          <td><span class="badge bg-success">90 Kg</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-                <div class="col-md-9">
-                  <strong><i class="fas fa-book mr-1"></i> Visi & Misi</strong>
-                  <p class="text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita sit,
-                    voluptatum repellendus soluta obcaecati fugit sint,
-                    nulla magni harum rem quae molestiae illum nostrum sequi temporibus numquam ipsum exercitationem quisquam.
-                  </p>
-                  <hr>
-                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Alamat</strong>
-                  <p class="text-muted">Malibu, California</p>
-                  <hr>
-                  <strong><i class="far fa-file-alt mr-1"></i> Sejarah</strong>
-                  <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur,
-                    voluptatum nisi iste officia incidunt ullam in quae mollitia,
-                    saepe hic sapiente omnis fugiat vel veniam ratione fugit pariatur eius quibusdam.</p>
-                  <hr>
-                  <strong><i class="far fa-file-alt mr-1"></i> Struktur Organisasi</strong>
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                <div class="col-md-4">
+                  <div class="card-body p-0" style="height: 300px;">
+                    <h4 class="text-center">Data Peternakan</h4>
+                    <table class="table table-hover table-responsive-sm">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th>Komoditas</th>
+                          <th style="width: 40px">Jumlah</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1.</td>
+                          <td>Update software</td>
+
+                          <td><span class="badge bg-danger">55 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>2.</td>
+                          <td>Clean database</td>
+
+                          <td><span class="badge bg-warning">70 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>3.</td>
+                          <td>Cron job running</td>
+
+                          <td><span class="badge bg-primary">30 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>4.</td>
+                          <td>Fix and squish bugs</td>
+
+                          <td><span class="badge bg-success">90 Kg</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body p-0" style="height: 300px;">
+                    <h4 class="text-center">Data Perikanan</h4>
+                    <table class="table table-hover table-responsive-sm">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th>Komoditas</th>
+                          <th style="width: 40px">Jumlah</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1.</td>
+                          <td>Update software</td>
+
+                          <td><span class="badge bg-danger">55 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>2.</td>
+                          <td>Clean database</td>
+
+                          <td><span class="badge bg-warning">70 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>3.</td>
+                          <td>Cron job running</td>
+
+                          <td><span class="badge bg-primary">30 Kg</span></td>
+                        </tr>
+                        <tr>
+                          <td>4.</td>
+                          <td>Fix and squish bugs</td>
+
+                          <td><span class="badge bg-success">90 Kg</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 

@@ -71,8 +71,6 @@
                             <i class="fa fa-folder-open"></i></a>
                           <a href="/tanaman/edit/<?= $tan['id_tanam']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
-                          <!-- <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" data-toggle="modal" data-target="#modal-default">
-                            <i class="fa fa-trash"></i></a> -->
                           <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="fa fa-trash"></i></a>
                         </div>

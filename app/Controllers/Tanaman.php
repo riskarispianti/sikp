@@ -58,6 +58,13 @@ class Tanaman extends BaseController
 
   public function save()
   {
+    // validasi input
+    if (!$this->validate([
+      'komoditas' => 'required'
+    ])) {
+      return redirect()->to('tanaman/tambah');
+    }
+
     $komoditas = [
       'komoditas' => $this->request->getVar('komoditas')
     ];
