@@ -27,8 +27,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tanaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
-          <a href="" class="btn btn-secondary"><i class="fas fa-print"></i> Print</a>
+          <a href="/tanaman/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+          <a href="" class="btn btn-secondary mr-2"><i class="fas fa-print"></i> Print</a>
           <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
         </div>
         <div class="col-md-12 mt-3">
