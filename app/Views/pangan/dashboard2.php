@@ -23,123 +23,168 @@
 
           <div class="row">
             <div class="col-md-4">
-              <div class="card-body p-0" style="height: 300px;">
-                <h4 class="text-center">Data Tanaman Pangan</h4>
-                <table class="table table-hover table-responsive-sm">
-                  <thead class="bg-gradient-info">
-                    <tr>
-                      <th style="width: 10px">#</th>
-                      <th>Komoditas</th>
-                      <th style="width: 40px">Jumlah</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
-
-                      <td><span class="badge bg-danger">55 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>Clean database</td>
-
-                      <td><span class="badge bg-warning">70 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Cron job running</td>
-
-                      <td><span class="badge bg-primary">30 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Fix and squish bugs</td>
-
-                      <td><span class="badge bg-success">90 Kg</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Tanaman Pangan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Komoditas</th>
+                        <th>Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card-body p-0" style="height: 300px;">
-                <h4 class="text-center">Data Peternakan</h4>
-                <table class="table table-hover table-responsive-sm">
-                  <thead class="bg-gradient-info">
-                    <tr>
-                      <th style="width: 10px">#</th>
-                      <th>Komoditas</th>
-                      <th style="width: 40px">Jumlah</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
-
-                      <td><span class="badge bg-danger">55 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>Clean database</td>
-
-                      <td><span class="badge bg-warning">70 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Cron job running</td>
-
-                      <td><span class="badge bg-primary">30 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Fix and squish bugs</td>
-
-                      <td><span class="badge bg-success">90 Kg</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Peternakan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Komoditas</th>
+                        <th>Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card-body p-0" style="height: 300px;">
-                <h4 class="text-center">Data Perikanan</h4>
-                <table class="table table-hover table-responsive-sm">
-                  <thead class="bg-gradient-info">
-                    <tr>
-                      <th style="width: 10px">#</th>
-                      <th>Komoditas</th>
-                      <th style="width: 40px">Jumlah</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>Update software</td>
-
-                      <td><span class="badge bg-danger">55 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td>Clean database</td>
-
-                      <td><span class="badge bg-warning">70 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Cron job running</td>
-
-                      <td><span class="badge bg-primary">30 Kg</span></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Fix and squish bugs</td>
-
-                      <td><span class="badge bg-success">90 Kg</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Perikanan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Komoditas</th>
+                        <th>Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
