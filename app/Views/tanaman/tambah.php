@@ -63,7 +63,10 @@
                       <div class="form-group row my-4">
                         <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="komoditas" placeholder="Komoditas" autofocus>
+                          <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
+                          <div class="invalid-feesback text-danger">
+                            <?= $validation->getError('komoditas'); ?>
+                          </div>
                         </div>
                       </div>
                       <div class="form-group row">

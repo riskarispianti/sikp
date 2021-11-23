@@ -50,8 +50,10 @@ class Tanaman extends BaseController
   }
   public function tambah()
   {
+    session();
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
+      'validation' => \Config\Services::validation()
     ];
     return view('tanaman/tambah', $data);
   }
@@ -60,9 +62,16 @@ class Tanaman extends BaseController
   {
     // validasi input
     if (!$this->validate([
-      'komoditas' => 'required'
+      'komoditas' => [
+        'rules' => 'required|if_exist',
+        'errors' => [
+          'required' => '{field} harus diisi.'
+        ]
+      ]
     ])) {
-      return redirect()->to('tanaman/tambah');
+      $validation = \Config\Services::validation();
+
+      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
     }
 
     $komoditas = [
