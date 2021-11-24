@@ -50,7 +50,6 @@ class Tanaman extends BaseController
   }
   public function tambah()
   {
-    session();
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
       'validation' => \Config\Services::validation()

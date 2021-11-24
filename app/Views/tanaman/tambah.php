@@ -60,158 +60,166 @@
                   <div class="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">
                     <div class="card-body text-muted">
                       <h4 class="text-center">PRODUKSI PANGAN</h4>
-                      <div class="form-group row my-4">
-                        <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('komoditas'); ?>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row my-4">
+                            <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
+                              <div class="invalid-feesback text-danger">
+                                <?= $validation->getError('komoditas'); ?>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="jenis_pangan" class="col-sm-5 col-form-label">Jenis Pangan</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="jenis_tanam">
+                                <option hidden></option>
+                                <option>Serealia</option>
+                                <option>Umbi-umbian</option>
+                                <option>Kacang-kacangan</option>
+                                <option>Sayur Musiman</option>
+                                <option>Sayur Tahunan</option>
+                                <option>Buah Musiman</option>
+                                <option>Buah Tahunan</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="ls_tanam" class="col-sm-5 col-form-label">Luas Tanam/Areal</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="ls_tanam" placeholder="Ha">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="ls_panen" class="col-sm-5 col-form-label">Luas Panen</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="ls_panen" placeholder="Ha">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="produktivitas" class="col-sm-5 col-form-label">Produktivitas</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="produktivitas" placeholder="Ton/Ha">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="jml_prod" class="col-sm-5 col-form-label">Jumlah Produksi</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="jml_prod" placeholder="Ton">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="lama_proses_prod" class="col-sm-5 col-form-label">Lama Proses Produksi</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="lama_proses_prod" placeholder="Bulan/Tahun">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="perk_iklim" class="col-sm-5 col-form-label">Perkiraan Iklim</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="perk_iklim" placeholder="Perkiraan iklim">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="perk_tanam_panen" class="col-sm-5 col-form-label">Perkiraan Musim Tanam dan Panen</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="perk_tanam_panen" placeholder="Waktu produksi">
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="jenis_pangan" class="col-sm-5 col-form-label">Jenis Pangan</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="jenis_tanam">
-                            <option hidden></option>
-                            <option>Serealia</option>
-                            <option>Umbi-umbian</option>
-                            <option>Kacang-kacangan</option>
-                            <option>Sayur Musiman</option>
-                            <option>Sayur Tahunan</option>
-                            <option>Buah Musiman</option>
-                            <option>Buah Tahunan</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="ls_tanam" class="col-sm-5 col-form-label">Luas Tanam/Areal</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="ls_tanam" placeholder="Ha">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="ls_panen" class="col-sm-5 col-form-label">Luas Panen</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="ls_panen" placeholder="Ha">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="produktivitas" class="col-sm-5 col-form-label">Produktivitas</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="produktivitas" placeholder="Ton/Ha">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="jml_prod" class="col-sm-5 col-form-label">Jumlah Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="jml_prod" placeholder="Ton">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="lama_proses_prod" class="col-sm-5 col-form-label">Lama Proses Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="lama_proses_prod" placeholder="Bulan/Tahun">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="perk_iklim" class="col-sm-5 col-form-label">Perkiraan Iklim</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="perk_iklim" placeholder="Perkiraan iklim">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="perk_tanam_panen" class="col-sm-5 col-form-label">Perkiraan Musim Tanam dan Panen</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="perk_tanam_panen" placeholder="Waktu produksi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="biaya_prod" class="col-sm-5 col-form-label">Biaya Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="biaya_prod" placeholder="Biaya produksi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="harga_jual_prod" class="col-sm-5 col-form-label">Harga Jual Hasil Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="harga_jual_prod" placeholder="Harga jual">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="lahan_prod" class="col-sm-5 col-form-label">Lahan Produksi</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="lahan_prod">
-                            <option hidden></option>
-                            <option>Sawah Irigasi</option>
-                            <option>Sawah Tadah Hujan</option>
-                            <option>Tegal/Kebun</option>
-                            <option>Ladang/Huma</option>
-                            <option>Perkebunan</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="sumber_pengairan" class="col-sm-5 col-form-label">Sumber Pengairan</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="sumber_pengairan">
-                            <option hidden></option>
-                            <option>Irigasi</option>
-                            <option>air Hujan</option>
-                            <option>Sumur/Mata air</option>
-                            <option>Sungai</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="bibit" class="col-sm-5 col-form-label">Bibit</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="bibit">
-                            <option hidden></option>
-                            <option>Produksi Sendiri</option>
-                            <option>Beli</option>
-                            <option>Bantuan</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="pupuk" class="col-sm-5 col-form-label">Pupuk</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="pupuk">
-                            <option hidden></option>
-                            <option>Produksi Sendiri</option>
-                            <option>Beli</option>
-                            <option>Bantuan</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="alat_teknologi" class="col-sm-5 col-form-label">Alat/teknologi yg Digunakan</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="alat_teknologi" placeholder="Alat/Teknologi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="peman_hsl_prod" class="col-sm-5 col-form-label">Pemanfaatan Hasil Produksi</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="peman_hsl_prod">
-                            <option hidden></option>
-                            <option>Dikonsumsi Sendiri</option>
-                            <option>Dijual Langsung</option>
-                            <option>Diolah Lebih lanjut</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="limbah_hsl_prod" class="col-sm-5 col-form-label">Limbah Produksi dan Pengelolaannya</label>
-                        <div class="col-sm-7">
-                          <select class="form-control" name="limbah_hsl_prod">
-                            <option hidden></option>
-                            <option>Dijual</option>
-                            <option>Dimanfaatkan Sendiri</option>
-                            <option>Diolah</option>
-                            <option>Dibuang</option>
-                          </select>
+
+                        <div class="col-md-6">
+                          <div class="form-group row my-4">
+                            <label for="biaya_prod" class="col-sm-5 col-form-label">Biaya Produksi</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="biaya_prod" placeholder="Biaya produksi">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="harga_jual_prod" class="col-sm-5 col-form-label">Harga Jual Hasil Produksi</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="harga_jual_prod" placeholder="Harga jual">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="lahan_prod" class="col-sm-5 col-form-label">Lahan Produksi</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="lahan_prod">
+                                <option hidden></option>
+                                <option>Sawah Irigasi</option>
+                                <option>Sawah Tadah Hujan</option>
+                                <option>Tegal/Kebun</option>
+                                <option>Ladang/Huma</option>
+                                <option>Perkebunan</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="sumber_pengairan" class="col-sm-5 col-form-label">Sumber Pengairan</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="sumber_pengairan">
+                                <option hidden></option>
+                                <option>Irigasi</option>
+                                <option>air Hujan</option>
+                                <option>Sumur/Mata air</option>
+                                <option>Sungai</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="bibit" class="col-sm-5 col-form-label">Bibit</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="bibit">
+                                <option hidden></option>
+                                <option>Produksi Sendiri</option>
+                                <option>Beli</option>
+                                <option>Bantuan</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="pupuk" class="col-sm-5 col-form-label">Pupuk</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="pupuk">
+                                <option hidden></option>
+                                <option>Produksi Sendiri</option>
+                                <option>Beli</option>
+                                <option>Bantuan</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="alat_teknologi" class="col-sm-5 col-form-label">Alat/teknologi yg Digunakan</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="alat_teknologi" placeholder="Alat/Teknologi">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="peman_hsl_prod" class="col-sm-5 col-form-label">Pemanfaatan Hasil Produksi</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="peman_hsl_prod">
+                                <option hidden></option>
+                                <option>Dikonsumsi Sendiri</option>
+                                <option>Dijual Langsung</option>
+                                <option>Diolah Lebih lanjut</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="limbah_hsl_prod" class="col-sm-5 col-form-label">Limbah Produksi dan Pengelolaannya</label>
+                            <div class="col-sm-7">
+                              <select class="form-control" name="limbah_hsl_prod">
+                                <option hidden></option>
+                                <option>Dijual</option>
+                                <option>Dimanfaatkan Sendiri</option>
+                                <option>Diolah</option>
+                                <option>Dibuang</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
