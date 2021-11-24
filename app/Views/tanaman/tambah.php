@@ -112,6 +112,12 @@
                             </div>
                           </div>
                           <div class="form-group row">
+                            <label for="jml_prod" class="col-sm-5 col-form-label">Tanggal Produksi</label>
+                            <div class="col-sm-7">
+                              <input type="text" class="form-control" name="jml_prod" placeholder="Tgl">
+                            </div>
+                          </div>
+                          <div class="form-group row">
                             <label for="lama_proses_prod" class="col-sm-5 col-form-label">Lama Proses Produksi</label>
                             <div class="col-sm-7">
                               <input type="text" class="form-control" name="lama_proses_prod" placeholder="Bulan/Tahun">
