@@ -25,7 +25,7 @@
 
   <section class="content">
     <div class="container">
-      <form class="form-horizontal" action="/tanaman/save" method="post">
+      <form class="form-horizontal" action="/tanaman/update/<?= $tanaman['id_tanam']; ?>" method="post">
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
@@ -342,7 +342,7 @@
         <div class="row">
           <div class="col-12 text-center">
             <a href="/tanaman" class="btn bg-gradient-warning">Batal</a>
-            <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-primary">
+            <input type="submit" value="Ubah Data Pangan" class="btn bg-gradient-primary">
           </div>
         </div>
       </form>

@@ -36,6 +36,7 @@ $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
 $routes->get('/tanaman', 'Tanaman::index');
 $routes->post('/tanaman/save', 'Tanaman::save');
+$routes->delete('/tanaman/(:num)', 'Tanaman::hapus/$1');
 $routes->get('/tanaman/edit/(:segment)', 'Tanaman::edit/$1');
 
 /*
