@@ -37,13 +37,12 @@
           <div class="card">
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
-                <thead>
+                <thead class="text-center">
                   <tr>
                     <th style="width: 10px;">#</th>
                     <th>Komoditas</th>
-                    <th style="width: 100px"></th>
+                    <th style="width: 100px">Aksi</th>
                   </tr>
-
                 </thead>
                 <tbody>
                   <?php $i = 1;

@@ -20,8 +20,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md">
-
-          <div class="row">
+          <div class="row text-center">
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header border-0">
@@ -31,9 +30,9 @@
                   <table class="table table-striped table-valign-middle">
                     <thead>
                       <tr>
-                        <th>#</th>
+                        <th style="width: 10px;">#</th>
                         <th>Komoditas</th>
-                        <th>Jumlah</th>
+                        <th style="width: 100px;">Jumlah</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -86,9 +85,9 @@
                   <table class="table table-striped table-valign-middle">
                     <thead>
                       <tr>
-                        <th>#</th>
+                        <th style="width: 10px;">#</th>
                         <th>Komoditas</th>
-                        <th>Jumlah</th>
+                        <th style="width: 100px;">Jumlah</th>
                       </tr>
                     </thead>
                     <tbody>

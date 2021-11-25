@@ -19,7 +19,7 @@ class Sentraprod extends BaseController
     {
         $data = [
             'title' => 'Sentra Produksi | Ketersediaan Pangan',
-            'sentr' => $this->sentraModel->findAll()
+            'sentra' => $this->sentraModel->findAll()
         ];
         return view('/more/sentra_prod/home', $data);
     }
