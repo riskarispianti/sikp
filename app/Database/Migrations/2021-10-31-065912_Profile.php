@@ -19,7 +19,11 @@ class Profile extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'visimisi'       => [
+            'visi'       => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+            'misi'       => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
