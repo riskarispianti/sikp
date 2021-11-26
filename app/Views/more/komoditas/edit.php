@@ -48,7 +48,7 @@
                       <div class="form-group row my-4">
                         <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" value="<?= $komoditas['komoditas']; ?>" autofocus>
+                          <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" value="<?= $komoditas['komoditas']; ?>">
                           <div class="invalid-feedback text-danger">
                             <?= $validation->getError('komoditas'); ?>
                           </div>

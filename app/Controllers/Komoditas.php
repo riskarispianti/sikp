@@ -19,7 +19,7 @@ class Komoditas extends BaseController
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
-            'komoditas' => $this->komoditasModel->getKomoditas()
+            'komoditas' => $this->komoditasModel->findAll()
         ];
         return view('/more/komoditas/home', $data);
     }
@@ -49,10 +49,9 @@ class Komoditas extends BaseController
             return redirect()->to('/komoditas/tambah')->withInput()->with('validation', $validation);
         }
 
-        $komoditas = [
+        $this->komoditasModel->insert([
             'komoditas' => $this->request->getVar('komoditas')
-        ];
-        $this->komoditasModel->insert($komoditas);
+        ]);
 
         session()->setFlashdata('pesan', 'ditambahkan.');
 
@@ -63,8 +62,8 @@ class Komoditas extends BaseController
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
-            'validation' => \Config\Services::validation(),
-            'komoditas' => $this->komoditasModel->getKomoditas($id_kom)
+            'komoditas' => $this->komoditasModel->find($id_kom),
+            'validation' => \Config\Services::validation()
         ];
         return view('/more/komoditas/edit', $data);
     }
@@ -84,12 +83,11 @@ class Komoditas extends BaseController
             return redirect()->to('/komoditas/edit' . $this->request->getVar('id_kom'))->withInput()->with('validation', $validation);
         }
 
-        $this->komoditasModel->save([
-            'id_kom' => $id_kom,
+        $this->komoditasModel->update($id_kom, [
             'komoditas' => $this->request->getVar('komoditas')
         ]);
 
-        session()->setFlashdata('pesan', 'diubah.');
+        session()->setFlashdata('pesan', 'diedit.');
 
         return redirect()->to('/komoditas');
     }
