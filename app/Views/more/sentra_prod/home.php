@@ -16,8 +16,8 @@
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active">Sentra Produksi</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Sentra Produksi</a>
+          <a href="/sentraprod/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Sentra Produksi</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
@@ -56,9 +56,9 @@
                       <td><?= $sen['kelurahan']; ?> </td>
                       <td>
                         <div class="btn-group">
-                          <a href="" class="btn btn-warning btn-sm" type="button">
+                          <a href="/sentraprod/edit/<?= $sen['id_sp']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
-                          <a href="" class="btn btn-danger btn-sm" type="button">
+                          <a href="/sentraprod/hapus/<?= $sen['id_sp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakan anda yakin?');">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
