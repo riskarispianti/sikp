@@ -50,7 +50,7 @@
                     <th>Jenis Tanam</th>
                     <th>Luas Panen</th>
                     <th>Produktivitas</th>
-                    <th></th>
+                    <th>Aksi</th>
                   </tr>
 
                 </thead>
@@ -60,9 +60,9 @@
                     <tr>
                       <td><?= $i++; ?></td>
                       <td><?= $tan['komoditas']; ?> </td>
+                      <td><?= $tan['jenis_tanam']; ?></td>
                       <td><?= $tan['kepemilikan']; ?></td>
                       <td><?= $tan['kecamatan']; ?></td>
-                      <td><?= $tan['jenis_tanam']; ?></td>
                       <td><?= $tan['ls_panen']; ?></td>
                       <td><?= $tan['produktivitas']; ?></td>
                       <td>
