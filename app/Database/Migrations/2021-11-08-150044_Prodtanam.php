@@ -15,11 +15,6 @@ class Prodtanam extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'id_kom'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'jenis_tanam'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
