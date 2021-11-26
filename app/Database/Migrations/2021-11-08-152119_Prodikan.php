@@ -75,7 +75,6 @@ class Prodikan extends Migration
                 'type'           => 'TEXT',
                 'null'           => true,
             ],
-
             'id_kom'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
