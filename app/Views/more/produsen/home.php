@@ -25,13 +25,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Produsen</a>
+          <a href="/produsen/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Produsen</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
             <div class="alert bg-gradient-info alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <h5><i class="icon fas fa-check"></i> Data berhasil <?= session()->getFlashdata('pesan'); ?></h5>
+              <h5><i class="icon fas fa-check"></i> Data Produsen berhasil <?= session()->getFlashdata('pesan'); ?></h5>
             </div>
           <?php endif; ?>
           <div class="card">
@@ -58,9 +58,9 @@
                       <td><?= $produ['kesejahteraan']; ?> </td>
                       <td>
                         <div class="btn-group">
-                          <a href="" class="btn btn-warning btn-sm" type="button">
+                          <a href="/produsen/edit/<?= $produ['id_produsen']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
-                          <a href="" class="btn btn-danger btn-sm" type="button">
+                          <a href="/produsen/hapus/<?= $produ['id_produsen']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakan anda yakin?');">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
