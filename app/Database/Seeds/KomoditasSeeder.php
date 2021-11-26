@@ -3,6 +3,7 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
+
 use CodeIgniter\I18n\Time;
 
 class KomoditasSeeder extends Seeder
@@ -11,12 +12,12 @@ class KomoditasSeeder extends Seeder
     {
         $data = [
             [
-                'komoditas'         => 'Padi',
+                'komoditas'         => 'Beras',
                 'created_at'        => Time::now(),
                 'updated_at'        => Time::now()
             ],
             [
-                'komoditas'         => 'Sapi',
+                'komoditas'         => 'Timun',
                 'created_at'        => Time::now(),
                 'updated_at'        => Time::now()
             ],
@@ -26,7 +27,7 @@ class KomoditasSeeder extends Seeder
                 'updated_at'        => Time::now()
             ],
             [
-                'komoditas'         => 'Telur',
+                'komoditas'         => 'Umbi Jalar',
                 'created_at'        => Time::now(),
                 'updated_at'        => Time::now()
             ],
