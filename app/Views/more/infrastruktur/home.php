@@ -25,13 +25,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Infrastruktur</a>
+          <a href="/infrastruktur/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Infrastruktur</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
             <div class="alert bg-gradient-info alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <h5><i class="icon fas fa-check"></i> Data berhasil <?= session()->getFlashdata('pesan'); ?></h5>
+              <h5><i class="icon fas fa-check"></i> Infrastruktur Produksi berhasil <?= session()->getFlashdata('pesan'); ?></h5>
             </div>
           <?php endif; ?>
           <div class="card">
@@ -56,9 +56,9 @@
                       <td><?= $infras['infras_pengel_air']; ?> </td>
                       <td>
                         <div class="btn-group">
-                          <a href="" class="btn btn-warning btn-sm" type="button">
+                          <a href="/infrastruktur/edit/<?= $infras['id_ip']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
-                          <a href="" class="btn btn-danger btn-sm" type="button">
+                          <a href="/infrastruktur/hapus/<?= $infras['id_ip']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
