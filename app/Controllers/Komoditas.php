@@ -19,7 +19,7 @@ class Komoditas extends BaseController
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
-            'komoditas' => $this->komoditasModel->findAll()
+            'komoditas' => $this->komoditasModel->getKomoditas()
         ];
         return view('/more/komoditas/home', $data);
     }
@@ -27,18 +27,73 @@ class Komoditas extends BaseController
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
-            'komoditas' => $this->komoditasModel->findAll()
+            'validation' => \Config\Services::validation()
         ];
         return view('/more/komoditas/tambah', $data);
     }
-    public function edit()
+
+    public function save()
+    {
+        // validasi input
+        if (!$this->validate([
+            'komoditas' => [
+                'rules' => 'required|is_unique[komoditas.komoditas]',
+                'errors' => [
+                    'required' => '{field} harus diisi.',
+                    'is_unique' => '{field} sudah ada.'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+
+            return redirect()->to('/komoditas/tambah')->withInput()->with('validation', $validation);
+        }
+
+        $komoditas = [
+            'komoditas' => $this->request->getVar('komoditas')
+        ];
+        $this->komoditasModel->insert($komoditas);
+
+        session()->setFlashdata('pesan', 'ditambahkan.');
+
+        return redirect()->to('/komoditas');
+    }
+
+    public function edit($id_kom)
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
-            'komoditas' => $this->komoditasModel->findAll()
+            'validation' => \Config\Services::validation(),
+            'komoditas' => $this->komoditasModel->getKomoditas($id_kom)
         ];
         return view('/more/komoditas/edit', $data);
     }
+
+    public function update($id_kom)
+    {
+        if (!$this->validate([
+            'komoditas' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+
+            return redirect()->to('/komoditas/edit' . $this->request->getVar('id_kom'))->withInput()->with('validation', $validation);
+        }
+
+        $this->komoditasModel->save([
+            'id_kom' => $id_kom,
+            'komoditas' => $this->request->getVar('komoditas')
+        ]);
+
+        session()->setFlashdata('pesan', 'diubah.');
+
+        return redirect()->to('/komoditas');
+    }
+
     public function hapus($id_kom)
     {
         $this->komoditasModel->delete($id_kom);

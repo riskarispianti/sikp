@@ -12,4 +12,13 @@ class KomoditasModel extends Model
     protected $allowedFields        = ['komoditas'];
     // Dates
     protected $useTimestamps        = true;
+
+    public function getKomoditas($id_kom = false)
+    {
+        if ($id_kom == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['id_kom' => $id_kom])->first();
+    }
 }
