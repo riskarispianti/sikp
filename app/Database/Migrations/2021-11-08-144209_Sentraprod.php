@@ -27,21 +27,6 @@ class Sentraprod extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'id_tanam'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true
-            ],
-            'id_ternak'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true
-            ],
-            'id_ikan'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true
-            ],
             'created_at'       => [
                 'type'       => 'DATETIME',
                 'null' => true,
