@@ -15,7 +15,7 @@ class ProdusenSeeder extends Seeder
                 'jml_penghasil_kom'     => $faker->buildingNumber(),
                 'pembinaan'             => $faker->companySuffix(),
                 'kelembagaan'           => $faker->company(),
-                'kesejahteraan'         => $faker->latitude(),
+                'kesejahteraan'         => 'kesejateraan petani',
                 'created_at'            => Time::createFromTimestamp($faker->unixTime()),
                 'updated_at'            => Time::now()
             ];
