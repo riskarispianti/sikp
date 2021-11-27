@@ -25,4 +25,11 @@ class Dashboard extends BaseController
     ];
     return view('pangan/dashboard2', $data);
   }
+  public function persediaan()
+  {
+    $data = [
+      'title' => 'Ketersediaan Pangan'
+    ];
+    return view('pangan/persediaan', $data);
+  }
 }
