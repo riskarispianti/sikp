@@ -10,14 +10,14 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Tempat Produksi</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active">Tempat Produksi</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
+          <a href="/tempatprod/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>

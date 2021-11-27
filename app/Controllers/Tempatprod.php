@@ -23,4 +23,13 @@ class Tempatprod extends BaseController
         ];
         return view('/more/tempat_prod/home', $data);
     }
+
+    public function tambah()
+    {
+        $data = [
+            'title' => 'Tempat Produksi | Ketersediaan Pangan',
+            'validation' => \Config\Services::validation()
+        ];
+        return view('/more/tempat_prod/tambah', $data);
+    }
 }
