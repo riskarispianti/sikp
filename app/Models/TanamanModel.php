@@ -6,10 +6,18 @@ use CodeIgniter\Model;
 
 class TanamanModel extends Model
 {
-    protected $table = "prod_tanam";
-    protected $primaryKey = "id_tanam";
-    protected $useTimestamps = true;
+    protected $table = 'prod_tanam';
+    protected $primaryKey = 'id_tanam';
+    protected $useAutoIncrement = true;
+    protected $allowedFields  = [
+        'id_kom',
+        'jenis_tanam', 'ls_tanam', 'ls_panen', 'produktivitas', 'jml_prod', 'lama_proses_prod',
+        'perk_iklim', 'perk_tanam_panen', 'biaya_prod', 'harga_jual_prod', 'lahan_prod', 'sumber_pengairan',
+        'bibit', 'pupuk', 'alat_teknologi', 'peman_hsl_prod', 'limbah_hsl_prod',
+        'id_anc', 'id_tp', 'id_sp', 'id_ip', 'id_produsen'
+    ];
 
+    protected $useTimestamps = true;
 
     public function getTanam($id_tanam = false)
     {
@@ -32,11 +40,5 @@ class TanamanModel extends Model
             ->join('infras_prod', 'infras_prod.id_ip=prod_tanam.id_ip')
             ->join('produsen', 'produsen.id_produsen=prod_tanam.id_produsen')
             ->first();
-    }
-
-    public function tambahTanaman($data)
-    {
-        $query = $this->db->table($this->table)->insert($data);
-        return $query;
     }
 }

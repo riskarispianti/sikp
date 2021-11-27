@@ -32,9 +32,7 @@
       </button>
     </div>
   <?php endif; ?>
-  <form action="/tanaman/tambah" class="form-horizontal" method="POST">
-
-
+  <form action="/tanaman/save" class="form-horizontal" method="POST">
     <section class="content">
       <div class="container">
         <!-- Default box -->
@@ -210,7 +208,7 @@
                     <div class="form-group row">
                       <label for="penanggulangan" class="col-sm-5 col-form-label">Cara Penanggulangan</label>
                       <div class="col-sm-7">
-                        <textarea class="form-control" name="penganggulangan"></textarea>
+                        <textarea class="form-control" name="penanggulangan"></textarea>
                       </div>
                     </div>
                   </div>
@@ -330,7 +328,7 @@
         </div>
       </div>
     </section>
-
+  </form>
 </div>
 
 <?= $this->endSection(); ?>

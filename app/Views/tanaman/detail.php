@@ -183,31 +183,30 @@
                   <?= $tanaman['kelurahan']; ?>
                 </p>
 
-              </div>
-              <div class="text-center mt-5 mb-3">
-                <a class="btn btn-app" href="">
-                  <i class="fas fa-trash"></i> Hapus
-                </a>
-                <a class="btn btn-app" href="">
-                  <i class="fas fa-edit"></i> Edit
-                </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-undo"></i> Kembali
-                </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-print"></i> Print
-                </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-download"></i> Download (PDF)
-                </a>
+                <div class="text-center mt-5 mb-3">
+                  <a class="btn btn-app" href="/tanaman/hapus/<?= $tanaman['id_tanam']; ?>" onclick="return  confirm('Apakah anda ingin menhapus data?')">
+                    <i class="fas fa-trash"></i> Hapus
+                  </a>
+                  <a class="btn btn-app" href="">
+                    <i class="fas fa-edit"></i> Edit
+                  </a>
+                  <a class="btn btn-app" href="/tanaman">
+                    <i class="fas fa-undo"></i> Kembali
+                  </a>
+                  <a class="btn btn-app" href="/tanaman">
+                    <i class="fas fa-print"></i> Print
+                  </a>
+                  <a class="btn btn-app" href="/tanaman">
+                    <i class="fas fa-download"></i> Download (PDF)
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <!-- /.card-body -->
         </div>
-        <!-- /.card-body -->
+        <!-- /.card -->
       </div>
-      <!-- /.card -->
-    </div>
   </section>
 
 </div>

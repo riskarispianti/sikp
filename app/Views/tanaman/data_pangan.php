@@ -26,45 +26,12 @@
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body p-0">
-              <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                  <a href="<?= base_url('/tanaman/tambah'); ?>" class="nav-link">
-                    <i class="fas fa-plus"></i> Tambah Data
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/print" class="nav-link">
-                    <i class="fas fa-print"></i> Print
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/download" class="nav-link">
-                    <i class="fas fa-download"></i> Download (PDF)
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/dashboard" class="nav-link">
-                    <i class="fas fa-reply"></i> Kembali
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- /.card-body -->
+        <div class="col-md">
+          <div class="card-header border-bottom-0">
+            <a href="/tanaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+            <a href="" class="btn btn-secondary"><i class="fas fa-print"></i> Print</a>
+            <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
           </div>
-          <!-- /.card -->
-
-        </div>
-        <div class="col-10">
           <div class="card">
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -93,15 +60,21 @@
                       <td><?= $tan['ls_panen']; ?></td>
                       <td><?= $tan['produktivitas']; ?></td>
                       <td>
-                        <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-block btn-info btn-sm" type="button">
-                          <i class="fa fa-folder-open"></i> Detail</a>
+                        <div class="btn-group">
+                          <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-info btn-sm" type="button">
+                            <i class="fa fa-folder-open"></i></a>
+                          <a href="/tanaman/edit/<?= $tan['id_tanam']; ?>" class="btn btn-warning btn-sm" type="button">
+                            <i class="fa fa-edit"></i></a>
+                          <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                            <i class="fa fa-trash"></i></a>
+                        </div>
                       </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
-            <!-- /.card-body -->
+
           </div>
           <!-- /.card -->
         </div>
@@ -109,7 +82,6 @@
       </div>
       <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
   </section>
 </div>
 

@@ -5,13 +5,13 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\ProfileModel;
 
-class Register extends Controller
+class Register extends BaseController
 {
     public function index()
     {
         //include helper form
         helper(['form']);
-        $data = [];
+        $data = ['title' => 'Registrasi'];
         echo view('profile/registrasi', $data);
     }
 
@@ -33,9 +33,9 @@ class Register extends Controller
                 'username'       => $this->request->getVar('username'),
                 'password'       => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'visimisi'       => $this->request->getVar('visimisi'),
-                'alamat_dinas'   => $this->request->getVar('alamat_dinas'),
+                'alamat'         => $this->request->getVar('alama'),
                 'sejarah'        => $this->request->getVar('sejarah'),
-                'logo'           => $this->request->getVar('logo'),
+                'logo_dinas'     => $this->request->getVar('logo_dinas'),
 
             ];
             $model->save($data);

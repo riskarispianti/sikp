@@ -6,6 +6,7 @@ use App\Models\ProfileModel;
 
 class Login extends BaseController
 {
+
   public function index()
   {
     $data = [
@@ -13,6 +14,8 @@ class Login extends BaseController
     ];
     return view('log_in/login', $data);
   }
+
+
 
   public function process()
   {

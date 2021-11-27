@@ -45,7 +45,7 @@
           <!-- Menu Footer-->
           <li class="user-footer">
 
-            <a href="/profile/registrasi" class="btn btn-default btn-flat">Edit Profile</a>
+            <a href="/register" class="btn btn-default btn-flat">Edit Profile</a>
             <a href="/" class="btn btn-default btn-flat float-right">Sign out</a>
           </li>
         </ul>
