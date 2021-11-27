@@ -15,11 +15,6 @@ class Prodternak extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'id_kom'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'jenis_ternak'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
@@ -64,7 +59,15 @@ class Prodternak extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'id_anc'          => [
+            'nama_anc'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'penanggulangan'          => [
+                'type'           => 'TEXT',
+                'null'           => true,
+            ],
+            'id_kom'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
@@ -99,23 +102,23 @@ class Prodternak extends Migration
             ],
         ]);
         $this->forge->addKey('id_ternak', true);
-        $this->forge->addForeignKey('id_kom', 'komoditas', 'id_kom');
-        $this->forge->addForeignKey('id_anc', 'ancaman', 'id_anc');
-        $this->forge->addForeignKey('id_tp', 'tempat_prod', 'id_tp');
-        $this->forge->addForeignKey('id_sp', 'sentra_prod', 'id_sp');
-        $this->forge->addForeignKey('id_ip', 'infras_prod', 'id_ip');
-        $this->forge->addForeignKey('id_produsen', 'produsen', 'id_produsen');
+        // $this->forge->addForeignKey('id_kom', 'komoditas', 'id_kom');
+        // $this->forge->addForeignKey('id_anc', 'ancaman', 'id_anc');
+        // $this->forge->addForeignKey('id_tp', 'tempat_prod', 'id_tp');
+        // $this->forge->addForeignKey('id_sp', 'sentra_prod', 'id_sp');
+        // $this->forge->addForeignKey('id_ip', 'infras_prod', 'id_ip');
+        // $this->forge->addForeignKey('id_produsen', 'produsen', 'id_produsen');
         $this->forge->createTable('prod_ternak');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_kom_foreign');
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_anc_foreign');
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_tp_foreign');
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_sp_foreign');
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_ip_foreign');
-        $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_produsen_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_kom_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_anc_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_tp_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_sp_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_ip_foreign');
+        // $this->forge->dropForeignKey('prod_ternak', 'prod_ternak_id_produsen_foreign');
         $this->forge->dropTable('prod_ternak');
     }
 }

@@ -12,5 +12,5 @@ class TempatModel extends Model
     protected $allowedFields        = ['letak_prod', 'luas_prod', 'kepemilikan', 'status_lahan'];
 
     // Dates
-    protected $useTimestamps        = false;
+    protected $useTimestamps        = true;
 }

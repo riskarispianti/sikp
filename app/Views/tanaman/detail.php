@@ -74,6 +74,10 @@
                             <dd><?= $tanaman['peman_hsl_prod']; ?></dd>
                             <dt>Limbah Hasil Produksi dan Pengelolaannya</dt>
                             <dd><?= $tanaman['limbah_hsl_prod']; ?></dd>
+                            <dt>Ancaman</dt>
+                            <dd><?= $tanaman['nama_anc']; ?></dd>
+                            <dt>Penanggulangan</dt>
+                            <dd><?= $tanaman['penanggulangan']; ?></dd>
                           </dl>
                         </div>
                       </div>
@@ -83,18 +87,6 @@
                 <div class="col-6">
                   <div class="row">
                     <div class="card-body">
-                      <div class="card card-secondary card-outline">
-                        <div class="card-header">
-                          <h5 class="card-title">Ancaman Produksi</h5>
-                        </div>
-                        <div class="card-body text-muted">
-                          <strong><?= $tanaman['nama_anc']; ?></strong>
-                          <p class="text-muted">
-                            <?= $tanaman['penanggulangan']; ?>
-                          </p>
-                        </div>
-                      </div>
-
                       <div class="card card-info card-outline">
                         <div class="card-header">
                           <h5 class="card-title">Infrastruktur Produksi</h5>
@@ -185,10 +177,11 @@
 
               </div>
               <div class="text-center mt-5 mb-3">
-                <a class="btn btn-app" href="">
-                  <i class="fas fa-trash"></i> Hapus
-                </a>
-                <a class="btn btn-app" href="">
+                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-app" onclick="return confirm('Apakah anda yakin?');"><i class="fas fa-trash"></i> Hapus</button>
+                </form>
+                <a class="btn btn-app" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
                   <i class="fas fa-edit"></i> Edit
                 </a>
                 <a class="btn btn-app" href="/tanaman">

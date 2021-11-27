@@ -20,23 +20,170 @@
     <div class="container">
       <div class="row">
         <div class="col-md">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="d-flex justify-content-between">
-                <h4>Produksi</h4>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Tanaman Pangan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th style="width: 10px;">#</th>
+                        <th>Komoditas</th>
+                        <th style="width: 100px;">Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-success">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <div class="position-relative mb-4">
-                <canvas id="sales-chart" height="200"></canvas>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Peternakan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th style="width: 10px;">#</th>
+                        <th>Komoditas</th>
+                        <th style="width: 100px;">Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-primary">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <div class="d-flex flex-row justify-content-end">
-                <span class="mr-2">
-                  <i class="fas fa-square text-primary"></i> in year
-                </span>
-                <span>
-                  <i class="fas fa-square text-gray"></i> last year
-                </span>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Perikanan</h3>
+                </div>
+                <div class="card-body table-responsive p-0" style="height: 300px;">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Komoditas</th>
+                        <th>Jumlah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          3
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          4
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          5
+                        </td>
+                        <td>Padi</td>
+                        <td><span class="badge bg-info">55 Kg</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

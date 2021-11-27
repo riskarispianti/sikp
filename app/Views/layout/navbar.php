@@ -17,14 +17,26 @@
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="/dashboard/grafik" class="nav-link">Persediaan</a>
+        <a href="/dashboard/persediaan" class="nav-link">Persediaan</a>
+      </li>
+      <li class="nav-item">
+        <a href="/komoditas" class="nav-link">Komoditas</a>
       </li>
       <li class="nav-item dropdown">
-        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data Pangan</a>
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Produksi</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tanaman" class="dropdown-item">Tanaman Pangan </a></li>
           <li><a href="#" class="dropdown-item">Peternakan</a></li>
           <li><a href="#" class="dropdown-item">Perikanan</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Learn More</a>
+        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+          <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
+          <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li>
+          <li><a href="/infrastruktur" class="dropdown-item">Infrastruktur Produksi</a></li>
+          <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
         </ul>
       </li>
       <!-- profile Dropdown Menu -->
@@ -44,7 +56,7 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-            <a href="/profile/registrasi" class="btn btn-default btn-flat">Edit Profile</a>
+            <a href="/profile" class="btn btn-default btn-flat">Profile</a>
             <a href="/" class="btn btn-default btn-flat float-right">Sign out</a>
           </li>
         </ul>

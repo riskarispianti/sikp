@@ -25,12 +25,17 @@
   <div class="content">
     <div class="container">
       <div class="row">
-
         <div class="col-lg">
+          <div class="card-header text-center">
+            <a href="" type="button" class="btn btn-primary mr-2">Produksi</a>
+            <a href="" type="button" class="btn btn-info mr-2">Daerah Produksi</a>
+            <a href="" type="button" class="btn btn-warning">Tahun Produksi</a>
+          </div>
+
           <div class="card">
             <div class="card-header border-0">
               <div class="d-flex justify-content-between">
-                <h2>Daerah Produksi</h2>
+                <h2>Produksi</h2>
               </div>
             </div>
             <div class="card-body">

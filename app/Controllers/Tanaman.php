@@ -52,6 +52,7 @@ class Tanaman extends BaseController
   {
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
+      'validation' => \Config\Services::validation()
     ];
     return view('tanaman/tambah', $data);
   }
@@ -65,6 +66,20 @@ class Tanaman extends BaseController
 
   public function save()
   {
+    // validasi input
+    if (!$this->validate([
+      'komoditas' => [
+        'rules' => 'required|if_exist',
+        'errors' => [
+          'required' => '{field} harus diisi.'
+        ]
+      ]
+    ])) {
+      $validation = \Config\Services::validation();
+
+      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
+    }
+
     $komoditas = [
       'komoditas' => $this->request->getVar('komoditas')
     ];
@@ -140,30 +155,50 @@ class Tanaman extends BaseController
     // dd($tanam);
     $this->tanamanModel->insert($tanam);
 
+    session()->setFlashdata('pesan', 'ditambahkan.');
+
     return redirect()->to('/tanaman');
   }
+
   public function edit($id_tanam)
   {
     $data = [
       'title' => 'Edit Data Tanaman Pangan',
-      'tanaman' => $this->tanamanModel->getTanam($id_tanam)
+      'tanaman' => $this->tanamanModel->getTanam($id_tanam),
+      'validation' => \Config\Services::validation()
     ];
     return view('tanaman/edit', $data);
   }
 
   public function update($id_tanam)
   {
+    // cek
+
+
+    if (!$this->validate([
+      'komoditas' => [
+        'rules' => 'required|if_exist',
+        'errors' => [
+          'required' => '{field} harus diisi.'
+        ]
+      ]
+    ])) {
+      $validation = \Config\Services::validation();
+
+      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
+    }
+
     $komoditas = [
       'komoditas' => $this->request->getVar('komoditas')
     ];
-    $this->komoditasModel->insert($komoditas);
+    $this->komoditasModel->update($komoditas);
     $id_kom = $this->komoditasModel->insertID();
 
     $ancaman = [
       'nama_anc' => $this->request->getVar('nama_anc'),
       'penanggulangan' => $this->request->getVar('penanggulangan')
     ];
-    $this->ancamanModel->insert($ancaman);
+    $this->ancamanModel->update($ancaman);
     $id_anc = $this->ancamanModel->insertID();
 
     $tempat = [
@@ -172,7 +207,7 @@ class Tanaman extends BaseController
       'kepemilikan' => $this->request->getVar('kepemilikan'),
       'status_lahan' => $this->request->getVar('status_lahan')
     ];
-    $this->tempatModel->insert($tempat);
+    $this->tempatModel->update($tempat);
     $id_tp = $this->tempatModel->insertID();
 
     $sentra = [
@@ -180,7 +215,7 @@ class Tanaman extends BaseController
       'kecamatan' => $this->request->getVar('kecamatan'),
       'kelurahan' => $this->request->getVar('kelurahan')
     ];
-    $this->sentraModel->insert($sentra);
+    $this->sentraModel->update($sentra);
     $id_sp = $this->sentraModel->insertID();
 
     $infrastruktur = [
@@ -188,7 +223,7 @@ class Tanaman extends BaseController
       'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
       'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
     ];
-    $this->infrastrukturModel->insert($infrastruktur);
+    $this->infrastrukturModel->update($infrastruktur);
     $id_ip = $this->infrastrukturModel->insertID();
 
     $produsen = [
@@ -197,7 +232,7 @@ class Tanaman extends BaseController
       'kelembagaan' => $this->request->getVar('kelembagaan'),
       'kesejahteraan' => $this->request->getVar('kesejahteraan')
     ];
-    $this->produsenModel->insert($produsen);
+    $this->produsenModel->update($produsen);
     $id_produsen = $this->produsenModel->insertID();
 
     $tanam = [
@@ -226,8 +261,10 @@ class Tanaman extends BaseController
       'id_ip' => $id_ip,
       'id_produsen' => $id_produsen
     ];
-    // dd($tanam);
+
     $this->tanamanModel->update($tanam);
+
+    session()->setFlashdata('pesan', 'diubah.');
 
     return redirect()->to('/tanaman');
   }
@@ -235,6 +272,9 @@ class Tanaman extends BaseController
   public function hapus($id_tanam)
   {
     $this->tanamanModel->delete($id_tanam);
+
+    session()->setFlashdata('pesan', 'dihapus.');
+
     return redirect()->to('/tanaman');
   }
 }
