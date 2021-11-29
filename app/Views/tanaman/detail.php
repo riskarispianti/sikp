@@ -74,10 +74,6 @@
                             <dd><?= $tanaman['peman_hsl_prod']; ?></dd>
                             <dt>Limbah Hasil Produksi dan Pengelolaannya</dt>
                             <dd><?= $tanaman['limbah_hsl_prod']; ?></dd>
-                            <dt>Ancaman</dt>
-                            <dd><?= $tanaman['nama_anc']; ?></dd>
-                            <dt>Penanggulangan</dt>
-                            <dd><?= $tanaman['penanggulangan']; ?></dd>
                           </dl>
                         </div>
                       </div>
@@ -87,6 +83,22 @@
                 <div class="col-6">
                   <div class="row">
                     <div class="card-body">
+                      <div class="card card-danger card-outline">
+                        <div class="card-header">
+                          <h5 class="card-title">Ancaman</h5>
+                        </div>
+                        <div class="card-body text-muted">
+                          <strong>Ancaman</strong>
+                          <p class="text-muted">
+                            <?= $tanaman['nama_anc']; ?>
+                          </p>
+                          <strong>Penanggulangan</strong>
+                          <p class="text-muted">
+                            <?= $tanaman['penanggulangan']; ?>
+                          </p>
+                        </div>
+                      </div>
+
                       <div class="card card-info card-outline">
                         <div class="card-header">
                           <h5 class="card-title">Infrastruktur Produksi</h5>
@@ -145,7 +157,7 @@
                 <p class="text-muted">
                   <?= $tanaman['kepemilikan']; ?>
                 </p>
-                <strong>Status Lahan</strong>
+                <strong>Status Tempat Produksi</strong>
                 <p class="text-muted">
                   <?= $tanaman['status_lahan']; ?>
                 </p>
