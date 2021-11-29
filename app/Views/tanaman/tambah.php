@@ -21,7 +21,6 @@
       </div><!-- /.row -->
     </div>
   </div>
-  <!-- /.content-header -->
 
   <section class="content">
     <div class="container">
@@ -66,7 +65,13 @@
                           <div class="form-group row my-4">
                             <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
+                              <select class="form-control" name="id_kom">
+                                <option hidden></option>
+                                <?php foreach ($komoditas as $kom => $value) : ?>
+                                  <option value="<?= $value['id_kom']; ?>"><?= $value['komoditas']; ?></option>
+                                <?php endforeach; ?>
+                              </select>
+                              <!-- <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus> -->
                               <div class="invalid-feesback text-danger">
                                 <?= $validation->getError('komoditas'); ?>
                               </div>
@@ -269,7 +274,7 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="status_lahan" class="col-sm-5 col-form-label">Status Lahan</label>
+                        <label for="status_lahan" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
                         <div class="col-sm-7">
                           <input type="text" class="form-control" name="status_lahan" placeholder="Status Lahan">
                         </div>

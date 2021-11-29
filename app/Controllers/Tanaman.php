@@ -52,16 +52,10 @@ class Tanaman extends BaseController
   {
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'komoditas' => $this->komoditasModel->findAll()
     ];
     return view('tanaman/tambah', $data);
-  }
-  public function tambah2()
-  {
-    $data = [
-      'title' => 'Tambah Data Tanaman Pangan',
-    ];
-    return view('tanaman/tambah2', $data);
   }
 
   public function save()

@@ -21,7 +21,6 @@
       </div><!-- /.row -->
     </div>
   </div>
-  <!-- /.content-header -->
 
   <section class="content">
     <div class="container">
