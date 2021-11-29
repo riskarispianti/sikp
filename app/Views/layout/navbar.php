@@ -2,8 +2,8 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-light">
   <div class="container">
     <a href="/" class="navbar-brand">
-      <img src="/img/SIKP.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
-      <span class="brand-text font-weight-light">SInKePang</span>
+      <img src="/img/sin2.png" alt="SInKePang" class="brand-image" style="opacity: 5" width="150">
+      <!-- <span class="brand-text font-weight-light">SInKePang</span> -->
     </a>
 
     <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Learn More</a>
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Master Data</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
           <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li>
@@ -42,15 +42,16 @@
       <!-- profile Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-          <img src="/img/logo_portal.png" class="user-image" alt="User Image">
-          <span class="d-none d-md-inline">FASILKOM</span>
+          <!-- <img src="/img/logo_portal.png" class="user-image"> -->
+          <!-- <span class="d-none d-md-inline"><b> Dinas Ketahanan Pangan </b></span> -->
+          <i class="fas fa-user-circle fa-lg"></i>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
-          <li class="user-header bg-info">
-            <img src="/img/logo_portal.png" class="elevation-2" alt="User Image">
+          <li class="user-header bg-gradient-lightblue">
+            <img src="/img/logo-indonesia-berdaulat-pangan.png" class="border-0">
             <p>
-              Fakultas Ilmu komputer
+              <b> Indonesia Berdaulat Pangan</b>
               <small>Member since Oct. 2021</small>
             </p>
           </li>
