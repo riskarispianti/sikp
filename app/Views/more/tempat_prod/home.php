@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tempatprod/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
+          <a href="/tempatprod/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
