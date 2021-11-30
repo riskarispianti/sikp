@@ -17,8 +17,8 @@
             <li class="breadcrumb-item"><a href="/tanaman">Tanaman</a></li>
             <li class="breadcrumb-item active">Tambah</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -28,7 +28,7 @@
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
-            <div class="card card-primary card-tabs">
+            <div class="card card-tabs card-success">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                   <li class="pt-2 px-3">
@@ -59,19 +59,17 @@
                   <div class="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">
                     <div class="card-body text-muted">
                       <h4 class="text-center">PRODUKSI PANGAN</h4>
-
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row my-4">
                             <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                             <div class="col-sm-7">
-                              <select class="form-control" name="id_kom">
+                              <select class="form-control select2bs4" name="id_kom">
                                 <option hidden></option>
                                 <?php foreach ($komoditas as $kom => $value) : ?>
                                   <option value="<?= $value['id_kom']; ?>"><?= $value['komoditas']; ?></option>
                                 <?php endforeach; ?>
                               </select>
-                              <!-- <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus> -->
                               <div class="invalid-feesback text-danger">
                                 <?= $validation->getError('komoditas'); ?>
                               </div>
@@ -258,7 +256,15 @@
                       <div class="form-group row my-4">
                         <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="letak_prod" placeholder="Letak produksi">
+                          <select class="form-control select2bs4" name="id_tp">
+                            <option hidden></option>
+                            <?php foreach ($tempat as $tem => $value) : ?>
+                              <option value="<?= $value['id_tp']; ?>"><?= $value['letak_prod']; ?></option>
+                            <?php endforeach; ?>
+                          </select>
+                          <div class="invalid-feesback text-danger">
+                            <?= $validation->getError('letak_prod'); ?>
+                          </div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -287,7 +293,15 @@
                       <div class="form-group row my-4">
                         <label for="nama_sp" class="col-sm-5 col-form-label">Identitas Sentra Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="nama_sp" placeholder="Sentra Produksi">
+                          <select class="form-control select2bs4" name="id_sp">
+                            <option hidden></option>
+                            <?php foreach ($sentra as $sen => $value) : ?>
+                              <option value="<?= $value['id_sp']; ?>"><?= $value['nama_sp']; ?></option>
+                            <?php endforeach; ?>
+                          </select>
+                          <div class="invalid-feesback text-danger">
+                            <?= $validation->getError('nama_sp'); ?>
+                          </div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -310,7 +324,15 @@
                       <div class="form-group row my-4">
                         <label for="sarana_pengairan" class="col-sm-5 col-form-label">Sarana dan Prasarana Pengairan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="sarana_pengairan" placeholder="Prasarana">
+                          <select class="form-control select2bs4" name="id_ip">
+                            <option hidden></option>
+                            <?php foreach ($infrastruktur as $infras => $value) : ?>
+                              <option value="<?= $value['id_ip']; ?>"><?= $value['sarana_pengairan']; ?></option>
+                            <?php endforeach; ?>
+                          </select>
+                          <div class="invalid-feesback text-danger">
+                            <?= $validation->getError('sarana_pengairan'); ?>
+                          </div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -331,6 +353,20 @@
                     <div class="card-body text-muted">
                       <h4 class="text-center">PRODUSEN</h4>
                       <div class="form-group row my-4">
+                        <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
+                        <div class="col-sm-7">
+                          <select class="form-control select2bs4" name="id_produsen">
+                            <option hidden></option>
+                            <?php foreach ($produsen as $pro => $value) : ?>
+                              <option value="<?= $value['id_produsen']; ?>"><?= $value['kelembagaan']; ?></option>
+                            <?php endforeach; ?>
+                          </select>
+                          <div class="invalid-feesback text-danger">
+                            <?= $validation->getError('kelembagaan'); ?>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
                         <label for="jml_penghasil_kom" class="col-sm-5 col-form-label">Jumlah Produsen/Petani</label>
                         <div class="col-sm-7">
                           <input type="text" class="form-control" name="jml_penghasil_kom">
@@ -340,12 +376,6 @@
                         <label for="pembinaan" class="col-sm-5 col-form-label">Pembinaan Kepada Produsen/Petani</label>
                         <div class="col-sm-7">
                           <input type="text" class="form-control" name="pembinaan">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="kelembagaan">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -363,8 +393,8 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/tanaman" class="btn bg-gradient-warning">Batal</a>
-            <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-primary">
+            <a href="/tanaman" class="btn bg-gradient-warning mr-3">Batal</a>
+            <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-success">
           </div>
         </div>
       </form>

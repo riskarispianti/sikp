@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tanaman/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+          <a href="/tanaman/tambah" class="btn btn-success mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
           <a href="" class="btn btn-secondary mr-2"><i class="fas fa-print"></i> Print</a>
           <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
         </div>
@@ -64,14 +64,14 @@
                       <td><?= $tan['kecamatan']; ?></td>
                       <td><?= $tan['ls_panen']; ?></td>
                       <td><?= $tan['produktivitas']; ?></td>
-                      <td>
+                      <td class="text-center">
                         <div class="btn-group">
                           <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
                           <a href="/tanaman/edit/<?= $tan['id_tanam']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
                           <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
-                            <i class="fa fa-trash"></i></a>
+                            <i class="far fa-trash-alt"></i></a>
                         </div>
                       </td>
                     </tr>

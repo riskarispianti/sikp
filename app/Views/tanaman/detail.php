@@ -188,23 +188,14 @@
                 </p>
 
               </div>
-              <div class="text-center mt-5 mb-3">
-                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
-                  <input type="hidden" name="_method" value="DELETE">
-                  <button type="submit" class="btn btn-app" onclick="return confirm('Apakah anda yakin?');"><i class="fas fa-trash"></i> Hapus</button>
-                </form>
-                <a class="btn btn-app" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
+              <div class="btn-group">
+                <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
                   <i class="fas fa-edit"></i> Edit
                 </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-undo"></i> Kembali
-                </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-print"></i> Print
-                </a>
-                <a class="btn btn-app" href="/tanaman">
-                  <i class="fas fa-download"></i> Download (PDF)
-                </a>
+                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
+                </form>
               </div>
             </div>
           </div>

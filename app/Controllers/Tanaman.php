@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\TanamanModel;
-use App\Models\AncamanModel;
 use App\Models\InfrastrukturModel;
 use App\Models\KomoditasModel;
 use App\Models\ProdusenModel;
@@ -13,7 +12,6 @@ use App\Models\TempatModel;
 class Tanaman extends BaseController
 {
   protected $tanamanModel;
-  protected $ancamanModel;
   protected $infrastrukturModel;
   protected $komoditasModel;
   protected $produsenModel;
@@ -23,7 +21,6 @@ class Tanaman extends BaseController
   public function __construct()
   {
     $this->tanamanModel = new TanamanModel();
-    $this->ancamanModel = new AncamanModel();
     $this->infrastrukturModel = new InfrastrukturModel();
     $this->komoditasModel = new KomoditasModel();
     $this->produsenModel = new ProdusenModel();
@@ -53,7 +50,11 @@ class Tanaman extends BaseController
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
       'validation' => \Config\Services::validation(),
-      'komoditas' => $this->komoditasModel->findAll()
+      'komoditas' => $this->komoditasModel->findAll(),
+      'tempat' => $this->tempatModel->findAll(),
+      'sentra' => $this->sentraModel->findAll(),
+      'infrastruktur' => $this->infrastrukturModel->findAll(),
+      'produsen' => $this->produsenModel->findAll()
     ];
     return view('tanaman/tambah', $data);
   }

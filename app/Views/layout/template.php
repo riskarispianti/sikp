@@ -22,6 +22,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/dist/css/adminlte.min.css">
   <!-- BS Stepper -->
   <link rel="stylesheet" href="/plugins/bs-stepper/css/bs-stepper.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -91,6 +94,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/plugins/chart.js/Chart.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="/dist/js/pages/dashboard3.js"></script>
+  <!-- bs-custom-file-input -->
+  <script src="/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <!-- Select2 -->
+  <script src="/plugins/select2/js/select2.full.min.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
@@ -104,6 +111,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         "info": true,
         "autoWidth": false,
         "responsive": true,
+      })
+
+      //Initialize Select2 Elements
+      $('.select2').select2()
+
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
       })
     })
     // BS-Stepper Init
