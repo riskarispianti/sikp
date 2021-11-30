@@ -16,16 +16,16 @@
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active">Komoditas</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+        </div>
+      </div>
+    </div>
   </div>
 
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 border-bottom-0">
-          <a href="/komoditas/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Komoditas</a>
+        <div class="col-md-12 border-bottom-0" id="accordion">
+          <a data-toggle="collapse" href="#collapseOne" class="btn bg-gradient-fuchsia"><i class="fas fa-plus"></i> Tambah Komoditas</a>
         </div>
         <div class="col-md-6 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
@@ -50,26 +50,44 @@
                     <tr>
                       <td><?= $i++; ?></td>
                       <td><?= $kom['komoditas']; ?> </td>
-                      <td>
-                        <div class="btn-group">
-                          <a href="/komoditas/edit/<?= $kom['id_kom']; ?>" class="btn btn-warning btn-sm" type="button">
-                            <i class="fa fa-edit"></i> Edit</a>
-                          <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?')">
-                            <i class="far fa-trash-alt"></i> Hapus</a>
-                        </div>
+                      <td class="text-center">
+                        <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?')">
+                          <i class="far fa-trash-alt"></i> Hapus</a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
-
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
+        <div class="col-md-6 mt-3">
+          <form action="/komoditas/save" method="post">
+            <div class="card collapse <?= ($validation->hasError('komoditas')) ? 'show' : ''; ?>" id="collapseOne" data-parent="#accordion">
+              <div class="card-header bg-gradient-fuchsia">
+                <h3 class="card-title">Komoditas</h3>
+              </div>
+              <div class="card-body">
+                <div class="card-body text-muted">
+                  <div class="form-group row">
+                    <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
+                      <div class="invalid-feedback text-danger">
+                        <?= $validation->getError('komoditas'); ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer text-center mb-3">
+                <a data-toggle="collapse" href="#collapseOne" class="btn bg-gradient-warning mr-3">Batal</a>
+                <input type="submit" value="Tambah Komoditas" class="btn bg-gradient-fuchsia">
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-      <!-- /.row -->
     </div>
   </section>
 
