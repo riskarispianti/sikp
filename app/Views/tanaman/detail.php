@@ -188,15 +188,18 @@
                 </p>
 
               </div>
-              <div class="btn-group">
-                <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
-                  <i class="fas fa-edit"></i> Edit
-                </a>
-                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+              <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+                <div class="btn-group">
+                  <a class="btn btn-info" href="/tanaman">
+                    <i class="fas fa-edit"></i> Kembali
+                  </a>
+                  <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
+                    <i class="fas fa-edit"></i> Edit
+                  </a>
                   <input type="hidden" name="_method" value="DELETE">
                   <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

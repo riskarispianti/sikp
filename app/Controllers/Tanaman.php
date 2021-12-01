@@ -62,68 +62,20 @@ class Tanaman extends BaseController
   public function save()
   {
     // validasi input
-    if (!$this->validate([
-      'komoditas' => [
-        'rules' => 'required|if_exist',
-        'errors' => [
-          'required' => '{field} harus diisi.'
-        ]
-      ]
-    ])) {
-      $validation = \Config\Services::validation();
+    // if (!$this->validate([
+    //   'komoditas' => [
+    //     'rules' => 'required',
+    //     'errors' => [
+    //       'required' => '{field} harus diisi.'
+    //     ]
+    //   ]
+    // ])) {
+    //   $validation = \Config\Services::validation();
 
-      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
-    }
+    //   return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
+    // }
 
-    $komoditas = [
-      'komoditas' => $this->request->getVar('komoditas')
-    ];
-    $this->komoditasModel->insert($komoditas);
-    $id_kom = $this->komoditasModel->insertID();
-
-    $ancaman = [
-      'nama_anc' => $this->request->getVar('nama_anc'),
-      'penanggulangan' => $this->request->getVar('penanggulangan')
-    ];
-    $this->ancamanModel->insert($ancaman);
-    $id_anc = $this->ancamanModel->insertID();
-
-    $tempat = [
-      'letak_prod' => $this->request->getVar('letak_prod'),
-      'luas_prod' => $this->request->getVar('luas_prod'),
-      'kepemilikan' => $this->request->getVar('kepemilikan'),
-      'status_lahan' => $this->request->getVar('status_lahan')
-    ];
-    $this->tempatModel->insert($tempat);
-    $id_tp = $this->tempatModel->insertID();
-
-    $sentra = [
-      'nama_sp' => $this->request->getVar('nama_sp'),
-      'kecamatan' => $this->request->getVar('kecamatan'),
-      'kelurahan' => $this->request->getVar('kelurahan')
-    ];
-    $this->sentraModel->insert($sentra);
-    $id_sp = $this->sentraModel->insertID();
-
-    $infrastruktur = [
-      'sarana_pengairan' => $this->request->getVar('sarana_pengairan'),
-      'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
-      'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
-    ];
-    $this->infrastrukturModel->insert($infrastruktur);
-    $id_ip = $this->infrastrukturModel->insertID();
-
-    $produsen = [
-      'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
-      'pembinaan' => $this->request->getVar('pembinaan'),
-      'kelembagaan' => $this->request->getVar('kelembagaan'),
-      'kesejahteraan' => $this->request->getVar('kesejahteraan')
-    ];
-    $this->produsenModel->insert($produsen);
-    $id_produsen = $this->produsenModel->insertID();
-
-    $tanam = [
-      'id_kom' => $id_kom,
+    $this->tanamanModel->insert([
       'jenis_tanam' => $this->request->getVar('jenis_tanam'),
       'ls_tanam' => $this->request->getVar('ls_tanam'),
       'ls_panen' => $this->request->getVar('ls_panen'),
@@ -141,14 +93,14 @@ class Tanaman extends BaseController
       'alat_teknologi' => $this->request->getVar('alat_teknologi'),
       'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
       'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
-      'id_anc' => $id_anc,
-      'id_tp' => $id_tp,
-      'id_sp' => $id_sp,
-      'id_ip' => $id_ip,
-      'id_produsen' => $id_produsen
-    ];
-    // dd($tanam);
-    $this->tanamanModel->insert($tanam);
+      'nama_anc' => $this->request->getVar('nama_anc'),
+      'penanggulangan' => $this->request->getVar('penanggulangan'),
+      'id_kom' => $this->request->getVar('id_kom'),
+      'id_tp' => $this->request->getVar('id_tp'),
+      'id_sp' => $this->request->getVar('id_sp'),
+      'id_ip' => $this->request->getVar('id_ip'),
+      'id_produsen' => $this->request->getVar('id_produsen')
+    ]);
 
     session()->setFlashdata('pesan', 'ditambahkan.');
 

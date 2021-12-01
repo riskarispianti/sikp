@@ -41,16 +41,7 @@
                     <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Ancaman Produksi</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Tempat Produksi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">Sentra Produksi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-two-infras-tab" data-toggle="pill" href="#custom-tabs-two-infras" role="tab" aria-controls="custom-tabs-two-infras" aria-selected="false">Infrastruktur Produksi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-two-produsen-tab" data-toggle="pill" href="#custom-tabs-two-produsen" role="tab" aria-controls="custom-tabs-two-produsen" aria-selected="false">Produsen</a>
+                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Master Data</a>
                   </li>
                 </ul>
               </div>
@@ -112,12 +103,6 @@
                             <label for="jml_prod" class="col-sm-5 col-form-label">Jumlah Produksi</label>
                             <div class="col-sm-7">
                               <input type="text" class="form-control" name="jml_prod" placeholder="Ton">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="jml_prod" class="col-sm-5 col-form-label">Tanggal Produksi</label>
-                            <div class="col-sm-7">
-                              <input type="text" class="form-control" name="jml_prod" placeholder="Tgl">
                             </div>
                           </div>
                           <div class="form-group row">
@@ -252,7 +237,6 @@
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
                     <div class="card-body text-muted">
-                      <h4 class="text-center">TEMPAT PRODUKSI</h4>
                       <div class="form-group row my-4">
                         <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                         <div class="col-sm-7">
@@ -267,29 +251,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label for="luas_prod" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="luas_prod" placeholder="Luas produksi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="kepemilikan" class="col-sm-5 col-form-label">Pemilik Kawasan Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="kepemilikan" placeholder="Pemilik produksi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="status_lahan" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="status_lahan" placeholder="Status Lahan">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel" aria-labelledby="custom-tabs-two-settings-tab">
-                    <div class="card-body text-muted">
-                      <h4 class="text-center">SENTRA PRODUKSI</h4>
                       <div class="form-group row my-4">
                         <label for="nama_sp" class="col-sm-5 col-form-label">Identitas Sentra Produksi</label>
                         <div class="col-sm-7">
@@ -304,23 +265,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label for="kecamatan" class="col-sm-5 col-form-label">Kecamatan</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="kecamatan" placeholder="Kecamatan">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="kelurahan" class="col-sm-5 col-form-label">Kelurahan</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="kelurahan" placeholder="Kelurahan">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="custom-tabs-two-infras" role="tabpanel" aria-labelledby="custom-tabs-two-infras-tab">
-                    <div class="card-body text-muted">
-                      <h4 class="text-center">INFRASTRUKTUR PRODUKSI</h4>
                       <div class="form-group row my-4">
                         <label for="sarana_pengairan" class="col-sm-5 col-form-label">Sarana dan Prasarana Pengairan</label>
                         <div class="col-sm-7">
@@ -335,23 +279,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label for="pengel_jar_irigasi" class="col-sm-5 col-form-label">Pengelolaan Jaringan Irigasi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="pengel_jar_irigasi" placeholder="pengelolaan">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="infras_pengel_air" class="col-sm-5 col-form-label">Infrastruktur Pengelolaan Air</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="infras_pengel_air" placeholder="pengelolaan air">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="custom-tabs-two-produsen" role="tabpanel" aria-labelledby="custom-tabs-two-produsen-tab">
-                    <div class="card-body text-muted">
-                      <h4 class="text-center">PRODUSEN</h4>
                       <div class="form-group row my-4">
                         <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
                         <div class="col-sm-7">
@@ -364,24 +291,6 @@
                           <div class="invalid-feesback text-danger">
                             <?= $validation->getError('kelembagaan'); ?>
                           </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="jml_penghasil_kom" class="col-sm-5 col-form-label">Jumlah Produsen/Petani</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="jml_penghasil_kom">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="pembinaan" class="col-sm-5 col-form-label">Pembinaan Kepada Produsen/Petani</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="pembinaan">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="kesejahteraan" class="col-sm-5 col-form-label">Kesejahteraan Petani</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control" name="kesejahteraan">
                         </div>
                       </div>
                     </div>
