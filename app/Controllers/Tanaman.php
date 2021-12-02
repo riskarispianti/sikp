@@ -62,18 +62,77 @@ class Tanaman extends BaseController
   public function save()
   {
     // validasi input
-    // if (!$this->validate([
-    //   'komoditas' => [
-    //     'rules' => 'required',
-    //     'errors' => [
-    //       'required' => '{field} harus diisi.'
-    //     ]
-    //   ]
-    // ])) {
-    //   $validation = \Config\Services::validation();
+    if (!$this->validate([
+      'ls_tanam' => [
+        'rules' => 'required|numeric',
+        'errors' => [
+          'required' => 'luas tanam harus diisi.',
+          'numeric' => 'isi harus angka'
+        ]
+      ],
+      'ls_panen' => [
+        'rules' => 'required|numeric',
+        'errors' => [
+          'required' => 'luas panen harus diisi.',
+          'numeric' => 'isi harus angka'
+        ]
+      ],
+      'produktivitas' => [
+        'rules' => 'required|numeric',
+        'errors' => [
+          'required' => 'produktivitas harus diisi.',
+          'numeric' => 'isi harus angka'
+        ]
+      ],
+      'jml_prod' => [
+        'rules' => 'required|numeric',
+        'errors' => [
+          'required' => 'jumlah produksi harus diisi.',
+          'numeric' => 'isi harus angka'
+        ]
+      ],
+      'lama_proses_prod' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'lama proses produksi harus diisi.'
+        ]
+      ],
+      'perk_iklim' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'perkiraan iklim harus diisi.'
+        ]
+      ],
+      'perk_tanam_panen' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'musim tanam dan panen iklim harus diisi.'
+        ]
+      ],
+      'biaya_prod' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'biaya produksi harus diisi.'
+        ]
+      ],
+      'harga_jual_prod' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'harga jual produksi harus diisi.'
+        ]
+      ],
+      'alat_teknologi' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'alat dan teknologi harus diisi.'
+        ]
+      ],
 
-    //   return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
-    // }
+    ])) {
+      $validation = \Config\Services::validation();
+
+      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
+    }
 
     $this->tanamanModel->insert([
       'jenis_tanam' => $this->request->getVar('jenis_tanam'),

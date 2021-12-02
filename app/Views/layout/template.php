@@ -25,6 +25,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Select2 -->
   <link rel="stylesheet" href="/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -98,6 +100,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
   <!-- Select2 -->
   <script src="/plugins/select2/js/select2.full.min.js"></script>
+  <!-- InputMask -->
+  <script src="/plugins/moment/moment.min.js"></script>
+  <!-- date-range-picker -->
+  <script src="/plugins/daterangepicker/daterangepicker.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
@@ -120,6 +126,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('.select2bs4').select2({
         theme: 'bootstrap4'
       })
+
+      //Date range picker
+      $('#reservation').daterangepicker()
+
     })
     // BS-Stepper Init
     document.addEventListener('DOMContentLoaded', function() {
