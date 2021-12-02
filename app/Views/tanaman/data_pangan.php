@@ -59,9 +59,9 @@
                     <tr>
                       <td><?= $i++; ?></td>
                       <td><?= $tan['komoditas']; ?> </td>
-                      <td><?= $tan['jenis_tanam']; ?></td>
                       <td><?= $tan['kepemilikan']; ?></td>
                       <td><?= $tan['kecamatan']; ?></td>
+                      <td><?= $tan['jenis_tanam']; ?></td>
                       <td><?= $tan['ls_panen']; ?></td>
                       <td><?= $tan['produktivitas']; ?></td>
                       <td class="text-center">
