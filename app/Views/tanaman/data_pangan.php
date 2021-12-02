@@ -47,6 +47,7 @@
                     <th>Kepemilikan</th>
                     <th>Lokasi</th>
                     <th>Jenis Tanam</th>
+                    <th>Luas Tanam</th>
                     <th>Luas Panen</th>
                     <th>Produktivitas</th>
                     <th>Aksi</th>
@@ -62,8 +63,9 @@
                       <td><?= $tan['kepemilikan']; ?></td>
                       <td><?= $tan['kecamatan']; ?></td>
                       <td><?= $tan['jenis_tanam']; ?></td>
-                      <td><?= $tan['ls_panen']; ?></td>
-                      <td><?= $tan['produktivitas']; ?></td>
+                      <td><?= $tan['ls_tanam']; ?> Ha</td>
+                      <td><?= $tan['ls_panen']; ?> Ha</td>
+                      <td><?= $tan['produktivitas']; ?> Ton/Ha</td>
                       <td class="text-center">
                         <div class="btn-group">
                           <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-info btn-sm" type="button">

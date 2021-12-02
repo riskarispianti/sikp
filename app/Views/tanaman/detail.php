@@ -43,13 +43,13 @@
                             <dt>Kelompok/Jenis Pangan</dt>
                             <dd><?= $tanaman['jenis_tanam']; ?></dd>
                             <dt>Luas Tanam/Areal</dt>
-                            <dd><?= $tanaman['ls_tanam']; ?></dd>
+                            <dd><?= $tanaman['ls_tanam']; ?> Ha</dd>
                             <dt>Luas Panen</dt>
-                            <dd><?= $tanaman['ls_panen']; ?></dd>
+                            <dd><?= $tanaman['ls_panen']; ?> Ha</dd>
                             <dt>Produktivitas</dt>
-                            <dd><?= $tanaman['produktivitas']; ?></dd>
+                            <dd><?= $tanaman['produktivitas']; ?> Ton/Ha</dd>
                             <dt>Jumlah Produksi</dt>
-                            <dd><?= $tanaman['jml_prod']; ?></dd>
+                            <dd><?= $tanaman['jml_prod']; ?> Ton</dd>
                             <dt>Lama Proses Produksi</dt>
                             <dd><?= $tanaman['lama_proses_prod']; ?></dd>
                             <dt>Perkiraan Iklim</dt>
@@ -57,9 +57,9 @@
                             <dt>Perkiraan Musim Tanam dan Panen</dt>
                             <dd><?= $tanaman['perk_tanam_panen']; ?></dd>
                             <dt>Biaya Produksi</dt>
-                            <dd><?= $tanaman['biaya_prod']; ?></dd>
+                            <dd>Rp. <?= $tanaman['biaya_prod']; ?></dd>
                             <dt>Harga Jual Hasil Produksi</dt>
-                            <dd><?= $tanaman['harga_jual_prod']; ?></dd>
+                            <dd>Rp. <?= $tanaman['harga_jual_prod']; ?></dd>
                             <dt>Lahan Produksi</dt>
                             <dd><?= $tanaman['lahan_prod']; ?></dd>
                             <dt>Sumber Pengairan</dt>
