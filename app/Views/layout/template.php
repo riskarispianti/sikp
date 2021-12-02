@@ -37,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <?= $this->renderSection('content'); ?>
 
     <!-- Main Footer -->
-    <footer class="main-footer mt-2">
+    <footer class="main-footer">
       <!-- To the right -->
       <div class="float-right d-none d-sm-inline">
         Anything you want
