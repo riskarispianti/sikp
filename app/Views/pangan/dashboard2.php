@@ -232,7 +232,7 @@
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-outline-success">
+                <a href="/peternakan" class="btn btn-sm btn-outline-success">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>

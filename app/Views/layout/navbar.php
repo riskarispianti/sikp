@@ -26,8 +26,8 @@
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Produksi</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tanaman" class="dropdown-item">Tanaman Pangan </a></li>
-          <li><a href="#" class="dropdown-item">Peternakan</a></li>
-          <li><a href="#" class="dropdown-item">Perikanan</a></li>
+          <li><a href="/peternakan" class="dropdown-item">Peternakan</a></li>
+          <li><a href="/perikanan" class="dropdown-item">Perikanan</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
