@@ -9,7 +9,7 @@ class PeternakanModel extends Model
     protected $table                = 'prod_ternak';
     protected $primaryKey           = 'id_ternak';
     protected $useAutoIncrement     = true;
-    protected $allowedFields        = [];
+    protected $allowedFields        = ['jenis_ternak', 'jml_popilasi', 'lama_prod', 'waktu_prod', 'biaya_prod', 'harga_hsl_prod', 'sistem_pemel_ternak', 'benih', 'alat_teknologi', 'peman_hsl_prod', 'limbah_hsl_prod', 'nama_anc', 'penanggulangan', 'id_kom', 'id_tp', 'id_sp', 'id_ipt', 'id_produsen'];
 
     // Dates
     protected $useTimestamps        = true;
@@ -21,7 +21,7 @@ class PeternakanModel extends Model
                 ->join('komoditas', 'komoditas.id_kom=prod_ternak.id_kom')
                 ->join('tempat_prod', 'tempat_prod.id_tp=prod_ternak.id_tp')
                 ->join('sentra_prod', 'sentra_prod.id_sp=prod_ternak.id_sp')
-                ->join('infras_prod_ternak', 'infras_prod.id_ipt=prod_ternak.id_ipt')
+                ->join('infras_prod_ternak', 'infras_prod_ternak.id_ipt=prod_ternak.id_ipt')
                 ->join('produsen', 'produsen.id_produsen=prod_ternak.id_produsen')
                 ->get()->getResultArray();
         }
@@ -30,7 +30,7 @@ class PeternakanModel extends Model
             ->join('komoditas', 'komoditas.id_kom=prod_ternak.id_kom')
             ->join('tempat_prod', 'tempat_prod.id_tp=prod_ternak.id_tp')
             ->join('sentra_prod', 'sentra_prod.id_sp=prod_ternak.id_sp')
-            ->join('infras_prod_ternak', 'infras_prod.id_ipt=prod_ternak.id_ipt')
+            ->join('infras_prod_ternak', 'infras_prod_ternak.id_ipt=prod_ternak.id_ipt')
             ->join('produsen', 'produsen.id_produsen=prod_ternak.id_produsen')
             ->first();
     }
