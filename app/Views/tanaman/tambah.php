@@ -28,7 +28,7 @@
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
-            <div class="card card-tabs card-success">
+            <div class="card card-tabs card-info">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                   <li class="pt-2 px-3">
@@ -335,7 +335,7 @@
         <div class="row">
           <div class="col-12 text-center">
             <a href="/tanaman" class="btn bg-gradient-warning mr-3">Batal</a>
-            <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-success">
+            <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-info">
           </div>
         </div>
       </form>
