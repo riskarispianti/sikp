@@ -28,9 +28,22 @@
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
+<<<<<<< HEAD
+            <div class="card card-primary card-tabs">
+              <div class="card-header p-0 pt-1">
+                <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
+                  <li class="pt-2 px-3">
+                    <h3 class="card-title">Tambah Data</h3>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Tempat Produksi</a>
+                  </li>
+                </ul>
+=======
             <div class="card">
               <div class="card-header bg-gradient-indigo">
                 <h3 class="card-title">Tambah Tempat Produksi</h3>
+>>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
               </div>
               <div class="card-body text-muted">
                 <h4 class="text-center">Tempat Produksi</h4>
