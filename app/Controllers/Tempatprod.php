@@ -32,10 +32,7 @@ class Tempatprod extends BaseController
         ];
         return view('/more/tempat_prod/tambah', $data);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
     public function save()
     {
         // validasi input
