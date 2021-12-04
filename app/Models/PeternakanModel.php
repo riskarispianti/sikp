@@ -21,7 +21,7 @@ class PeternakanModel extends Model
                 ->join('komoditas', 'komoditas.id_kom=prod_ternak.id_kom')
                 ->join('tempat_prod', 'tempat_prod.id_tp=prod_ternak.id_tp')
                 ->join('sentra_prod', 'sentra_prod.id_sp=prod_ternak.id_sp')
-                ->join('infras_prod_ternak', 'infras_prod.id_ipt=prod_ternak.id_ipt')
+                ->join('infras_prod_ternak', 'infras_prod_ternak.id_ipt=prod_ternak.id_ipt')
                 ->join('produsen', 'produsen.id_produsen=prod_ternak.id_produsen')
                 ->get()->getResultArray();
         }
@@ -30,7 +30,7 @@ class PeternakanModel extends Model
             ->join('komoditas', 'komoditas.id_kom=prod_ternak.id_kom')
             ->join('tempat_prod', 'tempat_prod.id_tp=prod_ternak.id_tp')
             ->join('sentra_prod', 'sentra_prod.id_sp=prod_ternak.id_sp')
-            ->join('infras_prod_ternak', 'infras_prod.id_ipt=prod_ternak.id_ipt')
+            ->join('infras_prod_ternak', 'infras_prod_ternak.id_ipt=prod_ternak.id_ipt')
             ->join('produsen', 'produsen.id_produsen=prod_ternak.id_produsen')
             ->first();
     }
