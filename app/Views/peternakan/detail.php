@@ -138,60 +138,8 @@
                           </p>
                           <strong>Kesejahteraan Petani</strong>
                           <p class="text-muted">
-                            <?= $tanaman['Kesejahteraan Petani']; ?>
+                            <?= $tanaman['kesejahteraan']; ?>
                           </p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="row">
-                    <div class="card-body">
-                      <div class="card card-info card-outline">
-                        <div class="card-header">
-                          <h5 class="card-title">Produksi Pangan</h5>
-
-                        </div>
-                        <div class="card-body">
-                          <dl>
-                            <dt>Kelompok/Jenis Pangan</dt>
-                            <dd><?= $tanaman['jenis tanam']; ?></dd>
-                            <dt>Luas Tanaman/Areal</dt>
-                            <dd><?= $tanaman['ls_tanam']; ?></dd>
-                            <dt>Luas Panen</dt>
-                            <dd><?= $tanaman['ls_tanam']=; ?></dd>
-                            <dt>Produktivitas</dt>
-                            <dd><?= $tanaman['produktivitas']; ?></dd>
-                            <dt>Jumlah Produksi</dt>
-                            <dd><?= $tanaman['jml_prod']; ?></dd>
-                            <dt>Lama Proses Produksi</dt>
-                            <dd><?= $tanaman['lama_proses_prod'] ?></dd>
-                            <dt>Perkiraan Iklim</dt>
-                            <dd><?= $tanaman [' perk_iklim']; ?></dd>
-                            <dt>Perkiraan Musim Tanaman Panen</dt>
-                            <dd><?= $tanaman ['perk_tanam_panen']; ?></dd>
-                            <dt>Biaya Produksi </dt>
-                            <dd><?= $tanaman ['biaya_prod']; ?></dd>
-                            <dt>Harga Jual Hasil Produksi </dt>
-                            <dd><?= $tanaman ['harga_jual_prod']; ?></dd>
-                            <dt>Lahan Produksi </dt>
-                            <dd><?= $tanaman ['lahan_prod']; ?></dd>
-                            <dt>Sumber Pengairan </dt>
-                            <dd><?= $tanaman ['sumber_pengairan']; ?></dd>
-                            <dt>Bibit </dt>
-                            <dd><?= $thistanaman ['bibit']; ?>l</dd>
-                            <dt>Pupuk</dt>
-                            <dd><?= $tanaman ['pupuk']; ?></dd>
-                            <dt>Alat atau teknologi yang digunakan</dd>
-                            <dd><?= $tanaman ['alat_teknologi']; ?></dd>
-                            
-                            <dt>Pemanfaatan Hasil Produksi</dt>
-                            <dd><?= $tanaman ['peman_hsl_prod']; ?></dd>
-                            <dt>Limbah Hasil Produksi dan Pengelolaannya</dd> 
-                            <dd><?= $tanaman ['limbah_hsl_prod']; ?></dd>
-                          </dl>
                         </div>
                       </div>
                     </div>
@@ -221,13 +169,12 @@
                 <p class="text-muted">
                   <?= $tanaman['luas_prod']; ?>
                 </p>
-
-                
+              </div>
 
               <h5 class="mt-5 text-muted">Senstra Produksi</h5>
               <hr>
               <div class="text-muted">
-                <strong>Nama/Identitas Sentra Produksi</strong>
+                <strong>Nama/Identitas Senstra Produksi</strong>
                 <p class="text-muted">
                   <?= $tanaman['nama_sp']; ?>
                 </p>

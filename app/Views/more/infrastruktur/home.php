@@ -9,15 +9,15 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Infrastruktur</small></h1>
+          <h1 class="m-0">Infrastruktur Produksi</small></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active">Infrastruktur</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/infrastruktur/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Infrastruktur</a>
+          <a href="/infrastruktur/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Infrastruktur</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>

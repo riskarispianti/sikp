@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tempatprod/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
+          <a href="/tempatprod/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
@@ -58,9 +58,9 @@
                       <td><?= $temp['status_lahan']; ?> </td>
                       <td>
                         <div class="btn-group">
-                          <a href="" class="btn btn-warning btn-sm" type="button">
+                          <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
-                          <a href="" class="btn btn-danger btn-sm" type="button">
+                          <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>

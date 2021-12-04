@@ -9,7 +9,7 @@ class TanamanModel extends Model
     protected $table = 'prod_tanam';
     protected $primaryKey = 'id_tanam';
     protected $useAutoIncrement = true;
-    protected $allowedFields  = ['jenis_tanam', 'ls_tanam', 'ls_panen', 'produktivitas', 'jml_prod', 'lama_proses_prod', 'perk_iklim', 'perk_tanam_panen', 'biaya_prod', 'harga_jual_prod', 'lahan_prod', 'sumber_pengairan', 'bibit', 'pupuk', 'alat_teknologi', 'peman_hsl_prod', 'limbah_hsl_prod', 'id_kom', 'id_tp', 'id_sp', 'id_ip', 'id_produsen'];
+    protected $allowedFields  = ['jenis_tanam', 'ls_tanam', 'ls_panen', 'produktivitas', 'jml_prod', 'lama_proses_prod', 'perk_iklim', 'perk_tanam_panen', 'biaya_prod', 'harga_jual_prod', 'lahan_prod', 'sumber_pengairan', 'bibit', 'pupuk', 'alat_teknologi', 'peman_hsl_prod', 'limbah_hsl_prod', 'nama_anc', 'penanggulangan', 'id_kom', 'id_tp', 'id_sp', 'id_ip', 'id_produsen'];
 
     protected $useTimestamps = true;
 
