@@ -28,6 +28,7 @@
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
+<<<<<<< HEAD
             <div class="card card-primary card-tabs">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
@@ -38,48 +39,47 @@
                     <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Tempat Produksi</a>
                   </li>
                 </ul>
+=======
+            <div class="card">
+              <div class="card-header bg-gradient-indigo">
+                <h3 class="card-title">Tambah Tempat Produksi</h3>
+>>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
               </div>
-              <div class="card-body">
-                <div class="tab-content" id="custom-tabs-two-tabContent">
-                  <div class="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">
-                    <div class="card-body text-muted">
-                      <h4 class="text-center">Tempat Produksi</h4>
-                      <div class="form-group row my-4">
-                        <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('letak_prod')) ? 'is-invalid' : ''; ?>" name="letak_prod" placeholder="Letak Produksi">
-                          <div class="invalid-feedback text-danger">
-                            <?= $validation->getError('letak_prod'); ?>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row my-4">
-                        <label for="luas_prod" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('luas_prod')) ? 'is-invalid' : ''; ?>" name="luas_prod" placeholder="Luas Produksi">
-                          <div class="invalid-feedback text-danger">
-                            <?= $validation->getError('luas_prod'); ?>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row my-4">
-                        <label for="kepemilikan" class="col-sm-5 col-form-label">Kepemilikan</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('kepemilikan')) ? 'is-invalid' : ''; ?>" name="kepemilikan" placeholder="Kepemilikan">
-                          <div class="invalid-feedback text-danger">
-                            <?= $validation->getError('kepemilikan'); ?>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row my-4">
-                        <label for="status_lahan" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
-                        <div class="col-sm-7">
-                          <input type="text" class="form-control <?= ($validation->hasError('status_lahan')) ? 'is-invalid' : ''; ?>" name="status_lahan" placeholder="Status Tempat Produksi">
-                          <div class="invalid-feedback text-danger">
-                            <?= $validation->getError('status_lahan'); ?>
-                          </div>
-                        </div>
-                      </div>
+              <div class="card-body text-muted">
+                <h4 class="text-center">Tempat Produksi</h4>
+                <div class="form-group row my-4">
+                  <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('letak_prod')) ? 'is-invalid' : ''; ?>" name="letak_prod" placeholder="Letak Produksi">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('letak_prod'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
+                  <label for="luas_prod" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('luas_prod')) ? 'is-invalid' : ''; ?>" name="luas_prod" placeholder="Luas Produksi">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('luas_prod'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
+                  <label for="kepemilikan" class="col-sm-5 col-form-label">Kepemilikan</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('kepemilikan')) ? 'is-invalid' : ''; ?>" name="kepemilikan" placeholder="Kepemilikan">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('kepemilikan'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
+                  <label for="status_lahan" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('status_lahan')) ? 'is-invalid' : ''; ?>" name="status_lahan" placeholder="Status Tempat Produksi">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('status_lahan'); ?>
                     </div>
                   </div>
                 </div>
@@ -89,8 +89,8 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/tempatprod" class="btn bg-gradient-warning">Batal</a>
-            <input type="submit" value="Tambah Tempat Produksi" class="btn bg-gradient-primary">
+            <a href="/tempatprod" class="btn bg-gradient-warning mr-3">Batal</a>
+            <input type="submit" value="Tambah Tempat Produksi" class="btn bg-gradient-indigo">
           </div>
         </div>
       </form>

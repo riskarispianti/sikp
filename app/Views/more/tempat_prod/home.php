@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tempatprod/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
+          <a href="/tempatprod/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
@@ -58,9 +58,15 @@
                       <td><?= $temp['status_lahan']; ?> </td>
                       <td>
                         <div class="btn-group">
+<<<<<<< HEAD
                           <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-default" data-toggle="modal" data-target="#modal-edit" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
                           <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakan anda yakin?');">
+=======
+                          <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-warning btn-sm" type="button">
+                            <i class="fa fa-edit"></i> Edit</a>
+                          <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+>>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>

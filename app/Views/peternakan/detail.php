@@ -202,10 +202,11 @@
               </form>
             </div>
           </div>
-          <!-- /.card-body -->
         </div>
-        <!-- /.card -->
+        <!-- /.card-body -->
       </div>
+      <!-- /.card -->
+    </div>
   </section>
 
 </div>

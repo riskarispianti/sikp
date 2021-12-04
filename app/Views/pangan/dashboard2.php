@@ -189,6 +189,7 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
           <div class="card bg-light d-flex flex-fill">
@@ -231,7 +232,7 @@
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-outline-success">
+                <a href="/peternakan" class="btn btn-sm btn-outline-success">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>

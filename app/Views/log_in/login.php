@@ -11,7 +11,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">
-        <img src="/img/SIKP.png" alt="logo" width="250">
+        <img src="/img/sin.png" alt="logo" width="250">
       </p>
       <form action="/dashboard" method="post">
         <div class="input-group mb-3">

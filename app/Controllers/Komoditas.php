@@ -19,17 +19,10 @@ class Komoditas extends BaseController
     {
         $data = [
             'title' => 'Komoditas | Ketersediaan Pangan',
+            'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->findAll()
         ];
         return view('/more/komoditas/home', $data);
-    }
-    public function tambah()
-    {
-        $data = [
-            'title' => 'Komoditas | Ketersediaan Pangan',
-            'validation' => \Config\Services::validation()
-        ];
-        return view('/more/komoditas/tambah', $data);
     }
 
     public function save()
@@ -46,7 +39,7 @@ class Komoditas extends BaseController
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/komoditas/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('/komoditas')->withInput()->with('validation', $validation);
         }
 
         $this->komoditasModel->insert([
@@ -54,40 +47,6 @@ class Komoditas extends BaseController
         ]);
 
         session()->setFlashdata('pesan', 'ditambahkan.');
-
-        return redirect()->to('/komoditas');
-    }
-
-    public function edit($id_kom)
-    {
-        $data = [
-            'title' => 'Komoditas | Ketersediaan Pangan',
-            'komoditas' => $this->komoditasModel->find($id_kom),
-            'validation' => \Config\Services::validation()
-        ];
-        return view('/more/komoditas/edit', $data);
-    }
-
-    public function update($id_kom)
-    {
-        if (!$this->validate([
-            'komoditas' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ]
-        ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/komoditas/edit' . $this->request->getVar('id_kom'))->withInput()->with('validation', $validation);
-        }
-
-        $this->komoditasModel->update($id_kom, [
-            'komoditas' => $this->request->getVar('komoditas')
-        ]);
-
-        session()->setFlashdata('pesan', 'diedit.');
 
         return redirect()->to('/komoditas');
     }

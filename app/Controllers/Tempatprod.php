@@ -32,6 +32,10 @@ class Tempatprod extends BaseController
         ];
         return view('/more/tempat_prod/tambah', $data);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
     public function save()
     {
         // validasi input
@@ -63,7 +67,7 @@ class Tempatprod extends BaseController
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('/tempatprod')->withInput()->with('validation', $validation);
+            return redirect()->to('/tempatprod/tambah')->withInput()->with('validation', $validation);
         }
 
         $this->tempatModel->insert([
@@ -81,11 +85,11 @@ class Tempatprod extends BaseController
     public function edit($id_tp)
     {
         $data = [
-            'title' => 'Sentra Produksi | Ketersediaan Pangan',
-            'tempat' => $this->sentraModel->find($id_tp),
+            'title' => 'Tempat Produksi | Ketersediaan Pangan',
+            'tempat' => $this->tempatModel->find($id_tp),
             'validation' => \Config\Services::validation()
         ];
-        return view('/more/sentra_prod/edit', $data);
+        return view('/more/tempat_prod/edit', $data);
     }
 
     public function update($id_tp)
