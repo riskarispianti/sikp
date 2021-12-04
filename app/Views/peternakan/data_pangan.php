@@ -62,11 +62,11 @@
                       <td><?= $pet['kepemilikan']; ?></td>
                       <td><?= $pet['kecamatan']; ?></td>
                       <td><?= $pet['jenis_ternak']; ?></td>
-                      <td><?= $pet['jml_populasi']; ?></td>
+                      <td><?= $pet['jml_populasi']; ?> Ekor</td>
                       <td><?= $pet['sistem_pemel_ternak']; ?></td>
                       <td class="text-center">
                         <div class="btn-group">
-                          <a href="" class="btn btn-info btn-sm" type="button">
+                          <a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
                           <a href="" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>

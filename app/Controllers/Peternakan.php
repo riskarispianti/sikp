@@ -14,7 +14,7 @@ use App\Models\TempatModel;
 class Peternakan extends BaseController
 {
     protected $peternakanModel;
-    protected $infrastrukturModel;
+    protected $infrasternakModel;
     protected $komoditasModel;
     protected $produsenModel;
     protected $sentraModel;
@@ -23,7 +23,7 @@ class Peternakan extends BaseController
     public function __construct()
     {
         $this->peternakanModel = new PeternakanModel();
-        $this->infrastrukturModel = new InfrasternakModel();
+        $this->infrasternakModel = new InfrasternakModel();
         $this->komoditasModel = new KomoditasModel();
         $this->produsenModel = new ProdusenModel();
         $this->sentraModel = new SentraModel();
@@ -37,5 +37,28 @@ class Peternakan extends BaseController
             'peternakan' => $this->peternakanModel->getTernak()
         ];
         echo view('peternakan/data_pangan', $data);
+    }
+
+    public function detail($id_ternak)
+    {
+        $data = [
+            'title' => 'Detail Laporan | Ketersediaan Pangan',
+            'peternakan' => $this->peternakanModel->getTernak($id_ternak)
+        ];
+        return view('peternakan/detail', $data);
+    }
+
+    public function tambah()
+    {
+        $data = [
+            'title' => 'Tambah Data Peternakan',
+            'validation' => \Config\Services::validation(),
+            'komoditas' => $this->komoditasModel->findAll(),
+            'tempat' => $this->tempatModel->findAll(),
+            'sentra' => $this->sentraModel->findAll(),
+            'infrastruktur' => $this->infrasternakModel->findAll(),
+            'produsen' => $this->produsenModel->findAll()
+        ];
+        return view('peternakan/tambah', $data);
     }
 }
