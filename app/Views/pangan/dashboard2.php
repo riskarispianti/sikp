@@ -36,41 +36,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-success">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          2
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-success">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          3
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-success">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          4
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-success">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          5
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-success">55 Kg</span></td>
-                      </tr>
+                      <?php $i = 1;
+                      foreach ($tanaman as $tan) : ?>
+                        <tr>
+                          <td><?= $i++; ?></td>
+                          <td><?= $tan['komoditas']; ?> </td>
+                          <td><span class="badge bg-success"><?= $tan['jml_prod']; ?></span></td>
+                        </tr>
+                      <?php endforeach; ?>
                     </tbody>
                   </table>
                 </div>

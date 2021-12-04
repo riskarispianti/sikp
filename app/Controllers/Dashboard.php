@@ -2,12 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Models\TanamanModel;
+
 class Dashboard extends BaseController
 {
+  protected $tanamanModel;
+
+  public function __construct()
+  {
+    $this->tanamanModel = new TanamanModel();
+  }
+
   public function index()
   {
     $data = [
-      'title' => 'Home | Ketersediaan Pangan'
+      'title' => 'Home | Ketersediaan Pangan',
+      'tanaman' => $this->tanamanModel->getTanam()
     ];
     return view('pangan/dashboard2', $data);
   }
