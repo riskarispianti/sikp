@@ -48,12 +48,16 @@ class Tanaman extends BaseController
     ];
     return view('tanaman/detail', $data);
   }
-
   public function tambah()
   {
     $data = [
       'title' => 'Tambah Data Tanaman Pangan',
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'komoditas' => $this->komoditasModel->findAll(),
+      'tempat' => $this->tempatModel->findAll(),
+      'sentra' => $this->sentraModel->findAll(),
+      'infrastruktur' => $this->infrastrukturModel->findAll(),
+      'produsen' => $this->produsenModel->findAll()
     ];
     return view('tanaman/tambah', $data);
   }
@@ -158,16 +162,8 @@ class Tanaman extends BaseController
   {
     $data = [
       'title' => 'Edit Data Tanaman Pangan',
-      'tanaman' => $this->tanamanModel->getTanam($id_tanam)
-    ];
-    return view('tanaman/edit', $data);
-  }
-  public function update($id_tanam)
-  {
-    $komoditas = [
-      'komoditas' => $this->request->getVar('komoditas'),
-      'tanaman' = $this->tanamanModel->getTanam($id_tanam),
-      'validation' = \Config\Services::validation()
+      'tanaman' => $this->tanamanModel->getTanam($id_tanam),
+      'validation' => \Config\Services::validation()
     ];
     return view('tanaman/edit', $data);
   }
@@ -175,6 +171,8 @@ class Tanaman extends BaseController
   public function update($id_tanam)
   {
     // cek
+
+
     if (!$this->validate([
       'komoditas' => [
         'rules' => 'required|if_exist',
@@ -198,9 +196,7 @@ class Tanaman extends BaseController
       'nama_anc' => $this->request->getVar('nama_anc'),
       'penanggulangan' => $this->request->getVar('penanggulangan')
     ];
-
     $this->ancamanModel->update($ancaman);
-
     $id_anc = $this->ancamanModel->insertID();
 
     $tempat = [
@@ -209,9 +205,7 @@ class Tanaman extends BaseController
       'kepemilikan' => $this->request->getVar('kepemilikan'),
       'status_lahan' => $this->request->getVar('status_lahan')
     ];
-
     $this->tempatModel->update($tempat);
-
     $id_tp = $this->tempatModel->insertID();
 
     $sentra = [
@@ -219,9 +213,7 @@ class Tanaman extends BaseController
       'kecamatan' => $this->request->getVar('kecamatan'),
       'kelurahan' => $this->request->getVar('kelurahan')
     ];
-
     $this->sentraModel->update($sentra);
-
     $id_sp = $this->sentraModel->insertID();
 
     $infrastruktur = [
@@ -229,9 +221,7 @@ class Tanaman extends BaseController
       'pengel_jar_irigasi' => $this->request->getVar('pengel_jar_irigasi'),
       'infras_pengel_air' => $this->request->getVar('infras_pengel_air')
     ];
-
     $this->infrastrukturModel->update($infrastruktur);
-
     $id_ip = $this->infrastrukturModel->insertID();
 
     $produsen = [
@@ -240,9 +230,7 @@ class Tanaman extends BaseController
       'kelembagaan' => $this->request->getVar('kelembagaan'),
       'kesejahteraan' => $this->request->getVar('kesejahteraan')
     ];
-
     $this->produsenModel->update($produsen);
-
     $id_produsen = $this->produsenModel->insertID();
 
     $tanam = [

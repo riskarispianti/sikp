@@ -65,10 +65,12 @@
                           <div class="form-group row my-4">
                             <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
-                              <div class="invalid-feesback text-danger">
-                                <?= $validation->getError('komoditas'); ?>
-                              </div>
+                              <select class="form-control" name="id_kom">
+                                <option selected disabled></option>
+                                <?php foreach ($komoditas as $kom => $value) : ?>
+                                  <option value="<?= $value['id_kom']; ?>"><?= $value['komoditas']; ?></option>
+                                <?php endforeach; ?>
+                              </select>
                             </div>
                           </div>
                           <div class="form-group row">

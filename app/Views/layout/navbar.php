@@ -31,7 +31,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Learn More</a>
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Master Data</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
           <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li>

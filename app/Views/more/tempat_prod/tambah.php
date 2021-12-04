@@ -35,7 +35,7 @@
                     <h3 class="card-title">Tambah Data</h3>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Sentra Produksi</a>
+                    <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Tempat Produksi</a>
                   </li>
                 </ul>
               </div>
