@@ -58,9 +58,15 @@
                       <td><?= $temp['status_lahan']; ?> </td>
                       <td>
                         <div class="btn-group">
+<<<<<<< HEAD
+                          <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-default" data-toggle="modal" data-target="#modal-edit" type="button">
+                            <i class="fa fa-edit"></i> Edit</a>
+                          <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakan anda yakin?');">
+=======
                           <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
                           <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+>>>>>>> 9d51e235469236e8a42896cb951174073fd9c033
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
@@ -80,5 +86,7 @@
   </section>
 
 </div>
+
+
 
 <?= $this->endSection(); ?>

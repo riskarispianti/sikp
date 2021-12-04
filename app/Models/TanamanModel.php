@@ -22,6 +22,7 @@ class TanamanModel extends Model
                 ->join('sentra_prod', 'sentra_prod.id_sp=prod_tanam.id_sp')
                 ->join('infras_prod', 'infras_prod.id_ip=prod_tanam.id_ip')
                 ->join('produsen', 'produsen.id_produsen=prod_tanam.id_produsen')
+                ->join('ancaman', 'ancaman.id_anc=prod_tanam.id_anc')
                 ->get()->getResultArray();
         }
 
@@ -31,6 +32,7 @@ class TanamanModel extends Model
             ->join('sentra_prod', 'sentra_prod.id_sp=prod_tanam.id_sp')
             ->join('infras_prod', 'infras_prod.id_ip=prod_tanam.id_ip')
             ->join('produsen', 'produsen.id_produsen=prod_tanam.id_produsen')
+            ->join('ancaman', 'ancaman.id_anc=prod_tanam.id_anc')
             ->first();
     }
 }
