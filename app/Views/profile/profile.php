@@ -36,23 +36,23 @@
                   <div class="text-center mb-3">
                     <img class="img-fluid" src="/img/logo_portal.png" width="150">
                   </div>
-                  <h3 class="profile-username text-center">Fakultas Ilmu Komputer</h3>
+                  <h3 class="profile-username text-center">Dinas Perdamaian Dunia</h3>
                   <p class="text-muted text-center">Universitas Subang</p>
                 </div>
               </div>
               <div class="col-md-9">
                 <div class="card-body">
-                  <strong><i class="fas fa-book mr-1"></i> Visi & Misi</strong>
+                  <strong><i class="fas fa-book mr-1"></i> Usename</strong>
                   <p class="text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita sit,
                     voluptatum repellendus soluta obcaecati fugit sint,
                     nulla magni harum rem quae molestiae illum nostrum sequi temporibus numquam ipsum exercitationem quisquam.
                   </p>
                   <hr>
-                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Alamat</strong>
+                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Password</strong>
                   <p class="text-muted">Malibu, California</p>
                   <hr>
-                  <strong><i class="far fa-file-alt mr-1"></i> Sejarah</strong>
+                  <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
                   <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nobis. Beatae nostrum, aut quisquam alias, eius doloribus hic odit error culpa ipsum autem nihil sint rerum molestias corporis ratione neque?</p>
                 </div>
               </div>
