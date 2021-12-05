@@ -10,15 +10,15 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Edit Data</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item"><a href="/tanaman">Tanaman</a></li>
             <li class="breadcrumb-item active">Edit</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -28,7 +28,7 @@
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
-            <div class="card card-tabs card-success">
+            <div class="card card-tabs card-info">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                   <li class="pt-2 px-3">
@@ -241,8 +241,8 @@
                                 <option selected disabled></option>
                                 <option <?= ($tanaman['limbah_hsl_prod'] == 'Dijual') ? 'selected' : ''; ?>>Dijual</option>
                                 <option <?= ($tanaman['limbah_hsl_prod'] == 'Dimanfaatkan Sendiri') ? 'selected' : ''; ?>>Dimanfaatkan Sendiri</option>
-                                <option <?= ($tanaman['limbah_hsl_prod'] == '') ? 'Diolah' : ''; ?>>Diolah</option>
-                                <option <?= ($tanaman['limbah_hsl_prod'] == '') ? 'Dibuang' : ''; ?>>Dibuang</option>
+                                <option <?= ($tanaman['limbah_hsl_prod'] == 'Diolah') ? 'selected' : ''; ?>>Diolah</option>
+                                <option <?= ($tanaman['limbah_hsl_prod'] == 'Dibuang') ? 'selected' : ''; ?>>Dibuang</option>
                               </select>
                             </div>
                           </div>
@@ -334,8 +334,8 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/tanaman" class="btn bg-gradient-warning mr-3">Batal</a>
-            <input type="submit" value="Edit Data Pangan" class="btn bg-gradient-success">
+            <a href="/tanaman" class="btn bg-gradient-warning mr-2">Batal</a>
+            <input type="submit" value="Edit Data Pangan" class="btn bg-gradient-info">
           </div>
         </div>
       </form>

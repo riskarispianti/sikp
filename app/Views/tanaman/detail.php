@@ -10,22 +10,20 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Detail</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item"><a href="/laporan">Laporan</a></li>
             <li class="breadcrumb-item active">Detail</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
-  <!-- /.content-header -->
 
   <section class="content">
     <div class="container">
-      <!-- Default box -->
       <div class="card">
         <div class="card-body">
           <div class="row">
@@ -171,7 +169,7 @@
                 </p>
               </div>
 
-              <h5 class="mt-5 text-muted">Senstra Produksi</h5>
+              <h5 class="mt-5 text-muted">Sentra Produksi</h5>
               <hr>
               <div class="text-muted">
                 <strong>Nama/Identitas Senstra Produksi</strong>
@@ -186,25 +184,24 @@
                 <p class="text-muted">
                   <?= $tanaman['kelurahan']; ?>
                 </p>
-
               </div>
-              <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
-                <div class="btn-group">
-                  <a class="btn btn-info" href="/tanaman">
-                    <i class="fas fa-undo"></i> Kembali
-                  </a>
-                  <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
-                    <i class="fas fa-edit"></i> Edit
-                  </a>
-                  <input type="hidden" name="_method" value="DELETE">
-                  <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
-                </div>
-              </form>
+              <div class="text-center">
+                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+                  <div class="btn-group btn-lg">
+                    <a class="btn btn-info" href="/tanaman">
+                      <i class="fas fa-undo"></i> Kembali
+                    </a>
+                    <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
+                      <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-          <!-- /.card-body -->
         </div>
-        <!-- /.card -->
       </div>
   </section>
 

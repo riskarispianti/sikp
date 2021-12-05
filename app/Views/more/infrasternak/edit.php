@@ -77,7 +77,7 @@
         <div class="row">
           <div class="col-12 text-center">
             <a href="/infrasternak" class="btn bg-gradient-warning mr-2">Batal</a>
-            <input type="submit" value="Ubah Data" class="btn bg-gradient-indigo">
+            <input type="submit" value="Edit Infrastruktur" class="btn bg-gradient-indigo">
           </div>
         </div>
       </form>
