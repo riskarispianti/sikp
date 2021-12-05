@@ -9,7 +9,7 @@ class PeternakanModel extends Model
     protected $table                = 'prod_ternak';
     protected $primaryKey           = 'id_ternak';
     protected $useAutoIncrement     = true;
-    protected $allowedFields        = [];
+    protected $allowedFields        = ['jenis_ternak', 'jml_popilasi', 'lama_prod', 'waktu_prod', 'biaya_prod', 'harga_hsl_prod', 'sistem_pemel_ternak', 'benih', 'alat_teknologi', 'peman_hsl_prod', 'limbah_hsl_prod', 'nama_anc', 'penanggulangan', 'id_kom', 'id_tp', 'id_sp', 'id_ipt', 'id_produsen'];
 
     // Dates
     protected $useTimestamps        = true;

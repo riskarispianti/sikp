@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tanaman/tambah" class="btn btn-success mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+          <a href="/peternakan/tambah" class="btn btn-success mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
           <a href="" class="btn btn-secondary mr-2"><i class="fas fa-print"></i> Print</a>
           <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
         </div>
@@ -46,33 +46,31 @@
                     <th>Komoditas</th>
                     <th>Kepemilikan</th>
                     <th>Lokasi</th>
-                    <th>Jenis Tanam</th>
-                    <th>Luas Tanam</th>
-                    <th>Luas Panen</th>
-                    <th>Produktivitas</th>
+                    <th>Jenis Ternak</th>
+                    <th>Jumlah Populasi</th>
+                    <th>Sistem Pemeliharaan Ternak</th>
                     <th>Aksi</th>
                   </tr>
 
                 </thead>
                 <tbody>
                   <?php $i = 1;
-                  foreach ($tanaman as $tan) : ?>
+                  foreach ($peternakan as $pet) : ?>
                     <tr>
                       <td><?= $i++; ?></td>
-                      <td><?= $tan['komoditas']; ?> </td>
-                      <td><?= $tan['kepemilikan']; ?></td>
-                      <td><?= $tan['kecamatan']; ?></td>
-                      <td><?= $tan['jenis_tanam']; ?></td>
-                      <td><?= $tan['ls_tanam']; ?> Ha</td>
-                      <td><?= $tan['ls_panen']; ?> Ha</td>
-                      <td><?= $tan['produktivitas']; ?> Ton/Ha</td>
+                      <td><?= $pet['komoditas']; ?> </td>
+                      <td><?= $pet['kepemilikan']; ?></td>
+                      <td><?= $pet['kecamatan']; ?></td>
+                      <td><?= $pet['jenis_ternak']; ?></td>
+                      <td><?= $pet['jml_populasi']; ?> Ekor</td>
+                      <td><?= $pet['sistem_pemel_ternak']; ?></td>
                       <td class="text-center">
                         <div class="btn-group">
-                          <a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn btn-info btn-sm" type="button">
+                          <a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
-                          <a href="/tanaman/edit/<?= $tan['id_tanam']; ?>" class="btn btn-warning btn-sm" type="button">
+                          <a href="" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
-                          <a href="/tanaman/hapus/<?= $tan['id_tanam']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                          <a href="" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i></a>
                         </div>
                       </td>
@@ -81,13 +79,9 @@
                 </tbody>
               </table>
             </div>
-
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </div>
   </section>
 </div>
