@@ -178,18 +178,20 @@
                 </p>
 
               </div>
-              <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
-                <div class="btn-group">
-                  <a class="btn btn-info" href="/peternakan">
-                    <i class="fas fa-undo"></i> Kembali
-                  </a>
-                  <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
-                    <i class="fas fa-edit"></i> Edit
-                  </a>
-                  <input type="hidden" name="_method" value="DELETE">
-                  <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
-                </div>
-              </form>
+              <div class="text-center">
+                <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
+                  <div class="btn-group">
+                    <a class="btn btn-info" href="/peternakan">
+                      <i class="fas fa-undo"></i> Kembali
+                    </a>
+                    <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
+                      <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');"><i class="far fa-trash-alt"></i> Hapus</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
