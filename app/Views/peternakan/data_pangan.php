@@ -86,4 +86,28 @@
   </section>
 </div>
 
+<div class="modal fade" id="modal-sm">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Apakan anda yakin?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Hapus data peternakan&hellip;</p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <form action="">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-danger">Hapus</button>
+        </form>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
 <?= $this->endSection(); ?>
