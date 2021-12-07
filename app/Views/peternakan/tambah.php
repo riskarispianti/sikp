@@ -58,7 +58,7 @@
                               <select class="form-control select2bs4" name="id_kom">
                                 <option selected disabled></option>
                                 <?php foreach ($komoditas as $kom => $value) : ?>
-                                  <option value="<?= $value['id_kom']; ?>"><?= $value['komoditas']; ?></option>
+                                  <option value="<?= $value['id_kom']; ?>" <?= (old('id_kom') == $value['id_kom']) ? 'selected' : ''; ?>><?= $value['komoditas']; ?></option>
                                 <?php endforeach; ?>
                               </select>
                             </div>
@@ -68,25 +68,36 @@
                             <div class="col-sm-7">
                               <select class="form-control select2bs4" name="jenis_ternak">
                                 <option selected disabled></option>
-                                <option>Ternak Besar</option>
-                                <option>Ternak Kecil</option>
-                                <option>Unggas</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Besar') ? 'selected' : ''; ?>>Ternak Besar</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Kecil') ? 'selected' : ''; ?>>Ternak Kecil</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Unggas') ? 'selected' : ''; ?>>Unggas</option>
                               </select>
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="jml_populasi" class="col-sm-5 col-form-label">Jumlah Populasi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('jml_populasi')) ? 'is-invalid' : ''; ?>" name="jml_populasi" placeholder="Ha" value="<?= old('jml_populasi'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('jml_populasi')) ? 'is-invalid' : ''; ?>" name="jml_populasi" placeholder="Ekor" value="<?= old('jml_populasi'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('jml_populasi'); ?>
                               </div>
                             </div>
                           </div>
                           <div class="form-group row">
+                            <label for="lama_prod" class="col-sm-5 col-form-label">Lama Proses Produksi</label>
+                            <div class="col-sm-7 input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="far fa-calendar-alt"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control float-right" name="lama_prod" id="reservation" value="<?= old('lama_prod'); ?>">
+                            </div>
+                          </div>
+                          <div class="form-group row">
                             <label for="waktu_prod" class="col-sm-5 col-form-label">Waktu Produksi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('waktu_prod')) ? 'is-invalid' : ''; ?>" name="waktu_prod" placeholder="Ha" value="<?= old('waktu_prod'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('waktu_prod')) ? 'is-invalid' : ''; ?>" name="waktu_prod" placeholder="Waktu Produksi" value="<?= old('waktu_prod'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('waktu_prod'); ?>
                               </div>
@@ -101,22 +112,23 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form-group row">
+
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group row mt-4">
                             <label for="harga_hsl_prod" class="col-sm-5 col-form-label">Harga Hasil Produksi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('harga_hsl_prod')) ? 'is-invalid' : ''; ?>" name="harga_hsl_prod" placeholder="Ton" value="<?= old('harga_hsl_prod'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('harga_hsl_prod')) ? 'is-invalid' : ''; ?>" name="harga_hsl_prod" value="<?= old('harga_hsl_prod'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('harga_hsl_prod'); ?>
                               </div>
                             </div>
                           </div>
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="form-group row mt-4">
+                          <div class="form-group row">
                             <label for="sistem_pemel_ternak" class="col-sm-5 col-form-label">Sistem Pemeliharaan Ternak</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('sistem_pemel_ternak')) ? 'is-invalid' : ''; ?>" name="sistem_pemel_ternak" placeholder="Perkiraan iklim" value="<?= old('sistem_pemel_ternak'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('sistem_pemel_ternak')) ? 'is-invalid' : ''; ?>" name="sistem_pemel_ternak" value="<?= old('sistem_pemel_ternak'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('sistem_pemel_ternak'); ?>
                               </div>
@@ -125,7 +137,7 @@
                           <div class="form-group row">
                             <label for="benih" class="col-sm-5 col-form-label">Benih</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('benih')) ? 'is-invalid' : ''; ?>" name="benih" placeholder="Waktu produksi" value="<?= old('benih'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('benih')) ? 'is-invalid' : ''; ?>" name="benih" value="<?= old('benih'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('benih'); ?>
                               </div>
@@ -134,7 +146,7 @@
                           <div class="form-group row">
                             <label for="alat_teknologi" class="col-sm-5 col-form-label">Alat/teknologi yg Digunakan</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('alat_teknologi')) ? 'is-invalid' : ''; ?>" name="alat_teknologi" placeholder="Alat/Teknologi" value="<?= old('alat_teknologi'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('alat_teknologi')) ? 'is-invalid' : ''; ?>" name="alat_teknologi" value="<?= old('alat_teknologi'); ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('alat_teknologi'); ?>
                               </div>

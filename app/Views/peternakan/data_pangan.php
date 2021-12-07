@@ -68,9 +68,9 @@
                         <div class="btn-group">
                           <a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
-                          <a href="" class="btn btn-warning btn-sm" type="button">
+                          <a href="/peternakan/edit/<?= $pet['id_ternak']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
-                          <a href="" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                          <a href="/peternakan/hapus/<?= $pet['id_ternak']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i></a>
                         </div>
                       </td>
