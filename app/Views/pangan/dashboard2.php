@@ -41,7 +41,7 @@
                         <tr>
                           <td><?= $i++; ?></td>
                           <td><?= $tan['komoditas']; ?> </td>
-                          <td><span class="badge bg-success"><?= $tan['jml_prod']; ?></span></td>
+                          <td><span class="badge bg-info text-sm"><?= $tan['jml_prod']; ?> Ton</span></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
@@ -65,40 +65,15 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-primary">55 Kg</span></td>
-                      </tr>
+                        <?php $i = 1;
+                        foreach ($peternakan as $pet) : ?>
                       <tr>
-                        <td>
-                          2
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-primary">55 Kg</span></td>
+                        <td><?= $i++; ?></td>
+                        <td><?= $pet['komoditas']; ?> </td>
+                        <td><span class="badge bg-success text-sm"><?= $pet['jml_populasi']; ?> Ekor</span></td>
                       </tr>
-                      <tr>
-                        <td>
-                          3
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-primary">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          4
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-primary">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          5
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-primary">55 Kg</span></td>
-                      </tr>
+                    <?php endforeach; ?>
+                    </tr>
                     </tbody>
                   </table>
                 </div>
