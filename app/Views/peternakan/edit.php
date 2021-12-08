@@ -58,7 +58,7 @@
                               <select class="form-control select2bs4" name="id_kom">
                                 <option selected disabled></option>
                                 <?php foreach ($komoditas as $kom => $value) : ?>
-                                  <option value="<?= $value['id_kom']; ?>" <?= (old('id_kom') == $value['id_kom']) ? 'selected' : ''; ?>><?= $value['komoditas']; ?></option>
+                                  <option value="<?= $value['id_kom']; ?>" <?= (old('id_kom') == $value['id_kom']) ? 'selected' : ''; ?> <?= ($value['id_kom'] == $peternakan['id_kom']) ? 'selected' : ''; ?>><?= $value['komoditas']; ?></option>
                                 <?php endforeach; ?>
                               </select>
                             </div>
@@ -68,16 +68,16 @@
                             <div class="col-sm-7">
                               <select class="form-control select2bs4" name="jenis_ternak">
                                 <option selected disabled></option>
-                                <option <?= (old('jenis_ternak') == 'Ternak Besar') ? 'selected' : ''; ?>>Ternak Besar</option>
-                                <option <?= (old('jenis_ternak') == 'Ternak Kecil') ? 'selected' : ''; ?>>Ternak Kecil</option>
-                                <option <?= (old('jenis_ternak') == 'Ternak Unggas') ? 'selected' : ''; ?>>Unggas</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Besar') ? 'selected' : ''; ?> <?= ($peternakan['jenis_ternak'] == 'Ternak Besar') ? 'selected' : ''; ?>>Ternak Besar</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Kecil') ? 'selected' : ''; ?> <?= ($peternakan['jenis_ternak'] == 'Ternak Kecil') ? 'selected' : ''; ?>>Ternak Kecil</option>
+                                <option <?= (old('jenis_ternak') == 'Ternak Unggas') ? 'selected' : ''; ?> <?= ($peternakan['jenis_ternak'] == 'Unggas') ? 'selected' : ''; ?>>Unggas</option>
                               </select>
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="jml_populasi" class="col-sm-5 col-form-label">Jumlah Populasi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('jml_populasi')) ? 'is-invalid' : ''; ?>" name="jml_populasi" placeholder="Ekor" value="<?= old('jml_populasi'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('jml_populasi')) ? 'is-invalid' : ''; ?>" name="jml_populasi" placeholder="Ekor" value="<?= (old('jml_populasi')) ? old('jml_populasi') : $peternakan['jml_populasi']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('jml_populasi'); ?>
                               </div>
@@ -91,13 +91,13 @@
                                   <i class="far fa-calendar-alt"></i>
                                 </span>
                               </div>
-                              <input type="text" class="form-control float-right" name="lama_prod" id="reservation" value="<?= old('lama_prod'); ?>">
+                              <input type="text" class="form-control float-right" name="lama_prod" id="reservation" value="<?= (old('lama_prod')) ? old('lama_prod') : $peternakan['lama_prod']; ?>">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="waktu_prod" class="col-sm-5 col-form-label">Waktu Produksi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('waktu_prod')) ? 'is-invalid' : ''; ?>" name="waktu_prod" placeholder="Waktu Produksi" value="<?= old('waktu_prod'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('waktu_prod')) ? 'is-invalid' : ''; ?>" name="waktu_prod" placeholder="Waktu Produksi" value="<?= (old('waktu_prod')) ? old('waktu_prod') : $peternakan['waktu_prod']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('waktu_prod'); ?>
                               </div>
@@ -106,7 +106,7 @@
                           <div class="form-group row">
                             <label for="biaya_prod" class="col-sm-5 col-form-label">Biaya Produksi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('biaya_prod')) ? 'is-invalid' : ''; ?>" name="biaya_prod" placeholder="Ton/Ha" value="<?= old('biaya_prod'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('biaya_prod')) ? 'is-invalid' : ''; ?>" name="biaya_prod" placeholder="Ton/Ha" value="<?= (old('biaya_prod')) ? old('biaya_prod') : $peternakan['biaya_prod']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('biaya_prod'); ?>
                               </div>
@@ -119,7 +119,7 @@
                           <div class="form-group row mt-4">
                             <label for="harga_hsl_prod" class="col-sm-5 col-form-label">Harga Hasil Produksi</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('harga_hsl_prod')) ? 'is-invalid' : ''; ?>" name="harga_hsl_prod" value="<?= old('harga_hsl_prod'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('harga_hsl_prod')) ? 'is-invalid' : ''; ?>" name="harga_hsl_prod" value="<?= (old('harga_hsl_prod')) ? old('harga_hsl_prod') : $peternakan['harga_hsl_prod']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('harga_hsl_prod'); ?>
                               </div>
@@ -128,7 +128,7 @@
                           <div class="form-group row">
                             <label for="sistem_pemel_ternak" class="col-sm-5 col-form-label">Sistem Pemeliharaan Ternak</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('sistem_pemel_ternak')) ? 'is-invalid' : ''; ?>" name="sistem_pemel_ternak" value="<?= old('sistem_pemel_ternak'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('sistem_pemel_ternak')) ? 'is-invalid' : ''; ?>" name="sistem_pemel_ternak" value="<?= (old('sistem_pemel_ternak')) ? old('sistem_pemel_ternak') : $peternakan['sistem_pemel_ternak']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('sistem_pemel_ternak'); ?>
                               </div>
@@ -137,7 +137,7 @@
                           <div class="form-group row">
                             <label for="benih" class="col-sm-5 col-form-label">Benih</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('benih')) ? 'is-invalid' : ''; ?>" name="benih" value="<?= old('benih'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('benih')) ? 'is-invalid' : ''; ?>" name="benih" value="<?= (old('benih')) ? old('benih') : $peternakan['benih']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('benih'); ?>
                               </div>
@@ -146,7 +146,7 @@
                           <div class="form-group row">
                             <label for="alat_teknologi" class="col-sm-5 col-form-label">Alat/teknologi yg Digunakan</label>
                             <div class="col-sm-7">
-                              <input type="text" class="form-control <?= ($validation->hasError('alat_teknologi')) ? 'is-invalid' : ''; ?>" name="alat_teknologi" value="<?= old('alat_teknologi'); ?>">
+                              <input type="text" class="form-control <?= ($validation->hasError('alat_teknologi')) ? 'is-invalid' : ''; ?>" name="alat_teknologi" value="<?= (old('alat_teknologi')) ? old('alat_teknologi') : $peternakan['alat_teknologi']; ?>">
                               <div class="invalid-feedback text-danger">
                                 <?= $validation->getError('alat_teknologi'); ?>
                               </div>
@@ -157,9 +157,9 @@
                             <div class="col-sm-7">
                               <select class="form-control select2bs4" name="peman_hsl_prod">
                                 <option selected disabled></option>
-                                <option>Dikonsumsi Sendiri</option>
-                                <option>Dijual Langsung</option>
-                                <option>Diolah Lebih lanjut</option>
+                                <option <?= (old('peman_hsl_prod') == 'Dikonsumsi Sendiri') ? 'selected' : ''; ?> <?= ($peternakan['peman_hsl_prod'] == 'Dikonsumsi Sendiri') ? 'selected' : ''; ?>>Dikonsumsi Sendiri</option>
+                                <option <?= (old('peman_hsl_prod') == 'Dijual Langsung') ? 'selected' : ''; ?> <?= ($peternakan['peman_hsl_prod'] == 'Dijual Langsung') ? 'selected' : ''; ?>>Dijual Langsung</option>
+                                <option <?= (old('peman_hsl_prod') == 'Diolah Lebih Lanjut') ? 'selected' : ''; ?> <?= ($peternakan['peman_hsl_prod'] == 'Diolah Lebih Lanjut') ? 'selected' : ''; ?>>Diolah Lebih lanjut</option>
                               </select>
                             </div>
                           </div>
@@ -168,10 +168,10 @@
                             <div class="col-sm-7">
                               <select class="form-control select2bs4" name="limbah_hsl_prod">
                                 <option selected disabled></option>
-                                <option>Dijual</option>
-                                <option>Dimanfaatkan Sendiri</option>
-                                <option>Diolah</option>
-                                <option>Dibuang</option>
+                                <option <?= (old('limbah_hsl_prod') == 'Dijual') ? 'selected' : ''; ?> <?= ($peternakan['limbah_hsl_prod'] == 'Dijual') ? 'selected' : ''; ?>>Dijual</option>
+                                <option <?= (old('limbah_hsl_prod') == 'Dimanfaatkan Sendiri') ? 'selected' : ''; ?> <?= ($peternakan['limbah_hsl_prod'] == 'Dimanfaatkan Sendiri') ? 'selected' : ''; ?>>Dimanfaatkan Sendiri</option>
+                                <option <?= (old('limbah_hsl_prod') == 'Diolah') ? 'selected' : ''; ?> <?= ($peternakan['limbah_hsl_prod'] == 'Diolah') ? 'selected' : ''; ?>>Diolah</option>
+                                <option <?= (old('limbah_hsl_prod') == 'Dibuang') ? 'selected' : ''; ?> <?= ($peternakan['limbah_hsl_prod'] == 'Dibuang') ? 'selected' : ''; ?>>Dibuang</option>
                               </select>
                             </div>
                           </div>
@@ -185,13 +185,13 @@
                       <div class="form-group row my-4">
                         <label for="ancaman" class="col-sm-5 col-form-label">Ancaman</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="nama_anc" placeholder="Ancaman" value="<?= old('nama_anc'); ?>">
+                          <input type="text" class="form-control" name="nama_anc" placeholder="Ancaman" value="<?= (old('nama_anc')) ? old('nama_anc') : $peternakan['nama_anc']; ?>">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="penanggulangan" class="col-sm-5 col-form-label">Cara Penanggulangan</label>
                         <div class="col-sm-7">
-                          <textarea class="form-control" name="penanggulangan" value="<?= old('penanggulangan'); ?>"></textarea>
+                          <textarea class="form-control" name="penanggulangan"><?= (old('penanggulangan')) ? old('penanggulangan') : $peternakan['penanggulangan']; ?></textarea>
                         </div>
                       </div>
                     </div>
@@ -204,7 +204,7 @@
                           <select class="form-control select2bs4" name="id_tp">
                             <option selected disabled></option>
                             <?php foreach ($tempat as $tem => $value) : ?>
-                              <option value="<?= $value['id_tp']; ?>"><?= $value['letak_prod']; ?></option>
+                              <option value="<?= $value['id_tp']; ?>" <?= (old('id_tp') == $value['id_tp']) ? 'selected' : ''; ?> <?= $value['id_tp'] == $peternakan['id_tp'] ? 'selected' : '' ?>><?= $value['letak_prod']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
@@ -218,7 +218,7 @@
                           <select class="form-control select2bs4" name="id_sp">
                             <option selected disabled></option>
                             <?php foreach ($sentra as $sen => $value) : ?>
-                              <option value="<?= $value['id_sp']; ?>"><?= $value['nama_sp']; ?></option>
+                              <option value="<?= $value['id_sp']; ?>" <?= (old('id_sp') == $value['id_sp']) ? 'selected' : ''; ?> <?= $value['id_sp'] == $peternakan['id_sp'] ? 'selected' : '' ?>><?= $value['nama_sp']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
@@ -232,7 +232,7 @@
                           <select class="form-control select2bs4" name="id_ipt">
                             <option selected disabled></option>
                             <?php foreach ($infrastruktur as $infras => $value) : ?>
-                              <option value="<?= $value['id_ipt']; ?>"><?= $value['kandang']; ?></option>
+                              <option value="<?= $value['id_ipt']; ?>" <?= (old('id_ipt') == $value['id_ipt']) ? 'selected' : ''; ?> <?= $value['id_ipt'] == $peternakan['id_ipt'] ? 'selected' : '' ?>><?= $value['kandang']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
@@ -246,7 +246,7 @@
                           <select class="form-control select2bs4" name="id_produsen">
                             <option selected disabled></option>
                             <?php foreach ($produsen as $pro => $value) : ?>
-                              <option value="<?= $value['id_produsen']; ?>"><?= $value['kelembagaan']; ?></option>
+                              <option value="<?= $value['id_produsen']; ?>" <?= (old('id_produsen') == $value['id_produsen']) ? 'selected' : ''; ?> <?= $value['id_produsen'] == $peternakan['id_produsen'] ? 'selected' : '' ?>><?= $value['kelembagaan']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
