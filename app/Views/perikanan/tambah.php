@@ -24,7 +24,7 @@
 
   <section class="content">
     <div class="container">
-      <form class="form-horizontal" action="/tanaman/save" method="post">
+      <form class="form-horizontal" action="/perikanan/save" method="post">
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
@@ -89,10 +89,7 @@
                                   <i class="far fa-calendar-alt"></i>
                                 </span>
                               </div>
-                              <input type="text" class="form-control float-right <?= ($validation->hasError('lama_proses_prod')) ? 'is-invalid' : ''; ?>" name="lama_proses_prod" id="reservation">
-                              <div class="invalid-feedback text-danger">
-                                <?= $validation->getError('lama_proses_prod'); ?>
-                              </div>
+                              <input type="text" class="form-control float-right" name="lama_proses_prod" id="reservation">
                             </div>
                           </div>
                           <div class="form-group row">
@@ -211,7 +208,7 @@
                     <div class="card-body text-muted">
                       <h4 class="text-center">ANCAMAN</h4>
                       <div class="form-group row my-4">
-                        <label for="ancaman" class="col-sm-5 col-form-label">Ancaman</label>
+                        <label for="nama_anc" class="col-sm-5 col-form-label">Ancaman</label>
                         <div class="col-sm-7">
                           <input type="text" class="form-control" name="nama_anc" placeholder="Ancaman" value="<?= old('nama_anc'); ?>">
                         </div>
@@ -235,9 +232,6 @@
                               <option value="<?= $value['id_tp']; ?>"><?= $value['letak_prod']; ?></option>
                             <?php endforeach; ?>
                           </select>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('letak_prod'); ?>
-                          </div>
                         </div>
                       </div>
                       <div class="form-group row my-4">
@@ -249,9 +243,6 @@
                               <option value="<?= $value['id_sp']; ?>"><?= $value['nama_sp']; ?></option>
                             <?php endforeach; ?>
                           </select>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('nama_sp'); ?>
-                          </div>
                         </div>
                       </div>
                       <div class="form-group row my-4">
@@ -263,9 +254,6 @@
                               <option value="<?= $value['id_ip']; ?>"><?= $value['sarana_pengairan']; ?></option>
                             <?php endforeach; ?>
                           </select>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('sarana_pengairan'); ?>
-                          </div>
                         </div>
                       </div>
                       <div class="form-group row my-4">
@@ -277,9 +265,6 @@
                               <option value="<?= $value['id_produsen']; ?>"><?= $value['kelembagaan']; ?></option>
                             <?php endforeach; ?>
                           </select>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('kelembagaan'); ?>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -299,7 +284,6 @@
       </form>
     </div>
   </section>
-
 </div>
 
 <?= $this->endSection(); ?>

@@ -65,14 +65,14 @@
                       <td><?= $ikan['jenis_ikan']; ?></td>
                       <td><?= $ikan['jml_prod']; ?> Ton</td>
                       <td><?= $ikan['waktu_prod']; ?></td>
-                      <td><?= $ikan['biaya_prod']; ?></td>
+                      <td>Rp. <?= $ikan['biaya_prod']; ?></td>
                       <td class="text-center">
                         <div class="btn-group">
-                          <a href="/perikanan/detail/<?= $tan['id_ikan']; ?>" class="btn btn-info btn-sm" type="button">
+                          <a href="/perikanan/detail/<?= $ikan['id_ikan']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
-                          <a href="/perikanan/edit/<?= $tan['id_ikan']; ?>" class="btn btn-warning btn-sm" type="button">
+                          <a href="/perikanan/edit/<?= $ikan['id_ikan']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
-                          <a href="/perikanan/hapus/<?= $tan['id_ikan']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                          <a href="/perikanan/hapus/<?= $ikan['id_ikan']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i></a>
                         </div>
                       </td>

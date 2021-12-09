@@ -60,4 +60,88 @@ class Perikanan extends BaseController
         ];
         return view('perikanan/tambah', $data);
     }
+
+    public function save()
+    {
+        // validasi input
+        if (!$this->validate([
+            'jenis_ikan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis ikan harus diisi.'
+                ]
+            ],
+            'jml_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'jumlah produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'lama_prod' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'lama proses produksi harus diisi.'
+                ]
+            ],
+            'waktu_prod' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'waktu produksi harus diisi.'
+                ]
+            ],
+            'biaya_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'biaya produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'harga_hsl_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'harga jual produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'alat_teknologi' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'alat dan teknologi harus diisi.'
+                ]
+            ],
+
+        ])) {
+            $validation = \Config\Services::validation();
+
+            return redirect()->to('perikanan/tambah')->withInput()->with('validation', $validation);
+        }
+
+        $this->perikananModel->insert([
+            'jenis_ikan' => $this->request->getVar('jenis_ikan'),
+            'jml_prod' => $this->request->getVar('jml_prod'),
+            'lama_prod' => $this->request->getVar('lama_prod'),
+            'waktu_prod' => $this->request->getVar('waktu_prod'),
+            'biaya_prod' => $this->request->getVar('biaya_prod'),
+            'harga_hsl_prod' => $this->request->getVar('harga_hsl_prod'),
+            'wadah_budidaya' => $this->request->getVar('wadah_budidaya'),
+            'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
+            'benih' => $this->request->getVar('benih'),
+            'jns_asal_pakan' => $this->request->getVar('jns_asal_pakan'),
+            'alat_teknologi' => $this->request->getVar('alat_teknologi'),
+            'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
+            'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
+            'nama_anc' => $this->request->getVar('nama_anc'),
+            'penanggulangan' => $this->request->getVar('penanggulangan'),
+            'id_kom' => $this->request->getVar('id_kom'),
+            'id_tp' => $this->request->getVar('id_tp'),
+            'id_sp' => $this->request->getVar('id_sp'),
+            'id_ip' => $this->request->getVar('id_ip'),
+            'id_produsen' => $this->request->getVar('id_produsen')
+        ]);
+
+        session()->setFlashdata('pesan', 'ditambahkan.');
+
+        return redirect()->to('/perikanan');
+    }
 }
