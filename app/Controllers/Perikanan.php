@@ -65,23 +65,11 @@ class Perikanan extends BaseController
     {
         // validasi input
         if (!$this->validate([
-            'jenis_ikan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'jenis ikan harus diisi.'
-                ]
-            ],
             'jml_prod' => [
                 'rules' => 'required|numeric',
                 'errors' => [
                     'required' => 'jumlah produksi harus diisi.',
                     'numeric' => 'isi harus angka.'
-                ]
-            ],
-            'lama_prod' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'lama proses produksi harus diisi.'
                 ]
             ],
             'waktu_prod' => [

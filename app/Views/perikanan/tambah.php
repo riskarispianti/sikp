@@ -82,14 +82,14 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="lama_proses_prod" class="col-sm-5 col-form-label">Lama Produksi</label>
+                            <label for="lama_prod" class="col-sm-5 col-form-label">Lama Produksi</label>
                             <div class="col-sm-7 input-group">
                               <div class="input-group-prepend">
                                 <span class="input-group-text">
                                   <i class="far fa-calendar-alt"></i>
                                 </span>
                               </div>
-                              <input type="text" class="form-control float-right" name="lama_proses_prod" id="reservation">
+                              <input type="text" class="form-control float-right" name="lama_prod" id="reservation">
                             </div>
                           </div>
                           <div class="form-group row">
