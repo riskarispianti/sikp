@@ -10,11 +10,10 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0"> Aplikasi Ketersediaan Pangan</small></h1>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- /.content-header -->
 
   <section class="content">
     <div class="container">
@@ -64,16 +63,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <?php $i = 1;
-                        foreach ($peternakan as $pet) : ?>
-                      <tr>
-                        <td><?= $i++; ?></td>
-                        <td><?= $pet['komoditas']; ?> </td>
-                        <td><span class="badge bg-success text-sm"><?= $pet['jml_populasi']; ?> Ekor</span></td>
-                      </tr>
-                    <?php endforeach; ?>
-                    </tr>
+                      <?php $i = 1;
+                      foreach ($peternakan as $pet) : ?>
+                        <tr>
+                          <td><?= $i++; ?></td>
+                          <td><?= $pet['komoditas']; ?> </td>
+                          <td><span class="badge bg-success text-sm"><?= $pet['jml_populasi']; ?> Ekor</span></td>
+                        </tr>
+                      <?php endforeach; ?>
                     </tbody>
                   </table>
                 </div>
@@ -94,41 +91,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-info">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          2
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-info">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          3
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-info">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          4
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-info">55 Kg</span></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          5
-                        </td>
-                        <td>Padi</td>
-                        <td><span class="badge bg-info">55 Kg</span></td>
-                      </tr>
+                      <?php $i = 1;
+                      foreach ($perikanan as $per) : ?>
+                        <tr>
+                          <td><?= $i++; ?></td>
+                          <td><?= $per['komoditas']; ?> </td>
+                          <td><span class="badge bg-primary text-sm"><?= $per['jml_prod']; ?> Ton</span></td>
+                        </tr>
+                      <?php endforeach; ?>
                     </tbody>
                   </table>
                 </div>
