@@ -204,7 +204,7 @@
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="#" class="btn btn-sm btn-outline-primary">
+                <a href="/perikanan" class="btn btn-sm btn-outline-primary">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>

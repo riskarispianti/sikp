@@ -63,9 +63,9 @@
                       <td><?= $ikan['kepemilikan']; ?></td>
                       <td><?= $ikan['kecamatan']; ?></td>
                       <td><?= $ikan['jenis_ikan']; ?></td>
-                      <td><?= $ikan['jml_prod']; ?> Ha</td>
-                      <td><?= $ikan['waktu_prod']; ?> Ha</td>
-                      <td><?= $ikan['biaya_prod']; ?> Ton/Ha</td>
+                      <td><?= $ikan['jml_prod']; ?> Ton</td>
+                      <td><?= $ikan['waktu_prod']; ?></td>
+                      <td><?= $ikan['biaya_prod']; ?></td>
                       <td class="text-center">
                         <div class="btn-group">
                           <a href="/perikanan/detail/<?= $tan['id_ikan']; ?>" class="btn btn-info btn-sm" type="button">
