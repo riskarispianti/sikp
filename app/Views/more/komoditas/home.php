@@ -74,9 +74,23 @@
                   <div class="form-group row">
                     <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus>
+                      <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" placeholder="Komoditas" autofocus value="<?= old('komoditas'); ?>">
                       <div class="invalid-feedback text-danger">
                         <?= $validation->getError('komoditas'); ?>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="g_kom" class="col-sm-5 col-form-label">Produksi</label>
+                    <div class="col-sm-7">
+                      <select class="form-control select2bs4 <?= ($validation->hasError('g_kom')) ? 'is-invalid' : ''; ?>" name="g_kom">
+                        <option selected disabled></option>
+                        <option <?= (old('g_kom') == 'Tanaman' ? 'selected' : ''); ?>>Tanaman</option>
+                        <option <?= (old('g_kom') == 'Peternakan' ? 'selected' : ''); ?>>Peternakan</option>
+                        <option <?= (old('g_kom') == 'Perikanan' ? 'selected' : ''); ?>>Perikanan</option>
+                      </select>
+                      <div class="invalid-feedback text-danger">
+                        <?= $validation->getError('g_kom'); ?>
                       </div>
                     </div>
                   </div>

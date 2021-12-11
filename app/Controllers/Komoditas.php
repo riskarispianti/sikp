@@ -35,6 +35,12 @@ class Komoditas extends BaseController
                     'required' => '{field} harus diisi.',
                     'is_unique' => '{field} sudah ada.'
                 ]
+            ],
+            'g_kom' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'produksi harus dipilih.'
+                ]
             ]
         ])) {
             $validation = \Config\Services::validation();
@@ -43,17 +49,13 @@ class Komoditas extends BaseController
         }
 
         $this->komoditasModel->insert([
-            'komoditas' => $this->request->getVar('komoditas')
+            'komoditas' => $this->request->getVar('komoditas'),
+            'g_kom' => $this->request->getVar('g_kom')
         ]);
 
         session()->setFlashdata('pesan', 'ditambahkan.');
 
         return redirect()->to('/komoditas');
-    }
-
-    public function edit($id_kom)
-    {
-        $data['komoditas'] = $this->komoditasModel->find($id_kom);
     }
 
     public function hapus($id_kom)

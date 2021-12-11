@@ -9,7 +9,7 @@ class KomoditasModel extends Model
     protected $table                = 'komoditas';
     protected $primaryKey           = 'id_kom';
     protected $useAutoIncrement     = true;
-    protected $allowedFields        = ['komoditas'];
+    protected $allowedFields        = ['komoditas', 'g_kom'];
     // Dates
     protected $useTimestamps        = true;
 }

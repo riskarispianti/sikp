@@ -32,11 +32,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition layout-top-nav">
   <div class="wrapper">
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="/img/sin2.png" alt="Sinkepang" height="100">
-    </div>
-
     <?= $this->include('layout/navbar'); ?>
 
     <?= $this->renderSection('content'); ?>

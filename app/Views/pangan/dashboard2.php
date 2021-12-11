@@ -2,6 +2,11 @@
 
 <?= $this->Section('content'); ?>
 
+<!-- Preloader -->
+<div class="preloader flex-column justify-content-center align-items-center">
+  <img class="animation__shake" src="/img/sin2.png" alt="Sinkepang" height="100">
+</div>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
