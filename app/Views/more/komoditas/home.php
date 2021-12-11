@@ -10,7 +10,7 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Komoditas</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -52,7 +52,6 @@
                       <td><?= $kom['komoditas']; ?> </td>
                       <td class="text-center">
                         <div class="btn-group btn-group-sm">
-                          <a href="/<?= $kom['id_kom']; ?>" class="btn btn-warning" data-toggle="collapse" data-target="#collapseTwo"><i class="fas fa-edit"></i> Edit</a>
                           <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?')">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
@@ -89,35 +88,8 @@
               </div>
             </div>
           </form>
-          <form action="" method="post">
-            <div class="card collapse <?= ($validation->hasError('komoditas')) ? 'show' : ''; ?>" id="collapseTwo" data-parent="#accordion">
-              <div class="card-header bg-gradient-fuchsia">
-                <h3 class="card-title">Komoditas</h3>
-              </div>
-              <div class="card-body">
-                <div class="card-body text-muted">
-                  <div class="form-group row">
-                    <label for="komoditas" class="col-sm-5 col-form-label">Komoditas</label>
-                    <div class="col-sm-7">
-                      <input type="text" class="form-control <?= ($validation->hasError('komoditas')) ? 'is-invalid' : ''; ?>" name="komoditas" value="<?= $kom['komoditas']; ?>">
-                      <div class="invalid-feedback text-danger">
-                        <?= $validation->getError('komoditas'); ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="footer text-center mb-3">
-                <a data-toggle="collapse" href="#collapseTwo" class="btn bg-gradient-warning mr-3">Batal</a>
-                <input type="submit" value="Edit Komoditas" class="btn bg-gradient-fuchsia">
-              </div>
-            </div>
-          </form>
         </div>
-      </div>
-    </div>
   </section>
-
 </div>
 
 <?= $this->endSection(); ?>

@@ -51,6 +51,11 @@ class Komoditas extends BaseController
         return redirect()->to('/komoditas');
     }
 
+    public function edit($id_kom)
+    {
+        $data['komoditas'] = $this->komoditasModel->find($id_kom);
+    }
+
     public function hapus($id_kom)
     {
         $this->komoditasModel->delete($id_kom);

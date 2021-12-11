@@ -9,12 +9,12 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Tempat Produksi</small></h1>
+          <h1 class="m-0">Infrastruktur Produksi</small></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Tempat Produksi</li>
+            <li class="breadcrumb-item active">Infrastruktur</li>
           </ol>
         </div>
       </div>
@@ -25,13 +25,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/tempatprod/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Tempat Produksi</a>
+          <a href="/infrasternak/tambah" class="btn bg-gradient-indigo"><i class="fas fa-plus"></i> Tambah Infrastruktur</a>
         </div>
         <div class="col-md-12 mt-3">
           <?php if (session()->getFlashdata('pesan')) : ?>
             <div class="alert bg-gradient-info alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <h5><i class="icon fas fa-check"></i> Data berhasil <?= session()->getFlashdata('pesan'); ?></h5>
+              <h5><i class="icon fas fa-check"></i> Infrastruktur Peternakan berhasil <?= session()->getFlashdata('pesan'); ?></h5>
             </div>
           <?php endif; ?>
           <div class="card">
@@ -40,27 +40,27 @@
                 <thead class="text-center">
                   <tr>
                     <th style="width: 10px;">#</th>
-                    <th>Letak Kawasan Produksi</th>
-                    <th>Luas Kawasan Produksi</th>
-                    <th>Kepemilikan</th>
-                    <th>Status Tempat Produksi</th>
+                    <th>Kandang</th>
+                    <th>Lokasi RPH</th>
+                    <th>Kapasitas</th>
+                    <th>Pemilik</th>
                     <th style="width: 100px">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php $i = 1;
-                  foreach ($tempat as $temp) : ?>
+                  foreach ($infrasternak as $infras) : ?>
                     <tr>
                       <td><?= $i++; ?></td>
-                      <td><?= $temp['letak_prod']; ?> </td>
-                      <td><?= $temp['luas_prod']; ?> </td>
-                      <td><?= $temp['kepemilikan']; ?> </td>
-                      <td><?= $temp['status_lahan']; ?> </td>
+                      <td><?= $infras['kandang']; ?> </td>
+                      <td><?= $infras['lok_rph']; ?> </td>
+                      <td><?= $infras['kapasitas_rph']; ?> Ekor</td>
+                      <td><?= $infras['pemilik']; ?> </td>
                       <td>
                         <div class="btn-group">
-                          <a href="/tempatprod/edit/<?= $temp['id_tp']; ?>" class="btn btn-warning btn-sm" type="button">
+                          <a href="/infrasternak/edit/<?= $infras['id_ipt']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i> Edit</a>
-                          <a href="/tempatprod/hapus/<?= $temp['id_tp']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                          <a href="/infrasternak/hapus/<?= $infras['id_ipt']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
@@ -69,18 +69,12 @@
                 </tbody>
               </table>
             </div>
-
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </div>
   </section>
 
 </div>
-
-
 
 <?= $this->endSection(); ?>

@@ -67,7 +67,7 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/infrastruktur" class="btn bg-gradient-warning">Batal</a>
+            <a href="/infrastruktur" class="btn bg-gradient-warning mr-2">Batal</a>
             <input type="submit" value="Tambah Infrastruktur" class="btn bg-gradient-indigo">
           </div>
         </div>

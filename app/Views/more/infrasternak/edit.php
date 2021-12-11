@@ -9,13 +9,13 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Tambah Produsen</small></h1>
+          <h1 class="m-0">Edit Infrastruktur Peternakan</small></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-            <li class="breadcrumb-item"><a href="/produsen">Produsen</a></li>
-            <li class="breadcrumb-item active">Tambah</li>
+            <li class="breadcrumb-item"><a href="/infrasternak">Infrastruktur</a></li>
+            <li class="breadcrumb-item active">Edit</li>
           </ol>
         </div>
       </div>
@@ -24,49 +24,49 @@
 
   <section class="content">
     <div class="container">
-      <form class="form-horizontal" action="/produsen/save" method="post">
+      <form class="form-horizontal" action="/infrasternak/update/<?= $infrasternak['id_ipt']; ?>" method="post">
         <?= csrf_field() ?>
         <div class="row">
           <div class="col-sm-12">
             <div class="card">
               <div class="card-header bg-gradient-indigo">
-                <h3 class="card-title">Tambah Produsen</h3>
+                <h3 class="card-title">Edit Infrastruktur Peternakan</h3>
               </div>
               <div class="card-body text-muted">
-                <h4 class="text-center">Produsen</h4>
+                <h4 class="text-center">Peternakan</h4>
                 <div class="form-group row my-4">
-                  <label for="jml_penghasil_kom" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
+                  <label for="kandang" class="col-sm-5 col-form-label">Kandang</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('jml_penghasil_kom')) ? 'is-invalid' : ''; ?>" name="jml_penghasil_kom" placeholder="jumlah">
+                    <input type="text" class="form-control <?= ($validation->hasError('kandang')) ? 'is-invalid' : ''; ?>" name="kandang" value="<?= $infrasternak['kandang']; ?>">
                     <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('jml_penghasil_kom'); ?>
+                      <?= $validation->getError('kandang'); ?>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row my-4">
-                  <label for="pembinaan" class="col-sm-5 col-form-label">Pembinaan</label>
+                  <label for="lok_rph" class="col-sm-5 col-form-label">Lokasi Rumah Pemotongan Hewan (RPH)</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('pembinaan')) ? 'is-invalid' : ''; ?>" name="pembinaan" placeholder="Pembinaan">
+                    <input type="text" class="form-control <?= ($validation->hasError('lok_rph')) ? 'is-invalid' : ''; ?>" name="lok_rph" value="<?= $infrasternak['lok_rph']; ?>">
                     <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('pembinaan'); ?>
+                      <?= $validation->getError('lok_rph'); ?>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row my-4">
-                  <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan</label>
+                  <label for="kapasitas_rph" class="col-sm-5 col-form-label">Kapasitas RPH</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kelembagaan')) ? 'is-invalid' : ''; ?>" name="kelembagaan" placeholder="Kelembagaan">
+                    <input type="text" class="form-control <?= ($validation->hasError('kapasitas_rph')) ? 'is-invalid' : ''; ?>" name="kapasitas_rph" value="<?= $infrasternak['kapasitas_rph']; ?>">
                     <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('kelembagaan'); ?>
+                      <?= $validation->getError('kapasitas_rph'); ?>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row my-4">
-                  <label for="kesejahteraan" class="col-sm-5 col-form-label">Kesejahteraan</label>
+                  <label for="pemilik" class="col-sm-5 col-form-label">Pemilik</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kesejahteraan')) ? 'is-invalid' : ''; ?>" name="kesejahteraan" placeholder="Kesejahteraan">
+                    <input type="text" class="form-control <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" name="pemilik" value="<?= $infrasternak['pemilik']; ?>">
                     <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('kesejahteraan'); ?>
+                      <?= $validation->getError('pemilik'); ?>
                     </div>
                   </div>
                 </div>
@@ -76,8 +76,8 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/produsen" class="btn bg-gradient-warning mr-2">Batal</a>
-            <input type="submit" value="Tambah Produsen" class="btn bg-gradient-indigo">
+            <a href="/infrasternak" class="btn bg-gradient-warning mr-2">Batal</a>
+            <input type="submit" value="Edit Infrastruktur" class="btn bg-gradient-indigo">
           </div>
         </div>
       </form>

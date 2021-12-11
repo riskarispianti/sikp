@@ -10,7 +10,7 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Edit Sentra Produksi</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
@@ -67,7 +67,7 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/sentraprod" class="btn bg-gradient-warning">Batal</a>
+            <a href="/sentraprod" class="btn bg-gradient-warning mr-2">Batal</a>
             <input type="submit" value="Edit Sentra Produksi" class="btn bg-gradient-indigo">
           </div>
         </div>

@@ -31,14 +31,18 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::index');
+$routes->get('/register', 'Register::index');
+$routes->post('/register/process', 'Register::process');
+$routes->get('/login', 'Login::index');
+$routes->post('/login/process', 'Login::process');
+$routes->get('/logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/profile', 'Profile::index');
 $routes->get('/tanaman', 'Tanaman::index');
 $routes->post('/tanaman/save', 'Tanaman::save');
 $routes->post('/komoditas/update/(:num)', 'Komoditas::update/$1');
 $routes->delete('/tanaman/(:num)', 'Tanaman::hapus/$1');
-// $routes->get('/tanaman/edit/(:segment)', 'Tanaman::update/$1');
+$routes->post('/perikanan/save', 'Perikanan::save');
 
 /*
  * --------------------------------------------------------------------

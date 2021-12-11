@@ -36,6 +36,7 @@
           <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
           <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li>
           <li><a href="/infrastruktur" class="dropdown-item">Infrastruktur Produksi</a></li>
+          <li><a href="/infrasternak" class="dropdown-item">Infrastruktur Ternak</a></li>
           <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
         </ul>
       </li>

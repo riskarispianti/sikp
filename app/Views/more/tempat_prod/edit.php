@@ -76,7 +76,7 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/tempatprod" class="btn bg-gradient-warning">Batal</a>
+            <a href="/tempatprod" class="btn bg-gradient-warning mr-2">Batal</a>
             <input type="submit" value="Edit Tempat Produksi" class="btn bg-gradient-indigo">
           </div>
         </div>

@@ -9,9 +9,9 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Laporan Produksi Peternakan</small></h1>
+          <h1 class="m-0">Perikanan</small></h1>
 
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 border-bottom-0">
-          <a href="/peternakan/tambah" class="btn btn-success mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
+          <a href="/perikanan/tambah" class="btn btn-primary mr-2"><i class="fas fa-plus"></i> Tambah Data Pangan</a>
           <a href="" class="btn btn-secondary mr-2"><i class="fas fa-print"></i> Print</a>
           <a href="" class="btn btn-success"><i class="fas fa-download"></i> Download (PDF)</a>
         </div>
@@ -46,31 +46,33 @@
                     <th>Komoditas</th>
                     <th>Kepemilikan</th>
                     <th>Lokasi</th>
-                    <th>Jenis Ternak</th>
-                    <th>Jumlah Populasi</th>
-                    <th>Sistem Pemeliharaan Ternak</th>
+                    <th>Jenis Ikan</th>
+                    <th>Jumlah Produksi</th>
+                    <th>Waktu Produksi</th>
+                    <th>Biaya Produksi</th>
                     <th>Aksi</th>
                   </tr>
 
                 </thead>
                 <tbody>
                   <?php $i = 1;
-                  foreach ($peternakan as $pet) : ?>
+                  foreach ($perikanan as $ikan) : ?>
                     <tr>
                       <td><?= $i++; ?></td>
-                      <td><?= $pet['komoditas']; ?> </td>
-                      <td><?= $pet['kepemilikan']; ?></td>
-                      <td><?= $pet['kecamatan']; ?></td>
-                      <td><?= $pet['jenis_ternak']; ?></td>
-                      <td><?= $pet['jml_populasi']; ?> Ekor</td>
-                      <td><?= $pet['sistem_pemel_ternak']; ?></td>
+                      <td><?= $ikan['komoditas']; ?> </td>
+                      <td><?= $ikan['kepemilikan']; ?></td>
+                      <td><?= $ikan['kecamatan']; ?></td>
+                      <td><?= $ikan['jenis_ikan']; ?></td>
+                      <td><?= $ikan['jml_prod']; ?> Ton</td>
+                      <td><?= $ikan['waktu_prod']; ?></td>
+                      <td>Rp. <?= $ikan['biaya_prod']; ?></td>
                       <td class="text-center">
                         <div class="btn-group">
-                          <a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn btn-info btn-sm" type="button">
+                          <a href="/perikanan/detail/<?= $ikan['id_ikan']; ?>" class="btn btn-info btn-sm" type="button">
                             <i class="fa fa-folder-open"></i></a>
-                          <a href="/peternakan/edit/<?= $pet['id_ternak']; ?>" class="btn btn-warning btn-sm" type="button">
+                          <a href="/perikanan/edit/<?= $ikan['id_ikan']; ?>" class="btn btn-warning btn-sm" type="button">
                             <i class="fa fa-edit"></i></a>
-                          <a href="/peternakan/hapus/<?= $pet['id_ternak']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
+                          <a href="/perikanan/hapus/<?= $ikan['id_ikan']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?');">
                             <i class="far fa-trash-alt"></i></a>
                         </div>
                       </td>
@@ -84,30 +86,6 @@
       </div>
     </div>
   </section>
-</div>
-
-<div class="modal fade" id="modal-sm">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Apakan anda yakin?</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Hapus data peternakan&hellip;</p>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <form action="">
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-danger">Hapus</button>
-        </form>
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
 </div>
 
 <?= $this->endSection(); ?>

@@ -76,7 +76,7 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/produsen" class="btn bg-gradient-warning mr-3">Batal</a>
+            <a href="/produsen" class="btn bg-gradient-warning mr-2">Batal</a>
             <input type="submit" value="Ubah Data Produsen" class="btn bg-gradient-indigo">
           </div>
         </div>

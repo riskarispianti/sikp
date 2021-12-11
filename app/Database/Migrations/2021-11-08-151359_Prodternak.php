@@ -82,7 +82,7 @@ class Prodternak extends Migration
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
-            'id_ip'          => [
+            'id_ipt'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,

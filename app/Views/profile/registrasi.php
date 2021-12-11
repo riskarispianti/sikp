@@ -26,121 +26,90 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="card card-default">
+          <div class="card card-info">
             <div class="card-header">
-              <h3 class="card-title">Account</h3>
+              <h3 class="card-title">Horizontal Form</h3>
             </div>
-            <div class="card-body p-0">
-              <div class="bs-stepper">
-                <div class="bs-stepper-header" role="tablist">
-                  <!-- your steps here -->
-                  <div class="step" data-target="#logins-part">
-                    <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
-                      <span class="bs-stepper-circle">1</span>
-                      <span class="bs-stepper-label">Profile</span>
-                    </button>
-                  </div>
-                  <div class="line"></div>
-                  <div class="step" data-target="#information-part">
-                    <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
-                      <span class="bs-stepper-circle">2</span>
-                      <span class="bs-stepper-label">Logins</span>
-                    </button>
+            <!-- /.card-header -->
+            <!-- form start -->
+
+            <?php if (isset($validation)) : ?>
+              <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+            <?php endif; ?>
+            <form class="form-horizontal" action="/register/save" method="post">
+              <div class="card-body">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Dinas</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nama_dinas" placeholder="Nama Dinas">
                   </div>
                 </div>
-                <div class="bs-stepper-content">
-                  <!-- your steps content here -->
-                  <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Nama Dinas</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName" placeholder="Nama dinas">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="visimisi" class="col-sm-2 col-form-label">Visi & Misi</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" placeholder="Visi & Misi">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputAlamat" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputSejarah" class="col-sm-2 col-form-label">Sejarah</label>
-                        <div class="col-sm-10">
-                          <textarea class="form-control" id="inputSejarah" placeholder="Sejarah"></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputLogo" class="col-sm-2 col-form-label">Logo Dinas</label>
-                        <div class="col-sm-5">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div>
-                            <img class="attachment-img" src="/dist/img/AdminLTELogo.png" alt="Logo" width="150">
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Visi Misi</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="visimisi" placeholder="Visi Misi">
                   </div>
-                  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="username" class="col-sm-2 col-form-label">Username</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="username" placeholder="Username">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" placeholder="Password">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="password2" class="col-sm-2 col-form-label">Verifikasi</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="password2" placeholder="Password">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <button class="btn btn-warning" onclick="stepper.previous()">Previous</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Alamat</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Sejarah</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="sejarah" placeholder="Sejarah">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" name="confpassword" placeholder="Confirm Password">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="InputLogo" class="col-sm-2 col-form-label">Logo Dinas</label>
+                  <div class="col-sm-5">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="logo_dinas">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                      <label class="form-check-label" for="exampleCheck2">Remember me</label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-
-            </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-default float-right">Cancel</button>
+              </div>
+              <!-- /.card-footer -->
+            </form>
           </div>
-          <!-- /.card -->
         </div>
       </div>
-    </div>
-    <!-- /.container-fluid -->
+      <!-- /.container-fluid -->
   </section>
   <!-- /.content -->
 

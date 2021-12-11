@@ -44,6 +44,7 @@ class Tanaman extends BaseController
     ];
     return view('tanaman/detail', $data);
   }
+
   public function tambah()
   {
     $data = [

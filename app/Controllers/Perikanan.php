@@ -3,18 +3,17 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
-use App\Models\PeternakanModel;
-use App\Models\InfrasternakModel;
+use App\Models\InfrastrukturModel;
 use App\Models\KomoditasModel;
 use App\Models\ProdusenModel;
 use App\Models\SentraModel;
 use App\Models\TempatModel;
+use App\Models\PerikananModel;
 
-class Peternakan extends BaseController
+class Perikanan extends BaseController
 {
-    protected $peternakanModel;
-    protected $infrasternakModel;
+    protected $perikananModel;
+    protected $infrastrukturModel;
     protected $komoditasModel;
     protected $produsenModel;
     protected $sentraModel;
@@ -22,8 +21,8 @@ class Peternakan extends BaseController
 
     public function __construct()
     {
-        $this->peternakanModel = new PeternakanModel();
-        $this->infrasternakModel = new InfrasternakModel();
+        $this->perikananModel = new PerikananModel();
+        $this->infrastrukturModel = new InfrastrukturModel();
         $this->komoditasModel = new KomoditasModel();
         $this->produsenModel = new ProdusenModel();
         $this->sentraModel = new SentraModel();
@@ -34,49 +33,43 @@ class Peternakan extends BaseController
     {
         $data = [
             'title' => 'Data Laporan | Ketersediaan Pangan',
-            'peternakan' => $this->peternakanModel->getTernak()
+            'perikanan' => $this->perikananModel->getIkan()
         ];
-        echo view('peternakan/data_pangan', $data);
+        echo view('perikanan/data_pangan', $data);
     }
 
-    public function detail($id_ternak)
+    public function detail($id_ikan)
     {
         $data = [
             'title' => 'Detail Laporan | Ketersediaan Pangan',
-            'peternakan' => $this->peternakanModel->getTernak($id_ternak)
+            'perikanan' => $this->perikananModel->getIkan($id_ikan)
         ];
-        return view('peternakan/detail', $data);
+        return view('perikanan/detail', $data);
     }
 
     public function tambah()
     {
         $data = [
-            'title' => 'Tambah Data Peternakan',
+            'title' => 'Tambah Data Perikanan',
             'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->findAll(),
             'tempat' => $this->tempatModel->findAll(),
             'sentra' => $this->sentraModel->findAll(),
-            'infrastruktur' => $this->infrasternakModel->findAll(),
+            'infrastruktur' => $this->infrastrukturModel->findAll(),
             'produsen' => $this->produsenModel->findAll()
         ];
-        return view('peternakan/tambah', $data);
+        return view('perikanan/tambah', $data);
     }
 
     public function save()
     {
         // validasi input
         if (!$this->validate([
-            'jenis_ternak' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'jenis ternak harus diisi.'
-                ]
-            ],
-            'jml_populasi' => [
+            'jml_prod' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'jumlah populasi harus diisi.',
-                    'numeric' => 'isi harus angka'
+                    'required' => 'jumlah produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'waktu_prod' => [
@@ -86,28 +79,17 @@ class Peternakan extends BaseController
                 ]
             ],
             'biaya_prod' => [
-                'rules' => 'required',
+                'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'biaya produksi harus diisi.'
+                    'required' => 'biaya produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'harga_hsl_prod' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'harga hasil produksi harus diisi.',
-                    'numeric' => 'isi harus angka'
-                ]
-            ],
-            'sistem_pemel_ternak' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'sistem pemeliharaan ternak harus diisi.'
-                ]
-            ],
-            'benih' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'harga jual produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'alat_teknologi' => [
@@ -116,28 +98,24 @@ class Peternakan extends BaseController
                     'required' => 'alat dan teknologi harus diisi.'
                 ]
             ],
-            'nama_anc' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'ancaman harus diisi.'
-                ]
-            ],
 
         ])) {
             $validation = \Config\Services::validation();
 
-            return redirect()->to('peternakan/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('perikanan/tambah')->withInput()->with('validation', $validation);
         }
 
-        $this->peternakanModel->insert([
-            'jenis_ternak' => $this->request->getVar('jenis_ternak'),
-            'jml_populasi' => $this->request->getVar('jml_populasi'),
+        $this->perikananModel->insert([
+            'jenis_ikan' => $this->request->getVar('jenis_ikan'),
+            'jml_prod' => $this->request->getVar('jml_prod'),
             'lama_prod' => $this->request->getVar('lama_prod'),
             'waktu_prod' => $this->request->getVar('waktu_prod'),
             'biaya_prod' => $this->request->getVar('biaya_prod'),
             'harga_hsl_prod' => $this->request->getVar('harga_hsl_prod'),
-            'sistem_pemel_ternak' => $this->request->getVar('sistem_pemel_ternak'),
+            'wadah_budidaya' => $this->request->getVar('wadah_budidaya'),
+            'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
             'benih' => $this->request->getVar('benih'),
+            'jns_asal_pakan' => $this->request->getVar('jns_asal_pakan'),
             'alat_teknologi' => $this->request->getVar('alat_teknologi'),
             'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
             'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
@@ -146,45 +124,39 @@ class Peternakan extends BaseController
             'id_kom' => $this->request->getVar('id_kom'),
             'id_tp' => $this->request->getVar('id_tp'),
             'id_sp' => $this->request->getVar('id_sp'),
-            'id_ipt' => $this->request->getVar('id_ipt'),
+            'id_ip' => $this->request->getVar('id_ip'),
             'id_produsen' => $this->request->getVar('id_produsen')
         ]);
 
         session()->setFlashdata('pesan', 'ditambahkan.');
 
-        return redirect()->to('/peternakan');
+        return redirect()->to('/perikanan');
     }
 
-    public function edit($id_ternak)
+    public function edit($id_ikan)
     {
         $data = [
-            'title' => 'Edit Data Peternakan',
+            'title' => 'Edit Data perikanan',
+            'perikanan' => $this->perikananModel->getIkan($id_ikan),
             'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->findAll(),
             'tempat' => $this->tempatModel->findAll(),
             'sentra' => $this->sentraModel->findAll(),
-            'infrastruktur' => $this->infrasternakModel->findAll(),
-            'produsen' => $this->produsenModel->findAll(),
-            'peternakan' => $this->peternakanModel->find($id_ternak)
+            'infrastruktur' => $this->infrastrukturModel->findAll(),
+            'produsen' => $this->produsenModel->findAll()
         ];
-        return view('peternakan/edit', $data);
+        return view('perikanan/edit', $data);
     }
 
-    public function update($id_ternak)
+    public function update($id_ikan)
     {
         // validasi input
         if (!$this->validate([
-            'jenis_ternak' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'jenis ternak harus diisi.'
-                ]
-            ],
-            'jml_populasi' => [
+            'jml_prod' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'jumlah populasi harus diisi.',
-                    'numeric' => 'isi harus angka'
+                    'required' => 'jumlah produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'waktu_prod' => [
@@ -194,40 +166,23 @@ class Peternakan extends BaseController
                 ]
             ],
             'biaya_prod' => [
-                'rules' => 'required',
+                'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'biaya produksi harus diisi.'
+                    'required' => 'biaya produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'harga_hsl_prod' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'harga hasil produksi harus diisi.',
-                    'numeric' => 'isi harus angka'
-                ]
-            ],
-            'sistem_pemel_ternak' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'sistem pemeliharaan ternak harus diisi.'
-                ]
-            ],
-            'benih' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'harga jual produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
                 ]
             ],
             'alat_teknologi' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'alat dan teknologi harus diisi.'
-                ]
-            ],
-            'nama_anc' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'ancaman harus diisi.'
                 ]
             ],
 
@@ -237,15 +192,17 @@ class Peternakan extends BaseController
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
-        $this->peternakanModel->update($id_ternak, [
-            'jenis_ternak' => $this->request->getVar('jenis_ternak'),
-            'jml_populasi' => $this->request->getVar('jml_populasi'),
+        $this->perikananModel->update($id_ikan, [
+            'jenis_ikan' => $this->request->getVar('jenis_ikan'),
+            'jml_prod' => $this->request->getVar('jml_prod'),
             'lama_prod' => $this->request->getVar('lama_prod'),
             'waktu_prod' => $this->request->getVar('waktu_prod'),
             'biaya_prod' => $this->request->getVar('biaya_prod'),
             'harga_hsl_prod' => $this->request->getVar('harga_hsl_prod'),
-            'sistem_pemel_ternak' => $this->request->getVar('sistem_pemel_ternak'),
+            'wadah_budidaya' => $this->request->getVar('wadah_budidaya'),
+            'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
             'benih' => $this->request->getVar('benih'),
+            'jns_asal_pakan' => $this->request->getVar('jns_asal_pakan'),
             'alat_teknologi' => $this->request->getVar('alat_teknologi'),
             'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
             'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
@@ -254,21 +211,21 @@ class Peternakan extends BaseController
             'id_kom' => $this->request->getVar('id_kom'),
             'id_tp' => $this->request->getVar('id_tp'),
             'id_sp' => $this->request->getVar('id_sp'),
-            'id_ipt' => $this->request->getVar('id_ipt'),
+            'id_ip' => $this->request->getVar('id_ip'),
             'id_produsen' => $this->request->getVar('id_produsen')
         ]);
 
         session()->setFlashdata('pesan', 'diedit.');
 
-        return redirect()->to('/peternakan');
+        return redirect()->to('/perikanan');
     }
 
-    public function hapus($id_ternak)
+    public function hapus($id_ikan)
     {
-        $this->peternakanModel->delete($id_ternak);
+        $this->perikananModel->delete($id_ikan);
 
         session()->setFlashdata('pesan', 'dihapus.');
 
-        return redirect()->to('/peternakan');
+        return redirect()->to('/perikanan');
     }
 }
