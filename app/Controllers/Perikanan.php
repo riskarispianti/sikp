@@ -52,7 +52,7 @@ class Perikanan extends BaseController
         $data = [
             'title' => 'Tambah Data Perikanan',
             'validation' => \Config\Services::validation(),
-            'komoditas' => $this->komoditasModel->findAll(),
+            'komoditas' => $this->komoditasModel->getIka('g_kom'),
             'tempat' => $this->tempatModel->findAll(),
             'sentra' => $this->sentraModel->findAll(),
             'infrastruktur' => $this->infrastrukturModel->findAll(),
@@ -139,7 +139,7 @@ class Perikanan extends BaseController
             'title' => 'Edit Data perikanan',
             'perikanan' => $this->perikananModel->getIkan($id_ikan),
             'validation' => \Config\Services::validation(),
-            'komoditas' => $this->komoditasModel->findAll(),
+            'komoditas' => $this->komoditasModel->getIka('g_kom'),
             'tempat' => $this->tempatModel->findAll(),
             'sentra' => $this->sentraModel->findAll(),
             'infrastruktur' => $this->infrastrukturModel->findAll(),

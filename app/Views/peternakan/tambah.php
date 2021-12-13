@@ -58,7 +58,7 @@
                               <select class="form-control select2bs4" name="id_kom">
                                 <option selected disabled></option>
                                 <?php foreach ($komoditas as $kom => $value) : ?>
-                                  <option value="<?= $value['id_kom']; ?>" <?= (old('id_kom') == $value['id_kom']) ? 'selected' : ''; ?>><?= $value['komoditas']; ?></option>
+                                  <option value="<?= $value['id_kom']; ?>"><?= $value['komoditas']; ?></option>
                                 <?php endforeach; ?>
                               </select>
                             </div>
@@ -263,7 +263,7 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <a href="/tanaman" class="btn bg-gradient-warning mr-3">Batal</a>
+            <a href="/peternakan" class="btn bg-gradient-warning mr-3">Batal</a>
             <input type="submit" value="Tambah Data Pangan" class="btn bg-gradient-success">
           </div>
         </div>

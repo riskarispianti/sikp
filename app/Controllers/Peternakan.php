@@ -53,7 +53,7 @@ class Peternakan extends BaseController
         $data = [
             'title' => 'Tambah Data Peternakan',
             'validation' => \Config\Services::validation(),
-            'komoditas' => $this->komoditasModel->findAll(),
+            'komoditas' => $this->komoditasModel->getTer('g_kom'),
             'tempat' => $this->tempatModel->findAll(),
             'sentra' => $this->sentraModel->findAll(),
             'infrastruktur' => $this->infrasternakModel->findAll(),
