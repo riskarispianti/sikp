@@ -10,17 +10,16 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Profile</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item active">Profile</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- /.content-header -->
 
   <section class="content">
     <div class="container">
@@ -42,22 +41,20 @@
               </div>
               <div class="col-md-9">
                 <div class="card-body">
-                  <?php foreach ($profile as $prof) : ?>
-                    <strong><i class="fas fa-book mr-1"></i>Nama</strong>
-                    <p class="text-muted">
-                      <?= $prof['nama_dinas']; ?>
-                    </p>
-                    <hr>
-                    <strong><i class="fas fa-map-marker-alt mr-1"></i> Username</strong>
-                    <p class="text-muted">
-                      <?= $prof['username']; ?>
-                    </p>
-                    <hr>
-                    <strong><i class="far fa-file-alt mr-1"></i> Password</strong>
-                    <p class="text-muted">
-                      <?= $prof['password']; ?>
-                    </p>
-                  <?php endforeach; ?>
+                  <strong><i class="fas fa-book mr-1"></i>Nama</strong>
+                  <p class="text-muted">
+                    sfgdgdgdgd
+                  </p>
+                  <hr>
+                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Username</strong>
+                  <p class="text-muted">
+                    dgdrdgrdrg
+                  </p>
+                  <hr>
+                  <strong><i class="far fa-file-alt mr-1"></i> Password</strong>
+                  <p class="text-muted">
+                    gdrgdgddg
+                  </p>
                 </div>
               </div>
             </div>

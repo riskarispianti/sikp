@@ -9,11 +9,11 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Infrastruktur Produksi</small></h1>
+          <h1 class="m-0">Infrastruktur Peternakan</small></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item active">Infrastruktur</li>
           </ol>
         </div>
