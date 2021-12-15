@@ -37,6 +37,18 @@ class Tempatprod extends BaseController
     {
         // validasi input
         if (!$this->validate([
+            'kecamatan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ],
+            'kelurahan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ],
             'letak_prod' => [
                 'rules' => 'required',
                 'errors' => [
@@ -68,6 +80,8 @@ class Tempatprod extends BaseController
         }
 
         $this->tempatModel->insert([
+            'kecamatan' => $this->request->getVar('kecamatan'),
+            'kelurahan' => $this->request->getVar('kelurahan'),
             'letak_prod' => $this->request->getVar('letak_prod'),
             'luas_prod' => $this->request->getVar('luas_prod'),
             'kepemilikan' => $this->request->getVar('kepemilikan'),
@@ -93,6 +107,18 @@ class Tempatprod extends BaseController
     {
         // validasi input
         if (!$this->validate([
+            'kecamatan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ],
+            'kelurahan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ],
             'letak_prod' => [
                 'rules' => 'required',
                 'errors' => [
@@ -124,6 +150,8 @@ class Tempatprod extends BaseController
         }
 
         $this->tempatModel->update($id_tp, [
+            'kecamatan' => $this->request->getVar('kecamatan'),
+            'kelurahan' => $this->request->getVar('kelurahan'),
             'letak_prod' => $this->request->getVar('letak_prod'),
             'luas_prod' => $this->request->getVar('luas_prod'),
             'kepemilikan' => $this->request->getVar('kepemilikan'),

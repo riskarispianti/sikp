@@ -35,6 +35,24 @@
               <div class="card-body text-muted">
                 <h4 class="text-center">Tempat Produksi</h4>
                 <div class="form-group row my-4">
+                  <label for="kecamatan" class="col-sm-5 col-form-label">Kecamatan</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('kecamatan')) ? 'is-invalid' : ''; ?>" name="kecamatan" value="<?= $tempat['kecamatan']; ?>">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('kecamatan'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
+                  <label for="kelurahan" class="col-sm-5 col-form-label">Kelurahann</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('kelurahan')) ? 'is-invalid' : ''; ?>" name="kelurahan" value="<?= $tempat['kelurahan']; ?>">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('kelurahan'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
                   <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                   <div class="col-sm-7">
                     <input type="text" class="form-control <?= ($validation->hasError('letak_prod')) ? 'is-invalid' : ''; ?>" name="letak_prod" value="<?= $tempat['letak_prod']; ?>">

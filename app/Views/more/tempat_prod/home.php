@@ -40,6 +40,8 @@
                 <thead class="text-center">
                   <tr>
                     <th style="width: 10px;">#</th>
+                    <th>kecamatan</th>
+                    <th>kelurahan</th>
                     <th>Letak Kawasan Produksi</th>
                     <th>Luas Kawasan Produksi</th>
                     <th>Kepemilikan</th>
@@ -52,8 +54,10 @@
                   foreach ($tempat as $temp) : ?>
                     <tr>
                       <td><?= $i++; ?></td>
+                      <td><?= $temp['kecamatan']; ?> </td>
+                      <td><?= $temp['kelurahan']; ?> </td>
                       <td><?= $temp['letak_prod']; ?> </td>
-                      <td><?= $temp['luas_prod']; ?> </td>
+                      <td><?= $temp['luas_prod']; ?> Km</td>
                       <td><?= $temp['kepemilikan']; ?> </td>
                       <td><?= $temp['status_lahan']; ?> </td>
                       <td>
@@ -69,18 +73,11 @@
                 </tbody>
               </table>
             </div>
-
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </div>
   </section>
-
 </div>
-
-
 
 <?= $this->endSection(); ?>
