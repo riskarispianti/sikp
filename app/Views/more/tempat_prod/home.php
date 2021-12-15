@@ -57,7 +57,7 @@
                       <td><?= $temp['kecamatan']; ?> </td>
                       <td><?= $temp['kelurahan']; ?> </td>
                       <td><?= $temp['letak_prod']; ?> </td>
-                      <td><?= $temp['luas_prod']; ?> Km</td>
+                      <td><?= $temp['luas_prod']; ?> Km<sup>2</sup></td>
                       <td><?= $temp['kepemilikan']; ?> </td>
                       <td><?= $temp['status_lahan']; ?> </td>
                       <td>

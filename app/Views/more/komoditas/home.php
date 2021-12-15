@@ -21,6 +21,29 @@
     </div>
   </div>
 
+  <div class="modal fade" id="modal-sm">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Apakah Anda Yakin?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Komoditas&hellip; akan dihapus!!</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Yes, Delete</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
   <section class="content">
     <div class="container">
       <div class="row">
@@ -41,7 +64,7 @@
                   <tr>
                     <th style="width: 10px;">#</th>
                     <th>Komoditas</th>
-                    <th style="width: 100px">Aksi</th>
+                    <th style="width: 130px">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,6 +76,8 @@
                       <td class="text-center">
                         <div class="btn-group btn-group-sm">
                           <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?')">
+                            <i class="far fa-trash-alt"></i> Hapus</a>
+                          <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-warning btn-sm" type="button" data-toggle="modal" data-target="#modal-sm">
                             <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
