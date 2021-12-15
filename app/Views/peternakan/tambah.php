@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Tambah Data</small></h1>
+          <h1 class="m-0">Produksi Peternakan</small></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -32,7 +32,7 @@
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                   <li class="pt-2 px-3">
-                    <h3 class="card-title">Tambah Data Pangan</h3>
+                    <h3 class="card-title">Tambah Peternakan</h3>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Produksi</a>
@@ -41,7 +41,13 @@
                     <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Ancaman Produksi</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Master Data</a>
+                    <a class="nav-link" id="custom-tabs-two-tempat-tab" data-toggle="pill" href="#custom-tabs-two-tempat" role="tab" aria-controls="custom-tabs-two-tempat" aria-selected="false">Tempat Produksi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-infrastruktur-tab" data-toggle="pill" href="#custom-tabs-two-infrastruktur" role="tab" aria-controls="custom-tabs-two-infrastruktur" aria-selected="false">Infrastruktur</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-two-produsen-tab" data-toggle="pill" href="#custom-tabs-two-produsen" role="tab" aria-controls="custom-tabs-two-produsen" aria-selected="false">Produsen</a>
                   </li>
                 </ul>
               </div>
@@ -196,50 +202,95 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
+                  <div class="tab-pane fade" id="custom-tabs-two-tempat" role="tabpanel" aria-labelledby="custom-tabs-two-tempat-tab">
                     <div class="card-body text-muted">
+                      <h4 class="text-center">TEMPAT PRODUKSI</h4>
                       <div class="form-group row my-4">
-                        <label for="letak_prod" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
+                        <label for="kepemilikan" class="col-sm-5 col-form-label">Kepemilikan</label>
                         <div class="col-sm-7">
                           <select class="form-control select2bs4" name="id_tp">
                             <option selected disabled></option>
                             <?php foreach ($tempat as $tem => $value) : ?>
-                              <option value="<?= $value['id_tp']; ?>"><?= $value['letak_prod']; ?></option>
+                              <option value="<?= $value['id_tp']; ?>"><?= $value['kepemilikan']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('letak_prod'); ?>
+                            <?= $validation->getError('kepemilikan'); ?>
                           </div>
                         </div>
                       </div>
-                      <div class="form-group row my-4">
-                        <label for="nama_sp" class="col-sm-5 col-form-label">Identitas Sentra Produksi</label>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Kecamatan</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_sp">
-                            <option selected disabled></option>
-                            <?php foreach ($sentra as $sen => $value) : ?>
-                              <option value="<?= $value['id_sp']; ?>"><?= $value['nama_sp']; ?></option>
-                            <?php endforeach; ?>
-                          </select>
-                          <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('nama_sp'); ?>
-                          </div>
+                          <input type="text" class="form-control" name="" disabled>
                         </div>
                       </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Kelurahan</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-two-infrastruktur" role="tabpanel" aria-labelledby="custom-tabs-two-infrastruktur-tab">
+                    <div class="card-body text-muted">
+                      <h4 class="text-center">INFRASTRUKTUR PRODUKSI</h4>
                       <div class="form-group row my-4">
-                        <label for="sarana_pengairan" class="col-sm-5 col-form-label">Kandang</label>
+                        <label for="pemilik" class="col-sm-5 col-form-label">Pemilik Rumah Pemotongan Hewan (RPH)</label>
                         <div class="col-sm-7">
                           <select class="form-control select2bs4" name="id_ipt">
                             <option selected disabled></option>
                             <?php foreach ($infrastruktur as $infras => $value) : ?>
-                              <option value="<?= $value['id_ipt']; ?>"><?= $value['kandang']; ?></option>
+                              <option value="<?= $value['id_ipt']; ?>"><?= $value['pemilik']; ?></option>
                             <?php endforeach; ?>
                           </select>
                           <div class="invalid-feesback text-danger">
-                            <?= $validation->getError('sarana_pengairan'); ?>
+                            <?= $validation->getError('pemilik'); ?>
                           </div>
                         </div>
                       </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Kandang</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Lokasi RPH</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Kapasitas</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-two-produsen" role="tabpanel" aria-labelledby="custom-tabs-two-produsen-tab">
+                    <div class="card-body text-muted">
+                      <h4 class="text-center">PRODUSEN</h4>
                       <div class="form-group row my-4">
                         <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
                         <div class="col-sm-7">
@@ -252,6 +303,24 @@
                           <div class="invalid-feesback text-danger">
                             <?= $validation->getError('kelembagaan'); ?>
                           </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Pembinaan</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-5 col-form-label">Kesejahteraan</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control" name="" disabled>
                         </div>
                       </div>
                     </div>

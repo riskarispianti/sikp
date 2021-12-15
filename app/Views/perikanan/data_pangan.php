@@ -9,8 +9,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Perikanan</small></h1>
-
+          <h1 class="m-0">Laporan Produksi Perikanan</small></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -52,7 +51,6 @@
                     <th>Biaya Produksi</th>
                     <th>Aksi</th>
                   </tr>
-
                 </thead>
                 <tbody>
                   <?php $i = 1;
