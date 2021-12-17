@@ -52,14 +52,14 @@
           <li class="user-header bg-gradient-lightblue">
             <img src="/img/logo-indonesia-berdaulat-pangan.png" class="border-0">
             <p>
-              <b> Indonesia Berdaulat Pangan</b>
+              <b><?= session()->get('username_u'); ?></b>
               <small>Member since Oct. 2021</small>
             </p>
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
             <a href="/profile" class="btn btn-default btn-flat">Profile</a>
-            <a href="/" class="btn btn-default btn-flat float-right">Sign out</a>
+            <a href="/login/logout" class="btn btn-default btn-flat float-right">Sign out</a>
           </li>
         </ul>
       </li>
