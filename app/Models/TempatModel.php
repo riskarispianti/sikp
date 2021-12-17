@@ -13,4 +13,12 @@ class TempatModel extends Model
 
     // Dates
     protected $useTimestamps        = true;
+
+    // public function cekTempat($id_tp = null, $pemilik = null)
+    // {
+    //     return $this->where(['id_tp' => $id_tp])
+    //         ->like(['id_tp' => $id_tp])
+    //         ->like(['pemilik' => $pemilik])
+    //         ->get()->getResultArray();
+    // }
 }

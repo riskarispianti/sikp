@@ -62,6 +62,13 @@ class Peternakan extends BaseController
         return view('peternakan/tambah', $data);
     }
 
+    function cekTempat()
+    {
+        $id_tp = $this->input->get("id_tp");
+        $data = $this->tempatModel->cek_IUP($id_tp);
+        echo json_encode($data);
+    }
+
     public function save()
     {
         // validasi input
