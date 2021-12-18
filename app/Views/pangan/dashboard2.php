@@ -35,17 +35,19 @@
                     <thead>
                       <tr>
                         <th style="width: 10px;">#</th>
+                        <th>Pemilik</th>
                         <th>Komoditas</th>
-                        <th style="width: 100px;">Jumlah</th>
+                        <th style="width: 50px;">Info</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-sm">
                       <?php $i = 1;
                       foreach ($tanaman as $tan) : ?>
                         <tr>
                           <td><?= $i++; ?></td>
+                          <td><?= $tan['kepemilikan']; ?> </td>
                           <td><?= $tan['komoditas']; ?> </td>
-                          <td><span class="badge bg-info text-sm"><?= $tan['jml_prod']; ?> Ton</span></td>
+                          <td><a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
@@ -63,17 +65,19 @@
                     <thead>
                       <tr>
                         <th style="width: 10px;">#</th>
+                        <th>Pemilik</th>
                         <th>Komoditas</th>
-                        <th style="width: 100px;">Jumlah</th>
+                        <th style="width: 50px;">Info</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-sm">
                       <?php $i = 1;
                       foreach ($peternakan as $pet) : ?>
                         <tr>
                           <td><?= $i++; ?></td>
+                          <td><?= $pet['kepemilikan']; ?> </td>
                           <td><?= $pet['komoditas']; ?> </td>
-                          <td><span class="badge bg-success text-sm"><?= $pet['jml_populasi']; ?> Ekor</span></td>
+                          <td><a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
@@ -90,18 +94,20 @@
                   <table class="table table-striped table-valign-middle">
                     <thead>
                       <tr>
-                        <th>#</th>
+                        <th style="width: 10px;">#</th>
+                        <th>Pemilik</th>
                         <th>Komoditas</th>
-                        <th>Jumlah</th>
+                        <th style="width: 50px;">Info</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-sm">
                       <?php $i = 1;
                       foreach ($perikanan as $per) : ?>
                         <tr>
                           <td><?= $i++; ?></td>
+                          <td><?= $per['kepemilikan']; ?> </td>
                           <td><?= $per['komoditas']; ?> </td>
-                          <td><span class="badge bg-primary text-sm"><?= $per['jml_prod']; ?> Ton</span></td>
+                          <td><a href="/perikanan/detail/<?= $per['id_ikan']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>

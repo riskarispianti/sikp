@@ -116,7 +116,7 @@
                         <div class="card-body text-muted">
                           <strong>Jumlah Produsen/Peternak Pengahasil Komoditas</strong>
                           <p class="text-muted">
-                            <?= $peternakan['jml_penghasil_kom']; ?>
+                            <?= $peternakan['jml_penghasil_kom']; ?> Orang
                           </p>
                           <strong>Pembinaan Kepada Produsen/Peternak</strong>
                           <p class="text-muted">
@@ -147,27 +147,6 @@
                 <p class="text-muted">
                   <?= $peternakan['kepemilikan']; ?>
                 </p>
-                <strong>Status Tempat Produksi</strong>
-                <p class="text-muted">
-                  <?= $peternakan['status_lahan']; ?>
-                </p>
-                <strong>Letak Produksi</strong>
-                <p class="text-muted">
-                  <?= $peternakan['letak_prod']; ?>
-                </p>
-                <strong>Luas Produksi</strong>
-                <p class="text-muted">
-                  <?= $peternakan['luas_prod']; ?>
-                </p>
-              </div>
-
-              <h5 class="mt-5 text-muted">Sentra Produksi</h5>
-              <hr>
-              <div class="text-muted">
-                <strong>Nama/Identitas Senstra Produksi</strong>
-                <p class="text-muted">
-                  <?= $peternakan['nama_sp']; ?>
-                </p>
                 <strong>Kecamatan</strong>
                 <p class="text-muted">
                   <?= $peternakan['kecamatan']; ?>
@@ -176,14 +155,23 @@
                 <p class="text-muted">
                   <?= $peternakan['kelurahan']; ?>
                 </p>
-
+                <strong>Letak Produksi</strong>
+                <p class="text-muted">
+                  <?= $peternakan['letak_prod']; ?>
+                </p>
+                <strong>Luas Produksi</strong>
+                <p class="text-muted">
+                  <?= $peternakan['luas_prod']; ?> Km<sup>2</sup>
+                </p>
+                <strong>Status Tempat Produksi</strong>
+                <p class="text-muted">
+                  <?= $peternakan['status_lahan']; ?>
+                </p>
               </div>
+
               <div class="text-center">
                 <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
                   <div class="btn-group">
-                    <a class="btn btn-info" href="/peternakan">
-                      <i class="fas fa-undo"></i> Kembali
-                    </a>
                     <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>
