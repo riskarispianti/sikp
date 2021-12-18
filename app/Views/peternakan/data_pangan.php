@@ -50,7 +50,6 @@
                     <th>Sistem Pemeliharaan Ternak</th>
                     <th>Aksi</th>
                   </tr>
-
                 </thead>
                 <tbody>
                   <?php $i = 1;

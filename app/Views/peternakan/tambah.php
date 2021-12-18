@@ -343,22 +343,23 @@
 </div>
 
 <script>
-  function cek_dataIUP() {
-    var id_iup = $('[name="id_iup_opt"]').val();
+  function cekTempat() {
+    var id_tp = $('[name="id_tp"]').val();
 
     //Ajax Load data from ajax
     $.ajax({
-      url: "<?php echo base_url('DataPenambangan/cekDataIUP/') ?>?id_iup=" + id_iup,
+      url: "/Peternakan/cekTempat/?id_tp=" + id_tp,
       type: "GET",
       dataType: "JSON",
-      success: function(data)
-
-      {
-        $('[name="id_iup"]').val(data.id_iup);
-        $('[name="date_iup"]').val(data.date_iup);
-        $('[name="nama_iup"]').val(data.nama_iup);
-
+      success: function(data) {
+        $('[name="id_tp"]').val(data.id_tp);
+        $('[name="kecamatan"]').val(data.kecamatan);
+        $('[name="kelurahan"]').val(data.kelurahan);
+        $('[name="letak_prod"]').val(data.letak_prod);
+        $('[name="luas_prod"]').val(data.luas_prod);
+        $('[name="status_lahan"]').val(data.status_lahan);
       },
+
       error: function(jqXHR, textStatus, errorThrown) {
         alert('Error get data from ajax');
       }
