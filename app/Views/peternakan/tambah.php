@@ -208,7 +208,7 @@
                       <div class="form-group row my-4">
                         <label for="kepemilikan" class="col-sm-5 col-form-label">Kepemilikan</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_tp">
+                          <select class="form-control select2bs4" name="id_tp" id="id_tp">
                             <option selected disabled></option>
                             <?php foreach ($tempat as $tem => $value) : ?>
                               <option value="<?= $value['id_tp']; ?>"><?= $value['kepemilikan']; ?></option>
@@ -222,31 +222,31 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kecamatan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kelurahan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" id="kelurahan" name="kelurahan" value="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" id="letak_prod" name="letak_prod" value="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" id="luas_prod" name="luas_prod" value="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" id="status_lahan" name="status_lahan" value="" readonly>
                         </div>
                       </div>
                     </div>
@@ -271,19 +271,19 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kandang</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Lokasi RPH</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kapasitas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                     </div>
@@ -308,19 +308,19 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Pembinaan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kesejahteraan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="" readonly>
                         </div>
                       </div>
                     </div>
@@ -341,5 +341,30 @@
   </section>
 
 </div>
+
+<script>
+  function cekTempat() {
+    var id_tp = $('[name="id_tp"]').val();
+
+    //Ajax Load data from ajax
+    $.ajax({
+      url: "/Peternakan/cekTempat/?id_tp=" + id_tp,
+      type: "GET",
+      dataType: "JSON",
+      success: function(data) {
+        $('[name="id_tp"]').val(data.id_tp);
+        $('[name="kecamatan"]').val(data.kecamatan);
+        $('[name="kelurahan"]').val(data.kelurahan);
+        $('[name="letak_prod"]').val(data.letak_prod);
+        $('[name="luas_prod"]').val(data.luas_prod);
+        $('[name="status_lahan"]').val(data.status_lahan);
+      },
+
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert('Error get data from ajax');
+      }
+    });
+  }
+</script>
 
 <?= $this->endSection(); ?>
