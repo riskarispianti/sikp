@@ -24,37 +24,77 @@
   <section class="content">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header bg-gradient-info">
-              <h3 class="card-title">About Me</h3>
+        <div class="col-md-3">
+          <div class="card callout callout-info">
+
+            <div class="text-center mb-3">
+              <img class="img-fluid" src="/img/<?= session()->get('gbr_u'); ?>" width="200">
             </div>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="card-body box-profile">
-                  <div class="text-center mb-3">
-                    <img class="img-fluid" src="/img/logo.png" width="150">
+
+          </div>
+
+        </div>
+        <div class="col-md-9">
+
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center">PROFILE</h4>
+                  <hr>
+                  <div class="form-group row mt-4">
+                    <label for="inputEmail3" class="col-sm-5 col-form-label">Nama Lengkap</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control form-control-border" value="<?= session()->get('nama_u'); ?>">
+                    </div>
                   </div>
-                  <h3 class="profile-username text-center">Dinas Perdamaian Dunia</h3>
-                  <p class="text-muted text-center">Universitas Subang</p>
+                  <div class="form-group row">
+                    <label for="username" class="col-sm-5 col-form-label">Username</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control form-control-border" value="<?= session()->get('username_u'); ?>">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="username" class="col-sm-5 col-form-label">Ganti Foto</label>
+                    <div class="col-sm-7">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input">
+                        <label class="custom-file-label">Pilih Foto</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn bg-gradient-cyan float-right">Edit Profile</button>
                 </div>
               </div>
-              <div class="col-md-9">
+            </div>
+            <div class="col-6">
+              <div class="card">
                 <div class="card-body">
-                  <strong><i class="fas fa-book mr-1"></i>Nama</strong>
-                  <p class="text-muted">
-                    sfgdgdgdgd
-                  </p>
+                  <h4 class="text-center">Ganti Password</h4>
                   <hr>
-                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Username</strong>
-                  <p class="text-muted">
-                    dgdrdgrdrg
-                  </p>
-                  <hr>
-                  <strong><i class="far fa-file-alt mr-1"></i> Password</strong>
-                  <p class="text-muted">
-                    gdrgdgddg
-                  </p>
+                  <div class="form-group row mt-4">
+                    <label for="inputEmail3" class="col-sm-5 col-form-label">Password lama</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="input-group input-group-sm">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="username" class="col-sm-5 col-form-label">Password Baru</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="input-group input-group-sm">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="username" class="col-sm-5 col-form-label">Konfirmasi Password</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="input-group input-group-sm">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn bg-gradient-cyan float-right">Ganti Password</button>
                 </div>
               </div>
             </div>
