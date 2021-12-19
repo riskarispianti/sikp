@@ -85,11 +85,6 @@ class Prodikan extends Migration
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
-            'id_sp'          => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
-            ],
             'id_ip'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
