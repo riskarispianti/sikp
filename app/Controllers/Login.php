@@ -10,53 +10,65 @@ class Login extends BaseController
 
   public function __construct()
   {
+    helper('form');
     $this->usersModel = new UsersModel();
   }
 
   public function index()
   {
-    $login = $this->request->getPost('login');
-    if ($login) {
-      $username_u = $this->request->getPost('username_u');
-      $password_u = $this->request->getPost('password_u');
-
-      if ($username_u == '' or $password_u == '') {
-        $err = "Silahkan masukan Username dan Password.";
-      }
-
-      if (empty($err)) {
-        $dataUsers = $this->usersModel->where('username_u', $username_u)->first();
-        if ($dataUsers['password_u'] != md5($password_u)) {
-          $err = "Password tidak sesuai.";
-        }
-      }
-
-      if (empty($err)) {
-        $dataSesi = [
-          'id_u' => $dataUsers['id_u'],
-          'username_u' => $dataUsers['username_u'],
-          'password_u' => $dataUsers['password_u']
-        ];
-        session()->set($dataSesi);
-        return redirect()->to('/dashboard');
-      }
-
-      if ($err) {
-        session()->setFlashdata('username_u', $username_u);
-        session()->setFlashdata('error', $err);
-        return redirect()->to('/');
-      }
-    }
-
     $data = [
       'title' => 'Login Ketersediaan Pangan'
     ];
     return view('log_in/login', $data);
   }
 
+  public function auth()
+  {
+    if ($this->validate([
+      'username_u' => [
+        'rules'  => 'required',
+        'errors' => [
+          'required' => 'username harus diisi.',
+        ],
+      ],
+      'password_u' => [
+        'rules'  => 'required',
+        'errors' => [
+          'required' => 'password harus diisi.'
+        ],
+      ]
+    ])) {
+      //jika valid
+      $username = $this->request->getPost('username_u');
+      $password = $this->request->getPost('password_u');
+      $cek = $this->usersModel->auth_l($username, $password);
+      if ($cek) {
+        //jika datanya cocok
+        session()->set('log', true);
+        session()->set('nama_u', $cek['nama_u']);
+        session()->set('gbr_u', $cek['gbr_u']);
+        session()->set('username_u', $cek['username_u']);
+        session()->set('password_u', $cek['password_u']);
+        return redirect()->to('/dashboard');
+      } else {
+        session()->setFlashdata('pesan', 'Login Gagal!!');
+        return redirect()->to('/');
+      }
+    } else {
+      // jika tidak valid
+      session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
+      return redirect()->to('/');
+      // if 
+    }
+  }
+
   public function logout()
   {
-    session()->destroy();
+    session()->remove('log');
+    session()->remove('nama_u');
+    session()->remove('gbr_u');
+
+    session()->setFlashdata('pesan', 'Anda Telah Logout.');
     return redirect()->to('/');
   }
 }

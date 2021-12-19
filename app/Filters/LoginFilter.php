@@ -6,12 +6,13 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class CekUsers implements FilterInterface
+class LoginFilter implements FilterInterface
 {
   public function before(RequestInterface $request, $arguments = null)
   {
     // Do something here
-    if (!session()->get('id_u')) {
+    if (session()->get('log') != true) {
+      session()->setFlashdata('pesan', 'Anda belum login.');
       return redirect()->to('/');
     }
   }
@@ -19,5 +20,8 @@ class CekUsers implements FilterInterface
   public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
   {
     // Do something here
+    if (session()->get('log') == true) {
+      return redirect()->to('/dashboard');
+    }
   }
 }

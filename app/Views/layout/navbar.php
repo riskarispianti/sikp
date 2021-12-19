@@ -44,22 +44,22 @@
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <!-- <img src="/img/logo_portal.png" class="user-image"> -->
-          <!-- <span class="d-none d-md-inline"><b> Dinas Ketahanan Pangan </b></span> -->
           <i class="fas fa-user-circle fa-lg"></i>
+          <span class="d-none d-md-inline"><?= session()->get('nama_u'); ?></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
           <li class="user-header bg-gradient-lightblue">
-            <img src="/img/logo-indonesia-berdaulat-pangan.png" class="border-0">
+            <img src="/img/<?= session()->get('gbr_u'); ?>" class="border-0">
             <p>
-              <b><?= session()->get('username_u'); ?></b>
-              <small>Member since Oct. 2021</small>
+              <b><?= session()->get('nama_u'); ?> - <?= session()->get('username_u'); ?></b>
+              <small><?= date('h-M-Y'); ?></small>
             </p>
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
             <a href="/profile" class="btn btn-default btn-flat">Profile</a>
-            <a href="/login/logout" class="btn btn-default btn-flat float-right">Sign out</a>
+            <a href="/login/logout" class="btn btn-default btn-flat float-right">Logout</a>
           </li>
         </ul>
       </li>

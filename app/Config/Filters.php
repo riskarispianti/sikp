@@ -20,8 +20,7 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
-        'cekUsers' => CekUsers::class,
-        'cekLogin' => CekLogin::class,
+        'loginFilter' => \App\Filters\LoginFilter::class
     ];
 
     /**
@@ -32,11 +31,18 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            'honeypot',
+            'loginFilter' => ['except' => [
+                'login', 'login/*',
+                '/'
+            ]],
+            // 'honeypot',
             //'login'
             // 'csrf',
         ],
         'after' => [
+            'loginFilter' => ['except' => [
+                'dashboard', 'dashboard/*'
+            ]],
             'toolbar',
             // 'honeypot',
         ],

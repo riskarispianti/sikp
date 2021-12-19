@@ -6,11 +6,11 @@ use CodeIgniter\Model;
 
 class UsersModel extends Model
 {
-    protected $table                = 'users';
-    protected $primaryKey           = 'id';
-    protected $useAutoIncrement     = true;
-    protected $allowedFields        = [];
-
-    // Dates
-    protected $useTimestamps        = true;
+    public function auth_l($username_u, $password_u)
+    {
+        return $this->db->table('users')->where([
+            'username_u' => $username_u,
+            'password_u' => md5($password_u)
+        ])->get()->getRowArray();
+    }
 }
