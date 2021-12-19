@@ -40,9 +40,6 @@ class Filters extends BaseConfig
             // 'csrf',
         ],
         'after' => [
-            'loginFilter' => ['except' => [
-                'dashboard', 'dashboard/*'
-            ]],
             'toolbar',
             // 'honeypot',
         ],

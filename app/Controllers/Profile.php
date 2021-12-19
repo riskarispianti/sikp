@@ -4,21 +4,22 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-use App\Models\ProfileModel;
+use App\Models\UsersModel;
 
 class Profile extends BaseController
 {
-  protected $profileModel;
+  protected $usersModel;
 
   public function __construct()
   {
-    $this->profileModel = new ProfileModel();
+    $this->usersModel = new UsersModel();
   }
+
   public function index()
   {
     $data = [
       'title' => 'Profile',
-      'profile' => $this->profileModel->findAll()
+      'profile' => $this->usersModel->findAll()
     ];
     return view('profile/profile', $data);
   }
