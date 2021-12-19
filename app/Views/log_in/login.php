@@ -60,6 +60,7 @@
         </div>
       </div>
       <?= form_close() ?>
+      <a href="/profile/tambah">Buat Akun Baru</a>
     </div>
   </div>
 </div>

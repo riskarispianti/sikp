@@ -26,6 +26,22 @@
   <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="/dist/js/adminlte.min.js"></script>
+  <script>
+    function previewGbr() {
+      const gbr_u = document.querySelector('#gbr_u');
+      const gbrLabel = document.querySelector('.custom-file-label');
+      const imgPreview = document.querySelector('.img-preview');
+
+      gbrLabel.textContent = gbr_u.files[0].name;
+
+      const fileGbr = new FileReader();
+      fileGbr.readAsDataURL(gbr_u.files[0]);
+
+      fileGbr.onload = function(e) {
+        imgPreview.src = e.target.result;
+      }
+    }
+  </script>
 </body>
 
 </html>
