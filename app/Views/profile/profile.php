@@ -26,13 +26,11 @@
       <div class="row">
         <div class="col-md-3">
           <div class="card callout callout-info">
-
             <div class="text-center mb-3">
               <img class="img-fluid" src="/img/<?= session()->get('gbr_u'); ?>" width="200">
             </div>
-
           </div>
-
+          <a href="" class="btn btn-danger btn-block" onclick="return confirm('Apakan anda yakin akun dihapus?')"><i class="far fa-trash-alt"></i> Hapus Akun</a>
         </div>
         <div class="col-md-9">
 

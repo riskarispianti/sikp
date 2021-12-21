@@ -79,12 +79,12 @@ class Profile extends BaseController
       //pindahkan gambar
       $file->move('img', $namaGambar);
     }
-    $pass = $this->request->getVar('password_u');
+
     $this->usersModel->insert([
       'nama_u' => $this->request->getVar('nama_u'),
       'gbr_u' => $namaGambar,
       'username_u' => $this->request->getVar('username_u'),
-      'password_u' => $pass
+      'password_u' => md5($this->request->getVar('password_u'))
     ]);
 
     session()->setFlashdata('pesan', 'silahkan login.');
