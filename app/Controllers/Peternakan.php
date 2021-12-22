@@ -8,7 +8,7 @@ use App\Models\PeternakanModel;
 use App\Models\InfrasternakModel;
 use App\Models\KomoditasModel;
 use App\Models\ProdusenModel;
-use App\Models\SentraModel;
+// use App\Models\SentraModel;
 use App\Models\TempatModel;
 
 class Peternakan extends BaseController
@@ -17,7 +17,7 @@ class Peternakan extends BaseController
     protected $infrasternakModel;
     protected $komoditasModel;
     protected $produsenModel;
-    protected $sentraModel;
+    // protected $sentraModel;
     protected $tempatModel;
 
     public function __construct()
@@ -26,7 +26,7 @@ class Peternakan extends BaseController
         $this->infrasternakModel = new InfrasternakModel();
         $this->komoditasModel = new KomoditasModel();
         $this->produsenModel = new ProdusenModel();
-        $this->sentraModel = new SentraModel();
+        // $this->sentraModel = new SentraModel();
         $this->tempatModel = new TempatModel();
     }
 
@@ -162,7 +162,7 @@ class Peternakan extends BaseController
             'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->findAll(),
             'tempat' => $this->tempatModel->findAll(),
-            'sentra' => $this->sentraModel->findAll(),
+            // 'sentra' => $this->sentraModel->findAll(),
             'infrastruktur' => $this->infrasternakModel->findAll(),
             'produsen' => $this->produsenModel->findAll(),
             'peternakan' => $this->peternakanModel->find($id_ternak)
@@ -253,7 +253,7 @@ class Peternakan extends BaseController
             'penanggulangan' => $this->request->getVar('penanggulangan'),
             'id_kom' => $this->request->getVar('id_kom'),
             'id_tp' => $this->request->getVar('id_tp'),
-            'id_sp' => $this->request->getVar('id_sp'),
+            // 'id_sp' => $this->request->getVar('id_sp'),
             'id_ipt' => $this->request->getVar('id_ipt'),
             'id_produsen' => $this->request->getVar('id_produsen')
         ]);

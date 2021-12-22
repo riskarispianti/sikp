@@ -64,9 +64,7 @@ class Infrasternak extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/infrasternak/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('/infrasternak/tambah')->withInput();
         }
 
         $this->infrasternakModel->insert([
@@ -95,6 +93,12 @@ class Infrasternak extends BaseController
     {
         // validasi input
         if (!$this->validate([
+            'pemilik' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi.'
+                ]
+            ],
             'kandang' => [
                 'rules' => 'required',
                 'errors' => [
@@ -113,24 +117,16 @@ class Infrasternak extends BaseController
                     'required' => 'kapasitas rph harus diisi.',
                     'numeric' => 'isi harus number.'
                 ]
-            ],
-            'pemilik' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->infrasternakModel->update($id_ipt, [
+            'pemilik' => $this->request->getVar('pemilik'),
             'kandang' => $this->request->getVar('kandang'),
             'lok_rph' => $this->request->getVar('lok_rph'),
-            'kapasitas_rph' => $this->request->getVar('kapasitas_rph'),
-            'pemilik' => $this->request->getVar('pemilik')
+            'kapasitas_rph' => $this->request->getVar('kapasitas_rph')
         ]);
 
         session()->setFlashdata('pesan', 'diedit.');

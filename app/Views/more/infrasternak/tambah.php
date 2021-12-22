@@ -46,7 +46,16 @@
                 <div class="form-group row my-4">
                   <label for="kandang" class="col-sm-5 col-form-label">Kandang</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kandang')) ? 'is-invalid' : ''; ?>" name="kandang" placeholder="Kandang">
+                    <input type="text" class="form-control <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" name="pemilik" placeholder="Pemilik" value="<?= old('pemilik'); ?>">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('pemilik'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
+                  <label for="kandang" class="col-sm-5 col-form-label">Kandang</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('kandang')) ? 'is-invalid' : ''; ?>" name="kandang" placeholder="Kandang" value="<?= old('kandang'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('kandang'); ?>
                     </div>
@@ -55,7 +64,7 @@
                 <div class="form-group row my-4">
                   <label for="lok_rph" class="col-sm-5 col-form-label">Lokasi Rumah Pemotongan Hewan (RPH)</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('lok_rph')) ? 'is-invalid' : ''; ?>" name="lok_rph" placeholder="Lokasi">
+                    <input type="text" class="form-control <?= ($validation->hasError('lok_rph')) ? 'is-invalid' : ''; ?>" name="lok_rph" placeholder="Lokasi" value="<?= old('lok_rph'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('lok_rph'); ?>
                     </div>
@@ -64,7 +73,7 @@
                 <div class="form-group row my-4">
                   <label for="kapasitas_rph" class="col-sm-5 col-form-label">Kapasitas RPH</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kapasitas_rph')) ? 'is-invalid' : ''; ?>" name="kapasitas_rph" placeholder="Kapasitas">
+                    <input type="text" class="form-control <?= ($validation->hasError('kapasitas_rph')) ? 'is-invalid' : ''; ?>" name="kapasitas_rph" placeholder="Kapasitas" value="<?= old('kapasitas_rph'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('kapasitas_rph'); ?>
                     </div>
