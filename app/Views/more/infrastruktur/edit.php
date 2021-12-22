@@ -10,15 +10,15 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0">Edit Infrastruktur Produksi</small></h1>
-        </div><!-- /.col -->
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
             <li class="breadcrumb-item"><a href="/infrastruktur">Infrastruktur</a></li>
             <li class="breadcrumb-item active">Edit</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -68,7 +68,7 @@
         <div class="row">
           <div class="col-12 text-center">
             <a href="/infrastruktur" class="btn bg-gradient-warning mr-2">Batal</a>
-            <input type="submit" value="Ubah Data Infrastruktur" class="btn bg-gradient-indigo">
+            <input type="submit" value="Edit Data Infrastruktur" class="btn bg-gradient-indigo">
           </div>
         </div>
       </form>

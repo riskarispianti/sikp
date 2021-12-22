@@ -41,25 +41,23 @@ class Infrastruktur extends BaseController
             'sarana_pengairan' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'sarana pengairan harus diisi.'
                 ]
             ],
             'pengel_jar_irigasi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'pengelolaann jaringan irigasi harus diisi.'
                 ]
             ],
             'infras_pengel_air' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'infrastruktur pengelolaan air harus diisi.'
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/infrastruktur/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('/infrastruktur/tambah')->withInput();
         }
 
         $this->infrastrukturModel->insert([
@@ -90,25 +88,23 @@ class Infrastruktur extends BaseController
             'sarana_pengairan' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'sarana pengairan harus diisi.'
                 ]
             ],
             'pengel_jar_irigasi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'pengelolaann jaringan irigasi harus diisi.'
                 ]
             ],
             'infras_pengel_air' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'infrastruktur pengelolaan air harus diisi.'
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/infrastruktur/edit' . $this->request->getVar('id_ip'))->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->infrastrukturModel->update($id_ip, [

@@ -35,6 +35,15 @@
               <div class="card-body text-muted">
                 <h4 class="text-center">Peternakan</h4>
                 <div class="form-group row my-4">
+                  <label for="pemilik" class="col-sm-5 col-form-label">Pemilik</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" name="pemilik" value="<?= $infrasternak['pemilik']; ?>">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('pemilik'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
                   <label for="kandang" class="col-sm-5 col-form-label">Kandang</label>
                   <div class="col-sm-7">
                     <input type="text" class="form-control <?= ($validation->hasError('kandang')) ? 'is-invalid' : ''; ?>" name="kandang" value="<?= $infrasternak['kandang']; ?>">
@@ -58,15 +67,6 @@
                     <input type="text" class="form-control <?= ($validation->hasError('kapasitas_rph')) ? 'is-invalid' : ''; ?>" name="kapasitas_rph" value="<?= $infrasternak['kapasitas_rph']; ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('kapasitas_rph'); ?>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row my-4">
-                  <label for="pemilik" class="col-sm-5 col-form-label">Pemilik</label>
-                  <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" name="pemilik" value="<?= $infrasternak['pemilik']; ?>">
-                    <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('pemilik'); ?>
                     </div>
                   </div>
                 </div>

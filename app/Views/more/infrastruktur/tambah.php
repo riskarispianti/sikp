@@ -37,7 +37,7 @@
                 <div class="form-group row my-4">
                   <label for="sarana_pengairan" class="col-sm-5 col-form-label">Sarana Pengairan</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('sarana_pengairan')) ? 'is-invalid' : ''; ?>" name="sarana_pengairan" placeholder="Sarana Pengairan">
+                    <input type="text" class="form-control <?= ($validation->hasError('sarana_pengairan')) ? 'is-invalid' : ''; ?>" name="sarana_pengairan" placeholder="Sarana Pengairan" value="<?= old('sarana_pengairan'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('sarana_pengairan'); ?>
                     </div>
@@ -46,7 +46,7 @@
                 <div class="form-group row my-4">
                   <label for="pengel_jar_irigasi" class="col-sm-5 col-form-label">Pengelolaan Jaringan Irigasi</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('pengel_jar_irigasi')) ? 'is-invalid' : ''; ?>" name="pengel_jar_irigasi" placeholder="Pengelolaan">
+                    <input type="text" class="form-control <?= ($validation->hasError('pengel_jar_irigasi')) ? 'is-invalid' : ''; ?>" name="pengel_jar_irigasi" placeholder="Pengelolaan" value="<?= old('pengel_jar_irigasi'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('pengel_jar_irigasi'); ?>
                     </div>
@@ -55,7 +55,7 @@
                 <div class="form-group row my-4">
                   <label for="infras_pengel_air" class="col-sm-5 col-form-label">infrastruktur Pengelolaan Irigasi</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('infras_pengel_air')) ? 'is-invalid' : ''; ?>" name="infras_pengel_air" placeholder="Pengelolaan Irigasi">
+                    <input type="text" class="form-control <?= ($validation->hasError('infras_pengel_air')) ? 'is-invalid' : ''; ?>" name="infras_pengel_air" placeholder="Pengelolaan Irigasi" value="<?= old('infras_pengel_air'); ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('infras_pengel_air'); ?>
                     </div>

@@ -37,19 +37,20 @@ class Produsen extends BaseController
     {
         // validasi input
         if (!$this->validate([
-            'jml_penghasil_kom' => [
+            'kelembagaan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi.'
+                ]
+            ],
+            'jml_penghasil_kom' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'pengahasil komoditas harus diisi.',
+                    'numeric' => 'isi harus number.'
                 ]
             ],
             'pembinaan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ],
-            'kelembagaan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi.'
@@ -62,15 +63,13 @@ class Produsen extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/produsen/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('/produsen/tambah')->withInput();
         }
 
         $this->produsenModel->insert([
+            'kelembagaan' => $this->request->getVar('kelembagaan'),
             'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
             'pembinaan' => $this->request->getVar('pembinaan'),
-            'kelembagaan' => $this->request->getVar('kelembagaan'),
             'kesejahteraan' => $this->request->getVar('kesejahteraan')
         ]);
 
@@ -93,19 +92,20 @@ class Produsen extends BaseController
     {
         // validasi input
         if (!$this->validate([
-            'jml_penghasil_kom' => [
+            'kelembagaan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi.'
+                ]
+            ],
+            'jml_penghasil_kom' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'pengahasil komoditas harus diisi.',
+                    'numeric' => 'isi harus number.'
                 ]
             ],
             'pembinaan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ],
-            'kelembagaan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi.'
@@ -118,15 +118,13 @@ class Produsen extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->produsenModel->update($id_produsen, [
+            'kelembagaan' => $this->request->getVar('kelembagaan'),
             'jml_penghasil_kom' => $this->request->getVar('jml_penghasil_kom'),
             'pembinaan' => $this->request->getVar('pembinaan'),
-            'kelembagaan' => $this->request->getVar('kelembagaan'),
             'kesejahteraan' => $this->request->getVar('kesejahteraan')
         ]);
 

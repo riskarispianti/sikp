@@ -35,6 +35,15 @@
               <div class="card-body text-muted">
                 <h4 class="text-center">Produsen</h4>
                 <div class="form-group row my-4">
+                  <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control <?= ($validation->hasError('kelembagaan')) ? 'is-invalid' : ''; ?>" name="kelembagaan" value="<?= $produsen['kelembagaan']; ?>">
+                    <div class="invalid-feedback text-danger">
+                      <?= $validation->getError('kelembagaan'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row my-4">
                   <label for="jml_penghasil_kom" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
                   <div class="col-sm-7">
                     <input type="text" class="form-control <?= ($validation->hasError('jml_penghasil_kom')) ? 'is-invalid' : ''; ?>" name="jml_penghasil_kom" value="<?= $produsen['jml_penghasil_kom']; ?>">
@@ -49,15 +58,6 @@
                     <input type="text" class="form-control <?= ($validation->hasError('pembinaan')) ? 'is-invalid' : ''; ?>" name="pembinaan" value="<?= $produsen['pembinaan']; ?>">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('pembinaan'); ?>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row my-4">
-                  <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan</label>
-                  <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kelembagaan')) ? 'is-invalid' : ''; ?>" name="kelembagaan" value="<?= $produsen['kelembagaan']; ?>">
-                    <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('kelembagaan'); ?>
                     </div>
                   </div>
                 </div>
