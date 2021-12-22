@@ -73,6 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- jQuery -->
   <script src="/plugins/jquery/jquery.min.js"></script>
+  <!-- <script src="/jquery-3.6.0.min.js"></script> -->
   <!-- Bootstrap 4 -->
   <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- DataTables  & Plugins -->
@@ -88,8 +89,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
   <script src="/dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="/dist/js/demo.js"></script>
   <!-- BS-Stepper -->
   <script src="/plugins/bs-stepper/js/bs-stepper.min.js"></script>
   <!-- OPTIONAL SCRIPTS -->

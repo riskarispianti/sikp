@@ -14,19 +14,15 @@ class TempatModel extends Model
     // Dates
     protected $useTimestamps        = true;
 
-    // public function cekTempat($id_tp = null, $pemilik = null)
-    // {
-    //     return $this->where(['id_tp' => $id_tp])
-    //         ->like(['id_tp' => $id_tp])
-    //         ->like(['pemilik' => $pemilik])
-    //         ->get()->getResultArray();
-    // }
-
-    public function getTem($id_tp = null)
+    public function getTem($id_tp, $kepemilikan)
     {
-        return $this->where(['id_tp' => $id_tp])
-            ->like(['id_tp' => $id_tp])
-            ->like('pemilik')
-            ->get();
+        // $query  =
+        //     "SELECT * FROM tempat_prod WHERE (id_tp LIKE '%" . $id_tp . "%' AND kepemilikan LIKE '%" . $kepemilikan . "%')";
+
+        // return $this->db->query($query);
+
+        $array = ['id_tp' => $id_tp, 'kepemilikan' => $kepemilikan];
+        // $builder->like($array);
+        return $this->like($array)->get()->getResultArray();
     }
 }

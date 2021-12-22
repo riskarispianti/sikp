@@ -38,8 +38,8 @@ $routes->post('/komoditas/update/(:num)', 'Komoditas::update/$1');
 $routes->delete('/tanaman/(:num)', 'Tanaman::hapus/$1');
 $routes->post('/perikanan/save', 'Perikanan::save');
 
-// Api
-$routes->resource('api/peternakan', ['controllers' => 'Api\Peternakan']);
+// API
+$routes->resource('api/tempat', ['controller' => 'Api\Tempat']);
 
 /*
  * --------------------------------------------------------------------

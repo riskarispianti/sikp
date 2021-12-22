@@ -6,7 +6,7 @@ use App\Models\TempatModel;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\RESTful\ResourceController;
 
-class Peternakan extends ResourceController
+class Tempat extends ResourceController
 {
   use ResponseTrait;
 
