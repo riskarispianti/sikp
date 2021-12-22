@@ -140,6 +140,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
+
+    $('#kelembagaan').on('change', (event) => {
+      getProdusen(event.target.value).then(produsen => {
+        $('#jml_penghasil_kom').val(produsen.jml_penghasil_kom);
+        $('#pembinaan').val(produsen.pembinaan);
+        $('#kesejahteraan').val(produsen.kesejahteraan);
+      })
+    });
+    async function getProdusen(id_produsen) {
+      let response = await fetch('/api/produsen/' + id_produsen)
+      let data = await response.json();
+      return data;
+    }
+
+    $('#sarana_pengairan').on('change', (event) => {
+      getInfrastruktur(event.target.value).then(infrastruktur => {
+        $('#pengel_jar_irigasi').val(infrastruktur.pengel_jar_irigasi);
+        $('#infras_pengel_air').val(infrastruktur.infras_pengel_air);
+      })
+    });
+    async function getInfrastruktur(id_ip) {
+      let response = await fetch('/api/infrastruktur/' + id_ip)
+      let data = await response.json();
+      return data;
+    }
   </script>
 </body>
 

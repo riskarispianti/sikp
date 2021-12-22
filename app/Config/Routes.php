@@ -41,6 +41,9 @@ $routes->delete('/tanaman/(:num)', 'Tanaman::hapus/$1');
 
 // API
 $routes->resource('api/tempat', ['controller' => 'Api\Tempat']);
+$routes->resource('api/infrasternak', ['controller' => 'Api\InfrasTernak']);
+$routes->resource('api/produsen', ['controller' => 'Api\Produsen']);
+$routes->resource('api/infrastruktur', ['controller' => 'Api\infrastruktur']);
 
 /*
  * --------------------------------------------------------------------

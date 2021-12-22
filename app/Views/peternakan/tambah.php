@@ -294,7 +294,7 @@
                       <div class="form-group row my-4">
                         <label for="kelembagaan" class="col-sm-5 col-form-label">Kelembagaan Produsen/Petani</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_produsen">
+                          <select class="form-control select2bs4" name="id_produsen" id="kelembagaan">
                             <option selected disabled></option>
                             <?php foreach ($produsen as $pro => $value) : ?>
                               <option value="<?= $value['id_produsen']; ?>"><?= $value['kelembagaan']; ?></option>
