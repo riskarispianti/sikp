@@ -13,16 +13,4 @@ class TempatModel extends Model
 
     // Dates
     protected $useTimestamps        = true;
-
-    public function getTem($id_tp, $kepemilikan)
-    {
-        // $query  =
-        //     "SELECT * FROM tempat_prod WHERE (id_tp LIKE '%" . $id_tp . "%' AND kepemilikan LIKE '%" . $kepemilikan . "%')";
-
-        // return $this->db->query($query);
-
-        $array = ['id_tp' => $id_tp, 'kepemilikan' => $kepemilikan];
-        // $builder->like($array);
-        return $this->like($array)->get()->getResultArray();
-    }
 }

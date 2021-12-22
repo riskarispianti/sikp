@@ -34,9 +34,10 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Login::index');
 
 $routes->post('/tanaman/save', 'Tanaman::save');
+$routes->post('/infrasternak/save', 'Infrasternak::save');
+$routes->post('/perikanan/save', 'Perikanan::save');
 $routes->post('/komoditas/update/(:num)', 'Komoditas::update/$1');
 $routes->delete('/tanaman/(:num)', 'Tanaman::hapus/$1');
-$routes->post('/perikanan/save', 'Perikanan::save');
 
 // API
 $routes->resource('api/tempat', ['controller' => 'Api\Tempat']);

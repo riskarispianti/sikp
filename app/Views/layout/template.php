@@ -47,28 +47,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </footer>
   </div>
   <!-- ./wrapper -->
-  <div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Apakah anda yakin?</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>menghapus data &hellip;</p>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-danger">yes, Delete it</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
   <!-- REQUIRED SCRIPTS -->
 
   <!-- jQuery -->
@@ -134,6 +112,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
     document.addEventListener('DOMContentLoaded', function() {
       window.stepper = new Stepper(document.querySelector('.bs-stepper'))
     })
+
+    $('#kepemilikan').on('change', (event) => {
+      getTempat(event.target.value).then(tempat => {
+        $('#kecamatan').val(tempat.kecamatan);
+        $('#kelurahan').val(tempat.kelurahan);
+        $('#letak_prod').val(tempat.letak_prod);
+        $('#luas_prod').val(tempat.luas_prod);
+        $('#status_lahan').val(tempat.status_lahan);
+      })
+    });
+    async function getTempat(id_tp) {
+      let response = await fetch('/api/tempat/' + id_tp)
+      let data = await response.json();
+      return data;
+    }
+
+    $('#pemilik').on('change', (event) => {
+      getInfrasTernak(event.target.value).then(infrasternak => {
+        $('#kandang').val(infrasternak.kandang);
+        $('#lok_rph').val(infrasternak.lok_rph);
+        $('#kapasitas_rph').val(infrasternak.kapasitas_rph);
+      })
+    });
+    async function getInfrasTernak(id_ipt) {
+      let response = await fetch('/api/infrasternak/' + id_ipt)
+      let data = await response.json();
+      return data;
+    }
   </script>
 </body>
 

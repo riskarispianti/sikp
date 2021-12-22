@@ -222,31 +222,31 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kecamatan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" id="kecamatan" readonly>
+                          <input type="text" class="form-control" name="kecamatan" id="kecamatan" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kelurahan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" id="kelurahan" readonly>
+                          <input type="text" class="form-control" name="kelurahan" id="kelurahan" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" id="letak" readonly>
+                          <input type="text" class="form-control" name="letak_prod" id="letak_prod" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" id="luas" readonly>
+                          <input type="text" class="form-control" name="luas_prod" id="luas_prod" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" id="status" readonly>
+                          <input type="text" class="form-control" name="status_lahan" id="status_lahan" readonly>
                         </div>
                       </div>
                     </div>
@@ -257,9 +257,9 @@
                       <div class="form-group row my-4">
                         <label for="pemilik" class="col-sm-5 col-form-label">Pemilik Rumah Pemotongan Hewan (RPH)</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_ipt">
+                          <select class="form-control select2bs4" name="id_ipt" id="pemilik">
                             <option selected disabled></option>
-                            <?php foreach ($infrastruktur as $infras => $value) : ?>
+                            <?php foreach ($infrasternak as $value) : ?>
                               <option value="<?= $value['id_ipt']; ?>"><?= $value['pemilik']; ?></option>
                             <?php endforeach; ?>
                           </select>
@@ -271,19 +271,19 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kandang</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="kandang" id="kandang" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Lokasi RPH</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="lok_rph" id="lok_rph" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kapasitas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="kapasitas_rph" id="kapasitas_rph" readonly>
                         </div>
                       </div>
                     </div>
@@ -308,19 +308,19 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="jml_penghasil_kom" id="jml_penghasil_kom" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Pembinaan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="pembinaan" id="pembinaan" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kesejahteraan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" readonly>
+                          <input type="text" class="form-control" name="kesejahteraan" id="kesejahteraan" readonly>
                         </div>
                       </div>
                     </div>
@@ -341,23 +341,5 @@
   </section>
 
 </div>
-
-<script>
-  $('#kepemilikan').on('change', (event) => {
-    getTempat(event.target.value).then(tempat => {
-      $('#kecamatan').val(tempat.kecamatan);
-      $('#kelurahan').val(tempat.kelurahan);
-      $('#letak').val(tempat.letak);
-      $('#luas').val(tempat.luas);
-      $('#status').val(tempat.status);
-    })
-  });
-
-  async function getTempat(id) {
-    let response = await fetch('/api/tempat/' + id_tp)
-    let data = await response.json();
-    return data;
-  }
-</script>
 
 <?= $this->endSection(); ?>

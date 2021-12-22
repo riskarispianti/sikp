@@ -56,18 +56,11 @@ class Peternakan extends BaseController
             'komoditas' => $this->komoditasModel->getTer('g_kom'),
             'tempat' => $this->tempatModel->findAll(),
             // 'sentra' => $this->sentraModel->findAll(),
-            'infrastruktur' => $this->infrasternakModel->findAll(),
+            'infrasternak' => $this->infrasternakModel->findAll(),
             'produsen' => $this->produsenModel->findAll()
         ];
         return view('peternakan/tambah', $data);
     }
-
-    // public function cekTempat($id_tp, $kepemilikan)
-    // {
-    //     // $id_tp = $this->input->get("id_tp");
-    //     $data = $this->tempatModel->getTem($id_tp, $kepemilikan);
-    //     echo json_encode($data);
-    // }
 
     public function save()
     {
