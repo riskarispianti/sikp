@@ -12,7 +12,10 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Membuat Akun baru</p>
 
-      <?= $validation->listErrors(); ?>
+      <div class="alert-danger alert-dismissible rounded-3">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h6><?= $validation->listErrors(); ?></h6>
+      </div>
 
       <form action="/profile/save" method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
@@ -21,6 +24,9 @@
             <div class="input-group-text">
               <span class="fas fa-user"></span>
             </div>
+          </div>
+          <div class="invalid-feedback text-danger">
+            <?= $validation->getError('alat_teknologi'); ?>
           </div>
         </div>
         <div class="input-group mb-3">

@@ -44,14 +44,6 @@ class Profile extends BaseController
           'required' => 'nama harus diisi.'
         ]
       ],
-      'gbr_u' => [
-        'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
-        'errors' => [
-          'max_size' => 'ukuran gambar terlalu besar',
-          'is_image' => 'yang anda pilih bukan gambar',
-          'mime_in' => 'yang anda pilih bukan gambar',
-        ]
-      ],
       'username_u' => [
         'rules' => 'required',
         'errors' => [
@@ -64,6 +56,14 @@ class Profile extends BaseController
           'required' => 'password harus diisi.'
         ]
       ],
+      'gbr_u' => [
+        'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
+        'errors' => [
+          'max_size' => 'ukuran gambar terlalu besar',
+          'is_image' => 'yang anda pilih bukan gambar',
+          'mime_in' => 'yang anda pilih bukan gambar',
+        ]
+      ]
     ])) {
       return redirect()->to('/profile/tambah')->withInput();
     }
