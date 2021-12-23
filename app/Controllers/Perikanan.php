@@ -100,9 +100,7 @@ class Perikanan extends BaseController
             ],
 
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('perikanan/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('perikanan/tambah')->withInput();
         }
 
         $this->perikananModel->insert([
@@ -187,9 +185,7 @@ class Perikanan extends BaseController
             ],
 
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->perikananModel->update($id_ikan, [

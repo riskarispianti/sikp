@@ -52,13 +52,13 @@ class Tempatprod extends BaseController
             'letak_prod' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'letak produksi harus diisi.'
                 ]
             ],
             'luas_prod' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'luas produksi harus diisi.'
                 ]
             ],
             'kepemilikan' => [
@@ -70,13 +70,11 @@ class Tempatprod extends BaseController
             'status_lahan' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'status tempat produksi harus diisi.'
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/tempatprod/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('/tempatprod/tambah')->withInput();
         }
 
         $this->tempatModel->insert([
@@ -122,13 +120,13 @@ class Tempatprod extends BaseController
             'letak_prod' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'letak produksi harus diisi.'
                 ]
             ],
             'luas_prod' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'luas produksi harus diisi.'
                 ]
             ],
             'kepemilikan' => [
@@ -140,13 +138,11 @@ class Tempatprod extends BaseController
             'status_lahan' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.'
+                    'required' => 'status tempat produksi harus diisi.'
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->tempatModel->update($id_tp, [

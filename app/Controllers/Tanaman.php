@@ -130,9 +130,7 @@ class Tanaman extends BaseController
       ],
 
     ])) {
-      $validation = \Config\Services::validation();
-
-      return redirect()->to('tanaman/tambah')->withInput()->with('validation', $validation);
+      return redirect()->to('tanaman/tambah')->withInput();
     }
 
     $this->tanamanModel->insert([
@@ -252,9 +250,7 @@ class Tanaman extends BaseController
       ],
 
     ])) {
-      $validation = \Config\Services::validation();
-
-      return redirect()->back()->withInput()->with('validation', $validation);
+      return redirect()->back()->withInput();
     }
 
     $this->tanamanModel->update($id_tanam, [

@@ -124,9 +124,7 @@ class Peternakan extends BaseController
             ],
 
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('peternakan/tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('peternakan/tambah')->withInput();
         }
 
         $this->peternakanModel->insert([
@@ -232,9 +230,7 @@ class Peternakan extends BaseController
             ],
 
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->back()->withInput();
         }
 
         $this->peternakanModel->update($id_ternak, [
