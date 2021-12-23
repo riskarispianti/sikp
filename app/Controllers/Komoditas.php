@@ -43,9 +43,7 @@ class Komoditas extends BaseController
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-
-            return redirect()->to('/komoditas')->withInput()->with('validation', $validation);
+            return redirect()->to('/komoditas')->withInput();
         }
 
         $this->komoditasModel->insert([
