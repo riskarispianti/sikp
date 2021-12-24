@@ -4,32 +4,33 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Lokasi extends Migration
+class Kelurahan extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_lok'          => [
+            'id_kel'          => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'kecamatan'       => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
+            'id_kec'          => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true
             ],
             'kelurahan'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '100'
             ],
         ]);
-        $this->forge->addKey('id_lok', true);
-        $this->forge->createTable('lokasi');
+        $this->forge->addKey('id_kel', true);
+        $this->forge->createTable('kelurahan');
     }
 
     public function down()
     {
-        $this->forge->dropTable('lokasi');
+        $this->forge->dropTable('kelurahan');
     }
 }
