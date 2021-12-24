@@ -27,7 +27,7 @@
         <div class="col-md-3">
           <div class="card callout callout-info">
             <div class="text-center mb-3">
-              <img class="img-fluid" src="/img/<?= session()->get('gbr_u'); ?>" width="200">
+              <img class="img-fluid img-preview" src="/img/<?= session()->get('gbr_u'); ?>" width="200">
             </div>
           </div>
           <a href="" class="btn btn-danger btn-block" onclick="return confirm('Apakan anda yakin akun dihapus?')"><i class="far fa-trash-alt"></i> Hapus Akun</a>
@@ -56,8 +56,8 @@
                     <label for="username" class="col-sm-5 col-form-label">Ganti Foto</label>
                     <div class="col-sm-7">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input">
-                        <label class="custom-file-label">Pilih Foto</label>
+                        <input type="file" class="custom-file-input" name="gbr_u" id="gbr_u" onchange="previewGbr()">
+                        <label class="custom-file-label" for="gambar">Pilih Foto</label>
                       </div>
                     </div>
                   </div>

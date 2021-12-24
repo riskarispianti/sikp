@@ -165,6 +165,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
+
+    function previewGbr() {
+      const gbr_u = document.querySelector('#gbr_u');
+      const gbrLabel = document.querySelector('.custom-file-label');
+      const imgPreview = document.querySelector('.img-preview');
+
+      gbrLabel.textContent = gbr_u.files[0].name;
+
+      const fileGbr = new FileReader();
+      fileGbr.readAsDataURL(gbr_u.files[0]);
+
+      fileGbr.onload = function(e) {
+        imgPreview.src = e.target.result;
+      }
+    }
   </script>
 </body>
 
