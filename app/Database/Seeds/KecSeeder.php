@@ -61,6 +61,9 @@ class KecSeeder extends Seeder
                 'kecamatan'   => 'Pabuaran'
             ],
             [
+                'kecamatan'   => 'Pagaden'
+            ],
+            [
                 'kecamatan'   => 'Pagaden Barat'
             ],
             [
