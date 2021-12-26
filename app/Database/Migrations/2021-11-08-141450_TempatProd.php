@@ -15,11 +15,11 @@ class TempatProd extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'kecamatan'       => [
+            'id_kec'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'kelurahan'       => [
+            'id_kel'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],

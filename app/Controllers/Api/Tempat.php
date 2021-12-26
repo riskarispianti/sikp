@@ -13,7 +13,7 @@ class Tempat extends ResourceController
   public function show($id_tp = null)
   {
     $tempatModel = new TempatModel();
-    $data = $tempatModel->find($id_tp);
+    $data = $tempatModel->getTempat($id_tp);
 
     return $this->respond($data);
   }

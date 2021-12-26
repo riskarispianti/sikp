@@ -37,7 +37,7 @@
                 <div class="form-group row my-4">
                   <label for="kecamatan" class="col-sm-5 col-form-label">Kecamatan</label>
                   <div class="col-sm-7">
-                    <select class="form-control select2bs4" name="kecamatan" id="kecamatan">
+                    <select class="form-control select2bs4" name="id_kec" id="kecamatan">
                       <option selected disabled></option>
                       <?php foreach ($kecamatan as $value) : ?>
                         <option value="<?= $value['id_kec']; ?>"><?= $value['kecamatan']; ?></option>
@@ -48,7 +48,7 @@
                 <div class="form-group row">
                   <label for="kelurahan" class="col-sm-5 col-form-label">Kelurahan</label>
                   <div class="col-sm-7">
-                    <select class="form-control select2bs4" name="kelurahan" id="kelurahan">
+                    <select class="form-control select2bs4" name="id_kel" id="kelurahan">
                       <option selected disabled></option>
                     </select>
                   </div>

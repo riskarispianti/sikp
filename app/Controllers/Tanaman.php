@@ -52,7 +52,7 @@ class Tanaman extends BaseController
       'title' => 'Tambah Data Tanaman Pangan',
       'validation' => \Config\Services::validation(),
       'komoditas' => $this->komoditasModel->getTan('g_kom'),
-      'tempat' => $this->tempatModel->findAll(),
+      'tempat' => $this->tempatModel->getTempat(),
       // 'sentra' => $this->sentraModel->findAll(),
       'infrastruktur' => $this->infrastrukturModel->findAll(),
       'produsen' => $this->produsenModel->findAll()
@@ -172,7 +172,7 @@ class Tanaman extends BaseController
       'tanaman' => $this->tanamanModel->getTanam($id_tanam),
       'validation' => \Config\Services::validation(),
       'komoditas' => $this->komoditasModel->getTan('g_kom'),
-      'tempat' => $this->tempatModel->findAll(),
+      'tempat' => $this->tempatModel->getTempat(),
       // 'sentra' => $this->sentraModel->findAll(),
       'infrastruktur' => $this->infrastrukturModel->findAll(),
       'produsen' => $this->produsenModel->findAll()
