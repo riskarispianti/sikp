@@ -233,11 +233,11 @@
                       <div class="form-group row my-4">
                         <label for="kepemilikan" class="col-sm-5 col-form-label">Kepemilikan</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_tp">
-                            <option selected disabled></option>
-                            <?php foreach ($tempat as $tem => $value) : ?>
+                          <select class="form-control select2bs4" name="id_tp" id="kepemilikan">
+                            <option value="" selected disabled></option>
+                            <?php foreach ($tempat as $value) : ?>
                               <option value="<?= $value['id_tp']; ?>" <?= (old('id_tp') == $value['id_tp']) ? 'selected' : ''; ?> <?= $value['id_tp'] == $perikanan['id_tp'] ? 'selected' : '' ?>><?= $value['kepemilikan']; ?></option>
-                            <?php endforeach; ?>
+                            <?php endforeach ?>
                           </select>
                           <div class="invalid-feesback text-danger">
                             <?= $validation->getError('kepemilikan'); ?>
@@ -247,31 +247,31 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kecamatan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="kecamatan" id="kecamatan" value="<?= $perikanan['kecamatan']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kelurahan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="kelurahan" id="kelurahan" value="<?= $perikanan['kelurahan']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Letak Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="letak_prod" id="letak_prod" value="<?= $perikanan['letak_prod']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="luas_prod" id="luas_prod" value="<?= $perikanan['luas_prod']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Status Tempat Produksi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="status_lahan" id="status_lahan" value="<?= $perikanan['status_lahan']; ?>" readonly>
                         </div>
                       </div>
                     </div>
@@ -282,7 +282,7 @@
                       <div class="form-group row my-4">
                         <label for="sarana_pengairan" class="col-sm-5 col-form-label">Sarana dan Prasarana Pengairan</label>
                         <div class="col-sm-7">
-                          <select class="form-control select2bs4" name="id_ip">
+                          <select class="form-control select2bs4" name="id_ip" id="sarana_pengairan">
                             <option selected disabled></option>
                             <?php foreach ($infrastruktur as $infras => $value) : ?>
                               <option value="<?= $value['id_ip']; ?>" <?= (old('id_ip') == $value['id_ip']) ? 'selected' : ''; ?> <?= $value['id_ip'] == $perikanan['id_ip'] ? 'selected' : '' ?>><?= $value['sarana_pengairan']; ?></option>
@@ -296,13 +296,13 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Pengelolaan Jaringan Irigasi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="pengel_jar_irigasi" id="pengel_jar_irigasi" value="<?= $perikanan['pengel_jar_irigasi']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Infrastruktur Pengelolaan Irigasi</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="infras_pengel_air" id="infras_pengel_air" value="<?= $perikanan['infras_pengel_air']; ?>" readonly>
                         </div>
                       </div>
                     </div>
@@ -327,26 +327,25 @@
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Jumlah Penghasil Komoditas</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="jml_penghasil_kom" id="jml_penghasil_kom" value="<?= $perikanan['jml_penghasil_kom']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Pembinaan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="pembinaan" id="pembinaan" value="<?= $perikanan['pembinaan']; ?>" readonly>
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="" class="col-sm-5 col-form-label">Kesejahteraan</label>
                         <div class="col-sm-7">
-                          <input type="text" class="form-control" name="" disabled>
+                          <input type="text" class="form-control" name="kesejahteraan" id="kesejahteraan" value="<?= $perikanan['kesejahteraan']; ?>" readonly>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

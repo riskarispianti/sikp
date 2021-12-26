@@ -159,11 +159,11 @@ class Peternakan extends BaseController
             'title' => 'Edit Data Peternakan',
             'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->findAll(),
-            'tempat' => $this->tempatModel->findAll(),
+            'tempat' => $this->tempatModel->getTempat(),
             // 'sentra' => $this->sentraModel->findAll(),
-            'infrastruktur' => $this->infrasternakModel->findAll(),
+            'infrasternak' => $this->infrasternakModel->findAll(),
             'produsen' => $this->produsenModel->findAll(),
-            'peternakan' => $this->peternakanModel->find($id_ternak)
+            'peternakan' => $this->peternakanModel->getTernak($id_ternak)
         ];
         return view('peternakan/edit', $data);
     }

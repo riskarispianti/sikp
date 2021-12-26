@@ -138,7 +138,7 @@ class Perikanan extends BaseController
             'perikanan' => $this->perikananModel->getIkan($id_ikan),
             'validation' => \Config\Services::validation(),
             'komoditas' => $this->komoditasModel->getIka('g_kom'),
-            'tempat' => $this->tempatModel->findAll(),
+            'tempat' => $this->tempatModel->getTempat(),
             // 'sentra' => $this->sentraModel->findAll(),
             'infrastruktur' => $this->infrastrukturModel->findAll(),
             'produsen' => $this->produsenModel->findAll()

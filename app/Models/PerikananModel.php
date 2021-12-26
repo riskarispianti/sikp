@@ -23,6 +23,8 @@ class PerikananModel extends Model
                 // ->join('sentra_prod', 'sentra_prod.id_sp=prod_ikan.id_sp')
                 ->join('infras_prod', 'infras_prod.id_ip=prod_ikan.id_ip')
                 ->join('produsen', 'produsen.id_produsen=prod_ikan.id_produsen')
+                ->join('kecamatan', 'kecamatan.id_kec=tempat_prod.id_kec')
+                ->join('kelurahan', 'kelurahan.id_kel=tempat_prod.id_kel')
                 ->get()->getResultArray();
         }
 
@@ -32,6 +34,8 @@ class PerikananModel extends Model
             // ->join('sentra_prod', 'sentra_prod.id_sp=prod_ikan.id_sp')
             ->join('infras_prod', 'infras_prod.id_ip=prod_ikan.id_ip')
             ->join('produsen', 'produsen.id_produsen=prod_ikan.id_produsen')
+            ->join('kecamatan', 'kecamatan.id_kec=tempat_prod.id_kec')
+            ->join('kelurahan', 'kelurahan.id_kel=tempat_prod.id_kel')
             ->first();
     }
 }
