@@ -3,23 +3,28 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
+use App\Models\KecModel;
+use App\Models\KelModel;
 use App\Models\TempatModel;
 
 class Tempatprod extends BaseController
 {
     protected $tempatModel;
+    protected $kecModel;
+    protected $kelModel;
 
     public function __construct()
     {
         $this->tempatModel = new TempatModel();
+        $this->kecModel = new KecModel();
+        $this->kelModel = new KelModel();
     }
 
     public function index()
     {
         $data = [
             'title' => 'Tempat Produksi | Ketersediaan Pangan',
-            'tempat' => $this->tempatModel->findAll()
+            'tempat' => $this->tempatModel->getTempat()
         ];
         return view('/more/tempat_prod/home', $data);
     }
@@ -28,9 +33,21 @@ class Tempatprod extends BaseController
     {
         $data = [
             'title' => 'Tempat Produksi | Ketersediaan Pangan',
-            'validation' => \Config\Services::validation()
+            'validation' => \Config\Services::validation(),
+            'kecamatan' => $this->kecModel->orderBy('kecamatan', 'ASC')->findAll()
         ];
         return view('/more/tempat_prod/tambah', $data);
+    }
+
+    public function action()
+    {
+        if ($this->request->getVar('action')) {
+            $action = $this->request->getVar('action');
+            if ($action == 'get_kelurahan') {
+                $kelData = $this->kelModel->where('id_kec', $this->request->getVar('id_kec'))->findAll();
+                echo json_encode($kelData);
+            }
+        }
     }
 
     public function save()
@@ -95,8 +112,9 @@ class Tempatprod extends BaseController
     {
         $data = [
             'title' => 'Tempat Produksi | Ketersediaan Pangan',
-            'tempat' => $this->tempatModel->find($id_tp),
-            'validation' => \Config\Services::validation()
+            'tempat' => $this->tempatModel->getTempat($id_tp),
+            'validation' => \Config\Services::validation(),
+            'kecamatan' => $this->kecModel->orderBy('kecamatan', 'ASC')->findAll()
         ];
         return view('/more/tempat_prod/edit', $data);
     }

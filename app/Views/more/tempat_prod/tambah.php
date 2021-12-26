@@ -37,19 +37,20 @@
                 <div class="form-group row my-4">
                   <label for="kecamatan" class="col-sm-5 col-form-label">Kecamatan</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kecamatan')) ? 'is-invalid' : ''; ?>" name="kecamatan" placeholder="Kecamatan">
-                    <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('kecamatan'); ?>
-                    </div>
+                    <select class="form-control select2bs4" name="kecamatan" id="kecamatan">
+                      <option selected disabled></option>
+                      <?php foreach ($kecamatan as $value) : ?>
+                        <option value="<?= $value['id_kec']; ?>"><?= $value['kecamatan']; ?></option>
+                      <?php endforeach; ?>
+                    </select>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="kelurahan" class="col-sm-5 col-form-label">Kelurahan</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('kelurahan')) ? 'is-invalid' : ''; ?>" name="kelurahan" placeholder="Kelurahan">
-                    <div class="invalid-feedback text-danger">
-                      <?= $validation->getError('kelurahan'); ?>
-                    </div>
+                    <select class="form-control select2bs4" name="kelurahan" id="kelurahan">
+                      <option selected disabled></option>
+                    </select>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -64,7 +65,7 @@
                 <div class="form-group row my-4">
                   <label for="luas_prod" class="col-sm-5 col-form-label">Luas Kawasan Produksi</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control <?= ($validation->hasError('luas_prod')) ? 'is-invalid' : ''; ?>" name="luas_prod" placeholder="Luas Produksi">
+                    <input type="text" class="form-control <?= ($validation->hasError('luas_prod')) ? 'is-invalid' : ''; ?>" name="luas_prod" placeholder="Km">
                     <div class="invalid-feedback text-danger">
                       <?= $validation->getError('luas_prod'); ?>
                     </div>

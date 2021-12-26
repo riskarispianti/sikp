@@ -180,6 +180,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
         imgPreview.src = e.target.result;
       }
     }
+
+    $(document).ready(function() {
+      $('#kecamatan').change(function() {
+        var id_kec = $('#kecamatan').val();
+        var action = 'get_kelurahan';
+        if (id_kec != '') {
+          $.ajax({
+            url: "/tempatprod/action",
+            method: "post",
+            data: {
+              id_kec: id_kec,
+              action: action
+            },
+            dataType: "JSON",
+            success: function(data) {
+              var html = '<option selected disabled></option>';
+              for (var count = 0; count < data.length; count++) {
+                html += '<option value="' + data[count].id_kel + '">' + data[count].kelurahan + '</option>';
+              }
+              $('#kelurahan').html(html);
+            }
+          });
+        } else {
+          $('#kelurahan').val('');
+        }
+
+      });
+    });
   </script>
 </body>
 
