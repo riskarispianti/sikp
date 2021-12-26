@@ -50,7 +50,7 @@ class KelSeeder extends Seeder
             ],
             [
                 'id_kec'   => '2',
-                'kelurahan'   => 'Cilamaya Girang’'
+                'kelurahan'   => 'Cilamaya Girang'
             ],
             [
                 'id_kec'   => '2',
@@ -82,11 +82,11 @@ class KelSeeder extends Seeder
             ],
             [
                 'id_kec'   => '3',
-                'kelurahan'   => 'Ciasem Girang’'
+                'kelurahan'   => 'Ciasem Girang'
             ],
             [
                 'id_kec'   => '3',
-                'kelurahan'   => 'Ciasem Hilir’'
+                'kelurahan'   => 'Ciasem Hilir'
             ],
             [
                 'id_kec'   => '3',
