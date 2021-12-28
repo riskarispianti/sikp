@@ -17,9 +17,6 @@
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="/dashboard/persediaan" class="nav-link">Persediaan</a>
-      </li>
-      <li class="nav-item">
         <a href="/komoditas" class="nav-link">Komoditas</a>
       </li>
       <li class="nav-item dropdown">
