@@ -56,6 +56,12 @@ class Profile extends BaseController
           'required' => 'password harus diisi.'
         ]
       ],
+      'confpassword' => [
+        'rules' => 'matches[password_u]',
+        'errors' => [
+          'required' => 'password tidak sesuai.'
+        ]
+      ],
       'gbr_u' => [
         'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
         'errors' => [

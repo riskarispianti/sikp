@@ -12,8 +12,7 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Membuat Akun baru</p>
 
-      <div class="alert-danger alert-dismissible rounded-3">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <div class="alert-danger alert-dismissible">
         <h6><?= $validation->listErrors(); ?></h6>
       </div>
 
@@ -39,6 +38,14 @@
         </div>
         <div class="input-group mb-3">
           <input type="password" class="form-control" placeholder="Password" name="password_u">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Konfirmasi Password" name="confpassword">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
