@@ -49,6 +49,7 @@ class Login extends BaseController
         session()->set('gbr_u', $cek['gbr_u']);
         session()->set('username_u', $cek['username_u']);
         session()->set('password_u', $cek['password_u']);
+        session()->set('created_at', $cek['created_at']);
         return redirect()->to('/dashboard');
       } else {
         session()->setFlashdata('pesan', 'Login Gagal!!');
@@ -67,6 +68,7 @@ class Login extends BaseController
     session()->remove('log');
     session()->remove('nama_u');
     session()->remove('gbr_u');
+    session()->remove('created_at');
 
     session()->setFlashdata('pesan', 'Anda Telah Logout.');
     return redirect()->to('/');

@@ -98,6 +98,57 @@ class Profile extends BaseController
     return redirect()->to('/');
   }
 
+  public function updateProfile($id_u)
+  {
+    // validasi input
+    if (!$this->validate([
+      'nama_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'nama harus diisi.'
+        ]
+      ],
+      'username_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'username harus diisi.'
+        ]
+      ],
+      'gbr_u' => [
+        'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
+        'errors' => [
+          'max_size' => 'ukuran gambar terlalu besar',
+          'is_image' => 'yang anda pilih bukan gambar',
+          'mime_in' => 'yang anda pilih bukan gambar',
+        ]
+      ]
+    ])) {
+      return redirect()->to('/profile')->withInput();
+    }
+
+    //ambil gambar
+    $file = $this->request->getFile('gbr_u');
+    //apakan tidak ada gambar yang diupload
+    if ($file->getError() == 4) {
+      $namaGambar = 'users.png';
+    } else {
+      //generate nama gambar random
+      $namaGambar = $file->getRandomName();
+      //pindahkan gambar
+      $file->move('img', $namaGambar);
+    }
+
+    $this->usersModel->update($id_u, [
+      'nama_u' => $this->request->getVar('nama_u'),
+      'gbr_u' => $namaGambar,
+      'username_u' => $this->request->getVar('username_u')
+    ]);
+
+    session()->setFlashdata('pesan', 'profile berhasil di update.');
+
+    return redirect()->to('/profile');
+  }
+
   public function hapus($id_u)
   {
     $profile = $this->usersModel->find($id_u);
