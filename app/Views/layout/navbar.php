@@ -2,8 +2,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-light">
   <div class="container">
     <a href="/" class="navbar-brand">
-      <img src="/img/sin2.png" alt="SInKePang" class="brand-image" style="opacity: 5" width="150">
-      <!-- <span class="brand-text font-weight-light">SInKePang</span> -->
+      <img src="/img/sin2.png" alt="SInKePang" class="brand-image" width="130">
     </a>
 
     <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +48,7 @@
           <li class="user-header bg-gradient-lightblue">
             <img src="/img/<?= session()->get('gbr_u'); ?>" class="border-0">
             <p>
-              <b><?= session()->get('nama_u'); ?> - <?= session()->get('username_u'); ?></b>
+              <b><?= session()->get('nama_u'); ?></b>
               <small><?= date('h-M-Y'); ?></small>
             </p>
           </li>

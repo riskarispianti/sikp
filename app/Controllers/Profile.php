@@ -81,9 +81,12 @@ class Profile extends BaseController
       $namaGambar = 'users.png';
     } else {
       //generate nama gambar random
-      $namaGambar = $file->getRandomName();
+      // $namaGambar = $file->getRandomName();
       //pindahkan gambar
-      $file->move('img', $namaGambar);
+      // $file->move('img', $namaGambar);
+
+      $file->move('img');
+      $namaGambar = $file->getName();
     }
 
     $this->usersModel->insert([
@@ -98,7 +101,7 @@ class Profile extends BaseController
     return redirect()->to('/');
   }
 
-  public function updateProfile($id_u)
+  public function update()
   {
     // validasi input
     if (!$this->validate([
@@ -114,6 +117,18 @@ class Profile extends BaseController
           'required' => 'username harus diisi.'
         ]
       ],
+      'password_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'password harus diisi.'
+        ]
+      ],
+      'confpassword' => [
+        'rules' => 'matches[password_u]',
+        'errors' => [
+          'required' => 'password tidak sesuai.'
+        ]
+      ],
       'gbr_u' => [
         'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
         'errors' => [
@@ -123,30 +138,21 @@ class Profile extends BaseController
         ]
       ]
     ])) {
-      return redirect()->to('/profile')->withInput();
+      return redirect()->to('/profile/tambah')->withInput();
     }
 
-    //ambil gambar
-    $file = $this->request->getFile('gbr_u');
-    //apakan tidak ada gambar yang diupload
-    if ($file->getError() == 4) {
-      $namaGambar = 'users.png';
+    $fileGambar = $this->request->getFile('gbr_u');
+    //apakah gambar lama
+    if ($fileGambar->getError() == 4) {
+      $namaGambar = $this->request->getVar('gambarLama');
     } else {
-      //generate nama gambar random
-      $namaGambar = $file->getRandomName();
-      //pindahkan gambar
-      $file->move('img', $namaGambar);
+
+      $fileGambar->move('img');
+      $namaGambar = $fileGambar->getName();
+      unlink('img/' . $this->request->getVar('gambarLama'));
     }
 
-    $this->usersModel->update($id_u, [
-      'nama_u' => $this->request->getVar('nama_u'),
-      'gbr_u' => $namaGambar,
-      'username_u' => $this->request->getVar('username_u')
-    ]);
-
-    session()->setFlashdata('pesan', 'profile berhasil di update.');
-
-    return redirect()->to('/profile');
+    $id = $this->session->userdata('id_u');
   }
 
   public function hapus($id_u)
