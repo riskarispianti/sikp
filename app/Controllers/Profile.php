@@ -81,9 +81,12 @@ class Profile extends BaseController
       $namaGambar = 'users.png';
     } else {
       //generate nama gambar random
-      $namaGambar = $file->getRandomName();
+      // $namaGambar = $file->getRandomName();
       //pindahkan gambar
-      $file->move('img', $namaGambar);
+      // $file->move('img', $namaGambar);
+
+      $file->move('img');
+      $namaGambar = $file->getName();
     }
 
     $this->usersModel->insert([
@@ -96,6 +99,60 @@ class Profile extends BaseController
     session()->setFlashdata('pesan', 'silahkan login.');
 
     return redirect()->to('/');
+  }
+
+  public function update()
+  {
+    // validasi input
+    if (!$this->validate([
+      'nama_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'nama harus diisi.'
+        ]
+      ],
+      'username_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'username harus diisi.'
+        ]
+      ],
+      'password_u' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'password harus diisi.'
+        ]
+      ],
+      'confpassword' => [
+        'rules' => 'matches[password_u]',
+        'errors' => [
+          'required' => 'password tidak sesuai.'
+        ]
+      ],
+      'gbr_u' => [
+        'rules' => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/jpg,image/jpeg,image/png]',
+        'errors' => [
+          'max_size' => 'ukuran gambar terlalu besar',
+          'is_image' => 'yang anda pilih bukan gambar',
+          'mime_in' => 'yang anda pilih bukan gambar',
+        ]
+      ]
+    ])) {
+      return redirect()->to('/profile/tambah')->withInput();
+    }
+
+    $fileGambar = $this->request->getFile('gbr_u');
+    //apakah gambar lama
+    if ($fileGambar->getError() == 4) {
+      $namaGambar = $this->request->getVar('gambarLama');
+    } else {
+
+      $fileGambar->move('img');
+      $namaGambar = $fileGambar->getName();
+      unlink('img/' . $this->request->getVar('gambarLama'));
+    }
+
+    $id = $this->session->userdata('id_u');
   }
 
   public function hapus($id_u)
