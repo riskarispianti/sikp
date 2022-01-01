@@ -54,10 +54,10 @@
             <div class="card-body">
               <div class="tab-content" id="custom-tabs-four-tabContent">
                 <div class="tab-pane fade active show" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
-                  <form action="/profile/updateprofile/<?= session()->get('id_u'); ?>" method="post" enctype="multipart/form-data">
+                  <form action="" method="post" enctype="multipart/form-data">
                     <h2 class="text-center my-3">PROFILE</h2>
                     <hr>
-                    <input type="hidden" name="gambarLama" value="<?= session()->get('gambar_u'); ?>">
+                    <input type="hidden" name="gambarLama" value="<?= session()->get('gbr_u'); ?>">
                     <div class="form-group row mt-4 text-right">
                       <label for="nama" class="col-sm-4 col-form-label">Nama Lengkap</label>
                       <div class="col-sm-6">
