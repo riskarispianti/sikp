@@ -37,13 +37,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <?= $this->renderSection('content'); ?>
 
     <!-- Main Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer bg-dark">
       <!-- To the right -->
       <div class="float-right d-none d-sm-inline">
         Anything you want
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2021 <a href="/">Ketahanan Pangan</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2021 <a href="/dashboard">Ketahanan Pangan</a>.</strong>
     </footer>
   </div>
   <!-- ./wrapper -->
@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     document.addEventListener('DOMContentLoaded', function() {
       window.stepper = new Stepper(document.querySelector('.bs-stepper'))
     })
-
+    // tampil tempat produksi
     $('#kepemilikan').on('change', (event) => {
       getTempat(event.target.value).then(tempat => {
         $('#kecamatan').val(tempat.kecamatan);
@@ -129,7 +129,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
-
+    // tampil infrastruktur ternak
     $('#pemilik').on('change', (event) => {
       getInfrasTernak(event.target.value).then(infrasternak => {
         $('#kandang').val(infrasternak.kandang);
@@ -142,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
-
+    // tampil produsen
     $('#kelembagaan').on('change', (event) => {
       getProdusen(event.target.value).then(produsen => {
         $('#jml_penghasil_kom').val(produsen.jml_penghasil_kom);
@@ -155,7 +155,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
-
+    // tampil infrastruktur untuk tanaman dan perikanan
     $('#sarana_pengairan').on('change', (event) => {
       getInfrastruktur(event.target.value).then(infrastruktur => {
         $('#pengel_jar_irigasi').val(infrastruktur.pengel_jar_irigasi);
@@ -167,7 +167,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       let data = await response.json();
       return data;
     }
-
+    // tampil gambar ketika pilih di exlorer
     function previewGbr() {
       const gbr_u = document.querySelector('#gbr_u');
       const gbrLabel = document.querySelector('.custom-file-label');
@@ -182,7 +182,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         imgPreview.src = e.target.result;
       }
     }
-
+    // tampil kelurahan menurut kecamatan yang dipilih
     $(document).ready(function() {
       $('#kecamatan').change(function() {
         var id_kec = $('#kecamatan').val();

@@ -77,8 +77,6 @@
                         <div class="btn-group btn-group-sm">
                           <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-danger btn-sm" type="button" onclick="return confirm('Apakah anda yakin?')">
                             <i class="far fa-trash-alt"></i> Hapus</a>
-                          <a href="/komoditas/hapus/<?= $kom['id_kom']; ?>" class="btn btn-warning btn-sm" type="button" data-toggle="modal" data-target="#modal-sm">
-                            <i class="far fa-trash-alt"></i> Hapus</a>
                         </div>
                       </td>
                     </tr>

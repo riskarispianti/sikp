@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand-md navbar-light navbar-light">
+<nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
   <div class="container">
     <a href="/" class="navbar-brand">
       <img src="/img/sin2.png" alt="SInKePang" class="brand-image" width="130">
@@ -12,13 +12,23 @@
 
     <!-- Right navbar links -->
     <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-      <li class="nav-item">
+      <li class="nav-item active">
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a href="/komoditas" class="nav-link">Komoditas</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown active">
+        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Komponen Produksi</a>
+        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+          <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
+          <!-- <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li> -->
+          <li><a href="/infrastruktur" class="dropdown-item">Infrastruktur Tanaman & Perikanan</a></li>
+          <li><a href="/infrasternak" class="dropdown-item">Infrastruktur Ternak</a></li>
+          <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown active">
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Produksi</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tanaman" class="dropdown-item">Tanaman Pangan </a></li>
@@ -26,18 +36,8 @@
           <li><a href="/perikanan" class="dropdown-item">Perikanan</a></li>
         </ul>
       </li>
-      <li class="nav-item dropdown">
-        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Master Data</a>
-        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-          <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
-          <!-- <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li> -->
-          <li><a href="/infrastruktur" class="dropdown-item">Infrastruktur Produksi</a></li>
-          <li><a href="/infrasternak" class="dropdown-item">Infrastruktur Ternak</a></li>
-          <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
-        </ul>
-      </li>
       <!-- profile Dropdown Menu -->
-      <li class="nav-item dropdown user-menu">
+      <li class="nav-item dropdown user-menu active">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <!-- <img src="/img/logo_portal.png" class="user-image"> -->
           <i class="fas fa-user-circle fa-lg"></i>
