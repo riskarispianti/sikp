@@ -48,6 +48,15 @@ class Peternakan extends BaseController
         return view('peternakan/detail', $data);
     }
 
+    public function detail_home($id_ternak)
+    {
+        $data = [
+            'title' => 'Detail Laporan | Ketersediaan Pangan',
+            'peternakan' => $this->peternakanModel->getTernak($id_ternak)
+        ];
+        return view('peternakan/detail_home', $data);
+    }
+
     public function tambah()
     {
         $data = [

@@ -47,7 +47,7 @@
                           <td><?= $i++; ?></td>
                           <td><?= $tan['kepemilikan']; ?> </td>
                           <td><?= $tan['komoditas']; ?> </td>
-                          <td><a href="/tanaman/detail/<?= $tan['id_tanam']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
+                          <td><a href="/tanaman/detail_home/<?= $tan['id_tanam']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
@@ -77,7 +77,7 @@
                           <td><?= $i++; ?></td>
                           <td><?= $pet['kepemilikan']; ?> </td>
                           <td><?= $pet['komoditas']; ?> </td>
-                          <td><a href="/peternakan/detail/<?= $pet['id_ternak']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
+                          <td><a href="/peternakan/detail_home/<?= $pet['id_ternak']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
@@ -107,7 +107,7 @@
                           <td><?= $i++; ?></td>
                           <td><?= $per['kepemilikan']; ?> </td>
                           <td><?= $per['komoditas']; ?> </td>
-                          <td><a href="/perikanan/detail/<?= $per['id_ikan']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
+                          <td><a href="/perikanan/detail_home/<?= $per['id_ikan']; ?>" class="btn bg-info btn-sm"><i class="fas fa-folder-open"></i></a></td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>

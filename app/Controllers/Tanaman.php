@@ -46,6 +46,15 @@ class Tanaman extends BaseController
     return view('tanaman/detail', $data);
   }
 
+  public function detail_home($id_tanam)
+  {
+    $data = [
+      'title' => 'Detail Laporan | Ketersediaan Pangan',
+      'tanaman' => $this->tanamanModel->getTanam($id_tanam)
+    ];
+    return view('tanaman/detail_home', $data);
+  }
+
   public function tambah()
   {
     $data = [

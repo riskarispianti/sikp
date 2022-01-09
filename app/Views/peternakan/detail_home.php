@@ -172,7 +172,7 @@
               <div class="text-center">
                 <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
                   <div class="btn-group">
-                    <a href="/peternakan" class="btn btn-info">Kembali</a>
+                    <a href="/dashboard" class="btn btn-info">Kembali</a>
                     <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>

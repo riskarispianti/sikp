@@ -14,7 +14,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-            <li class="breadcrumb-item"><a href="/laporan">Laporan</a></li>
+            <li class="breadcrumb-item"><a href="/tanaman">Tanaman</a></li>
             <li class="breadcrumb-item active">Detail</li>
           </ol>
         </div>
@@ -180,6 +180,7 @@
               <div class="text-center">
                 <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
                   <div class="btn-group btn-lg">
+                    <a href="/tanaman" class="btn btn-info">Kembali</a>
                     <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>

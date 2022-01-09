@@ -14,7 +14,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-            <li class="breadcrumb-item"><a href="/peternakan">Peternakan</a></li>
+            <li class="breadcrumb-item"><a href="/tanaman">Tanaman</a></li>
             <li class="breadcrumb-item active">Detail</li>
           </ol>
         </div>
@@ -38,28 +38,40 @@
                         </div>
                         <div class="card-body text-muted">
                           <dl>
-                            <dt>Kelompok/Jenis Ternak</dt>
-                            <dd><?= $peternakan['jenis_ternak']; ?></dd>
-                            <dt>Jumlah Populasi</dt>
-                            <dd><?= $peternakan['jml_populasi']; ?> Ekor</dd>
-                            <dt>Lama Produksi</dt>
-                            <dd><?= $peternakan['lama_prod']; ?></dd>
-                            <dt>Waktu Produksi</dt>
-                            <dd><?= $peternakan['waktu_prod']; ?></dd>
+                            <dt>Kelompok/Jenis Pangan</dt>
+                            <dd><?= $tanaman['jenis_tanam']; ?></dd>
+                            <dt>Luas Tanam/Areal</dt>
+                            <dd><?= $tanaman['ls_tanam']; ?> Ha</dd>
+                            <dt>Luas Panen</dt>
+                            <dd><?= $tanaman['ls_panen']; ?> Ha</dd>
+                            <dt>Produktivitas</dt>
+                            <dd><?= $tanaman['produktivitas']; ?> Ton/Ha</dd>
+                            <dt>Jumlah Produksi</dt>
+                            <dd><?= $tanaman['jml_prod']; ?> Ton</dd>
+                            <dt>Lama Proses Produksi</dt>
+                            <dd><?= $tanaman['lama_proses_prod']; ?></dd>
+                            <dt>Perkiraan Iklim</dt>
+                            <dd><?= $tanaman['perk_iklim']; ?></dd>
+                            <dt>Perkiraan Musim Tanam dan Panen</dt>
+                            <dd><?= $tanaman['perk_tanam_panen']; ?></dd>
                             <dt>Biaya Produksi</dt>
-                            <dd>Rp. <?= $peternakan['biaya_prod']; ?></dd>
-                            <dt>Harga Hasil Produksi</dt>
-                            <dd>Rp. <?= $peternakan['harga_hsl_prod']; ?></dd>
-                            <dt>Sistem Pemeliharaan Ternak</dt>
-                            <dd><?= $peternakan['sistem_pemel_ternak']; ?></dd>
-                            <dt>Benih</dt>
-                            <dd><?= $peternakan['benih']; ?></dd>
+                            <dd>Rp. <?= $tanaman['biaya_prod']; ?></dd>
+                            <dt>Harga Jual Hasil Produksi</dt>
+                            <dd>Rp. <?= $tanaman['harga_jual_prod']; ?></dd>
+                            <dt>Lahan Produksi</dt>
+                            <dd><?= $tanaman['lahan_prod']; ?></dd>
+                            <dt>Sumber Pengairan</dt>
+                            <dd><?= $tanaman['sumber_pengairan']; ?></dd>
+                            <dt>Bibit</dt>
+                            <dd><?= $tanaman['bibit']; ?></dd>
+                            <dt>Pupuk</dt>
+                            <dd><?= $tanaman['pupuk']; ?></dd>
                             <dt>Alat atau teknologi yang digunakan</dt>
-                            <dd><?= $peternakan['alat_teknologi']; ?></dd>
+                            <dd><?= $tanaman['alat_teknologi']; ?></dd>
                             <dt>Pemanfaatan Hasil Produksi</dt>
-                            <dd><?= $peternakan['peman_hsl_prod']; ?></dd>
+                            <dd><?= $tanaman['peman_hsl_prod']; ?></dd>
                             <dt>Limbah Hasil Produksi dan Pengelolaannya</dt>
-                            <dd><?= $peternakan['limbah_hsl_prod']; ?></dd>
+                            <dd><?= $tanaman['limbah_hsl_prod']; ?></dd>
                           </dl>
                         </div>
                       </div>
@@ -76,11 +88,11 @@
                         <div class="card-body text-muted">
                           <strong>Ancaman</strong>
                           <p class="text-muted">
-                            <?= $peternakan['nama_anc']; ?>
+                            <?= $tanaman['nama_anc']; ?>
                           </p>
                           <strong>Penanggulangan</strong>
                           <p class="text-muted">
-                            <?= $peternakan['penanggulangan']; ?>
+                            <?= $tanaman['penanggulangan']; ?>
                           </p>
                         </div>
                       </div>
@@ -90,21 +102,17 @@
                           <h5 class="card-title">Infrastruktur Produksi</h5>
                         </div>
                         <div class="card-body text-muted">
-                          <strong>Kandang</strong>
+                          <strong>Sarana dan Prasarana Pengairan</strong>
                           <p class="text-muted">
-                            <?= $peternakan['kandang']; ?>
+                            <?= $tanaman['sarana_pengairan']; ?>
                           </p>
-                          <strong>Lokasi Rumah Pemotongan Hewan (RPH)</strong>
+                          <strong>Pengelolaan Jaringan Irigasi, Embung dan Rawa</strong>
                           <p class="text-muted">
-                            <?= $peternakan['lok_rph']; ?>
+                            <?= $tanaman['pengel_jar_irigasi']; ?>
                           </p>
-                          <strong>Kapasitas (RPH)</strong>
+                          <strong>Insfrastruktur Pengelolaan Air Bagi Pertanian</strong>
                           <p class="text-muted">
-                            <?= $peternakan['kapasitas_rph']; ?>
-                          </p>
-                          <strong>Pemilik (RPH)</strong>
-                          <p class="text-muted">
-                            <?= $peternakan['pemilik']; ?>
+                            <?= $tanaman['infras_pengel_air']; ?>
                           </p>
                         </div>
                       </div>
@@ -114,21 +122,21 @@
                           <h5 class="card-title">Produsen</h5>
                         </div>
                         <div class="card-body text-muted">
-                          <strong>Jumlah Produsen/Peternak Pengahasil Komoditas</strong>
+                          <strong>Jumlah Produsen/Petani Pengahasil Komoditas</strong>
                           <p class="text-muted">
-                            <?= $peternakan['jml_penghasil_kom']; ?> Orang
+                            <?= $tanaman['jml_penghasil_kom']; ?> Orang
                           </p>
-                          <strong>Pembinaan Kepada Produsen/Peternak</strong>
+                          <strong>Pembinaan Kepada Produsen/Petani</strong>
                           <p class="text-muted">
-                            <?= $peternakan['pembinaan']; ?>
+                            <?= $tanaman['pembinaan']; ?>
                           </p>
-                          <strong>Kelembagaan Produsen/Peternak</strong>
+                          <strong>Kelembagaan Produsen/Petani</strong>
                           <p class="text-muted">
-                            <?= $peternakan['kelembagaan']; ?>
+                            <?= $tanaman['kelembagaan']; ?>
                           </p>
-                          <strong>Kesejahteraan Peternak</strong>
+                          <strong>Kesejahteraan Petani</strong>
                           <p class="text-muted">
-                            <?= $peternakan['kesejahteraan']; ?>
+                            <?= $tanaman['kesejahteraan']; ?>
                           </p>
                         </div>
                       </div>
@@ -138,42 +146,42 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h1 class="text-secondary text-center"><b><?= $peternakan['komoditas']; ?></b></h1>
+              <h1 class="text-secondary text-center"><b><?= $tanaman['komoditas']; ?></b></h1>
 
               <h5 class="mt-5 text-muted">Tempat Produksi</h5>
               <hr>
               <div class="text-muted">
                 <strong>Kepemilikan</strong>
                 <p class="text-muted">
-                  <?= $peternakan['kepemilikan']; ?>
+                  <?= $tanaman['kepemilikan']; ?>
                 </p>
                 <strong>Kecamatan</strong>
                 <p class="text-muted">
-                  <?= $peternakan['kecamatan']; ?>
+                  <?= $tanaman['kecamatan']; ?>
                 </p>
                 <strong>Kelurahan</strong>
                 <p class="text-muted">
-                  <?= $peternakan['kelurahan']; ?>
+                  <?= $tanaman['kelurahan']; ?>
                 </p>
                 <strong>Letak Produksi</strong>
                 <p class="text-muted">
-                  <?= $peternakan['letak_prod']; ?>
+                  <?= $tanaman['letak_prod']; ?>
                 </p>
                 <strong>Luas Produksi</strong>
                 <p class="text-muted">
-                  <?= $peternakan['luas_prod']; ?> Km<sup>2</sup>
+                  <?= $tanaman['luas_prod']; ?> Km<sup>2</sup>
                 </p>
                 <strong>Status Tempat Produksi</strong>
                 <p class="text-muted">
-                  <?= $peternakan['status_lahan']; ?>
+                  <?= $tanaman['status_lahan']; ?>
                 </p>
               </div>
 
               <div class="text-center">
-                <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
-                  <div class="btn-group">
-                    <a href="/peternakan" class="btn btn-info">Kembali</a>
-                    <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
+                <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
+                  <div class="btn-group btn-lg">
+                    <a href="/dashboard" class="btn btn-info">Kembali</a>
+                    <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>
                     <input type="hidden" name="_method" value="DELETE">
@@ -185,7 +193,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
 
 </div>

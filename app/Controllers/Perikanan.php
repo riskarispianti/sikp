@@ -47,6 +47,15 @@ class Perikanan extends BaseController
         return view('perikanan/detail', $data);
     }
 
+    public function detail_home($id_ikan)
+    {
+        $data = [
+            'title' => 'Detail Laporan | Ketersediaan Pangan',
+            'perikanan' => $this->perikananModel->getIkan($id_ikan)
+        ];
+        return view('perikanan/detail_home', $data);
+    }
+
     public function tambah()
     {
         $data = [
