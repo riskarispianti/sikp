@@ -173,7 +173,7 @@
                 <form action="/peternakan/<?= $peternakan['id_ternak']; ?>" method="POST">
                   <div class="btn-group">
                     <a href="/dashboard" class="btn btn-info">Kembali</a>
-                    <a class="btn btn-warning" href="/peternakan/edit/<?= $peternakan['id_ternak']; ?>">
+                    <a class="btn btn-warning" href="/peternakan/edit_detail_home/<?= $peternakan['id_ternak']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>
                     <input type="hidden" name="_method" value="DELETE">

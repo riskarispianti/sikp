@@ -173,7 +173,7 @@
                 <form action="/perikanan/<?= $perikanan['id_ikan']; ?>" method="POST">
                   <div class="btn-group btn-lg">
                     <a href="/perikanan" class="btn btn-info">Kembali</a>
-                    <a class="btn btn-warning" href="/perikanan/edit/<?= $perikanan['id_ikan']; ?>">
+                    <a class="btn btn-warning" href="/perikanan/edit_detail/<?= $perikanan['id_ikan']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>
                     <input type="hidden" name="_method" value="DELETE">

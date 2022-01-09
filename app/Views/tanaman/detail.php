@@ -181,7 +181,7 @@
                 <form action="/tanaman/<?= $tanaman['id_tanam']; ?>" method="POST">
                   <div class="btn-group btn-lg">
                     <a href="/tanaman" class="btn btn-info">Kembali</a>
-                    <a class="btn btn-warning" href="/tanaman/edit/<?= $tanaman['id_tanam']; ?>">
+                    <a class="btn btn-warning" href="/tanaman/edit_detail/<?= $tanaman['id_tanam']; ?>">
                       <i class="fas fa-edit"></i> Edit
                     </a>
                     <input type="hidden" name="_method" value="DELETE">

@@ -155,6 +155,36 @@ class Perikanan extends BaseController
         return view('perikanan/edit', $data);
     }
 
+    public function edit_detail($id_ikan)
+    {
+        $data = [
+            'title' => 'Edit Data perikanan',
+            'perikanan' => $this->perikananModel->getIkan($id_ikan),
+            'validation' => \Config\Services::validation(),
+            'komoditas' => $this->komoditasModel->getIka('g_kom'),
+            'tempat' => $this->tempatModel->getTempat(),
+            // 'sentra' => $this->sentraModel->findAll(),
+            'infrastruktur' => $this->infrastrukturModel->findAll(),
+            'produsen' => $this->produsenModel->findAll()
+        ];
+        return view('perikanan/edit_detail', $data);
+    }
+
+    public function edit_detail_home($id_ikan)
+    {
+        $data = [
+            'title' => 'Edit Data perikanan',
+            'perikanan' => $this->perikananModel->getIkan($id_ikan),
+            'validation' => \Config\Services::validation(),
+            'komoditas' => $this->komoditasModel->getIka('g_kom'),
+            'tempat' => $this->tempatModel->getTempat(),
+            // 'sentra' => $this->sentraModel->findAll(),
+            'infrastruktur' => $this->infrastrukturModel->findAll(),
+            'produsen' => $this->produsenModel->findAll()
+        ];
+        return view('perikanan/edit_detail_home', $data);
+    }
+
     public function update($id_ikan)
     {
         // validasi input
@@ -223,6 +253,146 @@ class Perikanan extends BaseController
         session()->setFlashdata('pesan', 'diedit.');
 
         return redirect()->to('/perikanan');
+    }
+
+    public function update_detail($id_ikan)
+    {
+        // validasi input
+        if (!$this->validate([
+            'jml_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'jumlah produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'waktu_prod' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'waktu produksi harus diisi.'
+                ]
+            ],
+            'biaya_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'biaya produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'harga_hsl_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'harga jual produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'alat_teknologi' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'alat dan teknologi harus diisi.'
+                ]
+            ],
+
+        ])) {
+            return redirect()->back()->withInput();
+        }
+
+        $this->perikananModel->update($id_ikan, [
+            'jenis_ikan' => $this->request->getVar('jenis_ikan'),
+            'jml_prod' => $this->request->getVar('jml_prod'),
+            'lama_prod' => $this->request->getVar('lama_prod'),
+            'waktu_prod' => $this->request->getVar('waktu_prod'),
+            'biaya_prod' => $this->request->getVar('biaya_prod'),
+            'harga_hsl_prod' => $this->request->getVar('harga_hsl_prod'),
+            'wadah_budidaya' => $this->request->getVar('wadah_budidaya'),
+            'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
+            'benih' => $this->request->getVar('benih'),
+            'jns_asal_pakan' => $this->request->getVar('jns_asal_pakan'),
+            'alat_teknologi' => $this->request->getVar('alat_teknologi'),
+            'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
+            'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
+            'nama_anc' => $this->request->getVar('nama_anc'),
+            'penanggulangan' => $this->request->getVar('penanggulangan'),
+            'id_kom' => $this->request->getVar('id_kom'),
+            'id_tp' => $this->request->getVar('id_tp'),
+            // 'id_sp' => $this->request->getVar('id_sp'),
+            'id_ip' => $this->request->getVar('id_ip'),
+            'id_produsen' => $this->request->getVar('id_produsen')
+        ]);
+
+        session()->setFlashdata('pesan', 'diedit.');
+
+        return redirect()->to('/perikanan/detail/' . $id_ikan);
+    }
+
+    public function update_detail_home($id_ikan)
+    {
+        // validasi input
+        if (!$this->validate([
+            'jml_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'jumlah produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'waktu_prod' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'waktu produksi harus diisi.'
+                ]
+            ],
+            'biaya_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'biaya produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'harga_hsl_prod' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'harga jual produksi harus diisi.',
+                    'numeric' => 'isi harus angka.'
+                ]
+            ],
+            'alat_teknologi' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'alat dan teknologi harus diisi.'
+                ]
+            ],
+
+        ])) {
+            return redirect()->back()->withInput();
+        }
+
+        $this->perikananModel->update($id_ikan, [
+            'jenis_ikan' => $this->request->getVar('jenis_ikan'),
+            'jml_prod' => $this->request->getVar('jml_prod'),
+            'lama_prod' => $this->request->getVar('lama_prod'),
+            'waktu_prod' => $this->request->getVar('waktu_prod'),
+            'biaya_prod' => $this->request->getVar('biaya_prod'),
+            'harga_hsl_prod' => $this->request->getVar('harga_hsl_prod'),
+            'wadah_budidaya' => $this->request->getVar('wadah_budidaya'),
+            'sumber_pengairan' => $this->request->getVar('sumber_pengairan'),
+            'benih' => $this->request->getVar('benih'),
+            'jns_asal_pakan' => $this->request->getVar('jns_asal_pakan'),
+            'alat_teknologi' => $this->request->getVar('alat_teknologi'),
+            'peman_hsl_prod' => $this->request->getVar('peman_hsl_prod'),
+            'limbah_hsl_prod' => $this->request->getVar('limbah_hsl_prod'),
+            'nama_anc' => $this->request->getVar('nama_anc'),
+            'penanggulangan' => $this->request->getVar('penanggulangan'),
+            'id_kom' => $this->request->getVar('id_kom'),
+            'id_tp' => $this->request->getVar('id_tp'),
+            // 'id_sp' => $this->request->getVar('id_sp'),
+            'id_ip' => $this->request->getVar('id_ip'),
+            'id_produsen' => $this->request->getVar('id_produsen')
+        ]);
+
+        session()->setFlashdata('pesan', 'diedit.');
+
+        return redirect()->to('/perikanan/detail_home/' . $id_ikan);
     }
 
     public function hapus($id_ikan)
