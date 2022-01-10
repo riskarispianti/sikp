@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Login');
+$routes->setDefaultController('Users');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,7 +31,18 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::index');
+$routes->match(['get', 'post'], '/', 'Users::index', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], 'register', 'Users::register', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], 'profile', 'Users::profile', ['filter' => 'auth']);
+$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
+$routes->get('/komoditas', 'Komoditas::index', ['filter' => 'auth']);
+$routes->get('/infrasternak', 'Infrasternak::index', ['filter' => 'auth']);
+$routes->get('/infrastruktur', 'Infrastruktur::index', ['filter' => 'auth']);
+$routes->get('/perikanan', 'Perikanan::index', ['filter' => 'auth']);
+$routes->get('/peternakan', 'Peternakan::index', ['filter' => 'auth']);
+$routes->get('/produsen', 'Produsen::index', ['filter' => 'auth']);
+$routes->get('/tanaman', 'Tanaman::index', ['filter' => 'auth']);
+$routes->get('/tempatprod', 'Tempatprod::index', ['filter' => 'auth']);
 
 $routes->post('/tanaman/save', 'Tanaman::save');
 $routes->post('/infrasternak/save', 'Infrasternak::save');

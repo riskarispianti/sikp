@@ -1,5 +1,8 @@
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
+  <?php
+  $uri = service('uri');
+  ?>
   <div class="container">
     <a href="/" class="navbar-brand">
       <img src="/img/sin2.png" alt="SInKePang" class="brand-image" width="130">
@@ -12,13 +15,13 @@
 
     <!-- Right navbar links -->
     <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-      <li class="nav-item active">
+      <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null); ?>">
         <a href="/dashboard" class="nav-link">Home</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item <?= ($uri->getSegment(1) == 'komoditas' ? 'active' : null); ?>">
         <a href="/komoditas" class="nav-link">Komoditas</a>
       </li>
-      <li class="nav-item dropdown active">
+      <li class="nav-item dropdown">
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Komponen Produksi</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
@@ -28,7 +31,7 @@
           <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
         </ul>
       </li>
-      <li class="nav-item dropdown active">
+      <li class="nav-item dropdown">
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Produksi Pangan</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tanaman" class="dropdown-item">Produksi Tanaman</a></li>
@@ -37,7 +40,7 @@
         </ul>
       </li>
       <!-- profile Dropdown Menu -->
-      <li class="nav-item dropdown user-menu active">
+      <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <!-- <img src="/img/logo_portal.png" class="user-image"> -->
           <i class="fas fa-user-circle fa-lg"></i>
@@ -54,8 +57,8 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-            <a href="/profile" class="btn btn-default btn-flat">Profile</a>
-            <a href="/login/logout" class="btn btn-default btn-flat float-right">Logout</a>
+            <a href="profile" class="btn btn-default btn-flat">Profile</a>
+            <a href="/users/logout" class="btn btn-default btn-flat float-right">Logout</a>
           </li>
         </ul>
       </li>

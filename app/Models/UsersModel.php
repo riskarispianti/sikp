@@ -9,14 +9,28 @@ class UsersModel extends Model
     protected $table      = 'users';
     protected $primaryKey = 'id_u';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama_u', 'gbr_u', 'username_u', 'password_u'];
+    protected $allowedFields = ['nama_u', 'gbr_u', 'username_u', 'password_u', 'updated_at'];
     protected $useTimestamps = true;
+    protected $beforeInsert = ['beforeInsert'];
+    protected $beforeUpdate = ['beforeUpdate'];
 
-    public function auth_l($username_u, $password_u)
+    protected function beforeInsert(array $data)
     {
-        return $this->db->table('users')->where([
-            'username_u' => $username_u,
-            'password_u' => md5($password_u)
-        ])->get()->getRowArray();
+        $data = $this->passwordHash($data);
+
+        return $data;
+    }
+    protected function beforeUpdate(array $data)
+    {
+        $data = $this->passwordHash($data);
+
+        return $data;
+    }
+    protected function passwordHash(array $data)
+    {
+        if (isset($data['data']['password_u']))
+            $data['data']['password_u'] = password_hash($data['data']['password_u'], PASSWORD_DEFAULT);
+
+        return $data;
     }
 }
