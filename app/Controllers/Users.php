@@ -40,7 +40,7 @@ class Users extends BaseController
             }
         }
 
-        return view('login', $data);
+        return view('profile/login', $data);
     }
     private function setUserSession($user)
     {
@@ -100,6 +100,15 @@ class Users extends BaseController
         }
 
         return view('profile/register', $data);
+    }
+
+    public function lupapass()
+    {
+        helper(['form']);
+        $data = [
+            'title' => 'Lupa Password'
+        ];
+        return view('profile/lupa', $data);
     }
 
     public function profile()

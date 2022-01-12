@@ -25,7 +25,6 @@
         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Komponen Produksi</a>
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
           <li><a href="/tempatprod" class="dropdown-item">Tempat Produksi</a></li>
-          <!-- <li><a href="/sentraprod" class="dropdown-item">Sentra Produksi</a></li> -->
           <li><a href="/infrastruktur" class="dropdown-item">Infrastruktur Tanaman & Perikanan</a></li>
           <li><a href="/infrasternak" class="dropdown-item">Infrastruktur Ternak</a></li>
           <li><a href="/produsen" class="dropdown-item">Produsen</a></li>
@@ -40,9 +39,8 @@
         </ul>
       </li>
       <!-- profile Dropdown Menu -->
-      <li class="nav-item dropdown user-menu">
+      <li class="nav-item dropdown user-menu active">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-          <!-- <img src="/img/logo_portal.png" class="user-image"> -->
           <i class="fas fa-user-circle fa-lg"></i>
           <span class="d-none d-md-inline"><?= session()->get('nama_u'); ?></span>
         </a>

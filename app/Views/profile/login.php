@@ -44,19 +44,17 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
+            <div>
+              <a href="register">Buat Akun Baru.</a>
             </div>
+            <a href="lupapass">Lupa Password!!</a>
           </div>
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Login</button>
           </div>
         </div>
       </form>
-      <a href="register">Buat Akun Baru</a>
+
     </div>
   </div>
 </div>
