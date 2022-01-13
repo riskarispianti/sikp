@@ -62,15 +62,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   <script src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-  <script src="/plugins/jszip/jszip.min.js"></script>
-  <script src="/plugins/pdfmake/pdfmake.min.js"></script>
-  <script src="/plugins/pdfmake/vfs_fonts.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
   <script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
   <!-- BS-Stepper -->
   <script src="/plugins/bs-stepper/js/bs-stepper.min.js"></script>
-  <!-- OPTIONAL SCRIPTS -->
-  <script src="/plugins/chart.js/Chart.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="/dist/js/pages/dashboard3.js"></script>
   <!-- bs-custom-file-input -->

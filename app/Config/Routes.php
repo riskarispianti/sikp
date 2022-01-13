@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->match(['get', 'post'], '/', 'Users::index', ['filter' => 'noauth']);
 $routes->match(['get', 'post'], 'register', 'Users::register', ['filter' => 'noauth']);
 $routes->match(['get', 'post'], 'lupapass', 'Users::lupapass', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], 'lupa_pass', 'Users::lupa_pass', ['filter' => 'noauth']);
 $routes->match(['get', 'post'], 'profile', 'Users::profile', ['filter' => 'auth']);
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/komoditas', 'Komoditas::index', ['filter' => 'auth']);

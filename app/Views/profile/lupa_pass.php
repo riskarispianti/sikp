@@ -10,23 +10,30 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Masukan Username untuk reset password.</p>
+      <p class="login-box-msg">Reset Password.</p>
 
-      <form action="lupapass" method="post">
+      <form action="lupa_pass" method="post">
         <?php if (isset($validation)) : ?>
           <div class="alert alert-danger text-sm" role="alert">
             <?= $validation->listErrors(); ?>
           </div>
         <?php endif; ?>
         <div class="input-group mb-3">
-          <input type="username" class="form-control" name="username_u" placeholder="Username">
+          <input type="password" class="form-control" name="password_u" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user-circle"></span>
             </div>
           </div>
         </div>
-
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" name="password_confirm" placeholder="Password Confirm">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user-circle"></span>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block">Request New Password</button>

@@ -108,7 +108,57 @@ class Users extends BaseController
         $data = [
             'title' => 'Lupa Password'
         ];
+
+        if ($this->request->getMethod() == 'post') {
+            $rules = [
+                'username_u' => 'required|min_length[5]|max_length[20]',
+            ];
+
+            if (!$this->validate($rules)) {
+                $data['validation'] = $this->validator;
+            } else {
+                $model = new UsersModel();
+
+                $user = $model->where('username_u', $this->request->getVar('username_u'))
+                    ->first();
+
+                return redirect()->to('lupa_pass')->withInput($user);
+            }
+        }
+
         return view('profile/lupa', $data);
+    }
+    public function lupa_pass()
+    {
+        helper(['form']);
+        $data = [
+            'title' => 'Lupa Password'
+        ];
+
+        if ($this->request->getMethod() == 'post') {
+            $rules = [
+                'password_u' => 'required|min_length[5]|max_length[255]',
+                'password_confirm' => 'matches[password_u]',
+            ];
+
+            if (!$this->validate($rules)) {
+                $data['validation'] = $this->validator;
+            } else {
+                $model = new UsersModel();
+
+                $newData = [
+                    'id_u' => $model->find('id_u'),
+                    'password_u' => $this->request->getPost('password_u'),
+                ];
+
+                $model->save($newData);
+
+                session()->setFlashdata('success', 'Silahkan Login');
+                return redirect()->to('/');
+            }
+        }
+
+        return view('profile/lupa_pass', $data);
     }
 
     public function profile()
