@@ -18,6 +18,7 @@
             <?= $validation->listErrors(); ?>
           </div>
         <?php endif; ?>
+        <input type="text" class="form-control" value="">
         <div class="input-group mb-3">
           <input type="password" class="form-control" name="password_u" placeholder="Password">
           <div class="input-group-append">

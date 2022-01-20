@@ -16,8 +16,23 @@ class Users extends BaseController
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
-                'username_u' => 'required|min_length[5]|max_length[20]',
-                'password_u' => 'required|min_length[5]|max_length[20]|validateUser[username_u,password_u]',
+                'username_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]',
+                    'errors' => [
+                        'required' => 'username harus diisi.',
+                        'min_length' => 'username minimal 5 digit.',
+                        'max_length' => 'username terlalu panjang',
+                    ]
+                ],
+                'password_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]|validateUser[username_u,password_u]',
+                    'errors' => [
+                        'required' => 'password harus diisi.',
+                        'min_length' => 'password minimal 5 digit.',
+                        'max_length' => 'password terlalu panjang',
+                        'validateUser' => 'username dan password tidak cocok.'
+                    ]
+                ]
             ];
 
             $errors = [
@@ -65,11 +80,44 @@ class Users extends BaseController
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
-                'nama_u' => 'required|min_length[3]|max_length[40]',
-                'gbr_u' => 'max_size[gbr_u,2048]',
-                'username_u' => 'required|min_length[5]|max_length[20]',
-                'password_u' => 'required|min_length[5]|max_length[20]',
-                'password_confirm' => 'matches[password_u]',
+                'nama_u' => [
+                    'rules'  => 'required|min_length[3]|max_length[50]',
+                    'errors' => [
+                        'required' => 'nama harus diisi.',
+                        'min_length' => 'nama minimal 3 digit.',
+                        'max_length' => 'nama terlalu panjang',
+                    ]
+                ],
+                'username_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]',
+                    'errors' => [
+                        'required' => 'username harus diisi.',
+                        'min_length' => 'username minimal 5 digit.',
+                        'max_length' => 'username terlalu panjang',
+                    ]
+                ],
+                'password_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]',
+                    'errors' => [
+                        'required' => 'password harus diisi.',
+                        'min_length' => 'password minimal 5 digit.',
+                        'max_length' => 'password terlalu panjang'
+                    ]
+                ],
+                'password_confirm' => [
+                    'rules'  => 'matches[password_u]',
+                    'errors' => [
+                        'matches' => 'password tidak sesuai.'
+                    ]
+                ],
+                'gbr_u' => [
+                    'rules'  => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/png,image/jpg,image/jpeg]',
+                    'errors' => [
+                        'max_size' => 'ukuran gambar terlalu besar.',
+                        'is_image' => 'ini bukan gambar.',
+                        'mime_in' => 'file yang dipilih bukan gambar',
+                    ]
+                ]
             ];
             if (!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
@@ -131,8 +179,10 @@ class Users extends BaseController
     public function lupa_pass()
     {
         helper(['form']);
+        $model = new UsersModel();
         $data = [
-            'title' => 'Lupa Password'
+            'title' => 'Lupa Password',
+            'user' => $model->where('username_u', $this->request->getVar('username_u'))
         ];
 
         if ($this->request->getMethod() == 'post') {
@@ -144,7 +194,6 @@ class Users extends BaseController
             if (!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
             } else {
-                $model = new UsersModel();
 
                 $newData = [
                     'id_u' => $model->find('id_u'),
@@ -168,14 +217,51 @@ class Users extends BaseController
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
-                'nama_u' => 'required|min_length[3]|max_length[40]',
-                'gbr_u' => 'max_size[gbr_u,2048]',
-                'username_u' => 'required|min_length[5]|max_length[20]'
+                'nama_u' => [
+                    'rules'  => 'required|min_length[3]|max_length[50]',
+                    'errors' => [
+                        'required' => 'nama harus diisi.',
+                        'min_length' => 'nama minimal 3 digit.',
+                        'max_length' => 'nama terlalu panjang',
+                    ]
+                ],
+                'username_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]',
+                    'errors' => [
+                        'required' => 'username harus diisi.',
+                        'min_length' => 'username minimal 5 digit.',
+                        'max_length' => 'username terlalu panjang',
+                    ]
+                ],
+                'gbr_u' => [
+                    'rules'  => 'max_size[gbr_u,2048]|is_image[gbr_u]|mime_in[gbr_u,image/png,image/jpg,image/jpeg]',
+                    'errors' => [
+                        'max_size' => 'ukuran gambar terlalu besar.',
+                        'is_image' => 'ini bukan gambar.',
+                        'mime_in' => 'file yang dipilih bukan gambar',
+                    ]
+                ]
             ];
 
             if ($this->request->getPost('password_u') != '') {
-                $rules['password_u'] = 'required|min_length[5]|max_length[255]';
-                $rules['password_confirm'] = 'matches[password_u]';
+                // $rules['password_u'] = 'required|min_length[5]|max_length[255]';
+                // $rules['password_confirm'] = 'matches[password_u]';
+                $rules = [
+                    'password_u' => [
+                        'rules'  => 'required|min_length[5]|max_length[20]',
+                        'errors' => [
+                            'required' => 'password harus diisi.',
+                            'min_length' => 'password minimal 5 digit.',
+                            'max_length' => 'password terlalu panjang'
+                        ]
+                    ],
+                    'password_confirm' => [
+                        'rules'  => 'matches[password_u]',
+                        'errors' => [
+                            'matches' => 'password tidak sesuai.'
+                        ]
+                    ]
+                ];
             }
 
             if (!$this->validate($rules)) {

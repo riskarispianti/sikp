@@ -33,4 +33,9 @@ class UsersModel extends Model
 
         return $data;
     }
+
+    public function reset(array $data, $username)
+    {
+        $data = $this->where->get($data, $username);
+    }
 }
