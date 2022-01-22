@@ -11,7 +11,11 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Masukan Username untuk reset password.</p>
-
+      <?php if (session()->get('danger')) : ?>
+        <div class="alert alert-danger text-sm-center" role="alert">
+          <?= session()->get('danger'); ?>
+        </div>
+      <?php endif; ?>
       <form action="lupapass" method="post">
         <?php if (isset($validation)) : ?>
           <div class="alert alert-danger text-sm" role="alert">

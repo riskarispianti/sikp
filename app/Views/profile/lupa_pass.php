@@ -10,7 +10,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Reset Password.</p>
+      <p class="login-box-msg">Ganti Password.</p>
 
       <form action="lupa_pass" method="post">
         <?php if (isset($validation)) : ?>
@@ -36,15 +36,11 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Request New Password</button>
+            <button type="submit" class="btn btn-primary btn-block">Ganti Password</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
-      <div>
-        <a href="/">Login</a>
-      </div>
-      <a href="register">Buat Akun Baru.</a>
     </div>
     <!-- /.login-card-body -->
   </div>

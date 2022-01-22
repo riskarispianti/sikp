@@ -15,7 +15,7 @@
       </p>
 
       <?php if (session()->get('success')) : ?>
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success text-center" role="alert">
           <?= session()->get('success'); ?>
         </div>
       <?php endif; ?>

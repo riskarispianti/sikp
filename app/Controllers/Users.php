@@ -153,24 +153,37 @@ class Users extends BaseController
     public function lupapass()
     {
         helper(['form']);
+        $model = new UsersModel();
         $data = [
             'title' => 'Lupa Password'
         ];
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
-                'username_u' => 'required|min_length[5]|max_length[20]',
+                'username_u' => [
+                    'rules'  => 'required|min_length[5]|max_length[20]',
+                    'errors' => [
+                        'required' => 'username harus diisi.',
+                        'min_length' => 'username minimal 5 digit.',
+                        'max_length' => 'username terlalu panjang'
+                    ]
+                ]
             ];
 
             if (!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
             } else {
-                $model = new UsersModel();
-
-                $user = $model->where('username_u', $this->request->getVar('username_u'))
-                    ->first();
-
-                return redirect()->to('lupa_pass')->withInput($user);
+                $username = $this->request->getVar('username_u');
+                $user = $model->where(['username_u' => $username])->first();
+                if ($user) {
+                    $ubah = [
+                        'username_u' => $user
+                    ];
+                    return redirect()->to('lupa_pass' . $this->request->getVar('id_u'))->withInput();
+                } else {
+                    session()->setFlashdata('danger', 'username tidak ada');
+                    return redirect()->to('lupapass');
+                }
             }
         }
 
@@ -196,7 +209,7 @@ class Users extends BaseController
             } else {
 
                 $newData = [
-                    'id_u' => $model->find('id_u'),
+                    'id_u' => $model->first('id_u'),
                     'password_u' => $this->request->getPost('password_u'),
                 ];
 
